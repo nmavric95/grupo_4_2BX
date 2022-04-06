@@ -1,10 +1,10 @@
 El url del repositorio en github es "https://github.com/nmavric95/grupo_4_2BX.git"
 
 Somos el grupo 4 - INTEGRANTES
-Aichino Ivan
-Aller Rodrigo
-Cerruti Ana
-Mavric Nadia
+-Aichino Ivan 
+-Aller Rodrigo
+-Cerruti Ana
+-Mavric Nadia
 
 El nombre del proyecto será 2BX - To Be Extreme
 
