@@ -18,3 +18,7 @@ Páginas referentes:
 "https://www.nixon.com/"
 "https://www.playxlife.com/"
 "https://www.protest.eu/"
+
+
+
+Descripción de cada participante:
