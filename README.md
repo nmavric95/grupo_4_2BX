@@ -22,3 +22,4 @@ Páginas referentes:
 
 
 Descripción de cada participante:
+-Ana Cerruti: Vivo en CABA, tengo 32 años y soy Lic. en Deporte y Educacion Fisica. Estudio actualmente Ingenieria en Alimentos y trabajo para una consultora de seguridad e higiene. Me encanta el deporte, sobretodo el tenis y me fascina la musica. Me gusta tambien cantar y bailar. hhhh
