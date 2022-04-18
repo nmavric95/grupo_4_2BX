@@ -1,17 +1,22 @@
-El url del repositorio en github es "https://github.com/nmavric95/grupo_4_2BX.git"
-
 Somos el grupo 4 - INTEGRANTES:
-
 -Aichino Ivan 
 -Aller Rodrigo
 -Cerruti Ana
 -Mavric Nadia
 
-El nombre del proyecto será 2BX - To Be Extreme
+El url del repositorio en github es "https://github.com/nmavric95/grupo_4_2BX.git"
+
+El URL de nuestro Trello es: "https://trello.com/b/SYbe1Poo/sprints"
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+El nombre del proyecto será: 2BX - To Be Extreme
 
 Objetivo: Crearemos una página destinada a ofrecer paquetes de turismo aventura en diferentes lugares del país.
 
 Público objetivo: Personas jóvenes entre 18 y 40 con interés en deportes extremos.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Páginas referentes: 
 
@@ -26,6 +31,7 @@ Páginas referentes:
 "https://www.protest.eu/" - Este sitio también nos pareció comprensible y organizado, por lo que lo tomamos como ejemplo de estructura.
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Descripción de cada participante:
 
