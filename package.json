@@ -1,0 +1,22 @@
+{
+  "name": "proyecto_final_2bx",
+  "version": "1.0.0",
+  "description": "\"Proyecto Final 2BX\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmavric95/grupo_4_2BX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmavric95/grupo_4_2BX/issues"
+  },
+  "homepage": "https://github.com/nmavric95/grupo_4_2BX#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
