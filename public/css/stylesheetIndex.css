@@ -1,7 +1,11 @@
 *{
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
     margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
 }
 
 .upperBar{
@@ -9,24 +13,36 @@
     color:#79ffa0;
     width: 100vw;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
 
 }
 
 .logo{
-    width: 5vw;
+    width: 7vw;
     height: auto;
     margin-left: auto;
-    position: relative;
-    bottom:5%;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    display: inline-block;
+
+}
+
+.loginButton{
+    width: 10%;
+    
+    
 }
 
 .bottomBar{
     background-color: #000000;
     color: #79ffa0;
-    display: flex;
 }
 
 .navBar{
-    
+    list-style: none;
+    display: flex;
     justify-content: space-around;
+    padding: 2%;
 }
