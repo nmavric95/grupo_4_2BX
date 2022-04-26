@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0%;
+}
+
+.upperBar{
+    background-color: #000000;
+    color:#79ffa0;
+    width: 100vw;
+    text-align: center;
+
+}
+
+.logo{
+    width: 5vw;
+    height: auto;
+    margin-left: auto;
+    position: relative;
+    bottom:5%;
+}
+
+.bottomBar{
+    background-color: #000000;
+    color: #79ffa0;
+    display: flex;
+}
+
+.navBar{
+    
+    justify-content: space-around;
+}
