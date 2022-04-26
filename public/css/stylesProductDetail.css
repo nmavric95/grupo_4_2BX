@@ -1,0 +1,119 @@
+/* Global selector */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    color: #000;
+
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+header{
+    background-color: #000;
+    color: white;
+    position: fixed;
+    top: 0px;
+    width: inherit;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Clases */
+    /* main */
+    .productDetail{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        align-items: center;
+        justify-self: center;
+        /* position: relative; */
+    }
+
+    .productDetailImage{
+        position: relative;
+        margin: auto;
+    }
+
+    .productDetailText{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 15px;
+    }
+
+    .productDetailText h2{
+        width: 100%;
+    }
+
+    .productDetailText p{
+        width: 100%;
+    }
+
+    .buyButton{
+        justify-content: end;
+        align-self: flex-end;
+        padding: 5px;
+        margin: 2px;
+        width: 50%;
+    }
+
+    .productDescription{
+        width: 100%;
+        background-color: brown;
+    }
+
+    /* footer */
+    footer{
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: inherit;
+        justify-content: space-around;
+        padding: 5px;
+        position: fixed;
+        bottom: 0px;
+    }
+
+    footer ul li{
+        margin: 5px;
+    }
+
+    footer ul li a{
+        text-decoration: none;
+        color: white;
+        padding-left: 5px;
+    }
+
+    .contact{
+        color: white;
+        padding: 30px;
+        
+    }
+
+    .socialNetwork{
+        color: white;
+        padding: 30px;
+        
+    }
+
+    /* .consultarEsto{
+        color: white;
+    } */
+
+    
+
