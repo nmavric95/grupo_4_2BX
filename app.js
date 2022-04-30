@@ -13,5 +13,9 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve(indexPath))
 })
 
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve(productDetailPath))
+})
+
 app.listen(port, () => console.log("Listening on port ", port))
 
