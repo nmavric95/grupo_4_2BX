@@ -24,7 +24,7 @@ app.get("/cart", (req, res) => {
 })
 
 app.get("/register", (req, res) => {
-    res.sendFile(path.resolve(productCart))
+    res.sendFile(path.resolve(registerPath))
 })
 
 app.listen(port, () => console.log("Listening on port ", port))
