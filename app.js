@@ -5,6 +5,7 @@ const path = require("path")
 const publicPath = path.resolve(__dirname, "./public")
 const indexPath = path.resolve(__dirname, "./views/index.html")
 const productDetailPath = path.resolve(__dirname, "./views/productDetail.html")
+const registerPath = path.resolve(__dirname, "./views/register.html")
 const productCart = path.resolve(__dirname, "./views/productCart.html")
 const port = 3030
 
@@ -19,6 +20,10 @@ app.get("/productDetail", (req, res) => {
 })
 
 app.get("/cart", (req, res) => {
+    res.sendFile(path.resolve(productCart))
+})
+
+app.get("/register", (req, res) => {
     res.sendFile(path.resolve(productCart))
 })
 

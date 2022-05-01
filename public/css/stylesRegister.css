@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+}
+
+
+h2{
+    font-size: 32px;
+    font-family: "BPimperial Regular";
+    display: block;
+    text-align: center;
+    padding-top: 7%;
+    color: RGB(157,59,225);
+}
+
+#registerForm {
+    
+    font-family: "Lato", sans-serif;
+    display: block;
+    text-align: center;
+    padding: 5%;
+}
+
+h3{
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    padding: 2%;
+    color: RGB(157,59,225);
+}
+
+p{
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    padding-top: 3%;
+    margin-left: 7%;
+    color: gray;
+}
+
+a:link{
+    color:RGB(203,108,230);
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+a:hover {
+    font-weight: bold;
+
+  }
+
+/* inputs */
+label{
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    margin-left: 7%;
+    color: gray;
+    padding-top: 2%;
+}
+
+input[type=text], [type=password], [type=email], [type = date]{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px ;
+    display: inline-block;
+    border: 3px solid RGB(157,59,225);
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    
+  }
+
+  input:hover {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px ;
+    display: inline-block;
+    border-bottom: 3px solid RGB(121,255,160);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    box-sizing: border-box;
+    
+  }  
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+  }
+/* button */
+button{
+    width: 25%;
+    font-family: "Lato", sans-serif;
+    background-color: RGB(121,255,160);
+    border: none;
+    color: white;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    margin: auto;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+  }
+
+
+button:hover{
+    background-color: RGB(157,59,225);
+    color: burlywood;
+} 
+
+
+/* media query cellphone */
+
+@media (max-width: 600px){
+.image {display: none;}    
+}
