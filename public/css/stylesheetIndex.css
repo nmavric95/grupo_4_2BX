@@ -36,6 +36,8 @@
     padding: 0%;
 }
 
+/*HEADER*/
+
 body{
     font-family: "Lato", sans-serif;
 }
@@ -45,29 +47,30 @@ body{
     background-color: #000000;
     color:#79ffa0;
     width: 100vw;
-    text-align: center;
+    padding: 2px;
     display: flex;
     justify-content: flex-end;
-    padding: 2px;
+    flex-wrap: wrap;
+
 
 }
 
 .logo{
-    width: 20vw;
-    height: auto;
-    margin-left: auto;
+    width: 25vw;
+    height: auto; 
+    margin-left: auto; 
     position: absolute;
-    top: 0.2%;
-    left: 50%;
-    display: inline-block;
+    top: 2px;
+    left: 36%; 
 
 }
 
 .loginButton{
     width: 10%;
-    font-size: 50%;
+    font-size: 10px;
     font-weight: bold;
     margin: 2px 5px;
+    padding: 2px 0px;
     color: #9d3be1;
     text-align: right;
     
@@ -83,7 +86,7 @@ body{
     list-style: none;
     display: flex;
     justify-content: space-around;
-    vertical-align: middle;
+    align-items: center;
     padding: 1%;
 }
 
@@ -94,35 +97,157 @@ nav li{
     display: none;
 }
 .burgerMenu{
-    width: 15px;
-    height: 20px;
+    width: 30px;
+    height: 40px;
     color: #79ffa0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    padding-bottom: 10px;
-    display: block;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px 40px 0px;
+    font-size: 30px;
+
+}
+
+/*CARROUSEL*/
+.slide{
+    position: relative;
+    width: 100vw;
+    height: 50vh;
     text-align: center;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
 
+.slideContent{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.slideShow:checked .slideItem{
+    position: static;
+    opacity: 100%;
+}
+
+.slideItem{
+    position:absolute;
+    opacity: 0%;
+    transition: opacity 450ms ease-out;
+    -webkit-transition: opacity 450ms ease-out;
+}
+
+.slideItem img{
+    display: block;
+    height: 100%;
+    max-width: 100%;
+}
+
+.slideControl{
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    color: #79ffa0;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+	cursor: pointer;
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+    text-align: center;
+    z-index: 10;
+
+}
+
+.slideControl.prev{
+    left: 2%;
+}
+
+.slideControl.next{
+    right: 2%;
+}
+
+.slideControl:hover{
+    background: rgba(0,0,0,0.8);
+    color: #9d3be1;
+}
+
+#slide1:checked ~ .control1,
+#slide2:checked ~ .control2,
+#slide3:checked ~ .control3, 
+#slide4:checked ~ .control4,
+#slide5:checked ~ .control5 {
+	display: block;
+}
+
+.slideIndicator{
+    list-style: none;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    z-index: 10;
+}
+
+.slideIndicator li{
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.slideCircle{
+    color: #79ffa0;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.slideCircle:hover{
+    color: #9d3be1;
+}
+
+#slide1:checked ~ .control1 ~ .slideIndicator 
+	li:nth-child(1) .slideCircle,
+#slide2:checked ~ .control2 ~ .slideIndicator  
+	li:nth-child(2) .slideCircle,
+#slide3:checked ~ .control3 ~ .slideIndicator  
+	li:nth-child(3) .slideCircle,
+#slide4:checked ~ .control4 ~ .slideIndicator  
+	li:nth-child(4) .slideCircle,
+#slide5:checked ~ .control5 ~ .slideIndicator  
+	li:nth-child(5) .slideCircle {
+		color: #79ffa0;
 }
 
 
 
-
-
-@media (min-width: 424px){
-    nav li{
-        display: flex;
-    }
-    .burgerMenu{
-        display: none;
+@media (min-width: 426px){
+    .logo{
+        width: 15vw;
+        left: 42%;
     }
 
 }
 
-@media (min-width: 767px){
+@media (min-width: 769px){
+    .logo{
+        width: 8vw;
+        left: 45%;
+    }
     nav li{
         display: flex;
+        margin-top: 50px;
+        font-size: 1.5vw;
+        padding-bottom: 10px;
     }
     .burgerMenu{
         display: none;
