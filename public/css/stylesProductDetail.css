@@ -1,3 +1,36 @@
+/* FUENTES */
+
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Italic"), url("/fonts/BPimperialItalic.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Light"), url("/fonts/BPimperialLight.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Light Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Light Italic"), url("fonts/BPimperialLightItalic.woff") format("woff");
+    }
+
 /* Global selector */
 *{
     margin: 0px;
@@ -12,6 +45,7 @@ html{
 }
 
 body{
+    font-family: "Lato", sans-serif;
     min-height: 100vh;
     width: 100%;
     padding-top: 50px;
