@@ -118,6 +118,7 @@ nav li{
     height: 50vh;
     text-align: center;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    
 }
 
 .slideContent{
@@ -127,22 +128,27 @@ nav li{
     height: 100%;
 }
 
-.slideShow:checked .slideItem{
+.slideShow{
+    display: none;
+}
+
+.slideShow:checked + .slideItem{
     position: static;
-    opacity: 100%;
+    opacity: 100;
 }
 
 .slideItem{
     position:absolute;
     opacity: 0%;
-    transition: opacity 450ms ease-out;
-    -webkit-transition: opacity 450ms ease-out;
+    transition: opacity 600ms ease-out;
+    -webkit-transition: opacity 600ms ease-out;
 }
 
 .slideItem img{
     display: block;
-    height: 100%;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: -200px auto 200px auto;
 }
 
 .slideControl{
