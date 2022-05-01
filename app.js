@@ -14,11 +14,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve(indexPath))
 })
 
-app.get("/", (req, res) => {
+app.get("/productDetail", (req, res) => {
     res.sendFile(path.resolve(productDetailPath))
 })
 
-app.get("/", (req, res) => {
+app.get("/cart", (req, res) => {
     res.sendFile(path.resolve(productCart))
 })
 
