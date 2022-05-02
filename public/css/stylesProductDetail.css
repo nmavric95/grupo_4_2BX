@@ -48,21 +48,18 @@ body{
     font-family: "Lato", sans-serif;
     min-height: 100vh;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 200px;
 }
 
 header{
     background-color: #000;
     color: white;
-    position: fixed;
-    top: 0px;
     width: inherit;
 }
 
 main{
     display: flex;
     flex-wrap: wrap;
+    background-color: #ebebeb;
 }
 /* Clases */
     /* main */
@@ -86,28 +83,111 @@ main{
         justify-content: space-around;
         background-color: white;
         border: solid 1px black;
-        border-radius: 15px;
+        /* border-radius: 15px; */
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        
+        margin: 0.5rem;
     }
 
-    .productDetailText h2{
+
+    .productDetailText h1{
+        padding: 0.3rem;
+        font-weight: normal;
+        color: #79ffa0;
+        text-shadow: 2px 2px 2px #9D3BE1;
+        font-family: BPimperial Regular;
         width: 100%;
+        text-align: center;
+        background-color: #000;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .textContainer{
+        padding: 0.5rem;
+    }
+
+    .textContainer h4{
+        /* font-weight: normal; */
+        font-family: BPImperial light;
+        font-size: 25px;
+        color: #79ffa0;
+        text-shadow: 2px 2px 2px #9D3BE1;
+        background-color: #000;
+        width: fit-content;
+        padding: 0.2rem;
+    }
+
+    .item{
+        padding: 0.3rem 0px 0.3rem 0px;
+    }
+
+    .textContainer ul li ul li{
+        padding-left: 0.5rem;
     }
 
     .productDetailText p{
         width: 100%;
     }
 
+    .reserva{
+        display: inline-block;
+    }
+
+    .precio{
+        display: inline-block;
+    }
+
     .buyButton{
-        justify-content: end;
+        justify-content: flex-end;
         align-self: flex-end;
         padding: 5px;
         margin: 2px;
         width: 50%;
     }
 
+    
     .productDescription{
+        background-color: #ebebeb;
         width: 100%;
-        background-color: brown;
+    }
+
+    .description{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        background-color: white;
+        width: 80%;
+        padding: 1rem;
+        /* padding: 1rem 0 1rem 0; */
+    }
+
+    .titleContainer{
+        background-color: #000;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description h2{
+        padding: 0.3rem;
+        font-weight: normal;
+        color: #79ffa0;
+        text-shadow: 2px 2px 2px #9D3BE1;
+        font-family: BPimperial Regular;
+    }
+
+    .description li, .description p{
+        padding: 0.2rem;
+    }
+
+    .description ul{
+        padding: 0 0 0 40px;
     }
 
     /* footer */
@@ -186,8 +266,8 @@ main{
     @media screen and (min-width: 769px){
 
         footer{
-            position: fixed;
-            bottom: 0px;
+            /* position: fixed;
+            bottom: 0px; */
             flex-direction: row;
         }
 
