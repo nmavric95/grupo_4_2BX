@@ -10,12 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/stylesheetIndex.css">
     <script src="https://kit.fontawesome.com/a00647b9df.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <title>2BX</title>
 </head>
 <body>
     <header class="upperBar">
-        <div class="burgerMenu"><i class="fa-regular fa-square-minus"></i></div>
         <img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo">
         <p class="loginButton">LOGIN</p>
     </header>
@@ -27,16 +27,92 @@
             <li>Registro</li>
             <li>Carrito</li>
         </ul>
+        <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
     </nav>
     <main>
-        <picture></picture>
+        <div class="slide">
+            <div class="slideContent">
+                <input type="radio" class="slideShow" id="slide1" name="slide" checked="checked">
+                <div class="slideItem">
+                    <img src="img/skydive_1280.jpg" alt="skydive">
+                </div>
+                <input type="radio" class="slideShow" id="slide2" name="slide">
+                <div class="slideItem">
+                    <img src="img/parapente_1280.jpg" alt="paragliding">
+                </div>
+                <input type="radio" class="slideShow" id="slide3" name="slide">
+                <div class="slideItem">
+                    <img src="img/kaitsurf_1280.jpg" alt="kaitsurf">
+                </div>
+                <input type="radio" class="slideShow" id="slide4" name="slide">
+                <div class="slideItem">
+                    <img src="img/rock-climbing_1280.jpg" alt="climbing">
+                </div>
+                <input type="radio" class="slideShow" id="slide5" name="slide">
+                <div class="slideItem">
+                    <img src="img/rafting_1280.jpg" alt="rafting">
+                </div>
+                <label for="slide5" class="slideControl prev control1"><</label>
+                <label for="slide2" class="slideControl next control1">></label>
+                <label for="slide1" class="slideControl prev control2"><</label>
+                <label for="slide3" class="slideControl next control2">></label>
+                <label for="slide2" class="slideControl prev control3"><</label>
+                <label for="slide4" class="slideControl next control3">></label>
+                <label for="slide3" class="slideControl prev control4"><</label>
+                <label for="slide5" class="slideControl next control4">></label>
+                <label for="slide4" class="slideControl prev control5"><</label>
+                <label for="slide1" class="slideControl next control5">></label>
+                <ol class="slideIndicator">
+                    <li>
+                        <label for="slide1" class="slideCircle">•</label>
+                    </li>
+                    <li>
+                        <label for="slide2" class="slideCircle">•</label>
+                    </li>
+                    <li>
+                        <label for="slide3" class="slideCircle">•</label>
+                    </li>
+                    <li>
+                        <label for="slide4" class="slideCircle">•</label>
+                    </li>
+                    <li>
+                        <label for="slide5" class="slideCircle">•</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container2">
         <section class="packages">
-            <article class="product"></article>
-            <article class="product"></article>
-            <article class="product"></article>
-            <article class="product"></article>
+            <label for="*" class="control"><</label>
+            <article class="product p1">
+                <img class="picturePackage" src="img/paquete.jpg" alt="paquete">
+                <p>PAQUETE 1</p>
+            </article>
+            <article class="product p2">
+                <img class="picturePackage" src="img/paquete.jpg" alt="paquete">
+                <p>PAQUETE 2</p>
+            </article>
+            <article class="product p3">
+                <img class="picturePackage" src="img/paquete.jpg" alt="paquete">
+                <p>PAQUETE 3</p>
+            </article>
+            <article class="product p4">
+                <img class="picturePackage" src="img/paquete.jpg" alt="paquete">
+                <p>PPAQUETE 4</p>
+            </article>
+            <label for="*" class="control">></label>
         </section>
-        <section class="clientMessages"></section>
+        <section class="clientMessages">
+            <article class="card">
+                <label for="*" class="controlMessages">></label>
+                <img class="userImage" src="img/FOTORANDOM2.jpg" alt="imagen de usuario">
+                <div class="message">
+                    <strong>Pepito Cawabonga</strong>
+                    <p>"Una experiencia increibleee! Pase mi finde a pura adrenalina. Muy divertido!!!"</p>
+                </div>
+            </article>
+        </section>
+        </div>
     </main>
     
 </body>
