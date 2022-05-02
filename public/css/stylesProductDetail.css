@@ -200,7 +200,7 @@ main{
         justify-content: space-around;
         align-items: center;
         padding: 1rem;
-        font-family: BPimperialRegular;
+        /* font-family: BPimperialRegular; */
         font-size: 1.1rem;
     }
 
