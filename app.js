@@ -19,7 +19,7 @@ app.get("/productDetail", (req, res) => {
     res.sendFile(path.resolve(productDetailPath))
 })
 
-app.get("/cart", (req, res) => {
+app.get("/productCart", (req, res) => {
     res.sendFile(path.resolve(productCart))
 })
 
