@@ -115,39 +115,83 @@ main{
         background-color: black;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
         width: inherit;
         justify-content: space-around;
-        padding: 5px;
-        position: fixed;
-        bottom: 0px;
+        align-items: center;
+        padding: 1rem;
+        font-family: BPimperialRegular;
+        font-size: 1.1rem;
     }
 
     footer ul li{
         margin: 5px;
+        /* color: white; */
+        /* color: #79ffa0; */
+        /* text-shadow: 2px 2px 2px #9D3BE1; */
     }
 
+    
     footer ul li a{
         text-decoration: none;
+        font-style: normal;
         color: white;
+        /* color: #79ffa0; */
         padding-left: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        transition: all 600ms; 
     }
 
+    footer ul li a p{
+        padding-left: 0.75rem;
+    }
+
+    
+    footer ul li a:hover{
+        text-shadow: 2px 2px 2px #9D3BE1;
+        color: #79ffa0;
+    }
+    
+
     .contact{
-        color: white;
-        padding: 30px;
+        padding: 1rem;
+        width: 240px
         
     }
 
     .socialNetwork{
+        padding: 1rem;
+        width: 240px
+    }
+
+    .consultarEsto{
         color: white;
-        padding: 30px;
+        width: 240px
+    }
+
+    /* MEDIA QUERY */
+
+    @media screen and (min-width: 426px) {
+
+        footer{
+            flex-direction: row;
+            /* justify-content: center;
+            align-items: center; */
+        }
         
     }
 
-    /* .consultarEsto{
-        color: white;
-    } */
+    @media screen and (min-width: 769px){
 
-    
+        footer{
+            position: fixed;
+            bottom: 0px;
+            flex-direction: row;
+        }
+
+
+
+    }
 
