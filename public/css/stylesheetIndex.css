@@ -106,6 +106,7 @@ a{
 
 .navBar{
     font-family: "BPimperial Regular";
+    letter-spacing: 2px;
     list-style: none;
     display: flex;
     justify-content: space-around;
