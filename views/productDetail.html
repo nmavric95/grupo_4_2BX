@@ -33,13 +33,18 @@
     <main>
         <section class="productDetail">
             <div class="productDetailImage">
-                <!-- <img src="https://lp-cms-production.imgix.net/features/2013/06/GettyRF_83654057-0d23ef9081fb.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850" alt="Imagen Random"> -->
+                <img src="/img/rockClimbingMountain_1280.jpg" alt="Imagen Random">
             </div>
             <article class="productDetailText">
 
                 <h1>Detalle general del Paquete</h1>
 
                 <div class="textContainer">
+                    
+                    <div class="item">
+                        <h4>Escalada Deportiva</h4>
+                    </div>
+
                     <div class="item">
                         <ul type="none">
                             <li>Duracion: 9 a 18:30 hs</li>
@@ -110,11 +115,33 @@
             </article>
         </section>
 
-        <section class="carrousel">
+        <!-- <section class="carrousel">
             <div class="carrouselImageContainer">
                 <img src="" alt="Aca va un carrousel">
             </div>
-        </section>    
+        </section>     -->
+        <section class="packages">
+            <label for="*" class="control"><</label>
+            <article class="product p1">
+                <img class="picturePackage" src="img/paquete.png" alt="paquete">
+                <p>PAQUETE 1</p>
+            </article>
+            <article class="product p2">
+                <img class="picturePackage" src="img/paquete.png" alt="paquete">
+                <p>PAQUETE 2</p>
+            </article>
+            <article class="product p3">
+                <img class="picturePackage" src="img/paquete.png" alt="paquete">
+                <p>PAQUETE 3</p>
+            </article>
+            <article class="product p4">
+                <img class="picturePackage" src="img/paquete.png" alt="paquete">
+                <p>PAQUETE 4</p>
+            </article>
+            <label for="*" class="control">></label>
+        </section>
+
+
     </main>
 
     <footer>
@@ -134,9 +161,20 @@
                 <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
             </ul>
         </section>
-        <!-- <section class="consultarEsto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi debitis quam laboriosam minus sed velit, perspiciatis officiis iste consequatur quaerat excepturi, reiciendis quas amet. Hic ullam quisquam voluptates atque.
-        </section> -->
+
+        <section class="userMessages">
+            <form action="/" method="POST">
+                <label for="nombre">Formulario de Contacto</label>
+                    <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+                <!-- <label for="email"></label> -->
+                    <input class="messages" type="email" name="email" id="email" placeholder="Email">
+                <!-- <label for="message"></label> -->
+                    <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
+
+                    </textarea>
+            </form>
+        </section>
+        
     </footer>
 
 </body>

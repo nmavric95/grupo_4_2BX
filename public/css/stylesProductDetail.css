@@ -61,32 +61,39 @@ main{
     flex-wrap: wrap;
     background-color: #ebebeb;
 }
-/* Clases */
-    /* main */
+
+    /* DETALLE GENERAL DEL PAQUETE */
     .productDetail{
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
         align-items: center;
         justify-self: center;
+        padding-bottom: 2rem;
         /* position: relative; */
     }
 
     .productDetailImage{
         position: relative;
         margin: auto;
+        width: 100%;
+    }
+
+    .productDetailImage img{
+        width: 100%;
     }
 
     .productDetailText{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: white;
-        border: solid 1px black;
-        /* border-radius: 15px; */
+        background-color: rgba(0, 0, 0, 0.7);
+        border: solid 1px rgba(0, 0, 0, 0.7);
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        
+        color: #79ffa0;
         margin: 0.5rem;
     }
 
@@ -96,7 +103,7 @@ main{
         font-weight: normal;
         color: #79ffa0;
         text-shadow: 2px 2px 2px #9D3BE1;
-        font-family: BPimperial Regular;
+        font-family: BPimperial Light;
         width: 100%;
         text-align: center;
         background-color: #000;
@@ -114,7 +121,6 @@ main{
         font-size: 25px;
         color: #79ffa0;
         text-shadow: 2px 2px 2px #9D3BE1;
-        background-color: #000;
         width: fit-content;
         padding: 0.2rem;
     }
@@ -140,17 +146,39 @@ main{
     }
 
     .buyButton{
-        justify-content: flex-end;
-        align-self: flex-end;
-        padding: 5px;
-        margin: 2px;
+        justify-content: center;
+        align-self: center;
+        margin: 1rem;
         width: 50%;
+        display: flex;
     }
 
+    .buyButton button{
+        background-color: #79ffa0;
+        color: #9D3BE1;
+        height: 50px;
+        padding: 0.3rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 15px;
+        transition-duration: 0.4s;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .buyButton button:hover{
+        background-color: #9D3BE1;
+        color: #79ffa0;
+    }
+
+
+/* DESCRIPCION DEL PAQUETE */
     
     .productDescription{
         background-color: #ebebeb;
         width: 100%;
+        margin: 1rem;
     }
 
     .description{
@@ -160,18 +188,28 @@ main{
         align-items: center;
         justify-content: center;
         margin: auto;
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.7);
         width: 80%;
-        padding: 1rem;
+        /* padding: 0 1rem 1rem 1rem; */
+        color:#79ffa0;
+        border-radius: 15px;
         /* padding: 1rem 0 1rem 0; */
     }
 
+    .description li::marker{
+        color:#9D3BE1
+    }
+
+    /* .description ul li p{
+        padding: 3rem;
+    } */
+
     .titleContainer{
-        background-color: #000;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgb(0, 0, 0);
     }
 
     .description h2{
@@ -179,7 +217,8 @@ main{
         font-weight: normal;
         color: #79ffa0;
         text-shadow: 2px 2px 2px #9D3BE1;
-        font-family: BPimperial Regular;
+        font-family: BPimperial Light;
+        font-size: 32px;
     }
 
     .description li, .description p{
@@ -187,7 +226,15 @@ main{
     }
 
     .description ul{
-        padding: 0 0 0 40px;
+        padding: 10px 10px 10px 25px;
+        margin: 0.2rem;
+    }
+
+    /* SECCION PACKAGES */
+
+    .packages{
+        width: 100%
+    
     }
 
     /* footer */
@@ -200,23 +247,19 @@ main{
         justify-content: space-around;
         align-items: center;
         padding: 1rem;
-        /* font-family: BPimperialRegular; */
         font-size: 1.1rem;
     }
 
     footer ul li{
         margin: 5px;
-        /* color: white; */
-        /* color: #79ffa0; */
-        /* text-shadow: 2px 2px 2px #9D3BE1; */
     }
 
     
     footer ul li a{
         text-decoration: none;
         font-style: normal;
-        color: white;
-        /* color: #79ffa0; */
+        /* color: white; */
+        color: #9D3BE1;
         padding-left: 5px;
         display: flex;
         flex-wrap: nowrap;
@@ -246,9 +289,28 @@ main{
         width: 240px
     }
 
-    .consultarEsto{
-        color: white;
-        width: 240px
+    .userMessages form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
+    .userMessages form label{
+        color: #9D3BE1;
+        padding: 0.3rem;
+        transition: all 600ms;
+    }
+
+    .userMessages form label:hover{
+        color: #79ffa0;
+        text-shadow: 1px 1px 1px #9D3BE1;
+    }
+
+    input[type=text], [type=email], textarea {
+        background-color: #ebebeb;
+        outline: none;
     }
 
     /* MEDIA QUERY */
@@ -266,12 +328,26 @@ main{
     @media screen and (min-width: 769px){
 
         footer{
-            /* position: fixed;
-            bottom: 0px; */
             flex-direction: row;
+        }
+
+        .productDetail{
+            padding-bottom: 14rem;
+        }
+
+        .productDetailText{
+            position: absolute;
+            top: 100px;
+            right: 100px;
         }
 
 
 
+    }
+
+    @media screen and (min-width: 1024px){
+        .productDetail{
+            padding-bottom: 6rem;
+        }
     }
 
