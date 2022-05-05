@@ -11,26 +11,156 @@
     src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
     }
 
+/*HEADER*/
+
+
+.upperBar{
+    font-family: "Lato";
+    background-color: #000000;
+    color:#79ffa0;
+    width: 100vw;
+    padding: 2px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+
+}
+
+.logo{
+    width: 151px;
+    height: auto; 
+    margin-left: auto; 
+    position: absolute;
+    top: 2px;
+    left: 45%; 
+
+}
+
+.logo:hover{
+    transition-property: border;
+    transition-duration: 600ms;
+    transition-delay: 1s;
+    border: #79ffa0 2px solid;
+}
+
+.loginButton{
+    font-family: "Lato";
+    width: 10%;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 2px 5px;
+    padding: 2px 0px;
+    color: #9d3be1;
+    text-align: right;
+    transition-property: all;
+    transition-duration: 500ms;
+    
+}
+
+.loginButton:hover{
+    color: #79ffa0;
+}
+
+.loginButton:active{
+    color: #79ffa0;
+}
+
+.bottomBar{
+    background-color: #000000;
+    color: #79ffa0;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #79ffa0;
+}
+
+.navBar{
+    font-family: "BPimperial Regular";
+    letter-spacing: 2px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+}
+
+nav li{
+    margin: 0px 5px;
+    text-shadow: 2px 2px 2px #9d3be1;
+    font-size: 110%;
+    display: none;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+nav li a:hover{
+    color: #9d3be1;
+    text-shadow: 2px 2px 2px #79ffa0;
+    font-size: 112%;
+}
+
+.burgerMenu{
+    width: 30px;
+    height: 40px;
+    color: #79ffa0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 0px 40px 0px;
+    font-size: 30px;
+
+}
+
+.burgerMenu:active{
+    color: #9d3be1;
+
+}
+
+
+
+
+
+
+
+/*MAIN BODY*/
+
 body{
         font-family: "Lato", sans-serif;
         background-color: black;
     }
 
 .si{
-    width: 50px;;
+    width: 50px;
+    cursor: pointer;
+    
 }
 .si:hover{
-    width: 50px;
+    width: 60px;
     background-color: #79ffa0;
     color: black;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 }
+
+h2{
+    display: block;
+    font-family: "BPimperial Regular";
+    text-align: left;
+    color: #79ffa0;
+    text-shadow: 8px 8px 8px black;
+    width: 50px;
+
+}
 .boton1{
     display: block;
     font-family: "BPimperial Regular";
     text-align: center;
-    background-color: black;
+    background-color: gray;
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9d3be1;
     width: 800px;
@@ -38,43 +168,65 @@ body{
 .boton{
     display: block;
     font-family: "BPimperial Regular";
-    text-align: center;
-    background-color: black;
+    text-align: end;
+    background-color: gray;
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9d3be1;
     width: 450px;
+    cursor: pointer;
 }
 .card {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 50px;
+    
 }
 
+h3{
+    display: flex;
+    font-family: "Lato";
+    display: block;
+    color: black;
+
+}
 .paquete {
-    width: 450px;
+    width: 400px;
     height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .contenedor {
-    content: 20px;
-    border: solid 5px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: gray;;
+    padding-right: 120px;
+    padding-left: 300px;
+    padding-top: 30px;
 }
 
 .contenedor2 {
     height: 100px;
-    border: solid 5px black;
+    background-color: gray;
+    padding: 5px;
+    
 }
 
 .container {
     background-color: gainsboro;
-    border: solid 5px black;
+    border: solid 10px black;
+    border-color: #79ffa0;
+
 }
 
 h1{
     display: block;
     font-family: "BPimperial Regular";
     text-align: center;
-    background-color: black;
+    background-color: gray;
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9d3be1;
     width: 800px;
@@ -85,10 +237,15 @@ h1{
     align-self: flex-end;
     font-style: normal;
     text-align: center;
-    text-shadow: 20px black;
+    text-shadow: 20px gray;
     width: 15%;
     padding: 3px;
     margin: 2px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
    
 }
 
@@ -97,8 +254,8 @@ h1{
     align-self: flex-end;
     font-style: normal;
     text-align: center;
-    text-shadow: 20px black;
-    width: 15%;
+    text-shadow: 20px gray;
+    width: 20%;
     padding: 3px;
     margin: 2px;
     background-color: #9d3be1;
@@ -116,7 +273,12 @@ h1{
     text-shadow: 20px black;
     width: 15%;
     padding: 3px;
-    margin: 2px;}
+    margin: 2px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;}
 
 .button:hover{
     justify-content: end;
@@ -124,7 +286,7 @@ h1{
     font-style: normal;
     text-align: center;
     text-shadow: 20px black;
-    width: 15%;
+    width: 20%;
     padding: 3px;
     margin: 2px;
     background-color: #79ffa0;
@@ -134,10 +296,118 @@ h1{
 
 }
 
+
+
+
+
+ /* FOOTER */
+ footer{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: inherit;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+footer ul li{
+    margin: 5px;
+}
+
+
+footer ul li a{
+    text-decoration: none;
+    font-style: normal;
+    /* color: white; */
+    color: #9D3BE1;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition: all 600ms; 
+}
+
+footer ul li a p{
+    padding-left: 0.75rem;
+}
+
+
+footer ul li a:hover{
+    text-shadow: 2px 2px 2px #9D3BE1;
+    color: #79ffa0;
+}
+
+
+.contact{
+    padding: 1rem;
+    width: 240px
+    
+}
+
+.socialNetwork{
+    padding: 1rem;
+    width: 240px
+}
+
+.userMessages form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+}
+
+.userMessages form label{
+    color: #9D3BE1;
+    padding: 0.3rem;
+    transition: all 600ms;
+}
+
+.userMessages form label:hover{
+    color: #79ffa0;
+    text-shadow: 1px 1px 1px #9D3BE1;
+}
+
+input[type=text], [type=email], textarea {
+    background-color: #ebebeb;
+    outline: none;
+}
+
+
 @media (min-width: 462px){
+
+    .logo{width: 15vw;
+    left: 42%;}
+
+    footer{
+        flex-direction: row;
+        /* justify-content: center;
+        align-items: center; */
+    }
 
 }
 
 @media (min-width: 770px){
+
+    .logo{
+        width: 8vw;
+        left: 45%;
+    }
+    nav li{
+        display: flex;
+        margin-top: 50px;
+        font-size: 1.5vw;
+        padding-bottom: 10px;
+    }
+    .burgerMenu{
+        display: none;
+    }
+
+    footer{
+        flex-direction: row;
+    }
 
 }

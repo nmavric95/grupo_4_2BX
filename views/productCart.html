@@ -11,30 +11,44 @@
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
     <title>2BX - Carro de Compras</title>
 </head>
-<header><h1>HEADER</h1></header>
+
+<body>
+    <header class="upperBar">
+        <img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo">
+        <p class="loginButton">LOGIN</p>
+    </header>
+    <nav class="bottomBar">
+        <ul class="navBar">
+            <li><a href="/productDetail">Paquetes</a></li>
+            <li><a href="/">About Us</a></li>
+            <li></li>
+            <li><a href="/register">Registro</a></li>
+            <li><a href="/productCart">Carrito</a></li>
+        </ul>
+        <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
+    </nav>
+
+<main>
+
 <section>
     <div>
         <div class="contenedor">
-        <article class="card">
             <h1 class="boton1">Carro de Compras</h1>
             <p></p>
             <p></p>
-            <p class="boton">Precio</p>
-            <p class="boton">Cantidad</p>
-            <p class="boton">Subtotal</p>
-            <p class="boton">Seleccionar</p>
-        </article>
+            <h2 class="boton">Precio</h2>
+            <h2 class="boton">Cantidad</h2>
+            <h2 class="boton">Subtotal</h2>
+            <h2 class="boton">Seleccionar</h2>
         </div>
-<body>
+
         <div class="container">
         <article class="card">
+            <h3>Paquete 1</h3>
             <img class="paquete" src="img/kaitsurf_640.jpg" alt="Kaitsurf">
-            <p>$</p>
-            <input type="button" name="" value="1">
-            <input type="button" name="" value="2">
-            <input type="button" name="" value="3">   
-            <p>$</p>
-            !/ HACER CALCULO ARITMETICO
+            <h2>$</h2>
+            <input type="button" name="" value="Cant">  
+            <h2>$</h2>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -43,12 +57,11 @@
         </div>
         <div class="container">
         <article class="card">
+            <h3>Paquete 2</h3>
             <img class="paquete" src="img/rafting_640.jpg" alt="Rafting">
-            <p>$</p>
-            <input type="button" name="" value="1">
-            <input type="button" name="" value="2">
-            <input type="button" name="" value="3">   
-            <p>$</p>
+            <h2>$</h2>
+            <input type="button" name="" value="Cant">    
+            <h2>$</h2>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -57,12 +70,11 @@
         </div>
         <div class="container">
         <article class="card">
+            <h3>Paquete 3</h3>
             <img class="paquete" src="img/surfing_640.jpg" alt="Surf">
-            <p>$</p>
-            <input type="button" name="" value="1">
-            <input type="button" name="" value="2">
-            <input type="button" name="" value="3">   
-            <p>$</p>
+            <h2>$</h2>
+            <input type="button" name="" value="Cant">     
+            <h2>$</h2>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -73,13 +85,42 @@
         <div class="contenedor2">
         <div class="card">
             <h1>TOTAL:</h1>
-            // HACER CALCULO ARITMETICO
             <input type="button" class="button1" value="Seguir comprando">
             <input type="button" class="button" value="Comprar">
         </div>
         </div>
     </div>  
     </section>
+</main>
 </body>
-<footer><h1>FOOTER</h1></footer>
+<footer>
+    <address class="contact">
+        <ul type="none">
+            <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>351 654321</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i><p>ejemplo@ejemplo.com</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i><p></p> Locacion ejemplo</a></li>
+        </ul>
+    </address>
+    <section class="socialNetwork">
+        <ul type="none">
+            <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a> </li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
+        </ul>
+    </section>
+    <section class="userMessages">
+        <form action="/" method="POST">
+            <label for="nombre">Formulario de Contacto</label>
+                <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+            <!-- <label for="email"></label> -->
+                <input class="messages" type="email" name="email" id="email" placeholder="Email">
+            <!-- <label for="message"></label> -->
+                <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
+
+                </textarea>
+        </form>
+    </section>
+</footer>
 </html>
