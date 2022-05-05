@@ -17,8 +17,8 @@
 </head>
 <body>
     <header class="upperBar">
-        <img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo">
-        <p class="loginButton">LOGIN</p>
+        <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
+        <a href="/login"><p class="loginButton">LOGIN</p></a>
     </header>
     <nav class="bottomBar">
         <ul class="navBar">
@@ -80,7 +80,7 @@
     </section>      
     </main>
 
-  <footer>
+    <footer>
         <address class="contact">
             <ul type="none">
                 <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
@@ -97,9 +97,18 @@
                 <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
             </ul>
         </section>
-        <!-- <section class="consultarEsto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi debitis quam laboriosam minus sed velit, perspiciatis officiis iste consequatur quaerat excepturi, reiciendis quas amet. Hic ullam quisquam voluptates atque.
-        </section> -->
+        <section class="userMessages">
+            <form action="/" method="POST">
+                <label for="nombre">Formulario de Contacto</label>
+                    <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+                <!-- <label for="email"></label> -->
+                    <input class="messages" type="email" name="email" id="email" placeholder="Email">
+                <!-- <label for="message"></label> -->
+                    <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
+    
+                    </textarea>
+            </form>
+        </section>
     </footer>
 </body>
 </html>
