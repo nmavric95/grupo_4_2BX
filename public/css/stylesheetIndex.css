@@ -513,7 +513,7 @@ nav li a:hover{
         font-size: 35px;
     }
 
-    .container2{
+    .containerBottom{
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;

@@ -164,6 +164,7 @@ h2{
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9d3be1;
     width: 800px;
+    letter-spacing: 2px;
 }
 .boton{
     display: block;
@@ -174,6 +175,7 @@ h2{
     text-shadow: 2px 2px 2px #9d3be1;
     width: 450px;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 .card {
     display: flex;
@@ -230,6 +232,7 @@ h1{
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9d3be1;
     width: 800px;
+    letter-spacing: 2px;
 }
 
 .button1{

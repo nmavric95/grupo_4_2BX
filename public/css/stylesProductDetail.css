@@ -57,10 +57,12 @@ header{
 }
 
 main{
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     background-color: #ebebeb;
 }
+
+ 
 
     /* DETALLE GENERAL DEL PAQUETE */
     .productDetail{
