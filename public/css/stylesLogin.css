@@ -69,6 +69,7 @@ input[type=email], [type=password]{
     display: inline-block;
     border: 3px solid RGB(157,59,225);
     border-radius: 25px;
+    background-color:rgb(235, 235, 235);
     box-sizing: border-box;
     transition-duration: 0.4s;
     
@@ -80,9 +81,9 @@ input[type=email], [type=password]{
     margin: 8px ;
     display: inline-block;
     border-bottom: 3px solid RGB(121,255,160);
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-top: rgb(235, 235, 235);
+    border-left: rgb(235, 235, 235);
+    border-right: rgb(235, 235, 235);
     border-radius: 0px;
     outline: none;
     box-sizing: border-box;  
@@ -108,6 +109,7 @@ button{
     cursor: pointer;
     border-radius: 15px;
     padding: 0px;
+    margin-bottom: 15px;
     transition-duration: 0.4s;
   }
 
@@ -117,73 +119,66 @@ button:hover{
     color: RGB(121,255,160);
 } 
 
-
-/* media query mobile */
-
-@media (max-width: 600px){
-.image {display: none}    
+.textPW{
+    margin-bottom: 12px;
 }
 
 /* media query tablet */
-@media (max-width: 800px){
-      
+
+@media (min-width: 426px){
+ 
     main{display: flex;}
 
     section.loginForm{
         display: block;
-        width: 35%;
-        float: right;
-        position: relative;
-        border: red 1px solid;
+        width: 50%;
+        float: left;
+        position: relative;        
     }
 
     section.image{
         display: block;
-        width: 65%;
-        float: left;
+        width: 50%;
+        float: right;
         position: relative;
-        height:300px;
+        height:auto;
         text-align: center;
         background-size: cover;
-        background-position: center;
-        border: red 1px solid;
+        background-position: center;       
 
     }
 
     div.image{
         height: 100%;
         position:relative;
-        background:  url("/img/kaitsurf_640.jpg");
+        background:  url("/img/surfing_1280.jpg");
         background-size: cover;
         background-position: center;
     }
-   
+
 }
 
 /* media query desktop */
-
-@media (max-width: 5000px){
+@media (min-width: 769px){
       
     main{display: flex;}
 
     section.loginForm{
         display: block;
-        width: 25%;
-        float: right;
-        position: relative;
-        border: red 1px solid;
+        width: 35%;
+        float: left;
+        position: relative;       
     }
 
     section.image{
         display: block;
-        width: 75%;
-        float: left;
+        width: 65%;
+        float: right;
         position: relative;
         height:auto;
         text-align: center;
         background-size: cover;
-        background-position: center;
-        border: red 1px solid;
+        background-position: center;        
 
     }
 

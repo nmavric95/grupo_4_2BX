@@ -8,15 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesLogin">
+    <link rel="stylesheet" href="/css/stylesheetIndex.css">
+    <link rel="stylesheet" href="/css/stylesProductDetail.css">
     <link rel="stylesheet" href="/css/stylesLogin.css">
     <script src="https://kit.fontawesome.com/a00647b9df.js" crossorigin="anonymous"></script>
 
     <title>2BX / Login</title>
 </head>
 <body>
-    <header>
-
+    <header class="upperBar">
+        <img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo">
+        <p class="loginButton">LOGIN</p>
     </header>
+    <nav class="bottomBar">
+        <ul class="navBar">
+            <li><a href="/productDetail">Paquetes</a></li>
+            <li><a href="/">About Us</a></li>
+            <li></li>
+            <li><a href="/register">Registro</a></li>
+            <li><a href="/productCart">Carrito</a></li>
+        </ul>
+        <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
+    </nav>
     
     <main>
     
@@ -34,13 +47,16 @@
                <input type="password" placeholder="********" name="password" id="password" required> 
    
                
-           </div>          
+           </div>  
+           
+           <label for="checkbox"> <input type="checkbox" id="checkbox" value="accept"> Recordar mi Email</label>
+           <label for="checkbox"> <input type="checkbox" id="checkbox" value="accept"> Recordar mi contraseña </label>
               
            </form>
    
            <a href="/"></a><button type="submit" form="loginForm" value="Submit">Login</button></a>
 
-           <p><a href="/*****"> Olvide mi contraseña.</a></p>
+           <p class="textPW"><a href="/*****"> Olvide mi contraseña.</a></p>
        </section>
    
        <section class="image">
@@ -51,7 +67,27 @@
        </main>
    
        <footer>
-   
-       </footer>
+        <address class="contact">
+            <ul type="none">
+                <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>351 654321</p></a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i><p>ejemplo@ejemplo.com</p></a></li>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i><p></p> Locacion ejemplo</a></li>
+            </ul>
+        </address>
+        <section class="socialNetwork">
+            <ul type="none">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a> </li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
+            </ul>
+        </section>
+        <!-- <section class="consultarEsto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi debitis quam laboriosam minus sed velit, perspiciatis officiis iste consequatur quaerat excepturi, reiciendis quas amet. Hic ullam quisquam voluptates atque.
+        </section> -->
+    </footer>
+
    </body>
+   
    </html>
