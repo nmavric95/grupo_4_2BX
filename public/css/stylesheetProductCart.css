@@ -39,9 +39,18 @@
 
 .logo:hover{
     transition-property: border;
-    transition-duration: 600ms;
-    transition-delay: 1s;
-    border: #79ffa0 2px solid;
+    animation: borderAnimation 600ms ease-in-out 1s;
+}
+
+@keyframes borderAnimation {
+    20% {border-top: #79ffa0 1px solid;}
+    25% {border-top: #79ffa0 2px solid;}
+    45% {border-right: #79ffa0 1px solid;}
+    50% {border-right: #79ffa0 2px solid;}
+    70% {border-bottom: #79ffa0 1px solid;}
+    75% {border-bottom: #79ffa0 2px solid;}
+    95% {border-left: #79ffa0 1px solid;}
+    10% {border-left: #79ffa0 2px solid;}
 }
 
 .loginButton{

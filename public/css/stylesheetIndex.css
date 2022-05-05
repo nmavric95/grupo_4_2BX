@@ -488,6 +488,7 @@ nav li a:hover{
 
     .card{
         border-radius: 0%;
+        padding-top: 10px;
 
     }
 
@@ -567,6 +568,7 @@ nav li a:hover{
 
     .card{
         border-radius: 4%;
+        padding-top: 10px;
 
     }
 
