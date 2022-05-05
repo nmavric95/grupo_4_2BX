@@ -180,7 +180,7 @@ main{
     .productDescription{
         background-color: #ebebeb;
         width: 100%;
-        margin: 1rem;
+        /* margin: 1rem; */
     }
 
     .description{
