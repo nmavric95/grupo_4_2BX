@@ -22,3 +22,23 @@ Do Less: Durante nuestro encuentro para la retrospectiva, llegamos a la conclusi
 
 
 Stop Doing: Decidimos por último, que las reuniones de revisiones finales de las entregas, ya no las haríamos el día anterior a las mismas. Nuestro objetivo es dejar de lado esta práctica, y reemplazarla por una reunión más temprana, obligándonos así a distribuir mejor el trabajo y llegar menos ajustados a los días de entrega.
+
+----------------------------------------------------------------------------------
+
+Retrospectiva
+SPRINT 2
+
+
+-Start Doing: Durante la reunión dedicada a la restrospectiva del sprint 2, llegamos a la conclusión de que podríamos comenzar a hacer revisiones periódicas de las modificaciones de nuestros compañeros. De esta forma, no solo podremos mantenernos más coordinados, sino también aprovechar ideas del trabajo de nuestros compañeros en el propio.
+
+
+-Do more: Creemos que podemos reevisar e inspeccionar más las páginas indicadas como "modelos o referencias" , para tomarlas en comparación de nuestro progreso y comparar nuestras formas de resolución contra las mismas. También traer nuevas referencias, para ayudarnos a incorporar nuevas ideas y avanzar en el desarrollo de nuestro sitio.
+
+
+-Keep Doing: Creemos que nuestra división de tareas fue sumamente eficiente y productiva,  por lo que decidimos continuar con un modelo de distribución similar. Por otro lado, creemos que la duración de nuestras reuniones es suficiente y ha mejorado con los cambios incorporados desde la retrospectiva del sprint anterior; por lo que nos mantendremos en el mismo curso.
+
+
+-Do Less: En retrospectiva, creemos que podemos seguir menos al pie de la letra las consignas del sprint y trabajar cumpliendo los requisitos, pero con mayor flexibilidad respecto del orden de las mismas.
+
+
+-Stop Doing: Pensamos en que debemos reforzar nuestro compromiso con la propuesta de la retrospectiva anterior de dejar de hacer una reunión de revisión, el día anterior a la entrega del sprint. Creemos que es muy importante para nuestra organización, definir una fecha previa, para poder manejarnos mejor ante imprevistos.
