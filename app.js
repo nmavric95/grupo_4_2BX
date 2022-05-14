@@ -10,6 +10,11 @@ const productCart = path.resolve(__dirname, "./views/productCart.html")
 const loginPath = path.resolve(__dirname, "./views/login.html")
 const port = 3030
 
+//VIEW ENGINE SETUP
+app.set("view engine", "ejs");
+app.set("views", path.resolve("/views"));
+
+//RECURSOS PUBLIC
 app.use(express.static(publicPath))
 
 app.get("/", (req, res) => {
