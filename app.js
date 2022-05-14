@@ -10,7 +10,7 @@ const productCart = path.resolve(__dirname, "./views/productCart.html")
 const loginPath = path.resolve(__dirname, "./views/login.html")
 const port = 3030
 //VARIABLES DE ROUTES
-const indexRouter = require("./routes/mainRoutes");
+const mainRouter = require("./routes/mainRoutes");
 
 
 
@@ -22,7 +22,9 @@ app.set("view engine", "ejs");
 app.use(express.static(publicPath))
 
 //ROUTES
-app.use("/", indexRouter);
+app.use("/", mainRouter);
+app.use("/login", mainRouter);
+
 
 
 //RUTAS EN APP PARA REMOVER 
@@ -42,9 +44,9 @@ app.get("/register", (req, res) => {
     res.sendFile(path.resolve(registerPath))
 })
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.resolve(loginPath))
-})
+// app.get("/login", (req, res) => {
+//     res.sendFile(path.resolve(loginPath))
+// })
 
 
 app.listen(port, () => console.log("Listening on port ", port))
