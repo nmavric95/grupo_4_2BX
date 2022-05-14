@@ -57,14 +57,12 @@ header{
 }
 
 main{
-    /* display: flex;
-    flex-wrap: wrap; */
     background-color: #ebebeb;
 }
 
  
 
-    /* DETALLE GENERAL DEL PAQUETE */
+/* DETALLE GENERAL DEL PAQUETE */
     .productDetail{
         display: flex;
         flex-wrap: wrap;
@@ -73,8 +71,7 @@ main{
         width: 100%;
         align-items: center;
         justify-self: center;
-        padding-bottom: 2rem;
-        /* position: relative; */
+        padding-bottom: 4rem;
     }
 
     .productDetailImage{
@@ -118,7 +115,6 @@ main{
     }
 
     .textContainer h4{
-        /* font-weight: normal; */
         font-family: BPImperial light;
         font-size: 25px;
         color: #79ffa0;
@@ -180,7 +176,7 @@ main{
     .productDescription{
         background-color: #ebebeb;
         width: 100%;
-        /* margin: 1rem; */
+        padding-bottom: 4rem;
     }
 
     .description{
@@ -192,19 +188,13 @@ main{
         margin: auto;
         background-color: rgba(0, 0, 0, 0.7);
         width: 80%;
-        /* padding: 0 1rem 1rem 1rem; */
         color:#79ffa0;
         border-radius: 15px;
-        /* padding: 1rem 0 1rem 0; */
     }
 
     .description li::marker{
         color:#9D3BE1
     }
-
-    /* .description ul li p{
-        padding: 3rem;
-    } */
 
     .titleContainer{
         width: 100%;
@@ -232,7 +222,7 @@ main{
         margin: 0.2rem;
     }
 
-    /* SECCION PACKAGES */
+/* SECCION PACKAGES */
 
     .packagesProductDetail{
         width: 100vw;
@@ -246,7 +236,7 @@ main{
         text-align: center;
     }
 
-    /* FOOTER */
+/* FOOTER */
     footer{
         background-color: black;
         display: flex;
@@ -308,7 +298,7 @@ main{
     }
 
     .userMessages{
-        width: 20rem;
+        width: 16rem;
         height: 18rem;
         display: flex;
         flex-wrap: nowrap;
@@ -324,28 +314,25 @@ main{
         height: 100%;
     }
 
-    .userMessages form label{
+    .userMessages form label h3{
         color: #9D3BE1;
         padding: 0.3rem;
         transition: all 600ms;
         text-align: center;
+        font-size: 24px;
+
     }
 
-    .userMessages form label:hover{
+    .userMessages form label h3:hover{
         color: #79ffa0;
         text-shadow: 1px 1px 1px #9D3BE1;
     }
 
     /* ESTILOS DEL FORMULARIO DE CONTACTO */
-    input[type=text], [type=password], [type=email], [type = date], textarea{
+    input.messages, textarea.messages{
         width: 100%;
         padding: 12px 20px;
         margin: 8px ;
-        /* display: inline-block; */
-        /* display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-evenly; */
         border: 3px solid rgb(157,59,225);
         border-radius: 25px;
         background-color:rgb(235, 235, 235);
@@ -355,15 +342,10 @@ main{
     }
 
     
-    input:hover, input:focus, textarea:hover, textarea:focus{
+    input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.messages:focus{
         width: 100%;
         padding: 12px 20px;
         margin: 8px ;
-        /* display: inline-block; */
-        /* display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-evenly; */
         border-bottom: 3px solid rgb(121,255,160);
         border-top: 3px rgb(235, 235, 235);
         border-left: 3px rgb(235, 235, 235);
@@ -380,8 +362,6 @@ main{
 
         footer{
             flex-direction: row;
-            /* justify-content: center;
-            align-items: center; */
         }
         
     }
