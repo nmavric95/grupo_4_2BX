@@ -246,7 +246,7 @@ main{
         text-align: center;
     }
 
-    /* footer */
+    /* FOOTER */
     footer{
         background-color: black;
         display: flex;
@@ -267,7 +267,6 @@ main{
     footer ul li a{
         text-decoration: none;
         font-style: normal;
-        /* color: white; */
         color: #9D3BE1;
         padding-left: 5px;
         display: flex;
@@ -289,27 +288,47 @@ main{
 
     .contact{
         padding: 1rem;
-        width: 240px
+        width: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
     }
 
     .socialNetwork{
         padding: 1rem;
-        width: 240px
+        width: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userMessages{
+        width: 20rem;
+        height: 18rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .userMessages form{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
     }
 
     .userMessages form label{
         color: #9D3BE1;
         padding: 0.3rem;
         transition: all 600ms;
+        text-align: center;
     }
 
     .userMessages form label:hover{
@@ -317,10 +336,43 @@ main{
         text-shadow: 1px 1px 1px #9D3BE1;
     }
 
-    input[type=text], [type=email], textarea {
-        background-color: #ebebeb;
-        outline: none;
+    /* ESTILOS DEL FORMULARIO DE CONTACTO */
+    input[type=text], [type=password], [type=email], [type = date], textarea{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px ;
+        /* display: inline-block; */
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly; */
+        border: 3px solid rgb(157,59,225);
+        border-radius: 25px;
+        background-color:rgb(235, 235, 235);
+        box-sizing: border-box;
+        transition-duration: 0.4s;
+        
     }
+
+    
+    input:hover, input:focus, textarea:hover, textarea:focus{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px ;
+        /* display: inline-block; */
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly; */
+        border-bottom: 3px solid rgb(121,255,160);
+        border-top: 3px rgb(235, 235, 235);
+        border-left: 3px rgb(235, 235, 235);
+        border-right: 3px rgb(235, 235, 235);
+        border-radius: 0px;
+        outline: none;
+        box-sizing: border-box;  
+    }
+
 
     /* MEDIA QUERY */
 
