@@ -9,17 +9,26 @@ const registerPath = path.resolve(__dirname, "./views/register.html")
 const productCart = path.resolve(__dirname, "./views/productCart.html")
 const loginPath = path.resolve(__dirname, "./views/login.html")
 const port = 3030
+//VARIABLES DE ROUTES
+const indexRouter = require("./routes/mainRoutes");
+
+
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
-app.set("views", path.resolve("/views"));
+// app.set("views", path.resolve("/views"));
 
 //RECURSOS PUBLIC
 app.use(express.static(publicPath))
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(indexPath))
-})
+//ROUTES
+app.use("/", indexRouter);
+
+
+//RUTAS EN APP PARA REMOVER 
+// app.get("/", (req, res) => {
+//     res.sendFile(path.resolve(indexPath))
+// })
 
 app.get("/productDetail", (req, res) => {
     res.sendFile(path.resolve(productDetailPath))
