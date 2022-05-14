@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+<%- include("./partials/head")  %> 
+
 <body>
-    <h1>About Us</h1>
+    <!-- HEADER -->
+    <!-- MAIN -->
+    <main>
+        <section class="aboutUsTitulo">
+            <h1>About Us</h1>
+        </section>
+        <section class="aboutUsPrincipal">
+            <article class="aboutUsEach">
+                <img src="" alt="introductionImage">
+                <p class="name">Tarjeta para la descripcion personal</p>
+                <p class="personalDescription"></p>
+                <address class="personalContact">
+                    <ul>
+                        <li><a href="">Mail</a></li>
+                        <li><a href="">Linkedin</a></li>
+                        <li><a href="">Otra cosa</a></li>
+                    </ul>
+                </address>
+            </article>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <%- include("./partials/footer") %> 
 </body>
 </html>

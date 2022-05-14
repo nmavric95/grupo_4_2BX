@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylesProductDetail.css">
-    <link rel="stylesheet" href="/css/stylesheetIndex.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/stylesheetIndex.css">
-    <script src="https://kit.fontawesome.com/82173492bf.js" crossorigin="anonymous"></script>
-    <title>Detalle de Paquetes</title>
-</head>
+<!-- HEAD -->
+<%- include("./partials/head") %>
 
 <body>
+    <!-- HEADER Y NAVBAR -->
     <header class="upperBar">
         <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
         <a href="/login"><p class="loginButton">LOGIN</p></a>
@@ -115,64 +104,13 @@
                 </ul>
             </article>
         </section>
-
+        <!-- CARROUSEL PACKAGES -->
         <%- include("./partials/packagesProductDetail") %> 
-        <!-- <section class="packagesProductDetail">
-            <label for="*" class="control"><</label>
-            <article class="product p1">
-                <img class="picturePackage" src="img/paquete.png" alt="paquete">
-                <p>PAQUETE 1</p>
-            </article>
-            <article class="product p2">
-                <img class="picturePackage" src="img/paquete.png" alt="paquete">
-                <p>PAQUETE 2</p>
-            </article>
-            <article class="product p3">
-                <img class="picturePackage" src="img/paquete.png" alt="paquete">
-                <p>PAQUETE 3</p>
-            </article>
-            <article class="product p4">
-                <img class="picturePackage" src="img/paquete.png" alt="paquete">
-                <p>PAQUETE 4</p>
-            </article>
-            <label for="*" class="control">></label>
-        </section> -->
-
+        
 
     </main>
-
+    <!-- FOOTER -->
     <%- include("./partials/footer") %> 
-
-    <!-- <footer>
-        <address class="contact">
-            <ul type="none">
-                <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>351 654321</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i><p>ejemplo@ejemplo.com</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-location-dot"></i><p></p> Locacion ejemplo</a></li>
-            </ul>
-        </address>
-        <section class="socialNetwork">
-            <ul type="none">
-                <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a> </li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
-            </ul>
-        </section>
-
-        <section class="userMessages">
-            <form action="/" method="POST">
-                <label for="nombre">Formulario de Contacto</label>
-                    <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                    <input class="messages" type="email" name="email" id="email" placeholder="Email">
-                    <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
-
-                    </textarea>
-            </form>
-        </section>
-        
-    </footer> -->
 
 </body>
 
