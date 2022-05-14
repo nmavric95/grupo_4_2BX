@@ -116,12 +116,8 @@
             </article>
         </section>
 
-        <!-- <section class="carrousel">
-            <div class="carrouselImageContainer">
-                <img src="" alt="Aca va un carrousel">
-            </div>
-        </section>     -->
-        <section class="packagesProductDetail">
+        <%- include("./partials/packagesProductDetail") %> 
+        <!-- <section class="packagesProductDetail">
             <label for="*" class="control"><</label>
             <article class="product p1">
                 <img class="picturePackage" src="img/paquete.png" alt="paquete">
@@ -140,12 +136,14 @@
                 <p>PAQUETE 4</p>
             </article>
             <label for="*" class="control">></label>
-        </section>
+        </section> -->
 
 
     </main>
 
-    <footer>
+    <%- include("./partials/footer") %> 
+
+    <!-- <footer>
         <address class="contact">
             <ul type="none">
                 <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
@@ -167,16 +165,14 @@
             <form action="/" method="POST">
                 <label for="nombre">Formulario de Contacto</label>
                     <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                <!-- <label for="email"></label> -->
                     <input class="messages" type="email" name="email" id="email" placeholder="Email">
-                <!-- <label for="message"></label> -->
                     <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
 
                     </textarea>
             </form>
         </section>
         
-    </footer>
+    </footer> -->
 
 </body>
 
