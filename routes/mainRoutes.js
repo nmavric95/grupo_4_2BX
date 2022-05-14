@@ -13,6 +13,9 @@ router.get("/login", mainRoutesControllers.login);
 //REGISTER
 router.get("/register", mainRoutesControllers.register);
 
+//ABOUTUS
+router.get("/aboutUs", mainRoutesControllers.aboutUs);
+
 
 module.exports = router;
 

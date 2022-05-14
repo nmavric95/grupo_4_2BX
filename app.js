@@ -30,6 +30,7 @@ app.use(express.static(publicPath))
 app.use("/", mainRouter);
 app.use("/login", mainRouter);
 app.use("/register", mainRouter);
+app.use("/aboutUs", mainRouter);
 app.use("/productDetail", productDetailRouter);
 app.use("/productCart", productCartRouter);
 

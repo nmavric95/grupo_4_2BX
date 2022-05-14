@@ -10,7 +10,11 @@ const mainRoutesControllers = {
 
     register : (req, res) => {
         res.render("register")
-    }
+    },
+
+    aboutUs : (req, res) => {
+        res.render("aboutUs")
+    },
 
 };
 
