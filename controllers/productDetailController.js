@@ -1,7 +1,7 @@
 //CONTROLLER PARA PRODUCT DETAIL
 const productDetailController = {
     productDetail : (req, res) => {
-        res.render("productDetail");
+        res.render("./productDetail/productDetail");
     },
 };
 
