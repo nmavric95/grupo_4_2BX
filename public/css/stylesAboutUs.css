@@ -65,13 +65,19 @@ section .aboutUsPrincipal{
     width: 60%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.75);
 }
 
 .memberImage{
     width: 30%;
     height: 90%;
-    margin: 5px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.containerAbout{
+    margin: 10px;
+
 }
 
 .name{
