@@ -163,6 +163,8 @@ main{
         transition-duration: 0.4s;
         align-self: center;
         justify-self: center;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .buyButton button:hover{
