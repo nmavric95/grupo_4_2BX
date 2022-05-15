@@ -21,7 +21,7 @@ const productCartRouter = require("./routes/productCartRoutes");
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
-// app.set("views", path.resolve("/views"));
+app.set("views", path.resolve("views"));
 
 //RECURSOS PUBLIC
 app.use(express.static(publicPath))
