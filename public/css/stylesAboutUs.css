@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Italic"), url("/fonts/BPimperialItalic.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Light"), url("/fonts/BPimperialLight.woff") format("woff");
+    }
+    
+
+    @font-face {
+    font-family: "BPimperial Light Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Light Italic"), url("fonts/BPimperialLightItalic.woff") format("woff");
+    }
+  
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body{
+    font-family: "Lato", sans-serif;
+}
+
+/* MAIN */
+
+main .mainAbout{
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+section .aboutUsPrincipal{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    text-align: center;
+}
+
+.aboutUsEach{
+    margin: 10px;
+    padding: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.memberImage{
+    width: 30%;
+    height: 90%;
+    margin: 5px;
+}
+
+.name{
+    font-weight: bold;
+    color: #9d3be1;
+
+}
+
+.personalDescription{
+    color: #9d3be1;
+}
+
+.personalContact li{
+    list-style: none;
+    text-decoration: none;
+    color: #9d3be1;
+}
+
+
