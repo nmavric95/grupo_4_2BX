@@ -2,7 +2,6 @@
 <html lang="en">
 
 <%- include("./partials/head")  %> 
-
 <body>
     <!-- HEADER -->
     <%- include("../partialsGeneral/header") %> 
@@ -15,7 +14,7 @@
            <% crew.forEach(member => { %>
             
             <article class="aboutUsEach">
-                <img src="<%= member.image %>" class="memberImage" alt="memberImage">
+                <img src="<%= member.image %>" class="memberImage animated infinite pulse" alt="memberImage">
                 <div class="containerAbout">
                 <p class="name"><%= member.name %> </p>
                 <p class="personalDescription"><%= member.description %></p>
