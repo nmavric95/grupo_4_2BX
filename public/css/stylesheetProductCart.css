@@ -160,6 +160,7 @@ body{
     background-color: #79ffa0;
     color: RGB(157,59,225);
     font-weight: bold;
+    border: none;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 }
@@ -173,12 +174,6 @@ h2{
     width: 50px;
     letter-spacing: 2px;
 
-}
-
-.contenedor2.card h2:hover{
-    background-color: goldenrod;
-    transition-property: background-color, color;
-    transition-duration: 0.5ms;
 }
 
 .boton1{
@@ -215,7 +210,7 @@ h3{
     display: flex;
     font-family: "Lato";
     display: block;
-    color: white;
+    color: #9d3be1;
     font-weight: bold;
     font-size: 20px;
 
@@ -238,7 +233,8 @@ h3{
 }
 
 .contenedor2 {
-    height: 100px;
+    display: flex;
+    justify-content: space-around;
     background-color: gray;
     padding: 5px;
     
@@ -295,34 +291,29 @@ h1{
    
 }
 
-.button{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
+
+button{
+
     color: #79ffa0;
     background-color: #9d3be1;
-    width: 20%;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;}
+    width: 150px;
+    height: 100px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;    
+}
 
-.button:hover{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
+button:hover{
     color:  #9d3be1;
     background-color: #79ffa0;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 
 }
-
 
 
 
@@ -460,7 +451,7 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
 
 @media (min-width: 490px){
 
-    
+
 }
 
 @media (min-width: 769px){
