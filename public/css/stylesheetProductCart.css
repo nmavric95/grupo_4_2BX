@@ -146,12 +146,20 @@ body{
 .si{
     width: 50px;
     cursor: pointer;
+    border-radius: 40px;
+    border: none;
+    color: #79ffa0;
+    background-color: #9d3be1;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
     
 }
 .si:hover{
-    width: 60px;
     background-color: #79ffa0;
-    color: black;
+    color: RGB(157,59,225);
+    font-weight: bold;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 }
@@ -163,8 +171,16 @@ h2{
     color: #79ffa0;
     text-shadow: 8px 8px 8px black;
     width: 50px;
+    letter-spacing: 2px;
 
 }
+
+.contenedor2.card h2:hover{
+    background-color: goldenrod;
+    transition-property: background-color, color;
+    transition-duration: 0.5ms;
+}
+
 .boton1{
     display: block;
     font-family: "BPimperial Regular";
@@ -199,7 +215,9 @@ h3{
     display: flex;
     font-family: "Lato";
     display: block;
-    color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 
 }
 .paquete {
@@ -282,27 +300,24 @@ h1{
     align-self: flex-end;
     font-style: normal;
     text-align: center;
-    text-shadow: 20px black;
-    width: 15%;
-    padding: 3px;
-    margin: 2px;
+    color: #79ffa0;
+    background-color: #9d3be1;
+    width: 20%;
     cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;}
+    font-size: 30px;
+    font-weight: bold;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;}
 
 .button:hover{
     justify-content: end;
     align-self: flex-end;
     font-style: normal;
     text-align: center;
-    text-shadow: 20px black;
-    width: 20%;
-    padding: 3px;
-    margin: 2px;
+    color:  #9d3be1;
     background-color: #79ffa0;
-    color: black;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 
@@ -355,13 +370,32 @@ footer ul li a:hover{
 
 .contact{
     padding: 1rem;
-    width: 240px
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .socialNetwork{
     padding: 1rem;
-    width: 240px
+    width: 240px;
+    display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.userMessages{
+    width: 16rem;
+    height: 18rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .userMessages form{
@@ -372,37 +406,64 @@ footer ul li a:hover{
     height: 90%;
 }
 
-.userMessages form label{
+.userMessages form label h3{
     color: #9D3BE1;
     padding: 0.3rem;
     transition: all 600ms;
+    text-align: center;
+    font-size: 24px;
+
 }
 
-.userMessages form label:hover{
+.userMessages form label h3:hover{
     color: #79ffa0;
     text-shadow: 1px 1px 1px #9D3BE1;
 }
 
-input[type=text], [type=email], textarea {
-    background-color: #ebebeb;
-    outline: none;
+  /* ESTILOS DEL FORMULARIO DE CONTACTO */
+  input.messages, textarea.messages{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px ;
+    border: 3px solid rgb(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    
 }
 
 
-@media (min-width: 462px){
+input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.messages:focus{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px ;
+    border-bottom: 3px solid rgb(121,255,160);
+    border-top: 3px rgb(235, 235, 235);
+    border-left: 3px rgb(235, 235, 235);
+    border-right: 3px rgb(235, 235, 235);
+    border-radius: 0px;
+    outline: none;
+    box-sizing: border-box;  
+}
+
+@media (min-width: 426px){
 
     .logo{width: 15vw;
     left: 42%;}
 
     footer{
         flex-direction: row;
-        /* justify-content: center;
-        align-items: center; */
     }
-
+    
 }
 
-@media (min-width: 770px){
+@media (min-width: 490px){
+
+    
+}
+
+@media (min-width: 769px){
 
     .logo{
         width: 8vw;
@@ -421,5 +482,6 @@ input[type=text], [type=email], textarea {
     footer{
         flex-direction: row;
     }
+
 
 }
