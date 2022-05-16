@@ -136,6 +136,7 @@ nav li a:hover{
 
 
 
+
 /*MAIN BODY*/
 
 body{
@@ -258,49 +259,18 @@ h1{
     letter-spacing: 2px;
 }
 
-.button1{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px gray;
-    width: 15%;
-    padding: 3px;
-    margin: 2px;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-   
-}
-
-.button1:hover{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px gray;
-    width: 20%;
-    padding: 3px;
-    margin: 2px;
-    background-color: #9d3be1;
-    color: black;
-    transition-property: background-color, color;
-    transition-duration: 0.5ms;
-   
-}
 
 
 button{
-
+    font-family: "Lato", sans-serif;
     color: #79ffa0;
     background-color: #9d3be1;
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
+    border: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -314,6 +284,8 @@ button:hover{
     transition-duration: 0.5ms;
 
 }
+
+
 
 
 
@@ -438,6 +410,13 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
     box-sizing: border-box;  
 }
 
+
+
+
+
+
+/** MQ **/
+
 @media (min-width: 426px){
 
     .logo{width: 15vw;
@@ -447,9 +426,51 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
         flex-direction: row;
     }
     
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;}
+
 }
 
 @media (min-width: 490px){
+
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;;
+        padding-right: 120px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        padding: 5px;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;}
 
 
 }
@@ -468,6 +489,31 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
     }
     .burgerMenu{
         display: none;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;;
+        padding-right: 120px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        padding: 5px;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;
+    
     }
 
     footer{
