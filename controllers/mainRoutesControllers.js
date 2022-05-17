@@ -1,7 +1,5 @@
 //CONTROLLERS PARA LAS MAIN ROUTES
 
-const { urlencoded } = require("express");
-
 const crew = [
     {
         name:"Ana Cerruti",
