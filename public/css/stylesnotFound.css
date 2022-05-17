@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+    }
+
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body{
+    font-family: "Lato", sans-serif;
+    background-color: black;
+    text-align: center;
+    color: #79ffa0;
+    margin: 10px;
+}
+
+h2{
+    font-family: "BPimperial Regular";
+    color: #79ffa0;
+    text-shadow: 2px 2px 2px #9d3be1;
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+p{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}

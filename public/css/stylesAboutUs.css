@@ -47,9 +47,9 @@ h1{
     margin-top: 0px;
     font-family: "BPimperial Regular";
     letter-spacing: 2px;
-    color: #79ffa0;
-    text-shadow: 2px 2px 2px #9d3be1;
-    font-size: 110%;
+    color: #9d3be1;
+    text-shadow: 2px 2px 2px #79ffa0;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -75,10 +75,9 @@ text-align: center;
     margin: 10px;
     padding: 10px;
     width: 80%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
     background-color: rgba(0,0,0,0.75);
 }
 
@@ -97,11 +96,13 @@ text-align: center;
 .name{
     font-weight: bold;
     color: #9d3be1;
+    margin-bottom: 5px;
 
 }
 
 .personalDescription{
     color: #9d3be1;
+    margin-bottom: 5px;
 }
 
 .personalContact li{
@@ -112,3 +113,11 @@ text-align: center;
 
 
 
+@media (min-width: 769px){
+    .aboutUsEach{
+        width: 42%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
