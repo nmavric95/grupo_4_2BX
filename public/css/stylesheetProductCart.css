@@ -213,7 +213,7 @@ h3{
     display: block;
     color: #9d3be1;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 .paquete {
@@ -236,8 +236,9 @@ h3{
 .contenedor2 {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: gray;
-    padding: 5px;
+    padding-bottom: 10px;
     
 }
 
@@ -268,8 +269,8 @@ button{
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    width: 250px;
-    height: 80px;
+    width: 200px;
+    height: 40px;
     border: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
