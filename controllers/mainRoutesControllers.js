@@ -10,9 +10,9 @@ const crew = [
     },
     {
         name:"Iván Lucas Achino",
-        description: "Soy de la provincia de Córdoba y vivo en Cba Capital, tengo 31 años. Actualmente me desempeño como mecánico de automóviles y soy técnico en Fotografía, actividad que llevo adelante tanto laboralmente como por hobby. Disfruto mucho de las actividades al aire libre y de la practica de deportes tales como escalada deportiva, trekking, ciclismo y buceo. Tambien me considero aficionado a la computación, ahora mismo me encuentro incursionando en el mundo de la programación.",
-        image: "", 
-        instagram: "",
+        description: "Soy de la provincia de Córdoba y vivo en Cba Capital, tengo 31 años. Disfruto mucho de las actividades al aire libre y de la practica de deportes tales como escalada deportiva, trekking, ciclismo y buceo. Tambien me considero aficionado a la computación, ahora mismo me encuentro incursionando en el mundo de la programación.",
+        image: "/img/fotoIvan.jpg", 
+        instagram: "https://www.instagram.com/fotografia.ivanaichino/",
         linkedin: "",
     },
     {
