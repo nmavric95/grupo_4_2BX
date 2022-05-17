@@ -61,6 +61,7 @@ p{
 
 a:link{
     color:RGB(203,108,230);
+    text-shadow: 2px 2px 2px RGB(157,59,225);
     cursor: pointer;
     text-decoration: none;
     transition-duration: 0.2s;
@@ -69,6 +70,7 @@ a:link{
 a:hover {
     font-weight: bold;
     color: RGBA(157,59,225,0.5);
+    text-shadow: 2px 2px 2px RGB(121,255,160)
 
   }
 

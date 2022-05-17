@@ -1,38 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesRegister">
-    <link rel="stylesheet" href="/css/stylesheetIndex.css">
-    <link rel="stylesheet" href="/css/stylesProductDetail.css">
-    <link rel="stylesheet" href="/css/stylesRegister.css">
-    <script src="https://kit.fontawesome.com/a00647b9df.js" crossorigin="anonymous"></script>
+<!-- HEAD -->
+<%- include("./partials/headRegister") %>
 
-    <title>2BX / Registro</title>
-</head>
 <body>
-    <header class="upperBar">
-        <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
-        <a href="/login"><p class="loginButton">LOGIN</p></a>
-    </header>
-    <nav class="bottomBar">
-        <ul class="navBar">
-            <li><a href="/productDetail">Paquetes</a></li>
-            <li><a href="/">About Us</a></li>
-            <li></li>
-            <li><a href="/register">Registro</a></li>
-            <li><a href="/productCart">Carrito</a></li>
-        </ul>
-        <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
-    </nav>
+    <!-- HEADER Y NAVBAR -->
+    <%- include("../partialsGeneral/header")  %>
     
-    <main>
-    
+<main>    
      <section class="registerForm">
         <h2>Registro / <a href="/login"> Login </a></h2>
         
@@ -81,34 +56,8 @@
     </main>
 
     <footer>
-        <address class="contact">
-            <ul type="none">
-                <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>351 654321</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i><p>ejemplo@ejemplo.com</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-location-dot"></i><p></p> Locacion ejemplo</a></li>
-            </ul>
-        </address>
-        <section class="socialNetwork">
-            <ul type="none">
-                <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a> </li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
-            </ul>
-        </section>
-        <section class="userMessages">
-            <form action="/" method="POST">
-                <label for="nombre">Formulario de Contacto</label>
-                    <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                <!-- <label for="email"></label> -->
-                    <input class="messages" type="email" name="email" id="email" placeholder="Email">
-                <!-- <label for="message"></label> -->
-                    <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
-    
-                    </textarea>
-            </form>
-        </section>
-    </footer>
+       <!-- FOOTER -->
+    <%- include("../partialsGeneral/footer")  %>
+
 </body>
 </html>
