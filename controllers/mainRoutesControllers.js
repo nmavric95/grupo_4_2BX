@@ -27,7 +27,7 @@ const crew = [
     {
         name:"Rodrigo Aller",
         description: "Actualmente vivo en CABA, tengo 32 años y trabajo en finanzas hace 7 años. En mi tiempo libre me gusta correr y estar al aire libre.",
-        image: "", 
+        image: "/img/fotoRodri.PNG", 
         instagram: "",
         linkedin: "",
     },
