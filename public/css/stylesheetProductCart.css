@@ -136,6 +136,7 @@ nav li a:hover{
 
 
 
+
 /*MAIN BODY*/
 
 body{
@@ -146,12 +147,21 @@ body{
 .si{
     width: 50px;
     cursor: pointer;
+    border-radius: 40px;
+    border: none;
+    color: #79ffa0;
+    background-color: #9d3be1;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
     
 }
 .si:hover{
-    width: 60px;
     background-color: #79ffa0;
-    color: black;
+    color: RGB(157,59,225);
+    font-weight: bold;
+    border: none;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 }
@@ -163,8 +173,10 @@ h2{
     color: #79ffa0;
     text-shadow: 8px 8px 8px black;
     width: 50px;
+    letter-spacing: 2px;
 
 }
+
 .boton1{
     display: block;
     font-family: "BPimperial Regular";
@@ -199,7 +211,9 @@ h3{
     display: flex;
     font-family: "Lato";
     display: block;
-    color: black;
+    color: #9d3be1;
+    font-weight: bold;
+    font-size: 25px;
 
 }
 .paquete {
@@ -220,9 +234,11 @@ h3{
 }
 
 .contenedor2 {
-    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: gray;
-    padding: 5px;
+    padding-bottom: 10px;
     
 }
 
@@ -244,69 +260,32 @@ h1{
     letter-spacing: 2px;
 }
 
-.button1{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px gray;
-    width: 15%;
-    padding: 3px;
-    margin: 2px;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-   
-}
 
-.button1:hover{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px gray;
-    width: 20%;
-    padding: 3px;
-    margin: 2px;
+
+button{
+    font-family: "Lato", sans-serif;
+    color: #79ffa0;
     background-color: #9d3be1;
-    color: black;
-    transition-property: background-color, color;
-    transition-duration: 0.5ms;
-   
-}
-
-.button{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px black;
-    width: 15%;
-    padding: 3px;
-    margin: 2px;
     cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;}
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;    
+}
 
-.button:hover{
-    justify-content: end;
-    align-self: flex-end;
-    font-style: normal;
-    text-align: center;
-    text-shadow: 20px black;
-    width: 20%;
-    padding: 3px;
-    margin: 2px;
+button:hover{
+    color:  #9d3be1;
     background-color: #79ffa0;
-    color: black;
     transition-property: background-color, color;
     transition-duration: 0.5ms;
 
 }
+
 
 
 
@@ -355,13 +334,32 @@ footer ul li a:hover{
 
 .contact{
     padding: 1rem;
-    width: 240px
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .socialNetwork{
     padding: 1rem;
-    width: 240px
+    width: 240px;
+    display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.userMessages{
+    width: 16rem;
+    height: 18rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .userMessages form{
@@ -372,37 +370,113 @@ footer ul li a:hover{
     height: 90%;
 }
 
-.userMessages form label{
+.userMessages form label h3{
     color: #9D3BE1;
     padding: 0.3rem;
     transition: all 600ms;
+    text-align: center;
+    font-size: 24px;
+
 }
 
-.userMessages form label:hover{
+.userMessages form label h3:hover{
     color: #79ffa0;
     text-shadow: 1px 1px 1px #9D3BE1;
 }
 
-input[type=text], [type=email], textarea {
-    background-color: #ebebeb;
-    outline: none;
+  /* ESTILOS DEL FORMULARIO DE CONTACTO */
+  input.messages, textarea.messages{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px ;
+    border: 3px solid rgb(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    
 }
 
 
-@media (min-width: 462px){
+input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.messages:focus{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px ;
+    border-bottom: 3px solid rgb(121,255,160);
+    border-top: 3px rgb(235, 235, 235);
+    border-left: 3px rgb(235, 235, 235);
+    border-right: 3px rgb(235, 235, 235);
+    border-radius: 0px;
+    outline: none;
+    box-sizing: border-box;  
+}
+
+
+
+
+
+
+/** MQ **/
+
+@media (min-width: 426px){
 
     .logo{width: 15vw;
     left: 42%;}
 
     footer{
         flex-direction: row;
-        /* justify-content: center;
-        align-items: center; */
     }
+    
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;}
 
 }
 
-@media (min-width: 770px){
+@media (min-width: 490px){
+
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;;
+        padding-right: 120px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        padding: 5px;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;}
+
+
+}
+
+@media (min-width: 769px){
 
     .logo{
         width: 8vw;
@@ -418,8 +492,34 @@ input[type=text], [type=email], textarea {
         display: none;
     }
 
+    .contenedor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;;
+        padding-right: 120px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+        padding: 5px;
+        
+    }
+    
+    .container {
+        background-color: gainsboro;
+        border: solid 10px black;
+        border-color: #79ffa0;
+    
+    }
+
     footer{
         flex-direction: row;
     }
+
 
 }

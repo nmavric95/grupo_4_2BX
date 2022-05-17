@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/82173492bf.js" crossorigin="anonymous"></script>
+
     <title>2BX - Carro de Compras</title>
 </head>
 
@@ -33,7 +36,7 @@
 <section>
     <div>
         <div class="contenedor">
-            <h1 class="boton1">Carro de Compras</h1>
+            <h1 class="boton1 animated infinite bounce">Carro de Compras</h1>
             <p></p>
             <p></p>
             <h2 class="boton">Precio</h2>
@@ -44,11 +47,11 @@
 
         <div class="container">
         <article class="card">
-            <h3>Paquete 1</h3>
+            <h3 class="animated infinite flash">Wild KAITSURF</h3>
             <img class="paquete" src="img/kaitsurf_640.jpg" alt="Kaitsurf">
-            <h2>$</h2>
+            <h3>$</h3>
             <input type="button" name="" value="Cant">  
-            <h2>$</h2>
+            <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -57,11 +60,11 @@
         </div>
         <div class="container">
         <article class="card">
-            <h3>Paquete 2</h3>
+            <h3 class="animated infinite flash">Power RAFTING</h3>
             <img class="paquete" src="img/rafting_640.jpg" alt="Rafting">
-            <h2>$</h2>
+            <h3>$</h3>
             <input type="button" name="" value="Cant">    
-            <h2>$</h2>
+            <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -70,11 +73,11 @@
         </div>
         <div class="container">
         <article class="card">
-            <h3>Paquete 3</h3>
+            <h3 class="animated infinite flash">SURF Adrenalin</h3>
             <img class="paquete" src="img/surfing_640.jpg" alt="Surf">
-            <h2>$</h2>
+            <h3>$</h3>
             <input type="button" name="" value="Cant">     
-            <h2>$</h2>
+            <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
@@ -83,16 +86,14 @@
         </div>
     </div>
         <div class="contenedor2">
-        <div class="card">
             <h1>TOTAL:</h1>
-            <input type="button" class="button1" value="Seguir comprando">
-            <input type="button" class="button" value="Comprar">
-        </div>
+            <a href="/productDetail"><button type="submit" class="animated infinite pulse">Seguir comprando</button></a>
+            <button type="submit" class="animated infinite pulse">Comprar</button>
         </div>
     </div>  
     </section>
 </main>
-</body>
+
 <footer>
     <address class="contact">
         <ul type="none">
@@ -112,7 +113,7 @@
     </section>
     <section class="userMessages">
         <form action="/" method="POST">
-            <label for="nombre">Formulario de Contacto</label>
+            <h3>Formulario de Contacto</h3>
                 <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
             <!-- <label for="email"></label> -->
                 <input class="messages" type="email" name="email" id="email" placeholder="Email">
@@ -123,4 +124,6 @@
         </form>
     </section>
 </footer>
+
+</body>
 </html>

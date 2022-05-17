@@ -58,3 +58,8 @@ app.use("/productCart", productCartRouter);
 //APP LISTEN
 app.listen(port, () => console.log("Listening on port ", port));
 
+//ERROR
+app.use((req,res,next)=> {
+    res.status(404).render("notFound")
+})
+

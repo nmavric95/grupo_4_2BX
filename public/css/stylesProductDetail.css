@@ -163,12 +163,15 @@ main{
         transition-duration: 0.4s;
         align-self: center;
         justify-self: center;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .buyButton button:hover{
         background-color: #9D3BE1;
         color: #79ffa0;
     }
+    
 
 
 /* DESCRIPCION DEL PAQUETE */
@@ -241,7 +244,7 @@ main{
         background-color: black;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
         width: inherit;
         justify-content: space-around;
         align-items: center;
@@ -278,32 +281,22 @@ main{
 
     .contact{
         padding: 1rem;
-        width: 240px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
+        width: 240px;               
     }
 
     .socialNetwork{
         padding: 1rem;
         width: 240px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .userMessages{
-        width: 16rem;
+        width: 15rem;
         height: 18rem;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
         justify-content: space-evenly;
+        padding-right: 2rem;
     }
 
     .userMessages form{
@@ -319,7 +312,7 @@ main{
         padding: 0.3rem;
         transition: all 600ms;
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
 
     }
 
@@ -380,6 +373,10 @@ main{
             position: absolute;
             top: 100px;
             right: 100px;
+        }
+
+        .userMessages{
+            padding-right: 1rem;
         }
 
 

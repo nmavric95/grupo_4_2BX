@@ -6,9 +6,9 @@ const crew = [
     {
         name:"Ana Cerruti",
         description: "Vivo en CABA, tengo 32 años y soy Lic. en Deporte y Educacion Fisica. Estudio actualmente Ingenieria en Alimentos y trabajo para una consultora de seguridad e higiene. Me encanta el deporte, sobretodo el tenis y me fascina la musica. Me gusta tambien cantar y bailar.",
-        image: "", 
-        instagram: "",
-        linkedin: "",
+        image: "/img/fotoAna.jpeg", 
+        instagram: "https://www.instagram.com/anycerruti/",
+        linkedin: "https://www.linkedin.com/in/ana-mar%C3%ADa-cerruti-61325261/",
     },
     {
         name:"Iván Lucas Achino",
