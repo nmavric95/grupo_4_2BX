@@ -48,6 +48,9 @@ const mainRoutesControllers = {
     aboutUs : (req, res) => {
         res.render("./index/aboutUs",{crew: crew})
     },
+    packages : (req, res) => {
+        res.render("./packages/packages")
+    },
 
 };
 
