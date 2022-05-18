@@ -12,6 +12,7 @@ const port = 3030
 const mainRouter = require("./routes/mainRoutes");
 const packageRouter = require("./routes/packageRoute");
 const productCartRouter = require("./routes/productCartRoutes");
+const adminRouter = require("./routes/adminRoute")
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
@@ -28,6 +29,7 @@ app.use("/aboutUs", mainRouter);
 app.use("/packages", packageRouter);
 app.use("/packages/detail", packageRouter);
 app.use("/productCart", productCartRouter);
+app.use("/adminForm", adminRouter)
 
 //APP LISTEN
 app.listen(port, () => console.log("Listening on port ", port));
