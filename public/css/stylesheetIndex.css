@@ -128,6 +128,7 @@ a{
 
 nav li{
     margin: 0px 5px;
+    min-width: 115px;
     text-shadow: 2px 2px 2px #9d3be1;
     font-size: 110%;
     display: none;
@@ -523,6 +524,7 @@ nav li a:hover{
         margin-top: 50px;
         font-size: 1.5vw;
         padding-bottom: 10px;
+        justify-content: center;
     }
     .burgerMenu{
         display: none;
