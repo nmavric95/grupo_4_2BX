@@ -97,15 +97,15 @@ input[type=text], [type=password], [type=email], [type = date]{
     
   }
 
-  input:hover, input:focus{
+ input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, input[type = date]:hover, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type = date]:focus{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
     display: inline-block;
     border-bottom: 3px solid RGB(121,255,160);
-    border-top: rgb(235, 235, 235);
-    border-left: rgb(235, 235, 235);
-    border-right: rgb(235, 235, 235);
+    border-top: 3px solid rgb(235, 235, 235);
+    border-left: 3px solid rgb(235, 235, 235);
+    border-right: 3px solid rgb(235, 235, 235);
     border-radius: 0px;
     outline: none;
     box-sizing: border-box;  
@@ -116,6 +116,7 @@ input[type="checkbox"] {
     display: inline-block;
     width: auto;
   }
+
 /* button */
 button{
     width: 30%;
