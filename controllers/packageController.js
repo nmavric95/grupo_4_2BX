@@ -1,6 +1,9 @@
 //CONTROLLER PARA PRODUCT DETAIL
 const packageController = {
-    productDetail : (req, res) => {
+    packages : (req, res) => {
+        res.render("./packages/packages")
+    },
+    packagesDetail : (req, res) => {
         res.render("./packagesDetail/packagesDetail");
     },
 };

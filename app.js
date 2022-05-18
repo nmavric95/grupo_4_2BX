@@ -25,7 +25,8 @@ app.use("/", mainRouter);
 app.use("/login", mainRouter);
 app.use("/register", mainRouter);
 app.use("/aboutUs", mainRouter);
-app.use("/productDetail", packageRouter);
+app.use("/packages", packageRouter);
+app.use("/packages/detail", packageRouter);
 app.use("/productCart", productCartRouter);
 
 //APP LISTEN

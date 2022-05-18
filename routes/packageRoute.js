@@ -3,8 +3,10 @@ const router = express.Router();
 
 const packageController = require("../controllers/packageController");
 
-//RUTA DE PRODUCT DETAIL
+//RUTA DE PACKAGES
+router.get("/", packageController.packages);
 
-router.get("/", packageController.productDetail);
+//RUTA DE PACKAGE DETAIL
+router.get("/detail", packageController.packagesDetail);
 
 module.exports = router;
