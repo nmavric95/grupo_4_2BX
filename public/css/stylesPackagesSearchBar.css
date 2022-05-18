@@ -14,13 +14,15 @@
     text-shadow: 2px 2px 2px #9D3BE1;
     justify-self: center;
     align-self: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0.5rem;
+    width: 100%;
+    text-align: center;
 }
 
 .packagesSearchBar div.filter{
     color: #9D3BE1;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     transition: all 600ms;
     padding: 0.5rem;
 }
@@ -29,5 +31,66 @@
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9D3BE1;
 }
+
+.filterInput{
+    padding: 4px 8px;
+    margin: 8px ;
+    border: 2px solid rgb(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    font-size: 0.9rem;
+}
+
+.filterInput:hover{
+    border: 2px solid #79ffa0;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 426px) {
+
+    .packagesSearchBar{
+        flex-flow: row wrap;
+        align-items: baseline;
+    }
+
+    .packagesSearchBar div.filter{
+        font-size: 1rem;
+    }
+
+    .filterInput{
+        font-size: 1rem;
+    }
+
+    .searchBarTitle{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .packagesSearchBar{
+        flex-flow: row wrap;
+        align-items: baseline;
+    }
+
+    .packagesSearchBar div.filter{
+        font-size: 1.1rem;
+    }
+
+    .filterInput{
+        font-size: 1.1rem;
+    }
+
+    .searchBarTitle{
+        font-size: 1.2rem;
+    }
+
+}
+
 
 
