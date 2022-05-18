@@ -29,7 +29,8 @@ app.use("/aboutUs", mainRouter);
 app.use("/packages", packageRouter);
 app.use("/packages/detail", packageRouter);
 app.use("/productCart", productCartRouter);
-app.use("/adminForm", adminRouter)
+app.use("/user", adminRouter);
+app.use("/user/adminForm", adminRouter);
 
 //APP LISTEN
 app.listen(port, () => console.log("Listening on port ", port));

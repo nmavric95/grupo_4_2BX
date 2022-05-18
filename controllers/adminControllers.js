@@ -2,7 +2,7 @@
 
 const adminControllers = {
     adminForm : (req, res) => {
-        res.render("/user/adminForm")
+        res.render("./user/adminForm")
     },
 };
 
