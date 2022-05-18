@@ -227,17 +227,7 @@ main{
 
 /* SECCION PACKAGES */
 
-    .packagesProductDetail{
-        width: 100vw;
-        height: 45vh;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
-        padding: 5px;
-        text-align: center;
-    }
+ /* VINCULADO CON PACKAGES.CSS */
 
 /* FOOTER */
     footer{
