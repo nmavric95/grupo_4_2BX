@@ -1,34 +1,44 @@
 <section class="packagesSearchBar">
+    <div class="searchBarTitle">
+        <h3>Filtros de busqueda</h3>
+    </div>
 
-    <div class="adrenalineLevel">
-        <label for="adrenalineLevel"></label>
+    <div class="adrenalineLevel filter">
+        <label for="adrenalineLevel">Nivel de Adrenalina</label>
         <select name="adrenalineLevel" id="adrenalineLevel">
-            <option value=""></option>
+            <option value="high">Alto</option>
+            <option value="medium">Medio</option>
+            <option value="low">Bajo</option>
         </select>
     </div>
 
-    <div class="sport">
-        <label for="sport"></label>
+    <div class="sport filter">
+        <label for="sport">Deporte</label>
         <select name="sport" id="sport">
-            <option value=""></option>
+            <option value="parachute">Paracaidismo</option>
+            <option value="rafting">Rafting</option>
+            <option value="kitesurf">Kitesurf</option>
+            <option value="sportsClimb">Escalada Deportiva</option>
         </select>
     </div>
 
-    <div class="lugar">
-        <label for="lugar"></label>
+    <div class="lugar filter">
+        <label for="lugar">Zona</label>
         <select name="lugar" id="lugar">
-            <option value=""></option>
+            <option value="norte">Norte</option>
+            <option value="centro">Centro</option>
+            <option value="sur">Sur</option>
         </select>
     </div>
 
-    <div class="sale">
-        <label for="sale"></label>
-        <input type="text" id="sale">
+    <div class="sale filter">
+        <label for="sale">Oferta</label>
+        <input type="checkbox" id="sale">
     </div>
     
-    <div class="price">
-        <label for="price"></label>
-        <input type="text" id="price">
+    <div class="price filter">
+        <label for="price">Precio Máximo</label>
+        <input type="text" id="price" placeholder="Ingrese valor max">
     </div>
 
 </section>

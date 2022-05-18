@@ -1,0 +1,33 @@
+.packagesSearchBar{
+    background-color: rgb(0,0,0);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+.searchBarTitle{
+    font-weight: normal;
+    font-family: BPimperial Light;
+    color: #79ffa0;
+    text-shadow: 2px 2px 2px #9D3BE1;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.packagesSearchBar div.filter{
+    color: #9D3BE1;
+    font-size: 1.1rem;
+    transition: all 600ms;
+    padding: 0.5rem;
+}
+
+.packagesSearchBar div.filter:hover{
+    color: #79ffa0;
+    text-shadow: 2px 2px 2px #9D3BE1;
+}
+
+
