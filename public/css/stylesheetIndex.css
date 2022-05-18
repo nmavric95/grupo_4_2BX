@@ -391,6 +391,13 @@ nav li a:hover{
     display: none;
 }
 
+.packages.s2{
+    display: none;
+}
+
+.packages.s3{
+    display: none;
+}
 
 
 
@@ -558,6 +565,14 @@ nav li a:hover{
     .packages{
         width: 70vw;
         height: 45vh;
+    }
+    
+    .packages.s2{
+        display: flex;
+    }
+    
+    .packages.s3{
+        display: flex;
     }
 
     .product{
