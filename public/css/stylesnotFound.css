@@ -66,3 +66,7 @@ button:hover{
     background-color: RGB(157,59,225);
     color: RGB(121,255,160);
 }
+
+a{
+    text-decoration: none;
+}
