@@ -340,9 +340,9 @@ main{
         padding: 12px 20px;
         margin: 8px ;
         border-bottom: 3px solid rgb(121,255,160);
-        border-top: 3px rgb(235, 235, 235);
-        border-left: 3px rgb(235, 235, 235);
-        border-right: 3px rgb(235, 235, 235);
+        border-top: 3px solid rgb(235, 235, 235);
+        border-left: 3px solid rgb(235, 235, 235);
+        border-right: 3px solid rgb(235, 235, 235);
         border-radius: 0px;
         outline: none;
         box-sizing: border-box;  
