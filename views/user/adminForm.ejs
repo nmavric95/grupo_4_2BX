@@ -1,59 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- HEAD -->
-<%- include("../register/partials/headRegister") %>
+<%- include("./partials/headAdminForm") %>
 
 <body>
     <!-- HEADER Y NAVBAR -->
     <%- include("../partialsGeneral/header")  %>
     
 <main>
-    <h1>PRUEBA</h1>    
-     <section class="registerForm">
+   
+     <section class="newProduct">
         <h2>Nuevo Paquete</h2>
         
-        <form action="" method="get" id="registerForm"  >
+        <form action="" method="get" id="newProduct"  >
         <h3>Detalle general del Paquete</h3>
 
         <div class="form">
-            <label for="name">Nombre</label>
-            <input type="text" placeholder="Juan Carlos" name="name"  id="name" required> 
-
-            <label for="lastName">Apellido</label>
-            <input type="text" placeholder="González" name="lastName" id="lastName" required> 
-
-            <label for="birthDate">Fecha de nacimiento</label>
-            <input type="date" placeholder="birthDate" name="birthDate" id="birthDate" required> 
-
-            <label for="email">Email</label>
-            <input type="email" placeholder="juan.gonzalez@2bx.com" name="email" id="email" required> 
-        </div>
-
-        <h3>Contraseña</h3>
-
-        <div class="form">
-            <label for="password">Contraseña</label>
-            <input type="password" placeholder="********" name="password" id="password" required> 
-
-            <label for="password">Repetir contraseña</label>
-            <input type="password" placeholder="********" name="password" id="password" required> 
-        </div>
-
-        <div class="termsAndConditions">
-            <p>Leer nuestros <a href="/*****"> terminos y condiciones.</a></p>
+           
+                <label for="activityName">Nombre de la actividad</label>
+                <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
             
-            <label for="checkbox"> <input type="checkbox" id="checkbox" value="accept"> Acepto los terminos y condiciones</label>
+                <label for="sport">Deporte</label>
+                <input type="text" list="sport" placeholder="Seleccionar deporte" />
+                <datalist id="sport">
+                  <option>Paracaidismo</option>
+                  <option>Rafting</option>
+                  <option>Kitesurf</option>
+                  <option>Escalada Deportiva</option>
+                </datalist>
+
+                <div class="activityDuration">
+                <label for="startTime">Horario inicio</label>
+                <input type="time" id="startTime" name="startTime" min="00:00" max="23:59" required>
+
+                <label for="endTime">Horario inicio</label>
+                <input type="time" id="endTime" name="endTime" min="00:00" max="23:59" required>
+                </div>
+
+                <label for="Location">Lugar</label>
+                <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required> 
+
+                <label for="geoRegion">Zona Geografica</label>
+                <input type="text" list="geoRegion" placeholder="Seleccionar zona" />
+                <datalist id="geoRegion">
+                  <option>Norte</option>
+                  <option>centro</option>
+                  <option>Sur</option>
+                </datalist>            
+
+               
+                <p>Elementos incluidos</p>
+                <label for="lunch"></label><input type="radio" name="lunch" id="lunch" value="lunch">Almuerzo</label>
+                <label for="snack"></label><input type="radio" name="snack" id="snack" value="snack">Snacks</label>
+                <label for="beverage"></label><input type="radio" name="beverage" id="beverage" value="beverage">Bebidas</label>
+                <label for="transport"></label><input type="radio" name="transport" id="transport" value="transport">Transporte desde el hotel</label>
+                <label for="equipment"></label><input type="radio" name="equipment" id="equipment" value="equipment">Equipamiento necesario</label>
+                <label for="healthInsurance"></label><input type="radio" name="healthInsurance" id="healthInsurance" value="healthInsurance">Seguro Medico</label>
+                 
+                <p>Requisitos</p>
+                <label for="age"></label><input type="radio" name="age" id="age" value="age">Mayores de 18 años</label>
+                <label for="minors"></label><input type="radio" name="minors" id="minors" value="minors">Menores acompañados por adulto</label>
+                <label for="doctorApproval"></label><input type="radio" name="doctorApproval" id="doctorApproval" value="doctorApproval">Aptop medico</label>
+                <label for="experience"></label><input type="radio" name="experience" id="experience" value="experience">Experiencia previa</label>
+
+                <label for="price">Precio</label>
+                <input type="number" placeholder="9,999" name="price"  id="price" required> 
+
+                <label for="reservationPrice">Precio reserva</label>
+                <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" required> 
+
+                <p>Esta en oferta?</p>
+                <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="yes">Si</label>
+                <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="no">No</label>
+
+                <label for="sale">% de descuento</label>
+                <input type="text" list="sale" placeholder="25%" />
+                <datalist id="sale">
+                  <option>10%</option>
+                  <option>25%</option>
+                  <option>33%</option>
+                  <option>50%</option>
+                </datalist>
+
+                <label for="adrenalineLevel">Nivel de adrenalina</label>
+                <input type="text" list="adrenalineLevel" placeholder="Seleccionar nivel" />
+                <datalist id="adrenalineLevel">
+                  <option>Alto</option>
+                  <option>Medio</option>
+                  <option>Bajo</option>                 
+                </datalist>
+
+
+            <h3>Descripción del paquete</h3>        
+
+            <label for="description">Descripción de la actividad</label>
+            <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" required> 
+          
+            <label for="image">Agregar imagenes</label>
+            <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple required>    
+
         </div>
+
         </form>
 
-        <a href="/login"></a><button type="submit" form="registerForm" value="Submit">Registrar</button></a>
+        <a href="/packages/detail"></a><button type="submit" form="newProduct" value="Submit">Crear paquete</button></a>
     </section>
-
-    <section class="image">
-        <div class="image">
-       <!-- <img src="/img/kaitsurf_640.jpg">-->
-        </div>  
-    </section>      
+       
     </main>
 
     <footer>
