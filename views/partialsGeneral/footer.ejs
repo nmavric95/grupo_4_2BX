@@ -18,11 +18,17 @@
     <section class="userMessages">
         <form action="/" method="POST">
             <label for="nombre"><h3>Formulario de Contacto</h3></label>
-                <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                <input class="messages" type="email" name="email" id="email" placeholder="Email">
-                <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
-
-                </textarea>
+                <div>
+                    <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+                    <input class="messages" type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div>
+                    <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui"></textarea>
+                    <div class="buttonContainer">
+                        <button class="formButton" type="submit">Enviar</button>
+                        <button class="formButton" type="reset">Vaciar</button>
+                    </div>
+                </div>
         </form>
     </section>
 </footer>

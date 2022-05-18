@@ -228,6 +228,9 @@ main{
 /* SECCION PACKAGES */
 
  /* VINCULADO CON PACKAGES.CSS */
+ .packagesContainer.packagesDetail{
+     padding-bottom: 4rem;
+ }
 
 /* FOOTER */
     footer{
@@ -302,7 +305,7 @@ main{
         padding: 0.3rem;
         transition: all 600ms;
         text-align: center;
-        font-size: 20px;
+        font-size: 1.1rem;
 
     }
 
@@ -338,6 +341,34 @@ main{
         box-sizing: border-box;  
     }
 
+    .buttonContainer{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    button.formButton{
+        background-color: #79ffa0;
+        color: #9D3BE1;
+        height: 30px;
+        padding: 0.5rem;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 15px;
+        transition-duration: 0.4s;        
+        font-size: 1.1rem;
+        flex-flow:row wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    button.formButton:hover{
+        background-color: #9D3BE1;
+        color: #79ffa0;
+    }
+
 
     /* MEDIA QUERY */
 
@@ -367,7 +398,15 @@ main{
 
         .userMessages{
             padding-right: 1rem;
+            /* width: 15rem;
+            height: 18rem;           */
         }
+
+        /* .userMessages form div{
+            display: inline-flex;
+            width: 100%;
+            height: 100%;
+        } */
 
 
 
