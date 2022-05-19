@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+}
+
+main{
+    display: block;
+    width: 100%;
+}    
+
+
+h2{
+    font-size: 32px;
+    font-family: "BPimperial Regular";
+    display: block;
+    text-align: center;
+    padding-top: 7%;
+    color: RGB(157,59,225);
+    text-shadow: 2px 2px 2px RGB(121,255,160)
+}
+
+#newProduct {
+    
+    font-family: "Lato", sans-serif;
+    display: block;
+    text-align: center;
+    padding: 5%;
+}
+
+h3{
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    padding: 2%;
+    color: RGB(157,59,225);
+}
+
+p{
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    padding-top: 3%;
+    margin-left: 7%;
+    color: gray;
+    font-weight: bold;
+
+}
+
+.activityDuration{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}  
+
+.radio{    
+    font-size: 18px;
+    text-align: left;
+    margin-left: 7%;
+    color: gray;
+    padding-top: 2%;
+    margin-bottom: 20px;
+}
+
+#description{
+    height: 180px;
+   
+}
+
+section.view{
+    display: none;
+}
+
+/* inputs */
+label{
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    margin-left: 7%;
+    color: gray;
+    padding-top: 2%;
+}
+
+input[type=text], [type = date], [type = number]{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px ;
+    display: inline-block;
+    border: 3px solid RGB(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    
+  }
+
+ input[type=text]:hover, input[type = date]:hover, input[type = number]:hover, input[type=text]:focus, input[type = date]:focus, input[type = number]:focus{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px ;
+    display: inline-block;
+    border: 3px solid RGB(121,255,160);
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;  
+  }  
+
+  input[type=time] {     
+    padding: 12px 20px;
+    border: 3px solid RGB(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    outline: none;
+  }  
+
+  input[type=time]:hover, input[type=time]:focus {
+    padding: 12px 20px;
+    border:  3px solid RGB(121,255,160);
+    border-radius: 25px;   
+    outline: none;
+  }  
+
+  input[type=file]{
+    margin-top: 10px;  
+    display: block;
+    margin-left: 7%;
+
+  }
+  
+   
+     
+   
+
+/* button */
+button{
+    width: 30%;
+    font-family: "Lato", sans-serif;
+    background-color: RGB(121,255,160);
+    border: none;
+    color: RGB(157,59,225);
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 0px;
+    transition-duration: 0.4s;
+  }
+
+ 
+button:hover{
+    background-color: RGB(157,59,225);
+    color: RGB(121,255,160);
+} 
+
+
+button.reset{
+    width: 30%;
+    font-family: "Lato", sans-serif;
+    background-color: RGBA(121,255,160,0.4);
+    border: none;
+    color: RGB(157,59,225);
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 0px;
+    transition-duration: 0.4s;
+  }
+
+ 
+button.reset:hover{
+    background-color: RGBA(157,59,225,0.3);
+    color: RGB(121,255,160);
+} 
+
+/* media query tablet */
+
+@media (min-width: 426px){
+ 
+
+.radio#sale{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    text-align: left;    
+    color: gray;
+    padding-top: 2%;
+    margin-bottom: 20px;
+}
+
+}
+
+/* media query desktop */
+@media (min-width: 769px){
+      
+    main{display: flex;}
+
+    section.newProduct{
+        display: block;
+        width: 40%;
+        float: left;
+        position: relative;       
+    }
+
+    section.image{
+        display: block;
+        width: 60%;
+        float: right;
+        position: relative;
+        height:auto;
+        text-align: center;
+        background-size: cover;
+        background-position: center;        
+
+    }
+
+    div.image{
+        height: 100%;
+        position:relative;
+        background:  url("../img/kaitsurf_1920.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+   
+}
+
+ 
+
+   
+
