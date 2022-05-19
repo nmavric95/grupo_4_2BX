@@ -14,11 +14,16 @@
 /*HEADER*/
 
 
+
+body{
+    font-family: "Lato", sans-serif;
+}
+
 .upperBar{
     font-family: "Lato";
     background-color: #000000;
     color:#79ffa0;
-    width: 100vw;
+    width: 100%;
     padding: 2px;
     display: flex;
     justify-content: flex-end;
@@ -26,14 +31,13 @@
 
 
 }
-
 .logo{
-    width: 151px;
+    width: 25vw;
     height: auto; 
     margin-left: auto; 
     position: absolute;
     top: 2px;
-    left: 45%; 
+    left: 36%; 
 
 }
 
@@ -53,12 +57,13 @@
     10% {border-left: #79ffa0 2px solid;}
 }
 
+
 .loginButton{
     font-family: "Lato";
     width: 10%;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
-    margin: 2px 5px;
+    margin: 2px 10px;
     padding: 2px 0px;
     color: #9d3be1;
     text-align: right;
@@ -79,6 +84,7 @@
     background-color: #000000;
     color: #79ffa0;
     width: 100%;
+    height: 140px;
 }
 a{
     text-decoration: none;
@@ -87,6 +93,7 @@ a{
 
 .navBar{
     font-family: "BPimperial Regular";
+    height: 100%;
     letter-spacing: 2px;
     list-style: none;
     display: flex;
@@ -97,6 +104,7 @@ a{
 
 nav li{
     margin: 0px 5px;
+    min-width: 115px;
     text-shadow: 2px 2px 2px #9d3be1;
     font-size: 110%;
     display: none;
@@ -116,7 +124,7 @@ nav li a:hover{
     color: #79ffa0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top: -70px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -136,7 +144,6 @@ nav li a:hover{
 
 
 
-
 /*MAIN BODY*/
 
 body{
@@ -145,7 +152,7 @@ body{
     }
 
 .si{
-    width: 50px;
+    width: 55px;
     cursor: pointer;
     border-radius: 40px;
     border: none;
@@ -154,6 +161,7 @@ body{
     font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
 
     
 }
@@ -238,7 +246,7 @@ h3{
     justify-content: space-around;
     align-items: center;
     background-color: gray;
-    padding-bottom: 10px;
+    padding: 10px;
     
 }
 
@@ -291,12 +299,13 @@ button:hover{
 
 
 
- /* FOOTER */
- footer{
+
+/* FOOTER */
+footer{
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     width: inherit;
     justify-content: space-around;
     align-items: center;
@@ -312,7 +321,6 @@ footer ul li{
 footer ul li a{
     text-decoration: none;
     font-style: normal;
-    /* color: white; */
     color: #9D3BE1;
     padding-left: 5px;
     display: flex;
@@ -334,40 +342,30 @@ footer ul li a:hover{
 
 .contact{
     padding: 1rem;
-    width: 240px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+    width: 240px;               
 }
 
 .socialNetwork{
     padding: 1rem;
     width: 240px;
-    display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
 }
 
 .userMessages{
-    width: 16rem;
+    width: 15rem;
     height: 18rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-right: 2rem;
 }
 
 .userMessages form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 .userMessages form label h3{
@@ -375,7 +373,7 @@ footer ul li a:hover{
     padding: 0.3rem;
     transition: all 600ms;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.1rem;
 
 }
 
@@ -384,10 +382,10 @@ footer ul li a:hover{
     text-shadow: 1px 1px 1px #9D3BE1;
 }
 
-  /* ESTILOS DEL FORMULARIO DE CONTACTO */
-  input.messages, textarea.messages{
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+input.messages, textarea.messages{
     width: 100%;
-    padding: 12px 20px;
+    padding: 8px 12px;
     margin: 8px ;
     border: 3px solid rgb(157,59,225);
     border-radius: 25px;
@@ -400,15 +398,43 @@ footer ul li a:hover{
 
 input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.messages:focus{
     width: 100%;
-    padding: 12px 20px;
+    /* padding: 10px 15px; */
     margin: 8px ;
     border-bottom: 3px solid rgb(121,255,160);
-    border-top: 3px rgb(235, 235, 235);
-    border-left: 3px rgb(235, 235, 235);
-    border-right: 3px rgb(235, 235, 235);
+    border-top: 3px solid rgb(235, 235, 235);
+    border-left: 3px solid rgb(235, 235, 235);
+    border-right: 3px solid rgb(235, 235, 235);
     border-radius: 0px;
     outline: none;
     box-sizing: border-box;  
+}
+
+.buttonContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button.formButton{
+    background-color: #79ffa0;
+    color: #9D3BE1;
+    height: 30px;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition-duration: 0.4s;        
+    font-size: 1.1rem;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+button.formButton:hover{
+    background-color: #9D3BE1;
+    color: #79ffa0;
 }
 
 
@@ -418,7 +444,7 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
 
 /** MQ **/
 
-@media (min-width: 426px){
+@media screen and (min-width: 426px){
 
     .logo{width: 15vw;
     left: 42%;}
@@ -427,56 +453,84 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
         flex-direction: row;
     }
     
-    .contenedor {
+
+    .contenedor h1{
         display: flex;
         justify-content: space-around;
-        align-items: center;
-        background-color: gray;
+        padding-left: 600px;
+        padding-right: 450px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
-    
+
+    .card{
+        flex-direction: column;
+    }
+
+    h3{
+        padding-top: 20px;
+    }
+
+    .paquete{
+    padding-left: 25px; }
+
+    .si{
+        width: 200px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
     .contenedor2 {
         display: flex;
-        justify-content: space-around;
-        background-color: gray;
-        
+        flex-direction: column;
+        justify-content: space-between;
     }
     
-    .container {
-        background-color: gainsboro;
-        border: solid 10px black;
-        border-color: #79ffa0;}
+    button{
+        margin: 15px;
+
+    }
+
+    .contenedor2 h1{
+        padding-right: 200px;
+    }
+  
+    input.messages{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+          
+    } 
+    textarea.messages{
+    width: 250px;
+}
+    button.formButton{
+    width: 100px;
+}
+}
+
+@media screen and (min-width: 481px){
+
+    .contenedor2 h1{
+        padding-right: 300px;
+    }
+
+    input.messages{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+          
+    } 
+    textarea.messages{
+    width: 250px;
+}
+    button.formButton{
+    width: 100px;
+}
 
 }
 
-@media (min-width: 490px){
-
-    .contenedor {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: gray;;
-        padding-right: 120px;
-        padding-left: 300px;
-        padding-top: 30px;
-    }
-    
-    .contenedor2 {
-        display: flex;
-        justify-content: space-around;
-        background-color: gray;
-        padding: 5px;
-        
-    }
-    
-    .container {
-        background-color: gainsboro;
-        border: solid 10px black;
-        border-color: #79ffa0;}
-
-
-}
-
-@media (min-width: 769px){
+@media screen and (min-width: 769px){
 
     .logo{
         width: 8vw;
@@ -493,33 +547,71 @@ input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.me
     }
 
     .contenedor {
+        margin: 0px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: gray;;
-        padding-right: 120px;
-        padding-left: 300px;
-        padding-top: 30px;
-    }
-    
-    .contenedor2 {
-        display: flex;
-        justify-content: space-around;
         background-color: gray;
-        padding: 5px;
-        
+        padding-left: 10px;
+        padding-top: 0px;
+        box-sizing: border-box;        
     }
     
-    .container {
-        background-color: gainsboro;
-        border: solid 10px black;
-        border-color: #79ffa0;
+    .boton1{
+        display: flex;
+        justify-content: flex-start;
+        padding: 0px;
+    }
     
+    .boton{
+     display: flex;
+     justify-content: space-between;
+     padding: 75px;    
     }
 
-    footer{
+    .contenedor2 {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        
+    }
+
+    .card{
+        display: flex;
         flex-direction: row;
     }
 
+    .si{
+        width: 50px;
+        height: 30px;
+    }
+    
+    .paquete{
+        display: flex;
+        justify-content: flex-start;    }
 
+    h2{
+        padding: 20px;
+    }
+
+    button{
+        width: 300px;
+        height: 50px;
+    }
+    footer{
+        flex-direction: row;
+    }
+  
+ input.messages{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+          
+        } 
+    textarea.messages{
+        width: 300px;
+    }
+button.formButton{
+    width: 150px;
+}
 }

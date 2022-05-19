@@ -1,42 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/stylesheetProductCart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="https://kit.fontawesome.com/82173492bf.js" crossorigin="anonymous"></script>
 
-    <title>2BX - Carro de Compras</title>
-</head>
+    <%- include("./partials/headCarro") %>
+
 
 <body>
-    <header class="upperBar">
-        <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
-        <a href="/login"><p class="loginButton">LOGIN</p></a>
-    </header>
-    <nav class="bottomBar">
-        <ul class="navBar">
-            <li><a href="/productDetail">Paquetes</a></li>
-            <li><a href="/">About Us</a></li>
-            <li></li>
-            <li><a href="/register">Registro</a></li>
-            <li><a href="/productCart">Carrito</a></li>
-        </ul>
-        <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
-    </nav>
+    <%- include("../partialsGeneral/header") %> 
 
 <main>
 
 <section>
-    <div>
         <div class="contenedor">
-            <h1 class="boton1 animated infinite bounce">Carro de Compras</h1>
+            <h1 class="boton1 animated infinite zoomIn">Carro de Compras</h1>
             <p></p>
             <p></p>
             <h2 class="boton">Precio</h2>
@@ -44,13 +19,14 @@
             <h2 class="boton">Subtotal</h2>
             <h2 class="boton">Seleccionar</h2>
         </div>
-
+    </section>
+<section>
         <div class="container">
         <article class="card">
             <h3 class="animated infinite flash">Wild KAITSURF</h3>
             <img class="paquete" src="img/kaitsurf_640.jpg" alt="Kaitsurf">
-            <h3>$</h3>
-            <input type="button" name="" value="Cant">  
+            <h3>$ 10000</h3>
+            <input class="si" type="number" value="numero">  
             <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
@@ -62,8 +38,8 @@
         <article class="card">
             <h3 class="animated infinite flash">Power RAFTING</h3>
             <img class="paquete" src="img/rafting_640.jpg" alt="Rafting">
-            <h3>$</h3>
-            <input type="button" name="" value="Cant">    
+            <h3>$ 20000</h3>
+            <input class="si" type="number" value="numero">    
             <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
@@ -75,8 +51,8 @@
         <article class="card">
             <h3 class="animated infinite flash">SURF Adrenalin</h3>
             <img class="paquete" src="img/surfing_640.jpg" alt="Surf">
-            <h3>$</h3>
-            <input type="button" name="" value="Cant">     
+            <h3>$ 30000</h3>
+            <input class="si" type="number" value="numero">     
             <h3>$</h3>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
@@ -84,46 +60,17 @@
             </form>
         </article>
         </div>
-    </div>
+</section>
+<section>
         <div class="contenedor2">
             <h1>TOTAL:</h1>
-            <a href="/productDetail"><button type="submit" class="animated infinite pulse">Seguir comprando</button></a>
+            <a href="/packages/detail"><button type="submit" class="animated infinite pulse">Seguir comprando</button></a>
             <button type="submit" class="animated infinite pulse">Comprar</button>
         </div>
-    </div>  
     </section>
 </main>
 
-<footer>
-    <address class="contact">
-        <ul type="none">
-            <li><a href="#"><i class="fa-solid fa-phone-flip"></i><p>351 123456</p></a></li>
-            <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>351 654321</p></a></li>
-            <li><a href="#"><i class="fa-solid fa-envelope"></i><p>ejemplo@ejemplo.com</p></a></li>
-            <li><a href="#"><i class="fa-solid fa-location-dot"></i><p></p> Locacion ejemplo</a></li>
-        </ul>
-    </address>
-    <section class="socialNetwork">
-        <ul type="none">
-            <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a> </li>
-            <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Facebook</p></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></li>
-        </ul>
-    </section>
-    <section class="userMessages">
-        <form action="/" method="POST">
-            <h3>Formulario de Contacto</h3>
-                <input class="messages" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-            <!-- <label for="email"></label> -->
-                <input class="messages" type="email" name="email" id="email" placeholder="Email">
-            <!-- <label for="message"></label> -->
-                <textarea class="messages" name="message" id="message" placeholder="Escriba su mensaje aqui">
-
-                </textarea>
-        </form>
-    </section>
-</footer>
+<%- include("../partialsGeneral/footer") %> 
 
 </body>
 </html>
