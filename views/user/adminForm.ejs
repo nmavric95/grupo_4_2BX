@@ -16,7 +16,7 @@
         <h3>Detalle general del Paquete</h3>
 
         <div class="form">
-           
+                <div class="activity">
                 <label for="activityName">Nombre de la actividad</label>
                 <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
             
@@ -28,6 +28,7 @@
                   <option>Kitesurf</option>
                   <option>Escalada Deportiva</option>
                 </datalist>
+                </div>
 
                 <div class="activityDuration">
                 <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" required>Horario inicio</label>
@@ -72,7 +73,7 @@
                 <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" required> 
 
                 <p>Esta en oferta?</p>
-                <div class="radio">
+                <div class="radio" id="sale">
                 <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="yes">Si</label>
                 <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="no">No</label>
                 </div>
@@ -109,10 +110,13 @@
         <div class="buttons">
         <button type="reset" value="reset" class="reset">Borrar todo</button>
         <a href="/packages/detail"></a><button type="submit" form="newProduct" value="Submit">Crear paquete</button></a>
-        </div>
-        
+        </div>        
     </section>
-       
+     
+    <section class="image">
+          <div class="image"></div>
+    </section>
+    
     </main>
 
     <footer>

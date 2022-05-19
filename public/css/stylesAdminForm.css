@@ -73,6 +73,10 @@ p{
    
 }
 
+section.view{
+    display: none;
+}
+
 /* inputs */
 label{
     font-size: 18px;
@@ -83,7 +87,7 @@ label{
     padding-top: 2%;
 }
 
-input[type=text], [type=password], [type=email], [type = date], [type = number]{
+input[type=text], [type = date], [type = number]{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -96,7 +100,7 @@ input[type=text], [type=password], [type=email], [type = date], [type = number]{
     
   }
 
- input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, input[type = date]:hover, input[type = number]:hover, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type = date]:focus, input[type = number]:focus{
+ input[type=text]:hover, input[type = date]:hover, input[type = number]:hover, input[type=text]:focus, input[type = date]:focus, input[type = number]:focus{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -128,11 +132,9 @@ input[type=text], [type=password], [type=email], [type = date], [type = number]{
     margin-left: 7%;
 
   }
-
+  
    
-   
-   
-   
+     
    
 
 /* button */
@@ -188,10 +190,64 @@ button.reset{
   }
 
  
-button:hover{
+button.reset:hover{
     background-color: RGBA(157,59,225,0.3);
     color: RGB(121,255,160);
 } 
 
+/* media query tablet */
 
+@media (min-width: 426px){
+ 
+
+.radio#sale{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    text-align: left;    
+    color: gray;
+    padding-top: 2%;
+    margin-bottom: 20px;
+}
+
+}
+
+/* media query desktop */
+@media (min-width: 769px){
+      
+    main{display: flex;}
+
+    section.newProduct{
+        display: block;
+        width: 40%;
+        float: left;
+        position: relative;       
+    }
+
+    section.image{
+        display: block;
+        width: 60%;
+        float: right;
+        position: relative;
+        height:auto;
+        text-align: center;
+        background-size: cover;
+        background-position: center;        
+
+    }
+
+    div.image{
+        height: 100%;
+        position:relative;
+        background:  url("../img/kaitsurf_1920.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+   
+}
+
+ 
+
+   
 
