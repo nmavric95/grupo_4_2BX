@@ -457,8 +457,8 @@ button.formButton:hover{
     .contenedor h1{
         display: flex;
         justify-content: space-around;
-        padding-left: 600px;
-        padding-right: 450px;
+        margin-left: 600px;
+        margin-right: 450px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
