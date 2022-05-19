@@ -330,7 +330,7 @@ main{
     }
 
     
-    input.messages:hover, input.messages:focus, textarea.messages:hover, textarea.messages:focus{
+    input.messages.footer:hover, input.messages.footer:focus, textarea.messages.footer:hover, textarea.messages.footer:focus{
         width: 100%;
         /* padding: 10px 15px; */
         margin: 8px ;
@@ -350,7 +350,7 @@ main{
         justify-content: space-evenly;
     }
 
-    button.formButton{
+    button.formButton.footer{
         background-color: #9D3BE1;
         color: #79ffa0;
         height: 30px;
@@ -367,7 +367,7 @@ main{
         
     }
 
-    button.formButton:hover{
+    button.formButton.footer:hover{
         background-color: #79ffa0;
         color: #9D3BE1;
     }
