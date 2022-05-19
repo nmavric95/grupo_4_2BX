@@ -105,10 +105,15 @@ text-align: center;
     margin-bottom: 5px;
 }
 
+.personalContact{
+    margin-top: 10px;
+}
+
 .personalContact li{
     list-style: none;
     text-decoration: none;
     color: #9d3be1;
+    margin: 10px;
 }
 
 
@@ -119,5 +124,11 @@ text-align: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .personalContact ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
