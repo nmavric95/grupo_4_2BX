@@ -239,6 +239,7 @@ h3{
     padding-right: 120px;
     padding-left: 300px;
     padding-top: 30px;
+    max-width: 100%;
 }
 
 .contenedor2 {
@@ -458,7 +459,7 @@ button.formButton:hover{
         display: flex;
         justify-content: space-around;
         margin-left: 600px;
-        margin-right: 450px;
+        margin-right: 320px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
