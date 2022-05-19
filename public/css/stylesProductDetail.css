@@ -242,7 +242,7 @@ main{
         justify-content: space-around;
         align-items: center;
         padding: 1rem;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     footer ul li{
@@ -297,16 +297,16 @@ main{
         flex-wrap: wrap;
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
+    
     .userMessages form label h3{
         color: #9D3BE1;
         padding: 0.3rem;
         transition: all 600ms;
         text-align: center;
         font-size: 1.1rem;
-
     }
 
     .userMessages form label h3:hover{
@@ -314,16 +314,18 @@ main{
         text-shadow: 1px 1px 1px #9D3BE1;
     }
 
+    
     /* ESTILOS DEL FORMULARIO DE CONTACTO */
     input.messages, textarea.messages{
         width: 100%;
         padding: 8px 12px;
         margin: 8px ;
-        border: 3px solid rgb(157,59,225);
+        border: 2px solid rgb(157,59,225);
         border-radius: 25px;
         background-color:rgb(235, 235, 235);
         box-sizing: border-box;
         transition-duration: 0.4s;
+        font-size: 0.9rem;
         
     }
 
@@ -332,10 +334,10 @@ main{
         width: 100%;
         /* padding: 10px 15px; */
         margin: 8px ;
-        border-bottom: 3px solid rgb(121,255,160);
-        border-top: 3px solid rgb(235, 235, 235);
-        border-left: 3px solid rgb(235, 235, 235);
-        border-right: 3px solid rgb(235, 235, 235);
+        border-bottom: 2px solid rgb(121,255,160);
+        border-top: 2px solid rgb(235, 235, 235);
+        border-left: 2px solid rgb(235, 235, 235);
+        border-right: 2px solid rgb(235, 235, 235);
         border-radius: 0px;
         outline: none;
         box-sizing: border-box;  
@@ -349,8 +351,8 @@ main{
     }
 
     button.formButton{
-        background-color: #79ffa0;
-        color: #9D3BE1;
+        background-color: #9D3BE1;
+        color: #79ffa0;
         height: 30px;
         padding: 0.5rem;
         border: none;
@@ -358,15 +360,16 @@ main{
         cursor: pointer;
         border-radius: 15px;
         transition-duration: 0.4s;        
-        font-size: 1.1rem;
+        font-size: 1rem;
         flex-flow:row wrap;
         justify-content: center;
         align-content: center;
+        
     }
 
     button.formButton:hover{
-        background-color: #9D3BE1;
-        color: #79ffa0;
+        background-color: #79ffa0;
+        color: #9D3BE1;
     }
 
 
@@ -376,6 +379,11 @@ main{
 
         footer{
             flex-direction: row;
+            font-size: 1rem;
+        }
+
+        input.messages, textarea.messages{
+            font-size: 1rem;
         }
         
     }
@@ -384,6 +392,7 @@ main{
 
         footer{
             flex-direction: row;
+            font-size: 1.1rem;
         }
 
         .productDetail{
@@ -398,17 +407,7 @@ main{
 
         .userMessages{
             padding-right: 1rem;
-            /* width: 15rem;
-            height: 18rem;           */
         }
-
-        /* .userMessages form div{
-            display: inline-flex;
-            width: 100%;
-            height: 100%;
-        } */
-
-
 
     }
 
