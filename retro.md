@@ -42,3 +42,29 @@ SPRINT 2
 
 
 -Stop Doing: Pensamos en que debemos reforzar nuestro compromiso con la propuesta de la retrospectiva anterior de dejar de hacer una reunión de revisión, el día anterior a la entrega del sprint. Creemos que es muy importante para nuestra organización, definir una fecha previa, para poder manejarnos mejor ante imprevistos.
+
+
+
+---------------------------------------------------------------------------------
+
+
+Retrospectiva 
+SPRINT 3
+
+
+-Start Doing: de nuestra reunión para la retrospectiva del sprint entregado la semana pasada, surgió la propuesta de comenzar a utilizar branches o ramas en nuestro repositorio. La idea sería evitar trabajar siempre sobre la rama principal y mantener siempre de esta manera una versión estable de nuestro proyecto.
+
+
+-Do more: Creemos que podemos mejorar la forma de organizar nuestro tablero de trabajo en Trello, utilizando más las herramientas que nos provee. En este caso, propusimos utilizar la herramienta de checklist en nuestras tarjetas, para especificar subtareas dentro de cada una y para ayudarnos así a realizar el seguimiento sobre el estado de esa consigna puntualmente.
+
+
+-Keep Doing: Creemos que nuestras reuniones semanales de tiempo limitado y nuestra metodología para distribuir tareas nos resultaron eficientes, por lo que en este punto decidimos continuar sin cambios.
+
+
+-Do Less: Durante el último sprint limpiamos nuestro código de lineas comentadas durante el desarrollo de los primeros sprint. Nos propusimos evitar la acumulación de lineas comentadas, que ya resolvimos de otra manera o resultan innecesarias o irrelevantes para nuestra aplicación.
+
+
+-Stop Doing: Analizando nuestro repositorio online y el avance de nuestro proyecto ingrador, vimos que nuestra actividad en los commits resulta algo excesiva y en algunos casos incluso confusa. Resolvimos entonces, que intentaremos en adelante evitar hacer tantos commits parciales y coordinarnos mejor entre nosotros, para saber cuándo podemos evitarlos, si no hay probabilidad de conflictos.
+
+
+----------------------------------------------------------------------------------
