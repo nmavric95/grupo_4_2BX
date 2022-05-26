@@ -13,6 +13,8 @@ const mainRouter = require("./routes/mainRoutes");
 const packageRouter = require("./routes/packageRoute");
 const productCartRouter = require("./routes/productCartRoutes");
 const adminRouter = require("./routes/adminRoute")
+const cProfileRouter = require("./routes/cProfileRoute");
+
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
@@ -31,6 +33,8 @@ app.use("/packages/detail", packageRouter);
 app.use("/productCart", productCartRouter);
 app.use("/user", adminRouter);
 app.use("/user/adminForm", adminRouter);
+app.use("/user/clientProfile", cProfileRouter);
+
 
 //APP LISTEN
 app.listen(port, () => console.log("Listening on port ", port));

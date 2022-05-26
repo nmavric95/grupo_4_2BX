@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BPimperial Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("BPimperial Regular"), url("/fonts/BPimperial.woff") format("woff");
+    }
+
+
+
+
+/*MAIN BODY*/
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   margin: 0px;
+   padding: 40px;
+   background-image: url('../img/nat\ y\ deporte.png');
+  background-attachment: fixed;
+  background-size: 1900px;
+}
+
+h1{
+    background-color: transparent;
+}
+
+.sobremi{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.numerito{
+    width: 55px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: none;
+    color: #9d3be1;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.numerito:hover{
+
+    background-color: #79ffa0;
+    color: RGB(157,59,225);
+    font-weight: bold;
+    border: none;
+    transition-property: background-color, color;
+    transition-duration: 0.5ms;
+}
+
+#leibel{
+    padding: 5px;
+    font-size: 30px;
+
+}
+
+.contanos{
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    border: none;
+    color: #79ffa0;
+    background-color: transparent;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: start;
+}
+
+h2{
+    display: flex;
+    align-items: flex-start;
+    width: 500px;
+    padding: 90px;
+}
+
+h5{
+font-size: 30px;
+}
+
+
+.com{
+    padding-top: 10px;
+    height: 38px;
+    width: 250px;
+    font-size: 20px;
+    color: blueviolet;
+    background-color: #79ffa0;
+}
+
+h3{
+    color: black;
+}
+
+.misp{
+    display: flex;
+    flex-direction: row;
+}
+
+.misp2{
+    display: flex;
+    flex-direction: row;
+}
+
+.ultimas{
+    display: flex;
+    flex-direction: row;
+}

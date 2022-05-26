@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylesheetIndex.css">
+    <link rel="stylesheet" href="/css/stylesProductDetail.css">
+    <link rel="stylesheet" href="/css/stylesheetProductCart.css">
+    <link rel="stylesheet" href="/css/stylesheetclientProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/82173492bf.js" crossorigin="anonymous"></script>
+    <title>2BX - Mi Perfil</title>
 </head>
 <body>
-    
+    <%- include("../partialsGeneral/header")  %> 
+    <main>
+        <section class="perfil">
+
+            <div class="name">
+                <h1>Mi nombre</h1>
+                <label>Mi foto</label>
+                <input type="file" accept="image/jpeg, image/jpg">
+            </div>
+            
+            <div class="sobremi">
+
+                <h2>Sobre mi</h2>
+                <label id="leibel">Edad</label>
+                <input class="numerito" type="number">
+
+                <label id="leibel">Peso</label>
+                <input class="numerito" type="number">
+
+                <label id="leibel">Altura</label>
+                <input class="numerito" type="number">
+
+                <label id="leibel">Apto Fisico Anual</label>
+               <label for="checkbox"><input type="checkbox">SI</label>
+               <label for="checkbox"><input type="checkbox">NO</label>
+
+               
+
+                <label id="leibel">Mas sobre mi</label>
+                <input class="contanos" type="text" value="Contanos mas">
+
+                <a type="button" class="com animated infinite pulse">Editar informacion</a>
+            </div>
+
+            <h2>Mis paquetes</h2>
+
+            <div class="misp">
+                
+                <h3 class="">Power RAFTING</h3>
+                <img class="foto" src="img/nat\ y\ deporte.png" alt="Rafting">
+                <h3 class="">Power RAFTING</h3>
+                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
+            </div>
+
+            <div class="misp2">
+                <a href="/packages/detail" type="button" class="com animated infinite pulse">Buscar paquetes</a>
+                <a href="/productCart" type="button" class="com animated infinite pulse">Agregar/Eliminar</a>
+            </div>
+
+            <h2>Ultimas visitas y compras</h2>
+
+        <div class="ultimas">
+                
+                <h3 class="">Power RAFTING</h3>
+                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
+                <h3 class="">Power RAFTING</h3>
+                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
+            </div>
+
+            <div class="conf">
+                <h2>Configuracion y Seguridad de mi cuenta</h2>
+
+                <a type="button" class="com animated infinite pulse">Editar</a>
+            </div>
+
+        </section>
+
+    </main>
+    <%- include("../partialsGeneral/footer") %> 
 </body>
 </html>
