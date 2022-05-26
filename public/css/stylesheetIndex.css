@@ -36,7 +36,7 @@
     padding: 0%;
 }
 
-/*HEADER*/
+/* HEADER
 
 body{
     font-family: "Lato", sans-serif;
@@ -160,7 +160,7 @@ nav li a:hover{
 .burgerMenu:active{
     color: #9d3be1;
 
-}
+} */
 
 /*CARROUSEL*/
 .slide{
