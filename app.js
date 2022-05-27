@@ -3,7 +3,7 @@ const app = express()
 const path = require("path")
 
 //PUBLIC PATH
-const publicPath = path.resolve(__dirname, "./public")
+const publicPath = path.resolve("public")
 
 //PORT
 const port = 3030
@@ -25,15 +25,10 @@ app.use(express.static(publicPath))
 
 //ROUTES
 app.use("/", mainRouter);
-app.use("/login", mainRouter);
-app.use("/register", mainRouter);
-app.use("/aboutUs", mainRouter);
 app.use("/packages", packageRouter);
-app.use("/packages/detail", packageRouter);
 app.use("/productCart", productCartRouter);
-app.use("/user", adminRouter);
-app.use("/user/adminForm", adminRouter);
-app.use("/user/clientProfile", cProfileRouter);
+app.use("/userAdmin", adminRouter);
+app.use("/userClient", cProfileRouter);
 
 
 //APP LISTEN
