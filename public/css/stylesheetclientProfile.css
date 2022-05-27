@@ -16,13 +16,13 @@
 
 /*MAIN BODY*/
 
-.perfil{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   margin: 0px;
-   padding: 40px;
-   background-image: url('../img/nat\ y\ deporte.png');
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 40px;
+  background-image: url('../img/nat\ y\ deporte.png');
   background-attachment: fixed;
   background-size: 1900px;
 }
@@ -32,13 +32,13 @@ h1{
     cursor: pointer;
 }
 
-.sobremi{
+.aboutme{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.numerito{
+.number{
     width: 55px;
     cursor: pointer;
     border-radius: 40px;
@@ -50,7 +50,7 @@ h1{
     text-align: center;
 }
 
-.numerito:hover{
+.number:hover{
 
     background-color: #79ffa0;
     color: RGB(157,59,225);
@@ -60,7 +60,7 @@ h1{
     transition-duration: 0.5ms;
 }
 
-#leibel{
+#personalinfo{
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 25px;
@@ -68,7 +68,7 @@ h1{
 
 }
 
-.contanos{
+.tellus{
     display: flex;
     align-items: flex-start;
     width: 500px;
@@ -118,7 +118,7 @@ h3{
     flex-direction: row;
 }
 
-.ultimas{
+.last{
     display: flex;
     flex-direction: row;
 }
