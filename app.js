@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const path = require("path")
+const methodOverride = require("method-override")
 
 //PUBLIC PATH
 const publicPath = path.resolve("public")
@@ -22,6 +23,7 @@ app.set("views", path.resolve("views"));
 
 //RECURSOS PUBLIC
 app.use(express.static(publicPath))
+app.use(methodOverride("_method"))
 
 //ROUTES
 app.use("/", mainRouter);

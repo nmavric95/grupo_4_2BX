@@ -9,4 +9,6 @@ router.get("/adminForm", adminControllers.adminForm);
 
 router.get("/adminBase", adminControllers.adminBase);
 
+router.delete("/adminBase/delete/:idPackages", adminControllers.adminDelete);
+
 module.exports = router
