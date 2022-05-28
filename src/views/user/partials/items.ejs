@@ -2,7 +2,7 @@
     <% dataBasePackages.forEach(package => { %>
 
     <article class="productItem p1">
-        <div class="picturePackages"><img class="picturesIn" src="<%= package.image  %>"  alt="paquete"></div>
+        <div class="picturePackages"><img class="picturesIn" src="/img/<%= package.image  %>"  alt="paquete"></div>
         <a href="*"><p><%= package.activityName  %></p></a>
         <form action="/userAdmin/adminBase/delete/<%= package.idPackages  %>?_method=DELETE" method="POST">
             <button type="submit">ELIMINAR</button>
