@@ -79,7 +79,7 @@
  },
  {
   "idPackages": 9,
-  "activityName": null,
+  "activityName": "El nombre de una paquete",
   "sports": "Teal",
   "startTime": "8:34 PM",
   "endTime": "2:23 AM",
@@ -105,7 +105,7 @@
  },
  {
   "idPackages": 10,
-  "activityName": null,
+  "activityName": "null",
   "sports": "Yellow",
   "startTime": "4:56 PM",
   "endTime": "11:46 PM",
@@ -1116,5 +1116,31 @@
   "adrenalineLevel": 1,
   "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "image": "http://dummyimage.com/151x233.png/ff4444/ffffff"
+ },
+ {
+  "idPackages": 49,
+  "activityName": "Esto es una prueba ",
+  "startTime": "20:45",
+  "endTime": "23:45",
+  "Location": "Cordoba",
+  "lunch": "lunch",
+  "age": "age",
+  "price": "4321",
+  "reservationPrice": "12",
+  "saleRadio": "yes",
+  "description": "Una descrpcviiom",
+  "image": "image-1653774338273-266006626.jpg"
+ },
+ {
+  "idPackages": 50,
+  "activityName": "imagen default",
+  "startTime": "11:46",
+  "endTime": "21:46",
+  "Location": "Mina Clavero",
+  "snack": "snack",
+  "price": "4321",
+  "reservationPrice": "78",
+  "description": "otra descripcion",
+  "image": "image-1653774442182-690760898.jpg"
  }
 ]
