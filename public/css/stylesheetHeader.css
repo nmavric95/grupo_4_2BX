@@ -161,3 +161,38 @@ nav li a:hover{
     color: #9d3be1;
 
 }
+
+
+
+@media (min-width: 426px){
+    .logo{
+        width: 15vw;
+        left: 42%;
+    }
+
+}
+
+@media (min-width: 769px){
+    .logo{
+        width: 8vw;
+        left: 45%;
+    }
+    .bottomBar{
+        height: 120px;
+    }
+    nav li{
+        display: flex;
+        margin-top: 50px;
+        font-size: 1.5vw;
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+    .burgerMenu{
+        display: none;
+    }
+
+  
+   
+
+  
+}

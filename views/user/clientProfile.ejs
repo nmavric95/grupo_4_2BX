@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/stylesheetIndex.css">
-    <link rel="stylesheet" href="/css/stylesProductDetail.css">
+    
+    <%- include("../partialsGeneral/head") %>
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
     <link rel="stylesheet" href="/css/stylesheetclientProfile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="https://kit.fontawesome.com/82173492bf.js" crossorigin="anonymous"></script>
     <title>2BX - Mi Perfil</title>
 </head>
 <body>
     <%- include("../partialsGeneral/header")  %> 
     <main>
-        <section class="perfil">
+        <section class="profile">
 
             <div class="name">
                 <h1>Mi nombre</h1>
@@ -27,26 +18,27 @@
                 <input type="file" accept="image/jpeg, image/jpg">
             </div>
             
-            <div class="sobremi">
 
-                <h2>Sobre mi</h2>
-                <label id="leibel">Edad:</label>
-                <input class="numerito" type="number">
+            <h2>Sobre mi</h2>
+            <div class="aboutme">
 
-                <label id="leibel">Peso:</label>
-                <input class="numerito" type="number">
+                <label id="personalinfo">Edad:</label>
+                <input class="number" type="number">
 
-                <label id="leibel">Altura:</label>
-                <input class="numerito" type="number">
+                <label id="personalinfo">Peso:</label>
+                <input class="number" type="number">
 
-                <label id="leibel">Apto Fisico Anual vigente:</label>
-               <label for="checkbox"><input type="checkbox">SI</label>
-               <label for="checkbox"><input type="checkbox">NO</label>
+                <label id="personalinfo">Altura:</label>
+                <input class="number" type="number">
 
-               
+                <label id="personalinfo">Apto Medico:</label>
+               <label for="checkbox"><input id="checkok" type="checkbox">SI</label>
+               <label for="checkbox"><input id="checkok" type="checkbox">NO</label>
 
-                <label id="leibel">Mas sobre mi:</label>
-                <input class="contanos" type="text" value="Contanos mas">
+            </div>
+
+                <label id="personalinfo">Mas sobre mi:</label>
+                <input class="tellus" type="text" value="Contanos mas">
 
             <div class="misp2">
 
@@ -54,16 +46,17 @@
                 <a type="button" class="com animated infinite pulse">Guardar</a>
             </div>
 
-            </div>
 
             <h2>Mis paquetes</h2>
 
             <div class="misp">
                 <h1><</h1>
-                <h3 class="">Power RAFTING</h3>
-                <img class="foto" src="img/nat\ y\ deporte.png" alt="Rafting">
-                <h3 class="">Power RAFTING</h3>
-                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
+                
+                <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
+                
+                <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
+
+                <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
                 <h1>></h1>
             </div>
 
@@ -74,12 +67,13 @@
 
             <h2>Ultimas visitas y compras</h2>
 
-        <div class="ultimas">
+        <div class="last">
                <h1><</h1>
-                <h3 class="">Power RAFTING</h3>
-                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
-                <h3 class="">Power RAFTING</h3>
-                <img class="foto" src="img/rafting_640.jpg" alt="Rafting">
+               <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
+                
+               <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
+
+               <img class="foto" src="/img/rafting_640.jpg" alt="Rafting">
                <h1>></h1>
             </div>
 
