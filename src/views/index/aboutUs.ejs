@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partialsGeneral/head")  %> 
+    <link rel="stylesheet" href="/css/stylesAboutUs.css">
+    <title>2BX - About US</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <%- include("../partialsGeneral/header") %> 
+    <!-- MAIN -->
+    <main class="mainAbout">
+        <section class="aboutUsTitulo">
+            <h1>About Us</h1>
+        </section>
+        <section class="aboutUsPrincipal">
+           <% crew.forEach(member => { %>
+            
+            <article class="aboutUsEach">
+                <img src="<%= member.image %>" class="memberImage animated infinite pulse" alt="memberImage">
+                <div class="containerAbout">
+                <p class="name"><%= member.name %> </p>
+                <p class="personalDescription"><%= member.description %></p>
+                <address class="personalContact">
+                    <ul>
+                        <li><a href="<%= member.linkedin %>" target="_blank">LinkedIn</a></li>
+                        <li><a href="<%= member.instagram %>" target="_blank">Instagram</a></li>
+                    </ul>
+                </address>
+                </div>
+            </article>
+            <% }) %>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <%- include("../partialsGeneral/footer") %> 
+</body>
+</html>

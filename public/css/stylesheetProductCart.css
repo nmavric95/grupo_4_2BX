@@ -141,6 +141,9 @@ h1{
 
 
 .com {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Lato", sans-serif;
     color: #79ffa0;
     background-color: #9d3be1;
