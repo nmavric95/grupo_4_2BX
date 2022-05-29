@@ -7,6 +7,6 @@ const packageController = require("../controllers/packageController");
 router.get("/", packageController.packages);
 
 //RUTA DE PACKAGE DETAIL
-router.get("/detail", packageController.packagesDetail);
+router.get("/detail/:idPackages", packageController.packagesDetail);
 
 module.exports = router;

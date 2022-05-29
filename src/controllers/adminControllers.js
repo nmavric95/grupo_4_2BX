@@ -6,12 +6,15 @@ const pathDB = path.resolve("./data/packageDB.json")
 const dataBasePackages = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 const adminControllers = {
+    // VISTA ADMIN DE TODOS LOS PAQUETES
     adminBase : (req,res) =>{
         res.render("./user/adminBase", {dataBasePackages: dataBasePackages})
     },
+    //VISTA CREAR NUEVO PAQUETE
     adminForm : (req, res) => {
         res.render("./user/adminForm")
     },
+    //ALMACENAR NUEVO PAQUETE
     adminFormStore : (req, res) => {
         let defaultImage = "Logo1FondoNegro.jpg";
         let image ;
@@ -32,11 +35,13 @@ const adminControllers = {
 
         res.redirect("/userAdmin/adminBase");
     },
+    //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {
         let id = req.params.idPackages
         let packageToEdit = dataBasePackages.find(package => package.idPackages == id)
         res.render("./user/adminFormEdit", {packageToEdit : packageToEdit} );
     },
+    //ACTUALIZAR PAQUETE
     adminFormEditSend : (req, res) => {
         let id = req.params.idPackages;
         let packageToEdit = dataBasePackages.find(package => package.idPackages == id);
@@ -65,8 +70,8 @@ const adminControllers = {
          fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
 
          res.redirect("/userAdmin/adminBase");
-    }, 
-
+    },
+    //BORRAR PAQUETE
     adminDelete: (req, res) => {
         let idProduct = req.params.idPackages
         let dataBaseModified = dataBasePackages.filter(package => package.idPackages != idProduct)

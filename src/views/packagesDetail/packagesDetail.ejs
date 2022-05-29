@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/stylesPackages.css">
 <link rel="stylesheet" href="/css/stylesProductDetail.css">
 <link rel="stylesheet" href="/css/stylesheetIndex.css">
-<title>Detalle de Paquetes</title>
+<title>Detalle de Paquete : <%= packageToDetail.activityName %> </title>
 </head>
 <body>
     <!-- HEADER Y NAVBAR -->
@@ -24,13 +24,13 @@
                 <div class="textContainer">
                     
                     <div class="item">
-                        <h4>Escalada Deportiva</h4>
+                        <h4><%= packageToDetail.activityName %> </h4>
                     </div>
 
                     <div class="item">
                         <ul type="none">
-                            <li>Duracion: 9 a 18:30 hs</li>
-                            <li>Lugar: La Ola</li>
+                            <li>Duracion: <%= packageToDetail.startTime %>  a <%= packageToDetail.endTime %> hs</li>
+                            <li>Lugar: <%= packageToDetail.location %></li>
                             <li>Incluye: 
                                 <ul type="none">
                                     <li>Almuerzo Liviano</li>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="item">
-                        <p>PRECIO : $5000 + reserva</p>
+                        <p>PRECIO : $<%= packageToDetail.price %> + reserva</p>
                     </div>
 
                     <div class="item">
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="precio">
-                        <p>$2000</p>
+                        <p>$<%= packageToDetail.reservationPrice %></p>
                     </div>
                 </div>
                 <div class="buyButton">
@@ -83,7 +83,7 @@
                 
                 <ul type="disc">
                     <li>¿En qué consiste la actividad?</li>
-                        <p>Explicacion de la actividad</p>
+                        <p><%= packageToDetail.description %></p>
                     <li>¿Qué debo llevar?</li>
                         <p>Ropa comoda, abrigo y calzado adecuado para trekking. Proteccion solar.</p>
                     <li>Seguridad</li>
