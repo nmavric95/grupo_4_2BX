@@ -15,7 +15,7 @@
      <section class="newProduct">
         <h2>Nuevo Paquete</h2>
         
-        <form action="/userAdmin/adminForm/:idPackage?_method=PUT" method="POST" id="newProduct" enctype="multipart/form-data">
+        <form action="/userAdmin/adminForm/<%= packageToEdit.idPackages %> ?_method=PUT" method="POST" id="newProduct" enctype="multipart/form-data">
           <h3>Detalle general del Paquete</h3>
 
           <div class="form">

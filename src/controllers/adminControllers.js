@@ -42,25 +42,29 @@ const adminControllers = {
         let packageToEdit = dataBasePackages.find(package => package.idPackages == id);
 
         let image;
-        if(req.file[0] != undefined){
-            image = req.file[0].filename;
+        if(req.files[0] != undefined){
+            image = req.files[0].filename;
         }else{
             image = packageToEdit.image;
         };
 
         let packageEdited = {
-            idPackages : packageToEdit.idPackages,
+            idPackages : id,
             ...req.body,
             image : image,
         };
 
 
          let dataBasePackagesEdited = dataBasePackages.map(package => {
-             if(package.idPackages == id){
+             if(package.idPackages == packageEdited.idPackages){
                  return package = {...packageEdited}
              }
              return package;
-         })
+         });
+
+         fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
+
+         res.redirect("/userAdmin/adminBase");
     }, 
 
     adminDelete: (req, res) => {

@@ -29,7 +29,7 @@ router.post("/adminForm", upload.any() ,adminControllers.adminFormStore);
 
 //RUTA EDITAR PAQUETE
 router.get("/adminForm/:idPackages", adminControllers.adminFormEdit);
-router.put("/adminForm/:idPackage", upload.any() ,adminControllers.adminFormEditSend);
+router.put("/adminForm/:idPackages", upload.any() ,adminControllers.adminFormEditSend);
 
 router.get("/adminBase", adminControllers.adminBase);
 
