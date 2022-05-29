@@ -13,10 +13,10 @@
 <main>
    
      <section class="newProduct">
-        <h2>Nuevo Paquete</h2>
+        <h2 class="h2">Nuevo Paquete</h2>
         
         <form action="/userAdmin/adminForm" method="POST" id="newProduct" enctype="multipart/form-data">
-          <h3>Detalle general del Paquete</h3>
+          <h3 class="h3">Detalle general del Paquete</h3>
 
           <div class="form">
                   <div class="activity">
@@ -24,7 +24,7 @@
                   <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
               
                   <label for="sport">Deporte</label>               
-                  <select id="sport">
+                  <select class="checkBoxAF" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
                     <option>Paracaidismo</option>
                     <option>Rafting</option>
@@ -43,7 +43,7 @@
                   <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required> 
 
                   <label for="geoRegion">Zona Geografica</label>
-                  <select id="geoRegion">
+                  <select class="checkBoxAF" id="geoRegion">
                     <option>Norte</option>
                     <option>centro</option>
                     <option>Sur</option>
@@ -81,7 +81,7 @@
                   </div>
 
                   <label for="sale">% de descuento</label>
-                  <select id="sale">
+                  <select class="checkBoxAF" id="sale">
                     <option value="" disabled selected>Seleccionar descuento</option>
                     <option>10%</option>
                     <option>25%</option>
@@ -90,7 +90,7 @@
                   </select>
 
                   <label for="adrenalineLevel">Nivel de adrenalina</label>
-                  <select id="adrenalineLevel">
+                  <select class="checkBoxAF" id="adrenalineLevel">
                     <option value="" disabled selected>Seleccionar nivel</option>
                     <option>Alto</option>
                     <option>Medio</option>
