@@ -24,7 +24,7 @@
                   <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
               
                   <label for="sport">Deporte</label>               
-                  <select class="checkBoxAF" id="sport">
+                  <select class="listAF" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
                     <option>Paracaidismo</option>
                     <option>Rafting</option>
@@ -43,7 +43,7 @@
                   <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required> 
 
                   <label for="geoRegion">Zona Geografica</label>
-                  <select class="checkBoxAF" id="geoRegion">
+                  <select class="listAF" id="geoRegion">
                     <option>Norte</option>
                     <option>centro</option>
                     <option>Sur</option>
@@ -52,20 +52,20 @@
                 
                   <p>Elementos incluidos</p>
                   <div class="radio">
-                  <label for="lunch"></label><input type="checkbox" name="lunch" id="lunch" value="lunch">Almuerzo</label>
-                  <label for="snack"></label><input type="checkbox" name="snack" id="snack" value="snack">Snacks</label>
-                  <label for="beverage"></label><input type="checkbox" name="beverage" id="beverage" value="beverage">Bebidas</label>
-                  <label for="transport"></label><input type="checkbox" name="transport" id="transport" value="transport">Transporte desde el hotel</label>
-                  <label for="equipment"></label><input type="checkbox" name="equipment" id="equipment" value="equipment">Equipamiento necesario</label>
-                  <label for="healthInsurance"></label><input type="checkbox" name="healthInsurance" id="healthInsurance" value="healthInsurance">Seguro Medico</label>
+                  <label for="lunch"></label><input type="checkbox" class="checkbox" name="lunch" id="lunch" value="lunch">Almuerzo</label>
+                  <label for="snack"></label><input type="checkbox" class="checkbox" name="snack" id="snack" value="snack">Snacks</label>
+                  <label for="beverage"></label><input type="checkbox" class="checkbox" name="beverage" id="beverage" value="beverage">Bebidas</label>
+                  <label for="transport"></label><input type="checkbox" class="checkbox" name="transport" id="transport" value="transport">Transporte desde el hotel</label>
+                  <label for="equipment"></label><input type="checkbox" class="checkbox" name="equipment" id="equipment" value="equipment">Equipamiento necesario</label>
+                  <label for="healthInsurance"></label><input type="checkbox" class="checkbox" name="healthInsurance" id="healthInsurance" value="healthInsurance">Seguro Medico</label>
                   </div>
                   
                   <p>Requisitos</p>
                   <div class="radio">
-                  <label for="age"></label><input type="checkbox" name="age" id="age" value="age">Mayores de 18 años</label><br>
-                  <label for="minors"></label><input type="checkbox" name="minors" id="minors" value="minors">Menores acompañados por adulto</label>
-                  <label for="doctorApproval"></label><input type="checkbox" name="doctorApproval" id="doctorApproval" value="doctorApproval">Apto medico</label>
-                  <label for="experience"></label><input type="checkbox" name="experience" id="experience" value="experience">Experiencia previa</label>
+                  <label for="age"></label><input type="checkbox" class="checkbox" name="age" id="age" value="age">Mayores de 18 años</label><br>
+                  <label for="minors"></label><input type="checkbox" class="checkbox" name="minors" id="minors" value="minors">Menores acompañados por adulto</label>
+                  <label for="doctorApproval"></label><input type="checkbox" class="checkbox" name="doctorApproval" id="doctorApproval" value="doctorApproval">Apto medico</label>
+                  <label for="experience"></label><input type="checkbox" class="checkbox" name="experience" id="experience" value="experience">Experiencia previa</label>
                   </div>      
 
                   <label for="price">Precio</label>
@@ -75,13 +75,13 @@
                   <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" required> 
 
                   <p>Esta en oferta?</p>
-                  <div class="radio" id="sale">
+                  <div class="radioButton" id="sale">
                   <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="yes">Si</label>
                   <label for="saleRadio"></label><input type="radio" name="saleRadio" id="saleRadio" value="no">No</label>
                   </div>
 
                   <label for="sale">% de descuento</label>
-                  <select class="checkBoxAF" id="sale">
+                  <select class="listAF" id="sale">
                     <option value="" disabled selected>Seleccionar descuento</option>
                     <option>10%</option>
                     <option>25%</option>
@@ -90,7 +90,7 @@
                   </select>
 
                   <label for="adrenalineLevel">Nivel de adrenalina</label>
-                  <select class="checkBoxAF" id="adrenalineLevel">
+                  <select class="listAF" id="adrenalineLevel">
                     <option value="" disabled selected>Seleccionar nivel</option>
                     <option>Alto</option>
                     <option>Medio</option>
