@@ -1,0 +1,139 @@
+/* FOOTER */
+footer{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer ul li{
+    margin: 5px;
+}
+
+
+footer ul li a{
+    text-decoration: none;
+    font-style: normal;
+    color: #9D3BE1;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition: all 600ms; 
+}
+
+footer ul li a p{
+    padding-left: 0.75rem;
+}
+
+
+footer ul li a:hover{
+    text-shadow: 2px 2px 2px #9D3BE1;
+    color: #79ffa0;
+}
+
+
+.contact{
+    padding: 1rem;
+    width: 240px;               
+}
+
+.socialNetwork{
+    padding: 1rem;
+    width: 240px;
+}
+
+.userMessages{
+    width: 15rem;
+    height: 18rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 2rem;
+}
+
+.userMessages form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+}
+
+
+.userMessages form label h3{
+    color: #9D3BE1;
+    padding: 0.3rem;
+    transition: all 600ms;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.userMessages form label h3:hover{
+    color: #79ffa0;
+    text-shadow: 1px 1px 1px #9D3BE1;
+}
+
+
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+input.messages, textarea.messages{
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px ;
+    border: 2px solid rgb(157,59,225);
+    border-radius: 25px;
+    background-color:rgb(235, 235, 235);
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    font-size: 0.9rem;
+    
+}
+
+
+input.messages.footer:hover, input.messages.footer:focus, textarea.messages.footer:hover, textarea.messages.footer:focus{
+    width: 100%;
+    /* padding: 10px 15px; */
+    margin: 8px ;
+    border-bottom: 2px solid rgb(121,255,160);
+    border-top: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+    border-radius: 0px;
+    outline: none;
+    box-sizing: border-box;  
+}
+
+.buttonContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button.formButton.footer{
+    background-color: #9D3BE1;
+    color: #79ffa0;
+    height: 30px;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition-duration: 0.4s;        
+    font-size: 1rem;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+button.formButton.footer:hover{
+    background-color: #79ffa0;
+    color: #9D3BE1;
+}
