@@ -33,8 +33,13 @@
                             <li>Lugar: <%= packageToDetail.location %></li>
                             <li>Incluye: 
                                 <ul type="none">
-                                    <li>Almuerzo Liviano</li>
-                                    <li>Bebidas</li>
+                                    <li><%= packageToDetail.lunch == true ? "Almuerzo Liviano" : null %></li>
+                                    <li><%= packageToDetail.snack == true ? "Snack" : null %></li>
+                                    <li><%= packageToDetail.beverage == true ? "Bebida" : null %></li>
+                                    <li><%= packageToDetail.transport == true ? "Transporte" : null %></li>
+                                    <li><%= packageToDetail.equipment == true ? "Equipo" : null %></li>
+                                    <li><%= packageToDetail.healthInsurance == true ? "Seguro Médico" : null %></li>
+                                    
                                 </ul>
                             </li>
                         </ul>
@@ -46,8 +51,10 @@
 
                     <div class="item">
                         <ul type="none">
-                            <li>Mayores de 18 años</li>
-                            <li>Menores acompañados por adulto</li>
+                            <li><%= packageToDetail.age == true ? "Mayores de 18 años" : null %></li>
+                            <li><%= packageToDetail.minors == true ? "Menores acompañados de un mayor" : null %></li>
+                            <li><%= packageToDetail.doctorApproval == true ? "Certificado médico" : null %></li>
+                            <li><%= packageToDetail.experience == true ? "Experiencia" : null %></li>
                         </ul>
                     </div>
 
