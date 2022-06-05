@@ -31,10 +31,6 @@
     padding-bottom: 95px;
 }
 
-h1{
-    background-color: transparent;
-    cursor: pointer;
-}
 
 .aboutme{
     display: flex;
@@ -94,12 +90,13 @@ h1{
     font-size: 20px;
 }
 
-h2{
+h4{
     display: flex;
     align-items: flex-start;
     width: 700px;
-    padding-bottom: 70px;
-    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    letter-spacing: 4px;
 }
 
 h5{
@@ -135,4 +132,175 @@ h3{
 .last{
     display: flex;
     flex-direction: row;
+}
+
+.photo{
+    cursor: pointer;
+}
+
+
+
+
+
+/** MQ **/
+
+@media screen and (min-width: 426px){
+
+
+h4{
+    display: block;
+    font-family: "BPimperial Regular";
+    color: #79ffa0;
+    text-shadow: 8px 8px 8px black;
+    width: 200px;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    width: 250px;
+}
+
+#checkok{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#tellus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.tellus{
+    width: 350px;
+}
+
+.misp{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.misp2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.last{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.conf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.photo{
+    width: 350px;
+    padding: 20px;
+}
+
+}
+
+@media screen and (min-width: 481px){
+
+    .photo{
+        width: 500px;
+        padding-bottom: 50px;
+    }
+
+    .misp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .last{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 769px){
+
+    .name{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .misp{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .last{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 150px;
+    }
+
+    .misp2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tellus{
+        display: flex;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .tellus{
+        width: 1700px;
+    }
+
+    .aboutme{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .number{
+       
+        width: 190px;
+       
+    }
+
+    h4{
+        display: flex;
+        align-items: flex-start;
+        font-size: 30px;
+        letter-spacing: 4px;
+       
+    }
+
+
 }
