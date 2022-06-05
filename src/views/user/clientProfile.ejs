@@ -12,48 +12,51 @@
     <main>
         <section class="profile">
 
+        <form method="POST" action="/userClient" enctype="multipart/form-data">
+
             <div class="name">
-                <h4>Mi nombre</h4>
-                <label>Mi foto</label>
+                <label for="" id="personalinfo"><h4>Nombre:</h4></label>
+                <input class="number" type="text" name="nombre">
+                <label for="" id="personalinfo"><h4>Apellido:</h4></label>
+                <input class="number" type="text" name="apellido">
+                <label><h4>Foto</h4>/label>
                 <input class="photo" type="file" accept="image/jpeg, image/jpg">
             </div>
-            
+
 
             <h4>Sobre mi</h4>
             <div class="aboutme">
 
-                <label id="personalinfo">Email:</label>
-                <input class="number" type="email">
+                <label for="" id="personalinfo">Edad:</label>
+                <input class="number" type="text" name="edad">
+                <br>
+                <label for="" id="personalinfo">Peso(Kg):</label>
+                <input class="number" type="number" name="peso">
+                <br>
+                <label for="" id="personalinfo">Altura(mts):</label>
+                <input class="number" type="number" name="altura">
+                <br>
+                <label for="" id="personalinfo">Apto Medico:</label>
+                <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">SI</label>
+                <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">NO</label>
+                <input class="photo" value="adjunta tu apto" type="file" accept="DOCTYPE">
 
-                <label id="personalinfo">Password:</label>
-                <input class="number" type="password">
-
-                <label id="personalinfo">Edad:</label>
-                <input class="number" type="number">
-
-                <label id="personalinfo">Peso:</label>
-                <input class="number" type="number">
-
-                <label id="personalinfo">Altura:</label>
-                <input class="number" type="number">
-
-                <label id="personalinfo">Apto Medico:</label>
-               <label for="checkbox"><input id="checkok" type="checkbox">SI</label>
-               <label for="checkbox"><input id="checkok" type="checkbox">NO</label>
 
             </div>
 
             <div id="tellus">
-
-                <label id="personalinfo">Mas sobre mi:</label>
-                <input class="tellus" type="text" value="Contanos mas">
+                <br>
+                <label for="" id="personalinfo">Mas sobre mi:</label>
+                <input class="tellus" name="tellus" type="text" value="My info">
             </div>
 
             <div class="misp2">
-
-                <a type="button" class="com animated infinite pulse">Editar informacion</a>
-                <a type="button" class="com animated infinite pulse">Guardar</a>
+                <br>
+                <a type="submit" class="com animated infinite pulse">Editar informacion</a>
+                <button type="submit" class="com animated infinite pulse">Guardar</button>
             </div>
+
+        </form>
 
 
             <h4>Mis paquetes</h4>
