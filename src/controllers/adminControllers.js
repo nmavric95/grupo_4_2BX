@@ -46,6 +46,8 @@ const adminControllers = {
         let id = req.params.idPackages;
         let packageToEdit = dataBasePackages.find(package => package.idPackages == id);
 
+        console.log(packageToEdit);
+
         let image;
         if(req.files[0] != undefined){
             image = req.files[0].filename;
@@ -54,7 +56,7 @@ const adminControllers = {
         };
 
         let packageEdited = {
-            idPackages : id,
+            idPackages : packageToEdit.idPackages,
             ...req.body,
             image : image,
         };

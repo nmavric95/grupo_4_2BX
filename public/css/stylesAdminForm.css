@@ -17,7 +17,7 @@ main{
 }    
 
 
-h2{
+.h2{
     font-size: 32px;
     font-family: "BPimperial Regular";
     display: block;
@@ -35,7 +35,7 @@ h2{
     padding: 5%;
 }
 
-h3{
+.h3{
     font-size: 24px;
     display: block;
     text-align: center;
@@ -66,8 +66,10 @@ p{
     color: gray;
     padding-top: 2%;
     margin-bottom: 20px;
+   
 }
 
+  
 #description{
     height: 180px;
    
@@ -85,9 +87,10 @@ label{
     margin-left: 7%;
     color: gray;
     padding-top: 2%;
+    
 }
 
-input[type=text], [type = date], [type = number]{
+input[type=text], [type = date], [type = number], .listAF{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -100,7 +103,8 @@ input[type=text], [type = date], [type = number]{
     
   }
 
- input[type=text]:hover, input[type = date]:hover, input[type = number]:hover, input[type=text]:focus, input[type = date]:focus, input[type = number]:focus{
+
+  input[type=text]:hover, input[type = date]:hover, input[type = number]:hover, .listAF:hover, input[type=text]:focus, input[type = date]:focus, input[type = number]:focus, .listAF:focus{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -126,6 +130,7 @@ input[type=text], [type = date], [type = number]{
     outline: none;
   }  
 
+   
   input[type=file]{
     margin-top: 10px;  
     display: block;
@@ -133,9 +138,33 @@ input[type=text], [type = date], [type = number]{
 
   }
   
-   
-     
-   
+ .checkbox{
+    -webkit-appearance: none;
+	background-color: rgb(235, 235, 235);
+	border: 3px solid RGB(121,255,160);	
+	padding: 9px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+ }  
+
+ 
+ .checkbox:checked{
+    background-color: RGBA(121,255,160,0.6);
+	border: 3px solid RGB(121,255,160);	 
+ }
+
+ .checkbox:checked:after{
+    content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: gray
+ }
+ 
+
+
 
 /* button */
 button{
@@ -200,7 +229,7 @@ button.reset:hover{
 @media (min-width: 426px){
  
 
-.radio#sale{
+.radioButton#sale{
     width: 90%;
     display: flex;
     flex-direction: row;

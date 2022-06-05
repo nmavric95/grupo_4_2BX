@@ -6,7 +6,7 @@
 <%- include("../partialsGeneral/head") %>
 <link rel="stylesheet" href="/css/stylesPackages.css">
 <link rel="stylesheet" href="/css/stylesProductDetail.css">
-<link rel="stylesheet" href="/css/stylesheetIndex.css">
+
 <title>Detalle de Paquete : <%= packageToDetail.activityName %> </title>
 </head>
 <body>
@@ -91,7 +91,7 @@
                     <li>Clima</li>
                         <p>En caso de clima adverso se reprogramará la actividad</p>
                     <li>Lugar</li>
-                        <p>Altas Cumbres, RP 34 Córdoba</p>
+                        <p><%= packageToDetail.location %></p>
 
                 </ul>
             </article>
