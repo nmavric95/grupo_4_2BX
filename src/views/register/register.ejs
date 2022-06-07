@@ -14,7 +14,7 @@
      <section class="registerForm">
         <h2>Registro / <a href="/login"> Login </a></h2>
         
-        <form action="" method="get" id="registerForm"  >
+        <form action="/" method="POST" id="registerForm" enctype="multipart/form-data">
         <h3>Datos Personales</h3>
 
         <div class="form">
@@ -48,7 +48,7 @@
         </div>
         </form>
 
-        <a href="/login"></a><button type="submit" form="registerForm" value="Submit">Registrar</button></a>
+        <a href="/"><button type="submit" form="registerForm" value="Submit" onclick="save()">Registrar</button></a>
     </section>
 
     <section class="image">

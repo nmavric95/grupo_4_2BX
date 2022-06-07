@@ -25,8 +25,11 @@ const clientProfileController = require("../controllers/clientProfileController"
 router.get("/", clientProfileController.clientProfile);
 router.post("/", uploadFile.any(), clientProfileController.create);
 
+router.get("/edit/:idUser", uploadFile.any(), clientProfileController.edit)
+router.put("/edit", uploadFile.any(), clientProfileController.edit)
 
-//RUTA PERFIL USUARIO - ACTUALIZAR DATOS
 
+
+//RUTA PERFIL USUARIO - EDITAR DATOS
 
 module.exports = router;
