@@ -21,6 +21,11 @@ const cProfileRouter = require("./routes/cProfileRoute");
 app.set("view engine", "ejs");
 app.set("views", path.resolve("views"));
 
+//CRUD - METODOS
+
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
+
 //RECURSOS PUBLIC
 app.use(express.static(publicPath))
 app.use(methodOverride("_method"))

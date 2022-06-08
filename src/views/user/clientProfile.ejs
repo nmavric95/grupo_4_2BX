@@ -12,14 +12,14 @@
     <main>
         <section class="profile">
 
-        <form method="POST" action="/userClient" enctype="multipart/form-data">
+        <form method="POST" action="/?_method=PUT" enctype="multipart/form-data">
 
             <div class="name">
                 <label for="" id="personalinfo"><h4>Nombre:</h4></label>
-                <input class="number" type="text" name="nombre">
+                <input class="number" type="text" name="name" id="name">
                 <label for="" id="personalinfo"><h4>Apellido:</h4></label>
-                <input class="number" type="text" name="apellido">
-                <label><h4>Foto</h4>/label>
+                <input class="number" type="text" name="lastName" id="lastName">
+                <label><h4>Foto</h4></label>
                 <input class="photo" type="file" accept="image/jpeg, image/jpg">
             </div>
 
@@ -27,8 +27,8 @@
             <h4>Sobre mi</h4>
             <div class="aboutme">
 
-                <label for="" id="personalinfo">Edad:</label>
-                <input class="number" type="text" name="edad">
+                <label for="" id="personalinfo">Nacimiento:</label>
+                <input class="number" type="date" name="birthDate" id="birthDate">
                 <br>
                 <label for="" id="personalinfo">Peso(Kg):</label>
                 <input class="number" type="number" name="peso">

@@ -1,5 +1,11 @@
 //CONTROLLERS PARA LAS MAIN ROUTES
 
+const path = require("path")
+const fs = require("fs")
+const pathDB = path.resolve("./data/userDB.json")
+
+const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
+
 const crew = [
     {
         name:"Ana Cerruti",
@@ -42,9 +48,36 @@ const mainRoutesControllers = {
     },
 
     register : (req, res) => {
-        res.render("./register/register")
+        res.render("./register/register", {userDB: userDB})
     },
 
+    save: (req, res) => {
+
+        const nameId=req.body.name;
+        const lastId=req.body.lastName;
+        const birthId=req.body.birthDate;
+        if (nameId ==""){
+            alert("Campo obligatorio");
+            userDB.getElementById("name").focus();
+        }else{
+            if (lastId ==""){
+                alert("Campo obligatorio");
+                userDB.getElementById("lastName").focus();
+        }else{
+            if (birthId ==""){
+                alert("Campo obligatorio");
+                userDB.getElementById("birthDate").focus();
+        }else{
+            res.redirect('/', nameId, lastId, birthId);
+            userDB.getElementById("name").value="";
+            userDB.getElementById("lastName").value="";
+            userDB.getElementById("birthDate").value="";
+            
+        }}}},
+
+
+   
+           
     aboutUs : (req, res) => {
         res.render("./index/aboutUs",{crew: crew})
     },
