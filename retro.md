@@ -1,4 +1,4 @@
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 Retrospectiva primer Sprint
 
 En nuestra reunión de retrospectiva evaluamos nuestro desempeño como equipo durante el Sprint 1 y nos avocamos sobre todo a discutir qué nos gustaría mejorar para el segundo.
@@ -23,7 +23,7 @@ Do Less: Durante nuestro encuentro para la retrospectiva, llegamos a la conclusi
 
 Stop Doing: Decidimos por último, que las reuniones de revisiones finales de las entregas, ya no las haríamos el día anterior a las mismas. Nuestro objetivo es dejar de lado esta práctica, y reemplazarla por una reunión más temprana, obligándonos así a distribuir mejor el trabajo y llegar menos ajustados a los días de entrega.
 
-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Retrospectiva
 SPRINT 2
@@ -45,7 +45,7 @@ SPRINT 2
 
 
 
----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Retrospectiva 
@@ -67,4 +67,22 @@ SPRINT 3
 -Stop Doing: Analizando nuestro repositorio online y el avance de nuestro proyecto ingrador, vimos que nuestra actividad en los commits resulta algo excesiva y en algunos casos incluso confusa. Resolvimos entonces, que intentaremos en adelante evitar hacer tantos commits parciales y coordinarnos mejor entre nosotros, para saber cuándo podemos evitarlos, si no hay probabilidad de conflictos.
 
 
-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Retrospectiva 
+SPRINT 4
+
+-Start Doing: Manteniendo la idea de este punto del sprint anterior, queremos empezar a utilizar la funcionalidad de branch de git, cosa que no pudimos implementar en el sprint anterior.
+
+
+-Do more: Investigar las documentaciones de los modulos vistos para poder aprovechar al maximo las funcionalidades de estos, como asi tambien desarrollar el habito de leer las documentaciones.
+
+
+-Keep Doing: Mantener el esquema de division de tareas y la comunicacion continua entre los miembros
+
+
+-Do Less: Tener tantas carpetas e informacion distribuida que distorsiona el orden del proyecto.
+
+
+-Stop Doing: Implementar funcionalidades al proyecto que no aportan ni son esenciales al objetivo a cumplir.
