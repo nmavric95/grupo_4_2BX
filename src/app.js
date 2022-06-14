@@ -16,6 +16,10 @@ const productCartRouter = require("./routes/productCartRoutes");
 const adminRouter = require("./routes/adminRoute")
 const cProfileRouter = require("./routes/cProfileRoute");
 
+// MIDDLEWARE GLOBAL
+
+const globalMiddleware = require('./middlewares/globalMiddleware')
+app.use(globalMiddleware)
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");

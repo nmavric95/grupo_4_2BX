@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const {body} = require('express-validator')
 const path = require("path");
 const multer = require("multer");
 
@@ -19,6 +20,20 @@ const uploadFile = multer({ storage: storage })
 
 const mainRoutesControllers = require("../controllers/mainRoutesControllers");
 
+
+// MIDDLEWARE CREACION
+
+const logMiddleware = require('../middlewares/logMiddleware')
+
+// EXP-VALIDATOR REGISTER
+
+const cvForm = [
+  body('name').notEmpty().withMessage('Campo obligatorio'),
+  body('lastName').notEmpty().withMessage('Campo obligatorio'),
+  body('email').isEmail().withMessage('Campo obligatorio'),
+
+];
+
 // RUTAS PRINCIPALES DEL SITIO
 // HOME
 router.get("/", mainRoutesControllers.index);
@@ -28,7 +43,7 @@ router.get("/login", mainRoutesControllers.login);
 
 //REGISTER
 router.get("/register", mainRoutesControllers.register);
-router.post("/", uploadFile.any(), mainRoutesControllers.save)
+router.post("/register", logMiddleware, cvForm, uploadFile.any(), mainRoutesControllers.save)
 
 //ABOUTUS
 router.get("/aboutUs", mainRoutesControllers.aboutUs);

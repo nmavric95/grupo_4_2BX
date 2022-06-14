@@ -53,28 +53,7 @@ const mainRoutesControllers = {
 
     save: (req, res) => {
 
-        const nameId=req.body.name;
-        const lastId=req.body.lastName;
-        const birthId=req.body.birthDate;
-        if (nameId ==""){
-            alert("Campo obligatorio");
-            userDB.getElementById("name").focus();
-        }else{
-            if (lastId ==""){
-                alert("Campo obligatorio");
-                userDB.getElementById("lastName").focus();
-        }else{
-            if (birthId ==""){
-                alert("Campo obligatorio");
-                userDB.getElementById("birthDate").focus();
-        }else{
-            res.redirect('/', nameId, lastId, birthId);
-            userDB.getElementById("name").value="";
-            userDB.getElementById("lastName").value="";
-            userDB.getElementById("birthDate").value="";
-            
-        }}}},
-
+    res.send('Succes')},
 
    
            
