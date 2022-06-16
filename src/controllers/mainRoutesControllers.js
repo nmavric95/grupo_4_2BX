@@ -52,8 +52,18 @@ const mainRoutesControllers = {
     },
 
     save: (req, res) => {
+        let newUser = {
+            id : userDB[userDB.length - 1].id + 1,
+            ...req.body,
+            // image : image,
+        };
 
-    res.send('Succes')},
+        userDB.push(newUser);
+        fs.writeFileSync(pathDB, JSON.stringify(userDB, null, " "));
+
+        res.redirect(("/userClient/" + newUser.id));
+        // res.send('Succes')
+    },
 
    
            

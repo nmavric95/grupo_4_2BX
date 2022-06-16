@@ -22,7 +22,11 @@ const clientProfileController = require("../controllers/clientProfileController"
 
 
 //RUTA PERFIL USUARIO - ENVIAR INFORMACION
-router.get("/", clientProfileController.clientProfile);
+// router.get("/", clientProfileController.clientProfile);
+// router.post("/", uploadFile.any(), clientProfileController.create);
+
+//MODIFICACIONES IVAN
+router.get("/:id", clientProfileController.clientProfile);
 router.post("/", uploadFile.any(), clientProfileController.create);
 
 router.get("/edit/:idUser", uploadFile.any(), clientProfileController.edit)

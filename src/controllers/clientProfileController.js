@@ -10,7 +10,9 @@ const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 // PERFIL CLIENTE 
 const clientProfileController = {
     clientProfile: (req, res) => {
-        res.render("./user/clientProfile"), ({userDB: userDB})
+        let id = req.params.id
+        let userToDetail = userDB.find(user => user.id == id);
+        res.render("./user/clientProfile", {userToDetail: userToDetail}) 
     },
 
     create: (req, res) =>{
