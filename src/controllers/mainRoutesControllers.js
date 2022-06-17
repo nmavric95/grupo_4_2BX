@@ -52,10 +52,11 @@ const mainRoutesControllers = {
     },
 
     save: (req, res) => {
+        let defaultImage = "Logo1FondoNegro.jpg"; 
         let newUser = {
             id : userDB[userDB.length - 1].id + 1,
             ...req.body,
-            // image : image,
+            image : defaultImage,
         };
 
         userDB.push(newUser);

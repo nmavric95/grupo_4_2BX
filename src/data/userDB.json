@@ -820,5 +820,40 @@
    "123456",
    "123456"
   ]
+ },
+ {
+  "id": 103,
+  "name": "Queen",
+  "lastName": "OfBlades",
+  "birthDate": "2022-01-16",
+  "email": "queen@ofblades.com",
+  "password": [
+   "123456",
+   "123456"
+  ]
+ },
+ {
+  "id": 104,
+  "name": "King",
+  "lastName": "OF Blades",
+  "birthDate": "2022-06-03",
+  "peso": "1",
+  "altura": "1",
+  "tellus": "Una info editada",
+  "email": "king@ofblades.com",
+  "password": "123456,123456",
+  "image": "Logo1FondoNegro.jpg"
+ },
+ {
+  "id": 105,
+  "name": "Otro editado",
+  "lastName": "User editado",
+  "birthDate": "2022-05-31",
+  "peso": "132",
+  "altura": "123",
+  "tellus": "algo escrito",
+  "email": "otro@user.com",
+  "password": "123456,123456",
+  "image": "Logo1FondoNegro.jpg"
  }
 ]
