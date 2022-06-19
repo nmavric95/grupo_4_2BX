@@ -12,13 +12,13 @@
     <main>
         <section class="profile">
 
-        <form method="POST" action="/?_method=PUT" enctype="multipart/form-data">
+        <form method="POST" action="/userClient/<%= userToDetail.id %>?_method=PUT" enctype="multipart/form-data">
 
             <div class="name">
                 <label for="" id="personalinfo"><h4>Nombre:</h4></label>
-                <input class="number" type="text" name="name" id="name">
+                <input class="number" type="text" name="name" id="name" value="<%= userToDetail.name %>" >
                 <label for="" id="personalinfo"><h4>Apellido:</h4></label>
-                <input class="number" type="text" name="lastName" id="lastName">
+                <input class="number" type="text" name="lastName" id="lastName" value="<%= userToDetail.lastName %>">
                 <label><h4>Foto</h4></label>
                 <input class="photo" type="file" accept="image/jpeg, image/jpg">
             </div>
@@ -28,13 +28,13 @@
             <div class="aboutme">
 
                 <label for="" id="personalinfo">Nacimiento:</label>
-                <input class="number" type="date" name="birthDate" id="birthDate">
+                <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birthDate %>">
                 <br>
                 <label for="" id="personalinfo">Peso(Kg):</label>
-                <input class="number" type="number" name="peso">
+                <input class="number" type="number" name="peso" value = <%= userToDetail.peso ? userToDetail.peso : "" %>>
                 <br>
                 <label for="" id="personalinfo">Altura(mts):</label>
-                <input class="number" type="number" name="altura">
+                <input class="number" type="number" name="altura" value = <%= userToDetail.altura ? userToDetail.altura : "" %>>
                 <br>
                 <label for="" id="personalinfo">Apto Medico:</label>
                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">SI</label>
@@ -47,13 +47,25 @@
             <div id="tellus">
                 <br>
                 <label for="" id="personalinfo">Mas sobre mi:</label>
-                <input class="tellus" name="tellus" type="text" value="My info">
+                <input class="tellus" name="tellus" type ="text" value = <%= userToDetail.tellus != "My info" ? userToDetail.tellus : "My info" %>>
+            </div>
+
+            <div class="conf">
+                <h4>Cuenta: Configuracion y Seguridad</h4>
+
+                <label for="" id="personalinfo"><h4>Email:</h4></label>
+                <input class="number" type="email" name="email" id="email" value="<%= userToDetail.email %>" >
+
+                <label for="" id="personalinfo"><h4>Password:</h4></label>
+                <input class="number" type="password" name="password" id="password" value="<%= userToDetail.password %>" >
+
+                <!-- <a type="button" class="com animated infinite pulse">Editar</a> -->
             </div>
 
             <div class="misp2">
                 <br>
-                <a type="submit" class="com animated infinite pulse">Editar informacion</a>
-                <button type="submit" class="com animated infinite pulse">Guardar</button>
+                <!-- <a type="submit" class="com animated infinite pulse">Editar informacion</a> -->
+                <button type="submit" class="com animated infinite pulse">Editar informacion</button>
             </div>
 
         </form>
@@ -88,11 +100,11 @@
                
             </div>
 
-            <div class="conf">
+            <!-- <div class="conf">
                 <h4>Cuenta: Configuracion y Seguridad</h4>
 
                 <a type="button" class="com animated infinite pulse">Editar</a>
-            </div>
+            </div> -->
 
         </section>
 

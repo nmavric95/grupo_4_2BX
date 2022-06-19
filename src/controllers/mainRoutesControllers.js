@@ -52,8 +52,19 @@ const mainRoutesControllers = {
     },
 
     save: (req, res) => {
+        let defaultImage = "Logo1FondoNegro.jpg"; 
+        let newUser = {
+            id : userDB[userDB.length - 1].id + 1,
+            ...req.body,
+            image : defaultImage,
+        };
 
-    res.send('Succes')},
+        userDB.push(newUser);
+        fs.writeFileSync(pathDB, JSON.stringify(userDB, null, " "));
+
+        res.redirect(("/userClient/" + newUser.id));
+        // res.send('Succes')
+    },
 
    
            
