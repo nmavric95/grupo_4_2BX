@@ -81,7 +81,23 @@ const mainRoutesControllers = {
 
         //res.redirect(("/userClient" + newUser.id));
     
-        User.create(req.body)
+        let existingUser = User.findByField('email', req.body.email);
+
+        if(existingUser){
+            return res.render("./register/register", {
+                errors: {
+                    email: {
+                        msg: 'El mail ingresado ya es un usuario registrado'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+        let newUserToCreate = {
+            ...req.body
+        }
+        let newUserCreated = User.create(newUserToCreate);
+        return res.redirect("./register/login");
     
     },
            

@@ -18,7 +18,7 @@ const cProfileRouter = require("./routes/cProfileRoute");
 
 // MIDDLEWARE GLOBAL
 
-const globalMiddleware = require('./middlewares/globalMiddleware')
+const globalMiddleware = require('./middlewares/globalMiddleware');
 app.use(globalMiddleware)
 
 //VIEW ENGINE SETUP
