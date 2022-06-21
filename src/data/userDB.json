@@ -3,7 +3,10 @@
   "id": 1,
   "name": "Daphna",
   "lastName": "MacGuffog",
-  "birthDate": "19/06/2019",
+  "birthDate": "",
+  "peso": "",
+  "altura": "",
+  "tellus": "",
   "email": "dmacguffog0@marketwatch.com",
   "password": "hbS2iJ4FM"
  },

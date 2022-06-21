@@ -28,10 +28,13 @@ const logMiddleware = require('../middlewares/logMiddleware')
 // EXP-VALIDATOR REGISTER
 
 const cvForm = [
-  body('name').notEmpty().withMessage('Campo obligatorio'),
-  body('lastName').notEmpty().withMessage('Campo obligatorio'),
-  body('email').isEmail().withMessage('Campo obligatorio'),
-
+  body('name').notEmpty().withMessage('Completa tu nombre'),
+  body('lastName').notEmpty().withMessage('Completa tu apellido'),
+  body('birthDate').notEmpty().withMessage('Completa tu fecha de nacimiento'),
+  body('email')
+  .notEmpty().withMessage('Completar tu email').bail()
+  .isEmail().withMessage('Tenes que completar un email valido'),
+  body('password').notEmpty().withMessage('Inserta tu contraseña'),
 ];
 
 // RUTAS PRINCIPALES DEL SITIO

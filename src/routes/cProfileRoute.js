@@ -23,7 +23,6 @@ const clientProfileController = require("../controllers/clientProfileController"
 
 //RUTA PERFIL USUARIO - ENVIAR INFORMACION
 // router.get("/", clientProfileController.clientProfile);
-// router.post("/", uploadFile.any(), clientProfileController.create);
 
 //RUTA PERFIL USUARIO - OBTENER VISTA 
 router.get("/:id", clientProfileController.clientProfile);

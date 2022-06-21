@@ -3,8 +3,12 @@
 const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
+const {validationResult} = require('express-validator')
+
 
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
+
+const User = require('../models/Users')
 
 const crew = [
     {
@@ -52,21 +56,34 @@ const mainRoutesControllers = {
     },
 
     save: (req, res) => {
-        let defaultImage = "Logo1FondoNegro.jpg"; 
-        let newUser = {
-            id : userDB[userDB.length - 1].id + 1,
-            ...req.body,
-            image : defaultImage,
-        };
 
-        userDB.push(newUser);
-        fs.writeFileSync(pathDB, JSON.stringify(userDB, null, " "));
+        const rValidation = validationResult(req);
 
-        res.redirect(("/userClient/" + newUser.id));
-        // res.send('Succes')
+        if (rValidation.errors.length > 0) {
+            return res.render("./register/register", {
+                errors: rValidation.mapped(),
+                oldData: req.body
+            })
+
+        }
+
+        // CODIGO DE IVAN:
+      
+     //   let defaultImage = "Logo1FondoNegro.jpg"; 
+       // let newUser = {
+         //   id : userDB[userDB.length - 1].id + 1,
+           // ...req.body,
+            //image : defaultImage,
+        //};
+
+        //userDB.push(newUser);
+        //fs.writeFileSync(pathDB, JSON.stringify(userDB, null, " "));
+
+        //res.redirect(("/userClient" + newUser.id));
+    
+        User.create(req.body)
+    
     },
-
-   
            
     aboutUs : (req, res) => {
         res.render("./index/aboutUs",{crew: crew})
