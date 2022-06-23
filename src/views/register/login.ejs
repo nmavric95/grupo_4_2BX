@@ -15,15 +15,16 @@
         <section class="loginForm">
            <h2>Login / <a href="/register"> Registro </a></h2>
            
-           <form action="" method="get" id="loginForm"  >
+           <form action="/login" method="POST" id="loginForm" enctype="multipart/form-data">
             
            <div class="form">
               
                <label for="email">Email</label>
-               <input type="email" placeholder="juan.gonzalez@2bx.com" name="email" id="email" required> 
+               <input type="email" name="email" id="email" required> 
+              
            
                <label for="password">Contraseña</label>
-               <input type="password" placeholder="********" name="password" id="password" required> 
+               <input type="password" name="password" id="password" required> 
    
                
            </div>  

@@ -5,7 +5,7 @@ const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
 const {validationResult} = require('express-validator')
 
-
+//const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 const User = require('../models/Users')
@@ -51,21 +51,61 @@ const mainRoutesControllers = {
         res.render("./register/login")
     },
 
+    successLogin : (req, res) => {
+
+      
+           let succesUser = User.findByField('email', req.body.email);
+           
+           if(succesUser){   
+           return res.render("./index/index")}
+               
+          
+         //      return res.render("./register/login", {
+           //         errors: {
+             //           email: { msg: 'El mail ingresado ya es un usuario registrado'}
+               //  },
+                 //   oldData: req.body
+            //})
+        
+          
+
+
+    },
+
     register : (req, res) => {
         res.render("./register/register", {userDB: userDB})
     },
 
     save: (req, res) => {
 
-        const rValidation = validationResult(req);
+     validationResult(req);
 
-        if (rValidation.errors.length > 0) {
-            return res.render("./register/register", {
-                errors: rValidation.mapped(),
-                oldData: req.body
+       // if (rValidation.errors.length > 0) {
+         ({
+         oldData: req.body
+        
+            });
+
+            let newUserToCreate = {
+                ...req.body,
+               
+           }
+           let existingUser = User.findByField('email', req.body.email);
+           if(existingUser){
+               return res.render("./register/register", {
+                    errors: {
+                        email: { msg: 'El mail ingresado ya es un usuario registrado'}
+                 },
+                    oldData: req.body
             })
-
         }
+             let newUserCreated = User.create(newUserToCreate);
+             res.render("./register/login")
+    
+    },
+       
+    
+
 
         // CODIGO DE IVAN:
       
@@ -81,25 +121,7 @@ const mainRoutesControllers = {
 
         //res.redirect(("/userClient" + newUser.id));
     
-        let existingUser = User.findByField('email', req.body.email);
 
-        if(existingUser){
-            return res.render("./register/register", {
-                errors: {
-                    email: {
-                        msg: 'El mail ingresado ya es un usuario registrado'
-                    }
-                },
-                oldData: req.body
-            })
-        }
-        let newUserToCreate = {
-            ...req.body
-        }
-        let newUserCreated = User.create(newUserToCreate);
-        return res.redirect("./register/login");
-    
-    },
            
     aboutUs : (req, res) => {
         res.render("./index/aboutUs",{crew: crew})

@@ -43,6 +43,7 @@ router.get("/", mainRoutesControllers.index);
 
 //LOGIN
 router.get("/login", mainRoutesControllers.login);
+router.post("/login", cvForm, uploadFile.any(), mainRoutesControllers.successLogin);
 
 //REGISTER
 router.get("/register", mainRoutesControllers.register);

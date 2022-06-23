@@ -858,5 +858,16 @@
   "email": "otro@user.com",
   "password": "123456,123456",
   "image": "Logo1FondoNegro.jpg"
+ },
+ {
+  "id": 106,
+  "name": "Ana",
+  "lastName": "Cerruti",
+  "birthDate": "1989-11-09",
+  "email": "cerrutianamaria@gmail.com",
+  "password": [
+   "anita",
+   "anita"
+  ]
  }
 ]

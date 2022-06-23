@@ -6,7 +6,6 @@ const User = {
     getData: function (){
         return JSON.parse(fs.readFileSync(this.filename, 'utf-8'));
     },
-
     generateId: function(){
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
@@ -33,23 +32,26 @@ const User = {
     },
 
     create: function (userData){
+
         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
             ...userData
         }
-        allUsers.push(userData);
-        fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
+      allUsers.push(newUser);
+      fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
         return newUser;
     },
 
     delete: function(id){
-        let allUsers = this.findAll();
+       let allUsers = this.findAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
         fs.writeFileSync(this.filename, JSON.stringify(finalUsers, null, ' '));
         return true;
 
     }
+   
 }
+
 
 module.exports = User;

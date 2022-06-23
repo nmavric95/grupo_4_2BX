@@ -19,18 +19,18 @@
 
         <div class="form">
             <label for="name">Nombre</label>
-            <input type="text" placeholder="Juan Carlos" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>"><% if (locals.errors && errors.name) {%> <%= errors.name.msg %> <% } %> 
+            <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" id="name" required>
 
             <label for="lastName">Apellido</label>
-            <input type="text" placeholder="González" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>"><% if (locals.errors && errors.lastName) {%> <%= errors.lastName.msg %> <% } %> 
+            <input type="text" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" id="lastName" required>
 
 
             <label for="birthDate">Fecha de nacimiento</label>
-            <input type="date" placeholder="birthDate" name="birthDate" id="birthDate" value="<%= locals.oldData ? oldData.birthDate : null %>"><% if (locals.errors && errors.birthDate) {%> <%= errors.birthDate.msg %> <% } %> 
+            <input type="date" name="birthDate" value="<%= locals.oldData ? oldData.birthDate : null %>" id="birthDate"  required> 
 
 
             <label for="email">Email</label>
-            <input type="email" placeholder="juan.gonzalez@2bx.com" name="email" id="email" value="<%= locals.oldData ? oldData.email: null %>"><% if (locals.errors && errors.email) {%> <%= errors.email.msg %> <% } %> 
+            <input type="email" name="email" value="<%= locals.oldData ? oldData.email: null %>" id="email" required>
 
         </div>
 
@@ -38,11 +38,11 @@
 
         <div class="form">
             <label for="password">Contraseña</label>
-            <input type="password" placeholder="********" name="password" id="password"><% if (locals.errors && errors.password) {%> <%= errors.password.msg %> <% } %> 
+            <input type="password" name="password" id="password" required>
 
 
             <label for="password">Repetir contraseña</label>
-            <input type="password" placeholder="********" name="password" id="password"><% if (locals.errors && errors.password) {%> <%= errors.password.msg %> <% } %> 
+            <input type="password" name="password" id="password" required>
 
         </div>
 
