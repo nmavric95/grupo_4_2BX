@@ -22,8 +22,8 @@
                <label for="email">Email</label>
                <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                <% if (locals.errors && errors.email) { %>
-                <p>
-                    <%= errors.email.msg %> 
+                <p class="warning message">
+                    <i class="fa-solid fa-angles-up"></i><%= errors.email.msg %><i class="fa-solid fa-angles-up"></i> 
                 </p>
              
                 <% } %> 
@@ -32,8 +32,8 @@
                <label for="password">Contraseña</label>
                <input type="password" name="password" id="password">
                <% if (locals.errors && errors.password) { %>
-                <p>
-                    <%= errors.password.msg %> 
+                <p class="warning message">
+                    <i class="fa-solid fa-angles-up"></i><%= errors.password.msg %><i class="fa-solid fa-angles-up"></i> 
                 </p>
              
             <% } %>

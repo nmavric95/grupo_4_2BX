@@ -807,11 +807,11 @@
   "name": "Ivan",
   "lastName": "Aichino",
   "birthDate": "1991-04-03",
+  "peso": "78",
+  "altura": "180",
+  "tellus": "",
   "email": "ivanaichino@gmail.com",
-  "password": [
-   "123456",
-   "123456"
-  ]
+  "password": "123456,123456"
  },
  {
   "id": 102,
@@ -914,4 +914,5 @@
    "123"
   ]
  }
+ 
 ]
