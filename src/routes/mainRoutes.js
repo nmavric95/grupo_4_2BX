@@ -27,7 +27,7 @@ const logMiddleware = require('../middlewares/logMiddleware')
 
 // EXP-VALIDATOR REGISTER
 
-const cvForm = [
+const registerValidation = [
   body('name').notEmpty().withMessage('Completa tu nombre'),
   body('lastName').notEmpty().withMessage('Completa tu apellido'),
   body('birthDate').notEmpty().withMessage('Completa tu fecha de nacimiento'),
@@ -37,17 +37,23 @@ const cvForm = [
   body('password').notEmpty().withMessage('Inserta tu contraseña'),
 ];
 
+// VALIDATOR LOGIN
+
+const loginValidation = [
+  body()
+]
+
 // RUTAS PRINCIPALES DEL SITIO
 // HOME
 router.get("/", mainRoutesControllers.index);
 
 //LOGIN
 router.get("/login", mainRoutesControllers.login);
-router.post("/login", cvForm, uploadFile.any(), mainRoutesControllers.successLogin);
+router.post("/login", uploadFile.any(), mainRoutesControllers.successLogin);
 
 //REGISTER
 router.get("/register", mainRoutesControllers.register);
-router.post("/register", logMiddleware, cvForm, uploadFile.any(), mainRoutesControllers.save)
+router.post("/register", uploadFile.any(), registerValidation, logMiddleware, mainRoutesControllers.save)
 
 //ABOUTUS
 router.get("/aboutUs", mainRoutesControllers.aboutUs);
