@@ -63,14 +63,15 @@ const mainRoutesControllers = {
         }else{
             
             //LOGICA DE LOGUEO
+            let succesUser = User.findByField('email', req.body.email);
+           
+            if(succesUser){   
+            return res.render("./index/index")}
 
         }
 
       
-           let succesUser = User.findByField('email', req.body.email);
            
-           if(succesUser){   
-           return res.render("./index/index")}
                
           
          //      return res.render("./register/login", {
