@@ -22,7 +22,8 @@ const User = {
     findByPk: function(id){
         let allUsers = this.findAll();
         let userFound = allUsers.find(onseUser => onseUser.id === id);
-        return userFound;},
+        return userFound;
+    },
 
     findByField: function(field, text){
             let allUsers = this.findAll();
@@ -38,8 +39,8 @@ const User = {
             id: this.generateId(),
             ...userData
         }
-      allUsers.push(newUser);
-      fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
+        allUsers.push(newUser);
+        fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
         return newUser;
     },
 

@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { body } = require('express-validator')
 const path = require("path");
 const multer = require("multer");
 
@@ -21,16 +22,11 @@ const uploadFile = multer({ storage: storage })
 const clientProfileController = require("../controllers/clientProfileController");
 
 
-//RUTA PERFIL USUARIO - ENVIAR INFORMACION
-// router.get("/", clientProfileController.clientProfile);
-
 //RUTA PERFIL USUARIO - OBTENER VISTA 
 router.get("/:id", clientProfileController.clientProfile);
+
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
 router.put("/:id", uploadFile.any(), clientProfileController.edit);
-
-// router.get("/edit/:idUser", uploadFile.any(), clientProfileController.edit)
-// router.put("/edit", uploadFile.any(), clientProfileController.edit)
 
 
 

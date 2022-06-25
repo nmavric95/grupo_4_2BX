@@ -3,7 +3,7 @@
 const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
-const {validationResult} = require('express-validator')
+const { validationResult } = require('express-validator')
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
@@ -52,12 +52,29 @@ const mainRoutesControllers = {
     },
 
     successLogin : (req, res) => {
+        let resultValidation = validationResult(req);
 
-      
-           let succesUser = User.findByField('email', req.body.email);
+        if(!resultValidation.isEmpty()) {
+            res.render("./register/login", {
+                errors : resultValidation.mapped(),
+                oldData : req.body,
+            })
+            
+        }else{
+            
+            //LOGICA DE LOGUEO
+            let succesUser = User.findByField('email', req.body.email);
            
             if(succesUser){   
             return res.render("./index/index")}
+
+        }
+
+      
+           
+          //  if(succesUser){   
+            //return res.render("./index/index")}
+
                
           
          //      return res.render("./register/login", {
@@ -73,34 +90,44 @@ const mainRoutesControllers = {
     },
 
     register : (req, res) => {
-        res.render("./register/register", {userDB: userDB})
+        res.render("./register/register")
     },
 
     save: (req, res) => {
+        let resultValidation = validationResult(req);
 
-     validationResult(req);
+        if(!resultValidation.isEmpty()) {
+            res.render("./register/register", {
+                errors : resultValidation.mapped(),
+                oldData : req.body,
+            })
+            
+        }else{
+            User.create(req.body)
+            res.redirect("/login")
+        }
 
        // if (rValidation.errors.length > 0) {
-         ({
-         oldData: req.body
+        //  ({
+        //  oldData: req.body
         
-            });
+        //     });
 
-            let newUserToCreate = {
-                ...req.body,
+        //     let newUserToCreate = {
+        //         ...req.body,
                
-           }
-           let existingUser = User.findByField('email', req.body.email);
-           if(existingUser){
-               return res.render("./register/register", {
-                    errors: {
-                        email: { msg: 'El mail ingresado ya es un usuario registrado'}
-                 },
-                    oldData: req.body
-            })
-        }
-             let newUserCreated = User.create(newUserToCreate);
-             res.render("./register/login")
+        //    }
+        //    let existingUser = User.findByField('email', req.body.email);
+        //    if(existingUser){
+        //        return res.render("./register/register", {
+        //             errors: {
+        //                 email: { msg: 'El mail ingresado ya es un usuario registrado'}
+        //          },
+        //             oldData: req.body
+        //     })
+        // }
+        //      let newUserCreated = User.create(newUserToCreate);
+        //      res.render("./register/login")
     
     },
        
