@@ -56,8 +56,8 @@ const mainRoutesControllers = {
       
            let succesUser = User.findByField('email', req.body.email);
            
-           if(succesUser){   
-           return res.render("./index/index")}
+            if(succesUser){   
+            return res.render("./index/index")}
                
           
          //      return res.render("./register/login", {
