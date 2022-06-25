@@ -52,6 +52,19 @@ const mainRoutesControllers = {
     },
 
     successLogin : (req, res) => {
+        let resultValidation = validationResult(req);
+
+        if(!resultValidation.isEmpty()) {
+            res.render("./register/login", {
+                errors : resultValidation.mapped(),
+                oldData : req.body,
+            })
+            
+        }else{
+            
+            //LOGICA DE LOGUEO
+
+        }
 
       
            let succesUser = User.findByField('email', req.body.email);

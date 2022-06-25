@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {body} = require('express-validator')
+const { body } = require('express-validator')
 const path = require("path");
 const multer = require("multer");
 
@@ -40,7 +40,10 @@ const registerValidation = [
 // VALIDATOR LOGIN
 
 const loginValidation = [
-  body()
+  body("email")
+  .notEmpty().withMessage('Completar tu email').bail()
+  .isEmail().withMessage('Tenes que completar un email valido'),
+  body('password').notEmpty().withMessage('Inserta tu contraseña'),
 ]
 
 // RUTAS PRINCIPALES DEL SITIO
@@ -49,7 +52,7 @@ router.get("/", mainRoutesControllers.index);
 
 //LOGIN
 router.get("/login", mainRoutesControllers.login);
-router.post("/login", uploadFile.any(), mainRoutesControllers.successLogin);
+router.post("/login", uploadFile.any(), loginValidation , mainRoutesControllers.successLogin);
 
 //REGISTER
 router.get("/register", mainRoutesControllers.register);
