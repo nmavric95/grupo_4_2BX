@@ -72,6 +72,9 @@ const mainRoutesControllers = {
 
       
            
+          //  if(succesUser){   
+            //return res.render("./index/index")}
+
                
           
          //      return res.render("./register/login", {
