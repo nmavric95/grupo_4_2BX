@@ -1,6 +1,7 @@
 const path = require("path")
 const fs = require("fs");
 const { validationResult } = require('express-validator');
+const { body } = require("express-validator");
 const pathDB = path.resolve("./data/userDB.json")
 
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
@@ -8,10 +9,11 @@ const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 // PERFIL CLIENTE 
 const clientProfileController = {
+
     clientProfile: (req, res) => {
-        let id = req.params.id
-        let userToDetail = userDB.find(user => user.id == id);
-        res.render("./user/clientProfile", {userToDetail: userToDetail}) 
+    let id = req.params.id
+    let userToDetail = userDB.find(user => user.id == id);
+    res.render("./user/clientProfile", {userToDetail: userToDetail}) 
     },
 
     edit: (req, res) => {

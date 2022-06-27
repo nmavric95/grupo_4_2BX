@@ -1,9 +1,18 @@
 //CONTROLLERS PARA LAS MAIN ROUTES
 
+<<<<<<< HEAD
 const path = require("path");
 const fs = require("fs");
 const pathDB = path.resolve("./data/userDB.json");
 const { validationResult } = require('express-validator');
+=======
+const path = require("path")
+const fs = require("fs")
+const pathDB = path.resolve("./data/userDB.json")
+const { validationResult } = require('express-validator')
+const bcrypt = require('bcrypt');
+
+>>>>>>> 529705c99d40308a0d21a67e1b78ecac7f2158d5
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
@@ -44,7 +53,7 @@ const crew = [
 
 const mainRoutesControllers = {
     index : (req, res) =>{
-        res.render("./index/index")
+       res.render("./index/index", {succesUser : req.session.userL})
     },
 
     login : (req, res) => {
@@ -64,13 +73,12 @@ const mainRoutesControllers = {
             
             //LOGICA DE LOGUEO
             let succesUser = User.findByField('email', req.body.email);
-           
-            if(succesUser){   
-            return res.render("./index/index")}
+             if(succesUser){  
+              delete succesUser.password; 
+              req.session.userL = succesUser;
+                res.render("./index/index", {succesUser : succesUser})}
 
         }
-
-      
            
           //  if(succesUser){   
             //return res.render("./index/index")}
@@ -83,9 +91,6 @@ const mainRoutesControllers = {
                //  },
                  //   oldData: req.body
             //})
-        
-          
-
 
     },
 
@@ -100,12 +105,18 @@ const mainRoutesControllers = {
             res.render("./register/register", {
                 errors : resultValidation.mapped(),
                 oldData : req.body,
-            })
-            
+            })     
+
         }else{
-            User.create(req.body)
-            res.redirect("/login")
+            let newUserToCreate = {
+             ...req.body,
+             password : bcrypt.hashSync(req.body.password.toString(), 10),
+            }
+
+           User.create(newUserToCreate);
+           res.redirect("/login") 
         }
+    },
 
        // if (rValidation.errors.length > 0) {
         //  ({
@@ -129,7 +140,7 @@ const mainRoutesControllers = {
         //      let newUserCreated = User.create(newUserToCreate);
         //      res.render("./register/login")
     
-    },
+   
        
     
 

@@ -1,4 +1,7 @@
+const req = require('express/lib/request');
 const fs = require('fs');
+const res = require('express/lib/response');
+const { body } = require('express-validator');
 
 const User = {
     filename: './data/userDB.json',
@@ -36,8 +39,8 @@ const User = {
 
         let allUsers = this.findAll();
         let newUser = {
-            id: this.generateId(),
-            ...userData
+           id: this.generateId(),
+            ...userData,
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
