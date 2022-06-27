@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { body } = require('express-validator')
+const { body } = require('express-validator');
 const path = require("path");
 const multer = require("multer");
 
@@ -22,11 +22,30 @@ const uploadFile = multer({ storage: storage })
 const clientProfileController = require("../controllers/clientProfileController");
 
 
+// EXP-VALIDATOR EDICION/SUMA DE DATOS
+const updateValidation = [
+  body('name').notEmpty().withMessage('Completa tu nombre'),
+  body('lastName').notEmpty().withMessage('Completa tu apellido'),
+  body('birthDate').notEmpty().withMessage('Completa tu fecha de nacimiento'),
+  body('peso')
+    .notEmpty().withMessage('Completa tu peso en kilogramos').bail()
+    .isNumeric().withMessage('Debes ingresar un valor numérico'),
+  body('altura')
+    .notEmpty().withMessage('Completa tu altura en metros').bail()
+    .isNumeric().withMessage('Debes ingresar un valor numérico'),
+  body('email')
+  .notEmpty().withMessage('Completar tu email').bail()
+  .isEmail().withMessage('Tenes que completar un email valido'),
+  body('password').notEmpty().withMessage('Inserta tu contraseña'),
+]
+
+
+
 //RUTA PERFIL USUARIO - OBTENER VISTA 
 router.get("/:id", clientProfileController.clientProfile);
 
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
-router.put("/:id", uploadFile.any(), clientProfileController.edit);
+router.put("/:id", uploadFile.any(), updateValidation, clientProfileController.edit);
 
 
 

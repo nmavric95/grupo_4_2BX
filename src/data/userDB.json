@@ -804,10 +804,10 @@
  },
  {
   "id": 101,
-  "name": "Ivan",
+  "name": "Ivan Lucas",
   "lastName": "Aichino",
   "birthDate": "1991-04-03",
-  "peso": "78",
+  "peso": "150",
   "altura": "180",
   "tellus": "",
   "email": "ivanaichino@gmail.com",
@@ -914,5 +914,4 @@
    "123"
   ]
  }
- 
 ]
