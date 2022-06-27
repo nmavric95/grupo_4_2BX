@@ -913,6 +913,21 @@
    "123",
    "123"
   ]
+ },
+ {
+  "id": 111,
+  "name": "Julian",
+  "lastName": "Rodriguez",
+  "birthDate": "1990-10-10",
+  "email": "julian@julian.com",
+  "password": "$2b$10$RcTzXzyiWeFk/xzZEZYzTOkvlA5PD3d5D8sZk50mh1DiOOEqY6Flm"
+ },
+ {
+  "id": 112,
+  "name": "Ana",
+  "lastName": "Cerruti",
+  "birthDate": "1989-10-10",
+  "email": "ana@gmail.com",
+  "password": "$2b$10$kCxKzna/h2rY3CqORlB1PegnPAYg.YUn64sh3kqxCQarGIoA88rdS"
  }
- 
 ]
