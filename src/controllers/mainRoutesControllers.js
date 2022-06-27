@@ -1,18 +1,11 @@
 //CONTROLLERS PARA LAS MAIN ROUTES
 
-<<<<<<< HEAD
-const path = require("path");
-const fs = require("fs");
-const pathDB = path.resolve("./data/userDB.json");
-const { validationResult } = require('express-validator');
-=======
 const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
->>>>>>> 529705c99d40308a0d21a67e1b78ecac7f2158d5
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
