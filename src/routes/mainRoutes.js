@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { body } = require('express-validator')
+const { body } = require('express-validator');
 const path = require("path");
 const multer = require("multer");
 
@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
   })
   
 const uploadFile = multer({ storage: storage })
+
 
 const mainRoutesControllers = require("../controllers/mainRoutesControllers");
 
