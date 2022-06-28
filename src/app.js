@@ -3,6 +3,8 @@ const app = express()
 const path = require("path")
 const methodOverride = require("method-override")
 const session = require("express-session")
+const cookies = require("cookie-parser")
+const globalMiddleware = require('./middlewares/globalMiddleware');
 
 //PUBLIC PATH
 const publicPath = path.resolve("../public")
@@ -19,8 +21,7 @@ const cProfileRouter = require("./routes/cProfileRoute");
 
 
 // MIDDLEWARES
-
-const globalMiddleware = require('./middlewares/globalMiddleware');
+app.use(cookies())
 app.use(globalMiddleware);
 
 const userLMiddleware = require('./middlewares/userLMiddleware');
