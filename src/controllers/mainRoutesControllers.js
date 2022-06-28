@@ -4,13 +4,15 @@ const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
-const User = require('../models/Users')
+const User = require('../models/Users');
+const req = require("express/lib/request");
+const res = require("express/lib/response");
 
 const crew = [
     {
@@ -69,9 +71,9 @@ const mainRoutesControllers = {
              if(succesUser){  
               delete succesUser.password; 
               req.session.userL = succesUser;
-                res.render("./index/index", {succesUser : succesUser})}
-
-        }
+              res.render("./index/index", {succesUser : succesUser})}
+            }
+    },
            
           //  if(succesUser){   
             //return res.render("./index/index")}
@@ -85,7 +87,7 @@ const mainRoutesControllers = {
                  //   oldData: req.body
             //})
 
-    },
+  
 
     register : (req, res) => {
         res.render("./register/register")
@@ -110,6 +112,15 @@ const mainRoutesControllers = {
            res.redirect("/login") 
         }
     },
+
+    // logOut: (req, res) => {
+    //     req.session.destroy();
+    //     return res.render("./index/index");
+    // },
+
+   
+
+    
 
        // if (rValidation.errors.length > 0) {
         //  ({

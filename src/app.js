@@ -18,8 +18,6 @@ const adminRouter = require("./routes/adminRoute")
 const cProfileRouter = require("./routes/cProfileRoute");
 
 
-
-
 // MIDDLEWARES
 
 const globalMiddleware = require('./middlewares/globalMiddleware');
