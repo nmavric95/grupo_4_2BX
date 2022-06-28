@@ -804,10 +804,10 @@
  },
  {
   "id": 101,
-  "name": "Ivan",
+  "name": "Ivan Lucas",
   "lastName": "Aichino",
   "birthDate": "1991-04-03",
-  "peso": "78",
+  "peso": "0",
   "altura": "180",
   "tellus": "",
   "email": "ivanaichino@gmail.com",
@@ -916,13 +916,26 @@
  },
  {
   "id": 111,
-  "name": "Nadia",
-  "lastName": "Mavric",
-  "birthDate": "1995-07-23",
-  "email": "mavricnadia@gmail.com",
-  "password": [
-   "nadija92",
-   "nadija92"
-  ]
+  "name": "Julian",
+  "lastName": "Rodriguez",
+  "birthDate": "1990-10-10",
+  "email": "julian@julian.com",
+  "password": "$2b$10$RcTzXzyiWeFk/xzZEZYzTOkvlA5PD3d5D8sZk50mh1DiOOEqY6Flm"
+ },
+ {
+  "id": 112,
+  "name": "Ana",
+  "lastName": "Cerruti",
+  "birthDate": "1989-10-10",
+  "email": "ana@gmail.com",
+  "password": "$2b$10$kCxKzna/h2rY3CqORlB1PegnPAYg.YUn64sh3kqxCQarGIoA88rdS"
+ },
+ {
+  "id": 113,
+  "name": "una prueba",
+  "lastName": "de hash",
+  "birthDate": "2022-06-02",
+  "email": "qw@fere.com",
+  "password": "$2a$10$WcOrt9.7GtPr0RFeEasEoedVnOCdi5ysL4f6STu0F3ZFoz7ZFW86W"
  }
 ]

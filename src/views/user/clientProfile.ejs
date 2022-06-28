@@ -12,13 +12,30 @@
     <main>
         <section class="profile">
 
-        <form method="POST" action="/userClient/<%= userToDetail.id %>?_method=PUT" enctype="multipart/form-data">
+        <form method="POST" action="/userClient/<%= userToDetail.id %>?_method=PUT" enctype="multipart/form-data"> 
 
             <div class="name">
-                <label for="" id="personalinfo"><h4>Nombre:</h4></label>
-                <input class="number" type="text" name="name" id="name" value="<%= userToDetail.name %>" >
-                <label for="" id="personalinfo"><h4>Apellido:</h4></label>
-                <input class="number" type="text" name="lastName" id="lastName" value="<%= userToDetail.lastName %>">
+                <div>
+                    <label for="" id="personalinfo"><h4>Nombre:</h4></label>
+                    <input class="number" type="text" name="name" id="name" value="<%= userToDetail.name %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.name.msg %><i class="fa-solid fa-angles-up"></i>
+                        </p>
+                    
+                    <% } %>
+                </div>
+                <div>
+                    <label for="" id="personalinfo"><h4>Apellido:</h4></label>
+                    <input class="number" type="text" name="lastName" id="lastName" value="<%= userToDetail.lastName %>">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.lastName.msg %><i class="fa-solid fa-angles-up"></i>
+                        </p>
+                    
+                    <% } %>
+                </div>
+                
                 <label><h4>Foto</h4></label>
                 <input class="photo" type="file" accept="image/jpeg, image/jpg">
             </div>
@@ -27,14 +44,38 @@
             <h4>Sobre mi</h4>
             <div class="aboutme">
 
-                <label for="" id="personalinfo">Nacimiento:</label>
-                <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birthDate %>">
+                <div>
+                    <label for="" id="personalinfo">Nacimiento:</label>
+                    <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birthDate %>">
+                    <% if (locals.errors && errors.birthDate) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.birthDate.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
+                    
+                    <% } %>
+                </div>
                 <br>
-                <label for="" id="personalinfo">Peso(Kg):</label>
-                <input class="number" type="number" name="peso" value = <%= userToDetail.peso ? userToDetail.peso : "" %>>
+                <div>
+                    <label for="" id="personalinfo">Peso(Kg):</label>
+                    <input class="number" type="number" name="peso" value = <%= userToDetail.peso ? userToDetail.peso : "" %>>
+                    <% if (locals.errors && errors.peso) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.peso.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
+                    
+                    <% } %>
+                </div>
                 <br>
-                <label for="" id="personalinfo">Altura(mts):</label>
-                <input class="number" type="number" name="altura" value = <%= userToDetail.altura ? userToDetail.altura : "" %>>
+                <div>
+                    <label for="" id="personalinfo">Altura(mts):</label>
+                    <input class="number" type="number" name="altura" value = <%= userToDetail.altura ? userToDetail.altura : "" %>>
+                    <% if (locals.errors && errors.altura) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.altura.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
+                    
+                    <% } %>
+                </div>
                 <br>
                 <label for="" id="personalinfo">Apto Medico:</label>
                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">SI</label>
@@ -53,11 +94,26 @@
             <div class="conf">
                 <h4>Cuenta: Configuracion y Seguridad</h4>
 
-                <label for="" id="personalinfo"><h4>Email:</h4></label>
-                <input class="number" type="email" name="email" id="email" value="<%= userToDetail.email %>" >
-
-                <label for="" id="personalinfo"><h4>Password:</h4></label>
-                <input class="number" type="password" name="password" id="password" value="<%= userToDetail.password %>" >
+                <div>
+                    <label for="" id="personalinfo"><h4>Email:</h4></label>
+                    <input class="number" type="email" name="email" id="email" value="<%= userToDetail.email %>" >
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.email.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
+                    
+                    <% } %>
+                </div>
+                <div>
+                    <label for="" id="personalinfo"><h4>Password:</h4></label>
+                    <input class="number" type="password" name="password" id="password" value="<%= userToDetail.password %>" >
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.password.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
+                    
+                    <% } %>
+                </div>
 
                 <!-- <a type="button" class="com animated infinite pulse">Editar</a> -->
             </div>

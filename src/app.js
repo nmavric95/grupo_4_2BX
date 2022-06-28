@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const methodOverride = require("method-override")
+const session = require("express-session")
 
 //PUBLIC PATH
 const publicPath = path.resolve("../public")
@@ -16,10 +17,24 @@ const productCartRouter = require("./routes/productCartRoutes");
 const adminRouter = require("./routes/adminRoute")
 const cProfileRouter = require("./routes/cProfileRoute");
 
-// MIDDLEWARE GLOBAL
+
+
+
+// MIDDLEWARES
 
 const globalMiddleware = require('./middlewares/globalMiddleware');
-app.use(globalMiddleware)
+app.use(globalMiddleware);
+
+const userLMiddleware = require('./middlewares/userLMiddleware');
+// SESSION
+
+app.use(session({
+    secret: "It's a secret",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+app.use(userLMiddleware)
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
