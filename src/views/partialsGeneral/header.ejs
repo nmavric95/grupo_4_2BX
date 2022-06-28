@@ -1,6 +1,13 @@
 <header class="upperBar">
     <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
-    <a href="/login"><p class="loginButton">BIENVENIDO </p></a>
+    <% if (locals.userLoggedOk) { %>
+
+        <a href="/userClient/<%= locals.userLoggedOk.id %> "><p class="loginButton">Hola - <%= locals.userLoggedOk.name  %> </p></a>
+        <form action="/userClient/logout" method="post"><button class="loginButton">LogOut</button></form>
+    
+    <% } else { %>
+         <a href="/login"><p class="loginButton">Login</p></a>
+    <% } %>
 </header>
 <nav class="bottomBar">
     <ul class="navBar">

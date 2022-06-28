@@ -47,6 +47,9 @@ router.get("/:id", clientProfileController.clientProfile);
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
 router.put("/:id", uploadFile.any(), updateValidation, clientProfileController.edit);
 
+//RUTA PARA LOGOUT
+router.post("/logout", clientProfileController.logout)
+
 
 
 //RUTA PERFIL USUARIO - EDITAR DATOS

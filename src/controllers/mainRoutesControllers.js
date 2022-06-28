@@ -69,6 +69,12 @@ const mainRoutesControllers = {
              if(succesUser){  
               delete succesUser.password; 
               req.session.userL = succesUser;
+
+              if(req.body.rememberEmail){
+                //aca está seteada la cookie por 2 min
+                res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
+              }
+
                 res.render("./index/index", {succesUser : succesUser})}
 
         }
@@ -86,6 +92,12 @@ const mainRoutesControllers = {
             //})
 
     },
+    // logout: (req, res) => {
+    //     res.clearCookie("userEmail")
+    //     req.session.destroy()
+    //     return res.redirect("/")
+
+    // },
 
     register : (req, res) => {
         res.render("./register/register")

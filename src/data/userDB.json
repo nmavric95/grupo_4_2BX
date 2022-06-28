@@ -937,5 +937,13 @@
   "birthDate": "2022-06-02",
   "email": "qw@fere.com",
   "password": "$2a$10$WcOrt9.7GtPr0RFeEasEoedVnOCdi5ysL4f6STu0F3ZFoz7ZFW86W"
+ },
+ {
+  "id": 114,
+  "name": "Nadia",
+  "lastName": "Maverick",
+  "birthDate": "1995-07-23",
+  "email": "mavericknadia@gmail.com",
+  "password": "$2a$10$eH7eqiVXEStxLCHfnEMsCugtCRhopFT4pTrfmbC9QOoiHXywHrZzy"
  }
 ]
