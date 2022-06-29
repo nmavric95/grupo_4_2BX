@@ -62,6 +62,10 @@ router.post("/register", uploadFile.any(), registerValidation, logMiddleware, ma
 //ABOUTUS
 router.get("/aboutUs", mainRoutesControllers.aboutUs);
 
+//LOGOUT
+//router.get("/logout", mainRoutesControllers.logOut);
+
+
 
 module.exports = router;
 

@@ -20,8 +20,6 @@ const adminRouter = require("./routes/adminRoute")
 const cProfileRouter = require("./routes/cProfileRoute");
 
 
-
-
 // MIDDLEWARES
 app.use(cookies())
 app.use(globalMiddleware);
