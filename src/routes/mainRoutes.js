@@ -3,6 +3,7 @@ const router = express.Router();
 const { body } = require('express-validator');
 const path = require("path");
 const multer = require("multer");
+const userRoutesMiddleware = require('../middlewares/userRoutesMiddleware');
 
 //PARTE MULTER
 
@@ -52,11 +53,11 @@ const loginValidation = [
 router.get("/", mainRoutesControllers.index);
 
 //LOGIN
-router.get("/login", mainRoutesControllers.login);
+router.get("/login", userRoutesMiddleware,mainRoutesControllers.login);
 router.post("/login", uploadFile.any(), loginValidation , mainRoutesControllers.successLogin);
 
 //REGISTER
-router.get("/register", mainRoutesControllers.register);
+router.get("/register", userRoutesMiddleware, mainRoutesControllers.register);
 router.post("/register", uploadFile.any(), registerValidation, logMiddleware, mainRoutesControllers.save)
 
 //ABOUTUS

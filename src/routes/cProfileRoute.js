@@ -3,6 +3,7 @@ const router = express.Router();
 const { body } = require('express-validator');
 const path = require("path");
 const multer = require("multer");
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 //PARTE MULTER
 
@@ -42,7 +43,7 @@ const updateValidation = [
 
 
 //RUTA PERFIL USUARIO - OBTENER VISTA 
-router.get("/:id", clientProfileController.clientProfile);
+router.get("/:id", guestMiddleware,clientProfileController.clientProfile);
 
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
 router.put("/:id", uploadFile.any(), updateValidation, clientProfileController.edit);

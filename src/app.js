@@ -5,6 +5,7 @@ const methodOverride = require("method-override")
 const session = require("express-session")
 const cookies = require("cookie-parser")
 const globalMiddleware = require('./middlewares/globalMiddleware');
+const userLMiddleware = require('./middlewares/userLMiddleware');
 
 //PUBLIC PATH
 const publicPath = path.resolve("../public")
@@ -24,7 +25,7 @@ const cProfileRouter = require("./routes/cProfileRoute");
 app.use(cookies())
 app.use(globalMiddleware);
 
-const userLMiddleware = require('./middlewares/userLMiddleware');
+
 // SESSION
 
 app.use(session({
@@ -34,6 +35,7 @@ app.use(session({
 }));
 
 app.use(userLMiddleware)
+
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
