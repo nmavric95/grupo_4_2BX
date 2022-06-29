@@ -945,5 +945,25 @@
   "birthDate": "1995-07-23",
   "email": "mavericknadia@gmail.com",
   "password": "$2a$10$eH7eqiVXEStxLCHfnEMsCugtCRhopFT4pTrfmbC9QOoiHXywHrZzy"
+ },
+ {
+  "id": 115,
+  "name": "otro",
+  "lastName": "registro",
+  "birthDate": "2022-06-01",
+  "email": "lalalal@jajaj.com",
+  "password": "$2b$10$aQbP9GEGf9z/EMbQyLx3y.pAMd0/7RIhwZX8zAAmcleMGSGt17/k."
+ },
+ {
+  "id": 116,
+  "name": "aaa",
+  "lastName": "bbb",
+  "birthDate": "2022-05-30",
+  "peso": "1",
+  "altura": "2",
+  "tellus": "",
+  "email": "a@b.com",
+  "password": "$2b$10$eGDtzwoXvd0z/yWWvpgnDuxcMtLZuiSj4sH5cGbg4CKsjas4.D.xi",
+  "image": "image-1656467918812-81518672.jpg"
  }
 ]
