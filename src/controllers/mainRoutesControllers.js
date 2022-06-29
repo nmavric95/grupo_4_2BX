@@ -71,21 +71,16 @@ const mainRoutesControllers = {
              if(succesUser){  
               delete succesUser.password; 
               req.session.userL = succesUser;
-<<<<<<< HEAD
-              res.render("./index/index", {succesUser : succesUser})}
-            }
-    },
-=======
 
               if(req.body.rememberEmail){
                 //aca está seteada la cookie por 2 min
                 res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
               }
 
-                res.render("./index/index", {succesUser : succesUser})}
+                res.render("./index/index", {succesUser : succesUser})
 
-        }
->>>>>>> 497d7b53381fcb74b4f045943ad0a8202c39b9c6
+            
+
            
           //  if(succesUser){   
             //return res.render("./index/index")}
@@ -99,17 +94,15 @@ const mainRoutesControllers = {
                  //   oldData: req.body
             //})
 
-<<<<<<< HEAD
-  
-=======
-    },
+
+    }}},
     // logout: (req, res) => {
     //     res.clearCookie("userEmail")
     //     req.session.destroy()
     //     return res.redirect("/")
 
     // },
->>>>>>> 497d7b53381fcb74b4f045943ad0a8202c39b9c6
+
 
     register : (req, res) => {
         res.render("./register/register")
