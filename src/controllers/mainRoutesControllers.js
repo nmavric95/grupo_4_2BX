@@ -79,31 +79,8 @@ const mainRoutesControllers = {
 
                 res.render("./index/index", {succesUser : succesUser})
 
-            
-
-           
-          //  if(succesUser){   
-            //return res.render("./index/index")}
-
-               
-          
-         //      return res.render("./register/login", {
-           //         errors: {
-             //           email: { msg: 'El mail ingresado ya es un usuario registrado'}
-               //  },
-                 //   oldData: req.body
-            //})
-
-
     }}},
-    // logout: (req, res) => {
-    //     res.clearCookie("userEmail")
-    //     req.session.destroy()
-    //     return res.redirect("/")
-
-    // },
-
-
+    
     register : (req, res) => {
         res.render("./register/register")
     },
@@ -118,75 +95,21 @@ const mainRoutesControllers = {
             })     
 
         }else{
+            let defaultImage = "Logo1FondoNegro.jpg";
             let newUserToCreate = {
              ...req.body,
              password : bcrypt.hashSync(req.body.password.toString(), 10),
+             image : defaultImage
             }
 
            User.create(newUserToCreate);
            res.redirect("/login") 
         }
     },
-
-    // logOut: (req, res) => {
-    //     req.session.destroy();
-    //     return res.render("./index/index");
-    // },
-
-   
-
-    
-
-       // if (rValidation.errors.length > 0) {
-        //  ({
-        //  oldData: req.body
-        
-        //     });
-
-        //     let newUserToCreate = {
-        //         ...req.body,
-               
-        //    }
-        //    let existingUser = User.findByField('email', req.body.email);
-        //    if(existingUser){
-        //        return res.render("./register/register", {
-        //             errors: {
-        //                 email: { msg: 'El mail ingresado ya es un usuario registrado'}
-        //          },
-        //             oldData: req.body
-        //     })
-        // }
-        //      let newUserCreated = User.create(newUserToCreate);
-        //      res.render("./register/login")
-    
-   
-       
-    
-
-
-        // CODIGO DE IVAN:
-      
-     //   let defaultImage = "Logo1FondoNegro.jpg"; 
-       // let newUser = {
-         //   id : userDB[userDB.length - 1].id + 1,
-           // ...req.body,
-            //image : defaultImage,
-        //};
-
-        //userDB.push(newUser);
-        //fs.writeFileSync(pathDB, JSON.stringify(userDB, null, " "));
-
-        //res.redirect(("/userClient" + newUser.id));
-    
-
            
     aboutUs : (req, res) => {
         res.render("./index/aboutUs",{crew: crew})
     },
-    // packages : (req, res) => {
-    //     res.render("./packages/packages")
-    // },
-
 };
 
 module.exports = mainRoutesControllers
