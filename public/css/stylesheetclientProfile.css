@@ -140,6 +140,25 @@ h3{
 
 
 
+/* MENSAJE DE ERROR VALIDACIONES */
+
+p.warning.message {
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    padding: 1%;
+    margin: auto;
+    font-weight: bolder;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.3);
+    width: 90%;
+    border-radius: 15px;
+
+}
+
+p.warning.message i {
+    padding: 0 2% 0 2%;
+}
 
 
 /** MQ **/
