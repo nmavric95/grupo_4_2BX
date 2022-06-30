@@ -2,8 +2,11 @@
     <a href="/"><img class="logo" src="/img/Logo1FondoNegro.jpg" alt="logo"></a>
     <% if (locals.userLoggedOk) { %>
 
-        <a href="/userClient/<%= locals.userLoggedOk.id %> "><p class="loginButton">Hola - <%= locals.userLoggedOk.name  %> </p></a>
-        <form action="/userClient/logout" method="post"><button class="loginButton">LogOut</button></form>
+        <div class="userBox">
+        <a href="/userClient/<%= locals.userLoggedOk.id %> "><p class="userLogged">Hola <%= locals.userLoggedOk.name  %> </p></a>
+        <img src="/img/<%= locals.userLoggedOk.image %>" class="profilePic" alt="profilePic">
+        </div>
+        <form action="/userClient/logout" method="post"><button class="logoutButton">LogOut</button></form>
     
     <% } else { %>
          <a href="/login"><p class="loginButton">Login</p></a>
