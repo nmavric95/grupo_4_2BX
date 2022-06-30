@@ -23,7 +23,7 @@ const cProfileRouter = require("./routes/cProfileRoute");
 
 // MIDDLEWARES
 app.use(cookies())
-app.use(globalMiddleware);
+// app.use(globalMiddleware);
 
 
 // SESSION

@@ -58,7 +58,7 @@ router.post("/login", uploadFile.any(), loginValidation , mainRoutesControllers.
 
 //REGISTER
 router.get("/register", userRoutesMiddleware, mainRoutesControllers.register);
-router.post("/register", uploadFile.any(), registerValidation, logMiddleware, mainRoutesControllers.save)
+router.post("/register", uploadFile.any(), registerValidation, mainRoutesControllers.save)
 
 //ABOUTUS
 router.get("/aboutUs", mainRoutesControllers.aboutUs);
