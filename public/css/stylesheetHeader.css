@@ -85,7 +85,7 @@ body{
 .loginButton{
     font-family: "Lato";
     width: 10%;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: bold;
     margin: 2px 10px;
     padding: 2px 0px;
@@ -103,6 +103,61 @@ body{
 .loginButton:active{
     color: #79ffa0;
 }
+
+/*para usuarios logueados*/
+.logoutButton{
+    font-family: "Lato";
+    width: 10%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px 10px;
+    margin-left: 3px;
+    padding: 2px 0px;
+    color: #9d3be1;
+    background-color: #000000;
+    border: none;
+    text-align: right;
+    transition-property: all;
+    transition-duration: 500ms;
+    
+}
+
+.logoutButton:hover{
+    color: #79ffa0;
+}
+
+.logoutButton:active{
+    color: #79ffa0;
+}
+
+.userBox{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    padding: 2px;
+    justify-content: space-around;
+}
+
+.userLogged{
+    font-family: "Lato";
+    width: 10%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px 10px;
+    padding: 2px 0px;
+    color: #9d3be1;
+    text-align: right;
+    transition-property: all;
+    transition-duration: 500ms;
+    
+}
+
+.profilePic{
+    width: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
 
 .bottomBar{
     background-color: #000000;
