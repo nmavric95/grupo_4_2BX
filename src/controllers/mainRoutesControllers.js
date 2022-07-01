@@ -80,6 +80,40 @@ const mainRoutesControllers = {
                 res.render("./index/index", {succesUser : succesUser})
 
     }}},
+
+// CODIGO A REVISAR 
+
+
+//     let errors = validationResult(req)
+//     if(!errors.isEmpty()){
+//         res.render("./register/login", {errors: errors.mapped(), oldData: req.body})
+//     }
+
+//     let userToLog = User.findByField("email", req.body.email)
+    
+//     if(!userToLog){
+//         return  res.render("./register/login", 
+//         {errors: {
+//             email: {
+//                 msg: "Este email no está registrado"}}, oldData: req.body})}
+    
+//     if (bcrypt.compareSync(req.body.password, userToLog.password)){
+//         delete userToLog.password
+//         req.session.userLogged = userToLog
+//         if(req.body.rememberEmail){
+//                //aca está seteada la cookie por 2 min
+//             res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
+//               }
+//         res.redirect("/")
+
+//     }else{
+//         res.render("./register/login", {errors: {
+//                password: {
+//                 msg: "Las credenciales son inválidas"}}, oldData: req.body})}
+    
+// },
+
+
     
     register : (req, res) => {
         res.render("./register/register")

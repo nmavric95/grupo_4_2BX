@@ -969,5 +969,14 @@
   "email": "a@b.com",
   "password": "$2b$10$eGDtzwoXvd0z/yWWvpgnDuxcMtLZuiSj4sH5cGbg4CKsjas4.D.xi",
   "image": "image-1656467918812-81518672.jpg"
+ },
+ {
+  "id": 117,
+  "name": "pepe",
+  "lastName": "hola",
+  "birthDate": "1990-10-10",
+  "email": "5@5.com",
+  "password": "$2b$10$ABmIhVDGzIJRQoHCWDOs6OECpi4JnFjpbQ3BnDgVzhpDhz2PfEh3i",
+  "image": "Logo1FondoNegro.jpg"
  }
 ]
