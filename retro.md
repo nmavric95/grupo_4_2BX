@@ -86,3 +86,18 @@ SPRINT 4
 
 
 -Stop Doing: Implementar funcionalidades al proyecto que no aportan ni son esenciales al objetivo a cumplir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Retrospectiva
+STRINT 5
+
+-Stop Doing: De la experiencia con los sprint pasados, surgió en nuestra retrospectiva, que deberíamos dejar de particionar todas las consignas y trabajar en completar un punto completo para pasar al siguiente. De esta forma creemos que podemos tener menos conflictos al hacer nuestros pull y push al repositorio y poder hacer seguimiento de aquellas funcionalidades que no están 100% funcionando.
+
+-Do Less: La idea para los siguientes sprint es simplificar nuestro trabajo para conseguir que las consignas importantes queden operativas y dejar en espera, aquellas ideas que podemos implementar luego si nuestra carga de tareas lo permite.
+
+-Keep Doing: nuestro objetivo es mantener la eficiencia de las interacciones del equipo hasta el momento y la coordinación de tareas y reuniones.
+
+-Do more: La comunicación del equipo es buena y por tanto creemos que podemos aprovechar este punto, para trabajar más en conjunto en las consignas en vez de repartir simplemente la carga. De esta forma, creemos que al dos o mas personas mirar el mismo problema, nos permitirá resolverlo más rápido y optimizar nuestro tiempo.
+
+-Start Doing: De nuestra reunión surgió la necesidad de comenzar a hacer más consultas entre cada sprint a los profesores y no esperar a las clases prácticas; ya que es más complicado resolver algunas cuestiones si no las atacamos con más tiempo.
