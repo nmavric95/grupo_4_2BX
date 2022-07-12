@@ -57,8 +57,8 @@
                 <br>
                 <div>
                     <label for="" id="personalinfo">Peso(Kg):</label>
-                    <input class="number" type="number" name="peso" value = <%= userToDetail.peso ? userToDetail.peso : "" %>>
-                    <% if (locals.errors && errors.peso) { %>
+                    <input class="number" type="number" name="weight" value = <%= userToDetail.weight ? userToDetail.weight : "" %>>
+                    <% if (locals.errors && errors.weight) { %>
                         <p class="warning message">
                             <i class="fa-solid fa-angles-up"></i><%= errors.peso.msg %><i class="fa-solid fa-angles-up"></i> 
                         </p>
@@ -68,8 +68,8 @@
                 <br>
                 <div>
                     <label for="" id="personalinfo">Altura(mts):</label>
-                    <input class="number" type="number" name="altura" value = <%= userToDetail.altura ? userToDetail.altura : "" %>>
-                    <% if (locals.errors && errors.altura) { %>
+                    <input class="number" type="number" name="height" value = <%= userToDetail.height ? userToDetail.height : "" %>>
+                    <% if (locals.errors && errors.height) { %>
                         <p class="warning message">
                             <i class="fa-solid fa-angles-up"></i><%= errors.altura.msg %><i class="fa-solid fa-angles-up"></i> 
                         </p>
