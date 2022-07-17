@@ -4,7 +4,10 @@ module.exports = {
     "password": null,
     "database": "2bx",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "dialectOptions": {
+      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+ }
   },
   "test": {
     "username": "root",
