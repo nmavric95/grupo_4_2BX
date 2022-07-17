@@ -4,15 +4,13 @@ const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/userDB.json")
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 const User = require('../models/Users');
-const req = require("express/lib/request");
-const res = require("express/lib/response");
 
 const crew = [
     {
@@ -23,7 +21,7 @@ const crew = [
         linkedin: "https://www.linkedin.com/in/ana-mar%C3%ADa-cerruti-61325261/",
     },
     {
-        name:"Iván Lucas Achino",
+        name:"Iván Lucas Aichino",
         description: "Soy de la provincia de Córdoba y vivo en Cba Capital, tengo 31 años. Disfruto mucho de las actividades al aire libre y de la practica de deportes tales como escalada deportiva, trekking, ciclismo y buceo. Tambien me considero aficionado a la computación, ahora mismo me encuentro incursionando en el mundo de la programación.",
         image: "/img/fotoIvan.jpg", 
         instagram: "https://www.instagram.com/fotografia.ivanaichino/",
@@ -56,62 +54,60 @@ const mainRoutesControllers = {
     },
 
     successLogin : (req, res) => {
-        let resultValidation = validationResult(req);
+        //     let resultValidation = validationResult(req);
 
-        if(!resultValidation.isEmpty()) {
-            res.render("./register/login", {
-                errors : resultValidation.mapped(),
-                oldData : req.body,
-            })
-            
-        }else{
-            
-            //LOGICA DE LOGUEO
-            let succesUser = User.findByField('email', req.body.email);
-             if(succesUser){  
-              delete succesUser.password; 
-              req.session.userL = succesUser;
+        //     if(!resultValidation.isEmpty()) {
+        //         res.render("./register/login", {
+        //             errors : resultValidation.mapped(),
+        //             oldData : req.body,
+        //         })
+                
+        //     }else{
+                
+        //         //LOGICA DE LOGUEO
+        //         let succesUser = User.findByField('email', req.body.email);
+        //          if(succesUser){  
+        //           delete succesUser.password; 
+        //           req.session.userL = succesUser;
 
-              if(req.body.rememberEmail){
+        //           if(req.body.rememberEmail){
+        //             //aca está seteada la cookie por 2 min
+        //             res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
+        //           }
+
+        //             res.render("./index/index", {succesUser : succesUser})
+
+        // }}},
+
+        // CODIGO A REVISAR 
+
+
+        let errors = validationResult(req)
+        if(!errors.isEmpty()){
+            res.render("./register/login", {errors: errors.mapped(), oldData: req.body})
+        }
+
+        let userToLog = User.findByField("email", req.body.email)
+        
+        if(!userToLog){
+            return  res.render("./register/login", 
+            {errors: {email: {msg: "Este email no está registrado"}}, oldData: req.body})}
+        
+        if (bcrypt.compareSync(req.body.password, userToLog.password)){
+            delete userToLog.password
+            req.session.userL = userToLog
+            if(req.body.rememberEmail){
                 //aca está seteada la cookie por 2 min
                 res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
-              }
+                }
+            res.redirect("/")
 
-                res.render("./index/index", {succesUser : succesUser})
-
-    }}},
-
-// CODIGO A REVISAR 
-
-
-//     let errors = validationResult(req)
-//     if(!errors.isEmpty()){
-//         res.render("./register/login", {errors: errors.mapped(), oldData: req.body})
-//     }
-
-//     let userToLog = User.findByField("email", req.body.email)
+        }else{
+            res.render("./register/login", {errors: {
+                password: {
+                    msg: "Las credenciales son inválidas"}}, oldData: req.body})}
     
-//     if(!userToLog){
-//         return  res.render("./register/login", 
-//         {errors: {
-//             email: {
-//                 msg: "Este email no está registrado"}}, oldData: req.body})}
-    
-//     if (bcrypt.compareSync(req.body.password, userToLog.password)){
-//         delete userToLog.password
-//         req.session.userLogged = userToLog
-//         if(req.body.rememberEmail){
-//                //aca está seteada la cookie por 2 min
-//             res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
-//               }
-//         res.redirect("/")
-
-//     }else{
-//         res.render("./register/login", {errors: {
-//                password: {
-//                 msg: "Las credenciales son inválidas"}}, oldData: req.body})}
-    
-// },
+    },
 
 
     
@@ -131,8 +127,11 @@ const mainRoutesControllers = {
         }else{
             let defaultImage = "Logo1FondoNegro.jpg";
             let newUserToCreate = {
-             ...req.body,
-             password : bcrypt.hashSync(req.body.password.toString(), 10),
+             name : req.body.name,
+             lastName : req.body.lastName,
+             birthDate : req.body.birthDate,
+             email : req.body.email,
+             password : bcrypt.hashSync(req.body.password, 10),
              image : defaultImage
             }
 

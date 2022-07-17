@@ -978,5 +978,14 @@
   "email": "5@5.com",
   "password": "$2b$10$ABmIhVDGzIJRQoHCWDOs6OECpi4JnFjpbQ3BnDgVzhpDhz2PfEh3i",
   "image": "Logo1FondoNegro.jpg"
+ },
+ {
+  "id": 118,
+  "name": "Lucas",
+  "lastName": "Aichino",
+  "birthDate": "2021-12-26",
+  "email": "lucas@gmail.com",
+  "password": "$2a$10$TlGA1Odi0fENm0k5wRQ2UOfDlGDwieVpswB0J9GZ52.fGoYk3iqyW",
+  "image": "Logo1FondoNegro.jpg"
  }
 ]

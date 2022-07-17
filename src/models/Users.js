@@ -1,10 +1,9 @@
-const req = require('express/lib/request');
 const fs = require('fs');
-const res = require('express/lib/response');
-const { body } = require('express-validator');
+const path = require("path");
 
 const User = {
-    filename: './data/userDB.json',
+    // filename: './data/userDB.json',
+    filename: path.join(__dirname, '../data/userDB.json'),
 
     getData: function (){
         return JSON.parse(fs.readFileSync(this.filename, 'utf-8'));

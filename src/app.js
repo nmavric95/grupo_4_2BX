@@ -39,7 +39,8 @@ app.use(userLMiddleware)
 
 //VIEW ENGINE SETUP
 app.set("view engine", "ejs");
-app.set("views", path.resolve("views"));
+app.set('views', path.join(__dirname, '/views'));
+// app.set("views", path.resolve("views"));
 
 //CRUD - METODOS
 
