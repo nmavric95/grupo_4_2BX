@@ -83,7 +83,19 @@ module.exports = (sequelize, DataTypes) => {
 
     const Activity = sequelize.define(alias, cols, config);
 
-    // Aca van las elaciones, una vez que esten todos los modelos
+    Activity.associate = function(models){
+        Activity.belongsTo(models.Sport, {
+            as: "Sport",
+            foreignKey: "sport_id"
+        })
+    }
+
+    Activity.associate = function(models){
+        Activity.belongsTo(models.Location, {
+            as: "Location",
+            foreignKey: "location_id"
+        })
+    }
 
     return Activity
 };
