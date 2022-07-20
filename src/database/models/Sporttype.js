@@ -28,6 +28,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const Sporttype = sequelize.define(alias, cols, config);
 
+    Sporttype.associate = function(models){
+        Sporttype.hasMany(models.Sport, {
+            as: "Sport",
+            foreignKey: "sportType_id"
+        })
+    }
 
     return Sporttype
 
