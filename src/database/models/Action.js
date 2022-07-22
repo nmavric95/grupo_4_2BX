@@ -16,6 +16,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
 
+        user_id: {
+            type: DataTypes.INTEGER(11),
+            allowNull: false,
+
+        },
+
     };
 
     let config = {
@@ -27,6 +33,13 @@ module.exports = (sequelize, DataTypes) => {
 
 
     const Action = sequelize.define(alias, cols, config);
+
+    Action.associate = function(models){
+        Action.belongsTo(models.User, {
+            as: "User",
+            foreignKey: "user_id"
+        })
+    }
 
     return Action
 

@@ -59,6 +59,13 @@ module.exports = (sequelize, DataTypes) => {
         })
     }
 
+    Sport.associate = function(models){
+        Sport.hasMany(models.Activity, {
+            as: "Activity",
+            foreignKey: "sport_id"
+        })
+    }
+
     return Sport
 
 }
