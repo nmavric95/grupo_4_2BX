@@ -12,12 +12,12 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         name: {
-            type: DataTypes.VARCHAR(45),
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
 
         lastName: {
-            type: DataTypes.VARCHAR(45),
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
 
@@ -27,17 +27,17 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         email: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
 
         password: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
 
         image: {
-            type: DataTypes.VARCHAR(200),
+            type: DataTypes.STRING(200),
             allowNull: true,
         },
 
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         tellus: {
-            type: DataTypes.VARCHAR(500),
+            type: DataTypes.STRING(500),
             allowNull: true,
         },
 

@@ -54,34 +54,6 @@ const mainRoutesControllers = {
     },
 
     successLogin : (req, res) => {
-        //     let resultValidation = validationResult(req);
-
-        //     if(!resultValidation.isEmpty()) {
-        //         res.render("./register/login", {
-        //             errors : resultValidation.mapped(),
-        //             oldData : req.body,
-        //         })
-                
-        //     }else{
-                
-        //         //LOGICA DE LOGUEO
-        //         let succesUser = User.findByField('email', req.body.email);
-        //          if(succesUser){  
-        //           delete succesUser.password; 
-        //           req.session.userL = succesUser;
-
-        //           if(req.body.rememberEmail){
-        //             //aca está seteada la cookie por 2 min
-        //             res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
-        //           }
-
-        //             res.render("./index/index", {succesUser : succesUser})
-
-        // }}},
-
-        // CODIGO A REVISAR 
-
-
         let errors = validationResult(req)
         if(!errors.isEmpty()){
             res.render("./register/login", {errors: errors.mapped(), oldData: req.body})

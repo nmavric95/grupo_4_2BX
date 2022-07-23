@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         },
         name:{
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
 

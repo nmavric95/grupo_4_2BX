@@ -3,8 +3,16 @@ const path = require("path")
 const fs = require("fs")
 const pathDB = path.resolve("./data/packageDB.json")
 
+//BASE DE DATOS RELACIONAL
+const db = require("../database/models");
+const Activity = db.Activity;
+
+
+//BASE DE DATOS JSON
 const dataBasePackages = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
+
+//CONTROLLERS
 const adminControllers = {
     // VISTA ADMIN DE TODOS LOS PAQUETES
     adminBase : (req,res) =>{
@@ -23,17 +31,36 @@ const adminControllers = {
         }else{
             image = defaultImage;
         };
+        //CODIGO PARA BASE DE DATOS JSON
+        // let newActivity = {
+        //     idPackages : dataBasePackages[dataBasePackages.length - 1].idPackages + 1,
+        //     ...req.body,
+        //     image : image,
+        // };
+        // dataBasePackages.push(newActivity);
+        // fs.writeFileSync(pathDB, JSON.stringify(dataBasePackages, null, " "));
 
+        //CODIGO PARA DB
         let newActivity = {
-            idPackages : dataBasePackages[dataBasePackages.length - 1].idPackages + 1,
-            ...req.body,
+            //REVISAR, HAY VALORES QUE NO ESTAN EN DATABASE
+            name : req.body.activityName,
+            startTime : req.body.startTime,
+            endTime : req.body.endTime,
             image : image,
-        };
+            description : req.body.description,
+            discount : req.body.sale,
+            saleRatio : req.body.radio,
+            reservationPrice : req.body.reservationPrice,
+            price : req.body.price,
+            lunch : req.body.lunch,
+            snack : req.body.snack,
+            transport : req.body.transport,
+            experienceLevel : req.body.experienceLevel,
 
-        dataBasePackages.push(newActivity);
-        fs.writeFileSync(pathDB, JSON.stringify(dataBasePackages, null, " "));
 
-        res.redirect("/userAdmin/adminBase");
+        }
+        Activity.create(newActivity)
+            .then(res.redirect("/userAdmin/adminBase"));
     },
     //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {

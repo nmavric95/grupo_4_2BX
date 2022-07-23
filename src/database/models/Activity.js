@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false,
         },
         name : {
-            type : DataTypes.VARCHAR(100),
+            type : DataTypes.STRING(100),
             allowNull : false,
         },
         startTime : {
@@ -29,11 +29,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false,
         },
         image : {
-            type : DataTypes.VARCHAR(200),
+            type : DataTypes.STRING(200),
             allowNull : false,
         },
         description : {
-            type : DataTypes.VARCHAR(500),
+            type : DataTypes.STRING(500),
             allowNull : false,
         },
         discount : {
@@ -69,7 +69,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : true,
         },
         description : {
-            type : DataTypes.VARCHAR(100),
+            type : DataTypes.STRING(100),
             allowNull : false,
         },
         

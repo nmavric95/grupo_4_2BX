@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         province: {
-            type: DataTypes.VARCHAR(50),
+            type: DataTypes.STRING(50),
             allowNull: false,
         },
         geoRegion: {
-            type: DataTypes.VARCHAR(50),
+            type: DataTypes.STRING(50),
             allowNull: false,
         },
 
