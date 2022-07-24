@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     Sporttype.associate = function(models){
         Sporttype.hasMany(models.Sport, {
             as: "Sport",
-            foreignKey: "sportType_id"
+            foreignKey: "sport_type_id"
         })
     }
 

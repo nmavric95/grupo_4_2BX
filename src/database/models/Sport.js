@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
 
-        sportType_id: {
+        sport_type_id: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
         },
-        healthInsurance: {
+        health_insurance: {
             type: DataTypes.INTEGER(4),
             allowNull: false,
         },
@@ -27,11 +27,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(11),
             allowNull: false,
         },
-        adrenalineLevel: {
+        adrenaline_level: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
         },
-        doctorAproval: {
+        doctor_aproval: {
             type: DataTypes.INTEGER(4),
             allowNull: false,
         },
@@ -55,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
     Sport.associate = function(models){
         Sport.belongsTo(models.Sporttype, {
             as: "Sporttype",
-            foreignKey: "sportType_id"
+            foreignKey: "sport_type_id"
         })
     }
 

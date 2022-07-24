@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `2bx` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `2bx`;
 -- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: 2bx
@@ -53,18 +55,18 @@ CREATE TABLE `activities` (
   `location_id` int(11) NOT NULL,
   `sport_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `startTime` time NOT NULL,
-  `endTime` time NOT NULL,
+  `start_time` time NOT NULL,
+  `end_time` time NOT NULL,
   `image` varchar(200) NOT NULL,
   `description` varchar(500) NOT NULL,
   `discount` int(11) DEFAULT NULL,
-  `saleRatio` tinyint(4) NOT NULL,
-  `reservationPrice` int(11) NOT NULL,
+  `sale_ratio` tinyint(4) NOT NULL,
+  `reservation_price` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `lunch` tinyint(4) NOT NULL,
   `snack` tinyint(4) NOT NULL,
   `transport` tinyint(4) NOT NULL,
-  `experienceLevel` int(11) NOT NULL,
+  `experience_level` int(11) NOT NULL,
   `address` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `location_id` (`location_id`),
@@ -93,7 +95,7 @@ DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `province` varchar(50) NOT NULL,
-  `geoRegion` varchar(50) NOT NULL,
+  `geo_region` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -118,15 +120,15 @@ DROP TABLE IF EXISTS `sports`;
 CREATE TABLE `sports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `sportType_id` int(11) NOT NULL,
-  `healthInsurance` tinyint(4) NOT NULL,
+  `sport_type_id` int(11) NOT NULL,
+  `health_insurance` tinyint(4) NOT NULL,
   `age` int(11) NOT NULL,
-  `adrenalineLevel` int(11) NOT NULL,
-  `doctorAproval` tinyint(4) NOT NULL,
+  `adrenaline_level` int(11) NOT NULL,
+  `doctor_aproval` tinyint(4) NOT NULL,
   `minors` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `sportType_id` (`sportType_id`),
-  CONSTRAINT `sportType_id` FOREIGN KEY (`sportType_id`) REFERENCES `sporttypes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `sport_type_id` (`sport_type_id`),
+  CONSTRAINT `sport_type_id` FOREIGN KEY (`sport_type_id`) REFERENCES `sports` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -174,8 +176,8 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `lastName` varchar(45) NOT NULL,
-  `birthDate` date NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `birth_date` date NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `image` varchar(200) DEFAULT NULL,
@@ -205,4 +207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-22 19:47:27
+-- Dump completed on 2022-07-24 20:46:12

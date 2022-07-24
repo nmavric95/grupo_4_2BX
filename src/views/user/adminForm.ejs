@@ -24,12 +24,12 @@
                   <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
               
                   <label for="sport">Deporte</label>               
-                  <select class="listAF" id="sport">
+                  <select class="listAF" name="sport" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
-                    <option>Paracaidismo</option>
-                    <option>Rafting</option>
-                    <option>Kitesurf</option>
-                    <option>Escalada Deportiva</option>
+                    <% allSports.forEach(sport => { %>
+                      <option value="<%= sport.id %>"><%= sport.name %></option>
+                     
+                    <% }); %>
                   </select>
                   </div>
 
@@ -40,32 +40,25 @@
                   </div>
 
                   <label for="Location">Lugar</label>
-                  <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required> 
+                  <select class="listAF" name="location" id="geoRegion">
+                    <% allProvinceLocations.forEach(province => { %>
+                      <option value="<%= province.id %>"> <%= province.province %>  </option>
+                     
+                    <% }); %>
+                  </select>
+                  <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required>  -->
 
-                  <label for="geoRegion">Zona Geografica</label>
-                  <select class="listAF" id="geoRegion">
-                    <option>Norte</option>
-                    <option>centro</option>
-                    <option>Sur</option>
-                  </select>            
-
-                
+                                  
                   <p>Elementos incluidos</p>
                   <div class="radio">
-                  <label for="lunch"></label><input type="radio" class="radio" name="lunch" id="lunch" value="lunch">Almuerzo</label>
-                  <label for="snack"></label><input type="radio" class="radio" name="snack" id="snack" value="snack">Snacks</label>
-                  <label for="beverage"></label><input type="radio" class="radio" name="beverage" id="beverage" value="beverage">Bebidas</label>
-                  <label for="transport"></label><input type="radio" class="radio" name="transport" id="transport" value="transport">Transporte desde el hotel</label>
-                  <label for="equipment"></label><input type="radio" class="radio" name="equipment" id="equipment" value="equipment">Equipamiento necesario</label>
-                  <label for="healthInsurance"></label><input type="radio" class="radio" name="healthInsurance" id="healthInsurance" value="healthInsurance">Seguro Medico</label>
+                  <label for="lunch"><input type="radio" class="radio" name="lunch" id="lunch" value=1>Almuerzo</label>
+                  <label for="snack"><input type="radio" class="radio" name="snack" id="snack" value=1>Snacks</label>
+                  <label for="transport"><input type="radio" class="radio" name="transport" id="transport" value=1>Transporte desde el hotel</label>
                   </div>
                   
                   <p>Requisitos</p>
                   <div class="radio">
-                  <label for="age"></label><input type="radio" class="radio" name="age" id="age" value="age">Mayores de 18 años</label><br>
-                  <label for="minors"></label><input type="radio" class="radio" name="minors" id="minors" value="minors">Menores acompañados por adulto</label>
-                  <label for="doctorApproval"></label><input type="radio" class="radio" name="doctorApproval" id="doctorApproval" value="doctorApproval">Apto medico</label>
-                  <label for="experience"></label><input type="radio" class="radio" name="experience" id="experience" value="experience">Experiencia previa</label>
+                  <label for="experience"><input type="radio" class="radio" name="experience" id="experience" value=1>Experiencia previa</label>
                   </div>      
 
                   <label for="price">Precio</label>
@@ -76,8 +69,8 @@
 
                   <p>Esta en oferta?</p>
                   <div class="radioButton" id="sale">
-                  <label for="saleRadio"></label><input type="radio" class="radio" name="radio" id="saleRadio" value="1">Si</label>
-                  <label for="saleRadio"></label><input type="radio" class="radio" name="radio" id="saleRadio" value="0">No</label>
+                  <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=1>Si</label>
+                  <!-- <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=0 selected>No</label> -->
                   </div>
 
                   <label for="sale">% de descuento</label>
@@ -89,13 +82,7 @@
                     <option>50%</option>
                   </select>
 
-                  <label for="adrenalineLevel">Nivel de adrenalina</label>
-                  <select class="listAF" name="experienceLevel" id="adrenalineLevel">
-                    <option value="" disabled selected>Seleccionar nivel</option>
-                    <option>Alto</option>
-                    <option>Medio</option>
-                    <option>Bajo</option>                 
-                  </select>
+                  
 
 
               <h3>Descripción del paquete</h3>        

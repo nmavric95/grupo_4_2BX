@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(50),
             allowNull: false,
         },
-        geoRegion: {
+        geo_region: {
             type: DataTypes.STRING(50),
             allowNull: false,
         },
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Location.associate = function(models){
         Location.hasMany(models.Activity, {
-            as: "Activity",
+            as: "Activities",
             foreignKey: "location_id"
         })
     }

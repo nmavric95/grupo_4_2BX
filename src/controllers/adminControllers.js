@@ -5,7 +5,9 @@ const pathDB = path.resolve("./data/packageDB.json")
 
 //BASE DE DATOS RELACIONAL
 const db = require("../database/models");
-const Activity = db.Activity;
+const Activities = db.Activity;
+const Locations = db.Location;
+const Sports = db.Sport;
 
 
 //BASE DE DATOS JSON
@@ -20,7 +22,20 @@ const adminControllers = {
     },
     //VISTA CREAR NUEVO PAQUETE
     adminForm : (req, res) => {
-        res.render("./user/adminForm")
+        // let promGeoRegionLocations = Locations.findAll({
+        //     attributes : ["geo_region"],
+        //     group: "geo_region"
+        // });
+        let promProvinceLocations = Locations.findAll();
+        let promSports = Sports.findAll();
+
+        Promise
+            .all([promProvinceLocations, promSports])
+            .then(([allProvinceLocations, allSports]) => {
+                res.render("./user/adminForm", {allProvinceLocations, allSports})
+            })
+            .catch(error => res.send(error));
+        
     },
     //ALMACENAR NUEVO PAQUETE
     adminFormStore : (req, res) => {
@@ -31,6 +46,41 @@ const adminControllers = {
         }else{
             image = defaultImage;
         };
+
+        let booleanConverter = function(value){
+            if (value == undefined){
+                value = 0;
+            }
+            return value;
+        }
+    
+        //CODIGO PARA DB
+        let newActivity = {
+            //REVISAR, HAY VALORES QUE NO ESTAN EN DATABASE
+
+            location_id : req.body.location,
+            sport_id : req.body.sport,
+            name : req.body.activityName,
+            start_time : req.body.startTime,
+            end_time : req.body.endTime,
+            image : image,
+            description : req.body.description,
+            discount : booleanConverter(req.body.sale),
+            sale_ratio : booleanConverter(req.body.radio),
+            reservation_price : req.body.reservationPrice,
+            price : req.body.price,
+            lunch : booleanConverter(req.body.lunch),
+            snack : booleanConverter(req.body.snack),
+            transport : booleanConverter(req.body.transport),
+            experience_level : booleanConverter(req.body.experienceLevel),
+            description : req.body.description,
+        };
+
+        console.log(newActivity)
+        
+        // Activities.create(newActivity)
+        //     .then(res.redirect("/userAdmin/adminBase"));
+        
         //CODIGO PARA BASE DE DATOS JSON
         // let newActivity = {
         //     idPackages : dataBasePackages[dataBasePackages.length - 1].idPackages + 1,
@@ -39,28 +89,6 @@ const adminControllers = {
         // };
         // dataBasePackages.push(newActivity);
         // fs.writeFileSync(pathDB, JSON.stringify(dataBasePackages, null, " "));
-
-        //CODIGO PARA DB
-        let newActivity = {
-            //REVISAR, HAY VALORES QUE NO ESTAN EN DATABASE
-            name : req.body.activityName,
-            startTime : req.body.startTime,
-            endTime : req.body.endTime,
-            image : image,
-            description : req.body.description,
-            discount : req.body.sale,
-            saleRatio : req.body.radio,
-            reservationPrice : req.body.reservationPrice,
-            price : req.body.price,
-            lunch : req.body.lunch,
-            snack : req.body.snack,
-            transport : req.body.transport,
-            experienceLevel : req.body.experienceLevel,
-
-
-        }
-        Activity.create(newActivity)
-            .then(res.redirect("/userAdmin/adminBase"));
     },
     //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {

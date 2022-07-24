@@ -16,12 +16,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
 
-        lastName: {
+        last_name: {
             type: DataTypes.STRING(45),
             allowNull: false,
         },
 
-        birthDate: {
+        birth_date: {
             type: DataTypes.DATE,
             allowNull: false,
         },

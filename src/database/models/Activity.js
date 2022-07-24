@@ -20,11 +20,11 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.STRING(100),
             allowNull : false,
         },
-        startTime : {
+        start_time : {
             type : DataTypes.TIME,
             allowNull : false,
         },
-        endTime : {
+        end_time : {
             type : DataTypes.TIME,
             allowNull : false,
         },
@@ -40,11 +40,11 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.INTEGER(11),
             allowNull : true,
         },
-        saleRatio : {
+        sale_ratio : {
             type : DataTypes.TINYINT(4),
             allowNull : false,
         },
-        reservationPrice : {
+        reservation_price : {
             type : DataTypes.INTEGER(11),
             allowNull : true,
         },
@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.TINYINT(4),
             allowNull : false,
         },
-        experienceLevel : {
+        experience_level : {
             type : DataTypes.INTEGER(11),
             allowNull : true,
         },
