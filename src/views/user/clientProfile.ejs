@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <label for="" id="personalinfo"><h4>Apellido:</h4></label>
-                    <input class="number" type="text" name="lastName" id="lastName" value="<%= userToDetail.lastName %>">
+                    <input class="number" type="text" name="lastName" id="lastName" value="<%= userToDetail.last_name %>">
                     <% if (locals.errors && errors.lastName) { %>
                         <p class="warning message">
                             <i class="fa-solid fa-angles-up"></i><%= errors.lastName.msg %><i class="fa-solid fa-angles-up"></i>
@@ -46,7 +46,7 @@
 
                 <div>
                     <label for="" id="personalinfo">Nacimiento:</label>
-                    <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birthDate %>">
+                    <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birth_date %>">
                     <% if (locals.errors && errors.birthDate) { %>
                         <p class="warning message">
                             <i class="fa-solid fa-angles-up"></i><%= errors.birthDate.msg %><i class="fa-solid fa-angles-up"></i> 

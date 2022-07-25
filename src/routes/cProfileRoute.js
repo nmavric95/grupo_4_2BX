@@ -46,7 +46,8 @@ const updateValidation = [
 router.get("/:id", guestMiddleware,clientProfileController.clientProfile);
 
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
-router.put("/:id", uploadFile.any(), updateValidation, clientProfileController.edit);
+// router.get("/:id",guestMiddleware, clientProfileController.edit);
+router.put("/:id", uploadFile.any(), updateValidation, clientProfileController.update);
 
 //RUTA PARA LOGOUT
 router.post("/logout", clientProfileController.logout)
