@@ -78,8 +78,8 @@ const adminControllers = {
 
         console.log(newActivity)
         
-        // Activities.create(newActivity)
-        //     .then(res.redirect("/userAdmin/adminBase"));
+        Activities.create(newActivity)
+             .then(res.redirect("/userAdmin/adminBase"));
         
         //CODIGO PARA BASE DE DATOS JSON
         // let newActivity = {
@@ -93,13 +93,27 @@ const adminControllers = {
     //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {
         let id = req.params.idPackages
-        let packageToEdit = dataBasePackages.find(package => package.idPackages == id)
-        res.render("./user/adminFormEdit", {packageToEdit : packageToEdit} );
+
+        let promProvinceLocations = Locations.findAll();
+        let promSports = Sports.findAll();
+        let packageToEdit = Activities.findByPk(id)
+
+        Promise
+            .all([promProvinceLocations, promSports, packageToEdit])
+            .then(([allProvinceLocations, allSports, packageToEdit]) => {
+                res.render("./user/adminFormEdit", {allProvinceLocations, allSports, packageToEdit})
+            })
+            .catch(error => res.send(error));
+        
+        //CODIGO PARA BASE DE DATOS JSON
+        // let packageToEdit = dataBasePackages.find(package => package.idPackages == id)
+
+        
     },
     //ACTUALIZAR PAQUETE
     adminFormEditSend : (req, res) => {
         let id = req.params.idPackages;
-        let packageToEdit = dataBasePackages.find(package => package.idPackages == id);
+        let packageToEdit = Activities.findByPk(id);
 
 
         let image;
@@ -110,20 +124,36 @@ const adminControllers = {
         };
 
         let packageEdited = {
-            idPackages : packageToEdit.idPackages,
-            ...req.body,
+            id : id,
+            location_id : req.body.location,
+            sport_id : req.body.sport,
+            name : req.body.activityName,
+            start_time : req.body.startTime,
+            end_time : req.body.endTime,
             image : image,
+            description : req.body.description,
+            discount : booleanConverter(req.body.sale),
+            sale_ratio : booleanConverter(req.body.radio),
+            reservation_price : req.body.reservationPrice,
+            price : req.body.price,
+            lunch : booleanConverter(req.body.lunch),
+            snack : booleanConverter(req.body.snack),
+            transport : booleanConverter(req.body.transport),
+            experience_level : booleanConverter(req.body.experienceLevel),
+            description : req.body.description,
         };
 
+        console.log(packageEdited)
 
-         let dataBasePackagesEdited = dataBasePackages.map(package => {
-             if(package.idPackages == packageEdited.idPackages){
-                 return package = {...packageEdited}
-             }
-             return package;
-         });
+        //CODIGO PARA BASE DE DATOS JSON
+        //  let dataBasePackagesEdited = dataBasePackages.map(package => {
+        //      if(package.idPackages == packageEdited.idPackages){
+        //          return package = {...packageEdited}
+        //      }
+        //      return package;
+        //  });
 
-         fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
+        //  fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
 
          res.redirect("/userAdmin/adminBase");
     },
