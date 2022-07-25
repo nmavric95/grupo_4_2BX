@@ -987,5 +987,14 @@
   "email": "lucas@gmail.com",
   "password": "$2a$10$TlGA1Odi0fENm0k5wRQ2UOfDlGDwieVpswB0J9GZ52.fGoYk3iqyW",
   "image": "Logo1FondoNegro.jpg"
+ },
+ {
+  "id": 119,
+  "name": "dd",
+  "last_name": "ff",
+  "birth_date": "1990-10-10",
+  "email": "d@f.com",
+  "password": "$2a$10$zbGuijgcZx7QUfJswJ24GOC3amJJUs8NEd2DIUadfy1H56Or11s9u",
+  "image": "Logo1FondoNegro.jpg"
  }
 ]

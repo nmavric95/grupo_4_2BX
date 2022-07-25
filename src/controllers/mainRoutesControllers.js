@@ -65,7 +65,8 @@ const mainRoutesControllers = {
             res.render("./register/login", {errors: errors.mapped(), oldData: req.body})
         }
 
-        let userToLog = User.findByField("email", req.body.email)
+        Users.findOne({where: {email: req.body.email}})
+        .then(userToLog => {
         
         if(!userToLog){
             return  res.render("./register/login", 
@@ -84,25 +85,19 @@ const mainRoutesControllers = {
             res.render("./register/login", {errors: {
                 password: {
                     msg: "Las credenciales son inválidas"}}, oldData: req.body})}
-    
-    },
+        })
+        .catch(error => res.send(error))
+    }, 
 
 
     
     register : (req, res) => {
+
         res.render("./register/register")
+    
     },
 
-    createN: function(req,res){
-
-    let createUser = Users.findAll();
-
-    Promise
-        .all(createUser)
-        .then((createUser) => {
-            res.render("./register/register", {createUser})
-        })
-        .catch(error => res.send(error));
+    createN: (req,res) => {
 
     let resultValidation = validationResult(req);
 
@@ -123,10 +118,8 @@ const mainRoutesControllers = {
              image : defaultImage
             }
 
-            console.log(newUserToCreate)
-
-        //    User.create(newUserToCreate);
-        //    res.redirect("/login") 
+           Users.create(newUserToCreate);
+           res.redirect("/login") 
         }
     },
            

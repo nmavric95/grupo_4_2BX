@@ -18,20 +18,14 @@ const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 const clientProfileController = {
 
     clientProfile: (req, res) => {
-    let id = req.params.id
-    let userToDetail = userDB.find(user => user.id == id);
-    res.render("./user/clientProfile", {userToDetail: userToDetail}) 
-    },
 
-    edit: (req, res) => {
-
-        let idUser = req.params.id;
-        let userID = Users.findByPk(idUser)
+        let id = req.params.id
+        let promUser = Users.findByPk(id)
         let action = Actions.findAll();
         Promise
-        .all([userID, action])
-        .then(([User, Action]) => {
-            return res.render(("./user/clientProfile"), {User,Action})}) 
+        .all([promUser, action])
+        .then(([userToDetail, allActions]) => {
+            return res.render("./user/clientProfile", {userToDetail, allActions})}) 
         .catch(error => res.send(error))
     },
 
@@ -61,8 +55,14 @@ const clientProfileController = {
         //     };}},
 
             // CODIGO NUEVO DB
-    update: function (req,res) {
-                let idUser = req.params.id;
+    update:  (req,res) => {
+            let id = req.params.id;
+            let userToEdit = Users.findByPk(id);
+                let image;
+            if(req.files[0] != undefined){
+                image = req.files[0].filename;
+            }else{
+                image = userToEdit.image;}
                 Users
                 .update(
                     {
@@ -75,14 +75,13 @@ const clientProfileController = {
                         height: req.body.height,
                         tellus: req.body.tellus,
                         admin: req.body.admin,
-
-
                     },
                     {
-                        where: {id: idUser}
-                    })
+                        where: {id: id}
+                    }
+                    )
                 .then(()=> {
-                    return res.redirect(("/userClient/" + userEdited.id))})            
+                    return res.redirect(("/userClient/" + id))})            
                 .catch(error => res.send(error))
             },
 
