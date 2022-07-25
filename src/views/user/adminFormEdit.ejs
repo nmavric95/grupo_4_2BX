@@ -4,7 +4,7 @@
 <head>
   <%- include("../partialsGeneral/head") %>
   <link rel="stylesheet" href="/css/stylesAdminForm.css">
-  <title>2BX / Editando Paquete <%= packageToEdit.activityName %>  </title>
+  <title>2BX / Editando Paquete </title>
 </head>
 <body>
     <!-- HEADER Y NAVBAR -->
@@ -15,7 +15,7 @@
       <section class="newProduct">
          <h2 class="h2">Nuevo Paquete</h2>
          
-         <form action="/userAdmin/adminForm" method="POST" id="newProduct" enctype="multipart/form-data">
+         <form action="/userAdmin/adminForm/<%= packageToEdit.id %>?_method=PUT" method="POST" id="newProduct" enctype="multipart/form-data">
            <h3 class="h3">Detalle general del Paquete</h3>
  
            <div class="form">

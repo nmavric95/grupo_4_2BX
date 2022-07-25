@@ -143,7 +143,11 @@ const adminControllers = {
             description : req.body.description,
         };
 
-        console.log(packageEdited)
+        
+
+        Activity.update(packageEdited, {
+             where: { id: id}
+        }).then(res.redirect("/userAdmin/adminBase"))
 
         //CODIGO PARA BASE DE DATOS JSON
         //  let dataBasePackagesEdited = dataBasePackages.map(package => {
@@ -155,7 +159,6 @@ const adminControllers = {
 
         //  fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
 
-         res.redirect("/userAdmin/adminBase");
     },
     //BORRAR PAQUETE
     adminDelete: (req, res) => {
