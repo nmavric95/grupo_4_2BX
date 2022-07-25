@@ -7,6 +7,12 @@ const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 
 
+// DB SEQUELIZE
+const db = require("../database/models");
+const Users = db.User;
+const Actions = db.Action;
+
+
 //const pathDB = path.join(__dirname, '../data/userDB.json');
 const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
@@ -87,8 +93,18 @@ const mainRoutesControllers = {
         res.render("./register/register")
     },
 
-    save: (req, res) => {
-        let resultValidation = validationResult(req);
+    createN: function(req,res){
+
+    let createUser = Users.findAll();
+
+    Promise
+        .all(createUser)
+        .then((createUser) => {
+            res.render("./register/register", {createUser})
+        })
+        .catch(error => res.send(error));
+
+    let resultValidation = validationResult(req);
 
         if(!resultValidation.isEmpty()) {
             res.render("./register/register", {
@@ -100,15 +116,17 @@ const mainRoutesControllers = {
             let defaultImage = "Logo1FondoNegro.jpg";
             let newUserToCreate = {
              name : req.body.name,
-             lastName : req.body.lastName,
-             birthDate : req.body.birthDate,
+             last_name : req.body.lastName,
+             birth_date : req.body.birthDate,
              email : req.body.email,
              password : bcrypt.hashSync(req.body.password, 10),
              image : defaultImage
             }
 
-           User.create(newUserToCreate);
-           res.redirect("/login") 
+            console.log(newUserToCreate)
+
+        //    User.create(newUserToCreate);
+        //    res.redirect("/login") 
         }
     },
            
