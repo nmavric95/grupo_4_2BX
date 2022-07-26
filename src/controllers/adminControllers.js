@@ -10,15 +10,15 @@ const Locations = db.Location;
 const Sports = db.Sport;
 
 
-//BASE DE DATOS JSON
-const dataBasePackages = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 
 //CONTROLLERS
 const adminControllers = {
     // VISTA ADMIN DE TODOS LOS PAQUETES
     adminBase : (req,res) =>{
-        res.render("./user/adminBase", {dataBasePackages: dataBasePackages})
+        Activities.findAll()
+        .then(dataBasePackages => res.render("./user/adminBase", {dataBasePackages}))
+        
     },
     //VISTA CREAR NUEVO PAQUETE
     adminForm : (req, res) => {
@@ -56,7 +56,6 @@ const adminControllers = {
     
         //CODIGO PARA DB
         let newActivity = {
-            //REVISAR, HAY VALORES QUE NO ESTAN EN DATABASE
 
             location_id : req.body.location,
             sport_id : req.body.sport,
@@ -76,19 +75,11 @@ const adminControllers = {
             description : req.body.description,
         };
 
-        console.log(newActivity)
         
         Activities.create(newActivity)
-             .then(res.redirect("/userAdmin/adminBase"));
-        
-        //CODIGO PARA BASE DE DATOS JSON
-        // let newActivity = {
-        //     idPackages : dataBasePackages[dataBasePackages.length - 1].idPackages + 1,
-        //     ...req.body,
-        //     image : image,
-        // };
-        // dataBasePackages.push(newActivity);
-        // fs.writeFileSync(pathDB, JSON.stringify(dataBasePackages, null, " "));
+            .then(res.redirect("/userAdmin/adminBase"))
+            .catch(error => res.send(error))
+    
     },
     //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {
@@ -105,8 +96,7 @@ const adminControllers = {
             })
             .catch(error => res.send(error));
         
-        //CODIGO PARA BASE DE DATOS JSON
-        // let packageToEdit = dataBasePackages.find(package => package.idPackages == id)
+        
 
         
     },
@@ -122,6 +112,13 @@ const adminControllers = {
         }else{
             image = packageToEdit.image;
         };
+
+        let booleanConverter = function(value){
+            if (value == undefined){
+                value = 0;
+            }
+            return value;
+        }
 
         let packageEdited = {
             id : id,
@@ -145,27 +142,20 @@ const adminControllers = {
 
         
 
-        Activity.update(packageEdited, {
+        Activities.update(packageEdited, {
              where: { id: id}
         }).then(res.redirect("/userAdmin/adminBase"))
-
-        //CODIGO PARA BASE DE DATOS JSON
-        //  let dataBasePackagesEdited = dataBasePackages.map(package => {
-        //      if(package.idPackages == packageEdited.idPackages){
-        //          return package = {...packageEdited}
-        //      }
-        //      return package;
-        //  });
-
-        //  fs.writeFileSync(pathDB, JSON.stringify(dataBasePackagesEdited, null, " "));
+        .catch(error => res.send(error))
 
     },
     //BORRAR PAQUETE
     adminDelete: (req, res) => {
-        let idProduct = req.params.idPackages
-        let dataBaseModified = dataBasePackages.filter(package => package.idPackages != idProduct)
-        fs.writeFileSync(pathDB, JSON.stringify(dataBaseModified, null, " "))
-        res.redirect("/userAdmin/adminBase");
+        let id = req.params.idPackages
+        Activities.destroy({
+            where: { id: id}
+        })
+        .then(() => res.redirect("/userAdmin/adminBase"))
+        .catch(error => res.send(error))
     },
 }
 

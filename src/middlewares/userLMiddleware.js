@@ -1,4 +1,7 @@
 const User = require("../models/Users")
+const db = require("../database/models")
+
+const Users= db.User
 
 function userLMiddleware (req, res, next){
     res.locals.userOk = false;
@@ -11,8 +14,9 @@ function userLMiddleware (req, res, next){
     //agrego setting al midelware para las cookies para mantener logeado al user
 
     let emailInCookie = req.cookies.userEmail
-    let userFromCookie = User.findByField("email", emailInCookie)
-    if (userFromCookie){
+    Users.findOne({email: emailInCookie})
+    .then(userFromCookie => {
+        if (userFromCookie){
         req.session.userLoggedOk = userFromCookie
     }
 
@@ -21,7 +25,8 @@ function userLMiddleware (req, res, next){
         res.locals.userLoggedOk = req.session.userL
     }
 
-    next();
+    next();})
+    .catch(error => res.send(error))
 
 }
 
