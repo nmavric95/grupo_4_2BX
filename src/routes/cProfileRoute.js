@@ -4,6 +4,7 @@ const { body } = require('express-validator');
 const path = require("path");
 const multer = require("multer");
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const userAdminMiddleware = require("../middlewares/userAdminMiddelware")
 
 //PARTE MULTER
 
@@ -43,7 +44,7 @@ const updateValidation = [
 
 
 //RUTA PERFIL USUARIO - OBTENER VISTA 
-router.get("/:id", guestMiddleware,clientProfileController.clientProfile);
+router.get("/:id", guestMiddleware, userAdminMiddleware, clientProfileController.clientProfile);
 
 //RUTA PERFIL USUARIO - EDICION/SUMA DE DATOS
 // router.get("/:id",guestMiddleware, clientProfileController.edit);

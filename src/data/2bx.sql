@@ -73,7 +73,7 @@ CREATE TABLE `activities` (
   KEY `sport_id` (`sport_id`),
   CONSTRAINT `location_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `sport_id` FOREIGN KEY (`sport_id`) REFERENCES `sports` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `activities` (
 
 LOCK TABLES `activities` WRITE;
 /*!40000 ALTER TABLE `activities` DISABLE KEYS */;
-INSERT INTO `activities` VALUES (1,1,2,'Salto Bautismo','10:00:00','18:30:00','image-1658791639450-372038480.jpg','Vení a pasar el día con nosotros y vivir la mejor experiencia de tu vida! Queremos compartirte nuestra pasión e mostrarte el cielo como lo vivimos nosotros.',0,0,5000,25000,0,0,0,0,'');
+INSERT INTO `activities` VALUES (1,1,2,'Salto Bautismo','10:00:00','18:30:00','image-1658791639450-372038480.jpg','Vení a pasar el día con nosotros y vivir la mejor experiencia de tu vida! Queremos compartirte nuestra pasión e mostrarte el cielo como lo vivimos nosotros.',0,0,5000,25000,0,0,0,0,''),(3,1,3,'Surf Class','09:30:00','11:30:00','image-1658879422211-628960940.jpg','Eleva tus habilidades de surf con nuestros instructores, van a enseñarte tips y técnicas para mejorar tu experiencia sobre la tabla!',0,0,1000,6000,0,0,0,0,''),(4,13,4,'Escalada en Roca','11:20:00','15:40:00','image-1658878722587-334340049.jpg','Disfrutá de una hermosa caminata que te llevará directo al pie de la roca que escalaremos juntos. Pasaremos una hermosa mañana juntos  y aprenderás algunos movimientos y técnicas para disfrutar cada paso, acompañado por nuestros guías experimentados y un equipamiento de primera.',0,0,1500,7500,1,0,0,0,''),(5,6,1,'Vuelo en Parapente','10:30:00','18:30:00','image-1658880442797-765971074.jpg','Pasemos el día juntos en comunidad. La comunidad de parapentistas de Cuchicorral en La Cumbre, te invita a que descubras el placer de pasear en el aire de nuestro valle. Pasamos el día en la rampa compartiendo experiencias, rica comida y buen vino al atardecer.',0,1,5000,20000,1,0,1,0,''),(6,13,5,'Travesía de los Rápidos','14:30:00','16:30:00','image-1658879321787-672237825.jpg','El precio incluye un paseo con guía por los rápidos mendocinos (por persona). Las reservas deben hacerse con al menos una semana de anticipación para asegurarnos que podemos llenar todos los lugares. La travesía de los rápidos incluye un paseo por los rápidos de San Rafael de 2 hs, donde experimentarás adrenalina pura!',0,0,2500,8500,0,0,0,0,'');
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,7 +187,7 @@ CREATE TABLE `users` (
   `tellus` varchar(500) DEFAULT NULL,
   `admin` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,7 +196,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',NULL);
+INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',1),(3,'Ana','Cerruti','1999-11-09','cerrutianamaria@gmail.com','$2a$10$4YWOirzAf3VFizwrzacRaeWjPLrWzalMvp1acfc8SaLaKlI7Yorhm','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -209,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-26 20:26:45
+-- Dump completed on 2022-07-26 21:30:20

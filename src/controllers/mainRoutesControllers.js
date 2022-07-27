@@ -71,6 +71,7 @@ const mainRoutesControllers = {
         if(!userToLog){
             return  res.render("./register/login", 
             {errors: {email: {msg: "Este email no está registrado"}}, oldData: req.body})}
+
         
         if (bcrypt.compareSync(req.body.password, userToLog.password)){
             delete userToLog.password
@@ -79,6 +80,9 @@ const mainRoutesControllers = {
                 //aca está seteada la cookie por 2 min
                 res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
                 }
+            if(userToLog.admin ==1){
+                res.redirect("/userAdmin/adminBase")
+            }
             res.redirect("/")
 
         }else{

@@ -61,25 +61,16 @@
                    <p>Elementos incluidos</p>
                    <div class="radio">
                    <label for="lunch"><input type="radio" class="radio" name="lunch" id="lunch" value="<%= packageToEdit.lunch %>" 
-                      <% if (packageToEdit.lunch == 1) { %>
-                        selected
-                      <% } %> >Almuerzo</label>
+                    <%= packageToEdit.lunch == 1 ? "checked" : "" %> >Almuerzo</label>
                    <label for="snack"><input type="radio" class="radio" name="snack" id="snack" value="<%= packageToEdit.snack %>" 
-                      <% if (packageToEdit.snack == 1) { %>
-                        selected
-                      <% } %>>Snacks</label>
+                    <%= packageToEdit.snack == 1 ? "checked" : "" %>>Snacks</label>
                    <label for="transport"><input type="radio" class="radio" name="transport" id="transport" value="<%= packageToEdit.transport %>" 
-                      <% if (packageToEdit.transport == 1) { %>
-                        selected
-                      <% } %>>Transporte desde el hotel</label>
-                   </div>
-                   
+                    <%= packageToEdit.transport == 1 ? "checked" : "" %>>Transporte desde el hotel</label>
+                    </div>
                    <p>Requisitos</p>
                    <div class="radio">
                    <label for="experience"><input type="radio" class="radio" name="experience" id="experience" value="<%= packageToEdit.experience_level %>" 
-                      <% if (packageToEdit.experience_level == 1) { %>
-                        selected
-                      <% } %>>Experiencia previa</label>
+                    <%= packageToEdit.experience_level == 1 ? "checked" : "" %>>Experiencia previa</label>
                    </div>      
  
                    <label for="price">Precio</label>
@@ -91,27 +82,17 @@
                    <p>Esta en oferta?</p>
                    <div class="radioButton" id="sale">
                    <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value="<%= packageToEdit.sale_ratio %>"  
-                      <% if (packageToEdit.sale_ratio == 1) { %>
-                        selected
-                      <% } %>>Si</label>
+                    <%= packageToEdit.sale_ratio == 1 ? "checked" : "" %>>Si</label>
                    <!-- <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=0 selected>No</label> -->
                    </div>
  
                    <label for="sale">% de descuento</label>
                    <select class="listAF" name="sale" id="sale">
                      <option value="" disabled selected>Seleccionar descuento</option>
-                     <option value=0.1 <% if (packageToEdit.discount == 0.1) { %>
-                      selected
-                     <% } %>>10%</option>
-                     <option value=0.25 <% if (packageToEdit.discount == 0.1) { %>
-                      selected
-                     <% } %>>25%</option>
-                     <option value=0.30 <% if (packageToEdit.discount == 0.1) { %>
-                      selected
-                     <% } %>>30%</option>
-                     <option value=0.5 <% if (packageToEdit.discount == 0.1) { %>
-                      selected
-                     <% } %>>50%</option>
+                     <option value=0.1 <%= packageToEdit.discount == 0.1 ? "selected" : "" %>>10%</option>
+                     <option value=0.25 <%= packageToEdit.discount == 0.25 ? "selected" : "" %>>25%</option>
+                     <option value=0.30 <%= packageToEdit.discount == 0.3 ? "selected" : "" %>>30%</option>
+                     <option value=0.5 <%= packageToEdit.discount == 0.5 ? "selected" : "" %>>50%</option>
                    </select>
  
                    
