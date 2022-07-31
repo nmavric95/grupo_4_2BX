@@ -12,7 +12,15 @@ const dataBasePackages = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 const packageController = {
     
     packages : (req,res) =>{
-        res.render("./packages/packages", {dataBasePackages: dataBasePackages})
+        Activities.findAll({
+            include : [
+                {association : "Location"},
+                {association : "Sport"}
+            ]
+        }).then(dataBasePackages => {
+            res.render("./packages/packages", {dataBasePackages: dataBasePackages})
+        })
+        
     },
 
     packagesDetail : (req, res) => {
