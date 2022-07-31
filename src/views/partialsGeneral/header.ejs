@@ -4,7 +4,7 @@
 
         <div class="userBox">
         <a href="/userClient/<%= locals.userLoggedOk.id %> "><p class="userLogged">Hola <%= locals.userLoggedOk.name  %> </p></a>
-        <img src="/img/<%= locals.userLoggedOk.image %>" class="profilePic" alt="profilePic">
+        <img src="/img/users/<%= locals.userLoggedOk.image %>" class="profilePic" alt="profilePic">
         </div>
         <form action="/userClient/logout" method="post"><button class="logoutButton">LogOut</button></form>
     
