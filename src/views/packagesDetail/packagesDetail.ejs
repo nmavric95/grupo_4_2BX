@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/stylesPackages.css">
 <link rel="stylesheet" href="/css/stylesProductDetail.css">
 
-<title>Detalle de Paquete : <%= packageToDetail.activityName %> </title>
+<title>Detalle de Paquete : <%= packageToDetail.name %> </title>
 </head>
 <body>
     <!-- HEADER Y NAVBAR -->
@@ -16,7 +16,7 @@
         <section class="productDetail">
             <div class="productDetailImage">
                 <!-- <img src="/img/rockClimbingMountain_1280.jpg" alt="Imagen Random"> -->
-                <img src="/img/<%= packageToDetail.image %> " alt="Imagen del Deporte">
+                <img src="/img/activities/<%= packageToDetail.image %> " alt="Imagen del Deporte">
             </div>
             <article class="productDetailText">
 
@@ -25,21 +25,19 @@
                 <div class="textContainer">
                     
                     <div class="item">
-                        <h4><%= packageToDetail.activityName %> </h4>
+                        <h4><%= packageToDetail.name %> </h4>
                     </div>
 
                     <div class="item">
                         <ul type="none">
-                            <li>Duracion: <%= packageToDetail.startTime %>  a <%= packageToDetail.endTime %> hs</li>
-                            <li>Lugar: <%= packageToDetail.location %></li>
+                            <li>Duracion: <%= packageToDetail.start_time %>  a <%= packageToDetail.end_time %> hs</li>
+                            <li>Lugar: <%= packageToDetail.Location.province %></li>
                             <li>Incluye: 
                                 <ul type="none">
-                                    <li><%= packageToDetail.lunch == true ? "Almuerzo Liviano" : null %></li>
-                                    <li><%= packageToDetail.snack == true ? "Snack" : null %></li>
-                                    <li><%= packageToDetail.beverage == true ? "Bebida" : null %></li>
-                                    <li><%= packageToDetail.transport == true ? "Transporte" : null %></li>
-                                    <li><%= packageToDetail.equipment == true ? "Equipo" : null %></li>
-                                    <li><%= packageToDetail.healthInsurance == true ? "Seguro Médico" : null %></li>
+                                    <li><%= packageToDetail.lunch == 1 ? "Almuerzo Liviano" : null %></li>
+                                    <li><%= packageToDetail.snack == 1 ? "Snack" : null %></li>
+                                    <li><%= packageToDetail.transport == 1 ? "Transporte" : null %></li>
+                                    <li><%= packageToDetail.Sport.health_insurance == 1 ? "Seguro Médico" : null %></li>
                                     
                                 </ul>
                             </li>
@@ -52,9 +50,9 @@
 
                     <div class="item">
                         <ul type="none">
-                            <li><%= packageToDetail.age == true ? "Mayores de 18 años" : null %></li>
-                            <li><%= packageToDetail.minors == true ? "Menores acompañados de un mayor" : null %></li>
-                            <li><%= packageToDetail.doctorApproval == true ? "Certificado médico" : null %></li>
+                            <li><%= packageToDetail.Sport.age == true ? "Mayores de 18 años" : null %></li>
+                            <li><%= packageToDetail.Sport.minors == 1 ? "Menores acompañados de un mayor" : "Mayores de 18 años" %></li>
+                            <li><%= packageToDetail.Sport.doctor_aproval == 1 ? "Certificado médico" : null %></li>
                             <li><%= packageToDetail.experience == true ? "Experiencia" : null %></li>
                         </ul>
                     </div>
@@ -72,7 +70,7 @@
                     </div>
 
                     <div class="precio">
-                        <p>$<%= packageToDetail.reservationPrice %></p>
+                        <p>$<%= packageToDetail.reservation_price %></p>
                     </div>
                 </div>
                 <div class="buyButton">
@@ -99,7 +97,7 @@
                     <li>Clima</li>
                         <p>En caso de clima adverso se reprogramará la actividad</p>
                     <li>Lugar</li>
-                        <p><%= packageToDetail.location %></p>
+                        <p><%= packageToDetail.Location.province %> - Geo Region : <%= packageToDetail.Location.geo_region %></p>
 
                 </ul>
             </article>

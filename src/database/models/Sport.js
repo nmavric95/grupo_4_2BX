@@ -53,16 +53,14 @@ module.exports = (sequelize, DataTypes) => {
     const Sport = sequelize.define(alias, cols, config);
 
     Sport.associate = function(models){
-        Sport.belongsTo(models.Sporttype, {
-            as: "Sporttype",
-            foreignKey: "sport_type_id"
-        })
-    }
-
-    Sport.associate = function(models){
         Sport.hasMany(models.Activity, {
             as: "Activity",
             foreignKey: "sport_id"
+        })
+
+        Sport.belongsTo(models.Sporttype, {
+            as: "Sporttype",
+            foreignKey: "sport_type_id"
         })
     }
 
