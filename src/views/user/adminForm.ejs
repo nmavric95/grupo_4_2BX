@@ -33,38 +33,50 @@
                   <select class="listAF" name="sport" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
                       <% allSports.forEach(sport => { %>
-                        <% if (locals.oldData && oldData.sport) { %>
-                          <option value="<%= sport.id %>" selected><%= sport.name %></option>
-                        <% } %>
-
-                        <option value="<%= sport.id %>" ><%= sport.name %></option>
-                      
+                        <option value="<%= sport.id %>" <%= (locals.oldData && oldData.sport == sport.id) ? "selected" : null %>><%= sport.name %></option>
                       <% }); %>
-
-                      <% if (locals.errors && errors.sport) { %>
-                        <p class="warning message">
-                            <i class="fa-solid fa-angles-up"></i><%= errors.sport.msg %><i class="fa-solid fa-angles-up"></i> 
-                        </p>
-                     
-                        <% } %>
-
                   </select>
+                  <% if (locals.errors && errors.sport) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.sport.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
+
                   </div>
 
                   <div class="activityDuration">
-                  <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" >Horario inicio</label>
+                  <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.startTime : null %>">Horario inicio</label>
+                    <% if (locals.errors && errors.startTime) { %>
+                      <p class="warning message">
+                          <i class="fa-solid fa-angles-up"></i><%= errors.startTime.msg %><i class="fa-solid fa-angles-up"></i> 
+                      </p>
                   
-                  <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" >Horario finalización</label>
+                      <% } %>
+
+                  <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.endTime : null %>">Horario finalización</label>
+                    <% if (locals.errors && errors.endTime) { %>
+                      <p class="warning message">
+                          <i class="fa-solid fa-angles-up"></i><%= errors.endTime.msg %><i class="fa-solid fa-angles-up"></i> 
+                      </p>
+                    <% } %>
+
                   </div>
 
                   <label for="Location">Lugar</label>
                   <select class="listAF" name="location" id="geoRegion">
                     <option value="" disabled selected>Seleccionar provincia</option>
                     <% allProvinceLocations.forEach(province => { %>
-                      <option value="<%= province.id %>"> <%= province.province %>  </option>
+                      <option value="<%= province.id %>" <%= (locals.oldData && oldData.location == province.id) ? "selected" : null %>> <%= province.province %>  </option>
                      
                     <% }); %>
                   </select>
+                  <% if (locals.errors && errors.location) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.location.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
                   <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" >  -->
 
                                   
@@ -81,10 +93,20 @@
                   </div>      
 
                   <label for="price">Precio</label>
-                  <input type="number" placeholder="9,999" name="price"  id="price" > 
+                  <input type="number" placeholder="9,999" name="price"  id="price" value="<%= locals.oldData ? oldData.price : null %>">
+                    <% if (locals.errors && errors.price) { %>
+                      <p class="warning message">
+                          <i class="fa-solid fa-angles-up"></i><%= errors.price.msg %><i class="fa-solid fa-angles-up"></i> 
+                      </p>
+                    <% } %> 
 
                   <label for="reservationPrice">Precio reserva</label>
-                  <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" > 
+                  <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" value="<%= locals.oldData ? oldData.reservationPrice : null %>">
+                    <% if (locals.errors && errors.reservationPrice) { %>
+                      <p class="warning message">
+                          <i class="fa-solid fa-angles-up"></i><%= errors.reservationPrice.msg %><i class="fa-solid fa-angles-up"></i> 
+                      </p>
+                    <% } %>
 
                   <p>Esta en oferta?</p>
                   <div class="radioButton" id="sale">
@@ -107,8 +129,12 @@
               <h3>Descripción del paquete</h3>        
 
               <label for="description">Descripción de la actividad</label>
-              <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" > 
-            
+              <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" value="<%= locals.oldData ? oldData.description : null %>"> 
+                <% if (locals.errors && errors.description) { %>
+                  <p class="warning message">
+                      <i class="fa-solid fa-angles-up"></i><%= errors.description.msg %><i class="fa-solid fa-angles-up"></i> 
+                  </p>
+                <% } %>
               <label for="image">Agregar imagenes</label>
               <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple >    
 

@@ -37,7 +37,7 @@ const adminControllers = {
     //ALMACENAR NUEVO PAQUETE
     adminFormStore : (req, res) => {
         let errors = validationResult(req);
-        console.log(errors)
+        console.log(errors.mapped())
         if(!errors.isEmpty()){
             let promProvinceLocations = Locations.findAll();
             let promSports = Sports.findAll();
@@ -45,7 +45,9 @@ const adminControllers = {
             Promise
                 .all([promProvinceLocations, promSports])
                 .then(([allProvinceLocations, allSports]) => {
-                    return res.render("./user/adminForm", {allProvinceLocations, allSports, errors: errors.mapped(), oldData: {...req.body}} )
+                    let oldData = {...req.body}
+                    console.log(oldData)
+                    return res.render("./user/adminForm", {allProvinceLocations, allSports, errors: errors.mapped(), oldData} )
                 })
                 .catch(error => res.send(error));
             // return res.render("./user/adminForm", {errors: errors.mapped(), oldData: {...req.body}})
