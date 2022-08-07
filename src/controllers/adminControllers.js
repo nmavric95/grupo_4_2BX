@@ -37,7 +37,7 @@ const adminControllers = {
     //ALMACENAR NUEVO PAQUETE
     adminFormStore : (req, res) => {
         let errors = validationResult(req);
-        console.log(errors.mapped())
+        
         if(!errors.isEmpty()){
             let promProvinceLocations = Locations.findAll();
             let promSports = Sports.findAll();
@@ -46,11 +46,9 @@ const adminControllers = {
                 .all([promProvinceLocations, promSports])
                 .then(([allProvinceLocations, allSports]) => {
                     let oldData = {...req.body}
-                    console.log(oldData)
                     return res.render("./user/adminForm", {allProvinceLocations, allSports, errors: errors.mapped(), oldData} )
                 })
                 .catch(error => res.send(error));
-            // return res.render("./user/adminForm", {errors: errors.mapped(), oldData: {...req.body}})
         }else{
             let defaultImage = "Logo1FondoNegro.jpg";
             let image ;
@@ -100,11 +98,11 @@ const adminControllers = {
     },
     //VISTA EDITAR PAQUETE
     adminFormEdit : (req, res) => {
-        let id = req.params.idPackages
-
+        let id = req.params.idPackages;
+        
         let promProvinceLocations = Locations.findAll();
         let promSports = Sports.findAll();
-        let packageToEdit = Activities.findByPk(id)
+        let packageToEdit = Activities.findByPk(id);
 
         Promise
             .all([promProvinceLocations, promSports, packageToEdit])
@@ -120,49 +118,85 @@ const adminControllers = {
     //ACTUALIZAR PAQUETE
     adminFormEditSend : (req, res) => {
         let id = req.params.idPackages;
-        let packageToEdit = Activities.findByPk(id);
+        let errors = validationResult(req);
 
+        if(!errors.isEmpty()){
+            let promProvinceLocations = Locations.findAll();
+            let promSports = Sports.findAll();
 
-        let image;
-        if(req.files[0] != undefined){
-            image = req.files[0].filename;
+            Promise
+                .all([promProvinceLocations, promSports])
+                .then(([allProvinceLocations, allSports]) => {
+                    let packageToEdit = {
+                        id : id,
+                        ...req.body,
+                        location_id : req.body.location,
+                        // sport_id : req.body.sport,
+                        // name : req.body.activityName,
+                        start_time : req.body.startTime,
+                        end_time : req.body.endTime,
+                        // image : image,
+                        // description : req.body.description,
+                        // discount : req.body.sale,
+                        // sale_ratio : req.body.radio,
+                        // reservation_price : req.body.reservationPrice,
+                        // price : req.body.price,
+                        // lunch : req.body.lunch,
+                        // snack : req.body.snack,
+                        // transport : req.body.transport,
+                        // experience_level : req.body.experienceLevel,
+                        // description : req.body.description,
+                    };
+                    return res.render("./user/adminFormEdit", {allProvinceLocations, allSports, errors: errors.mapped(), packageToEdit} )
+                })
+                .catch(error => res.send(error));
         }else{
-            image = packageToEdit.image;
-        };
+            let packageToEdit = Activities.findByPk(id);
 
-        let booleanConverter = function(value){
-            if (value == undefined){
-                value = 0;
+            let image;
+            if(req.files[0] != undefined){
+                image = req.files[0].filename;
+            }else{
+                image = packageToEdit.image;
+            };
+
+            let booleanConverter = function(value){
+                if (value == undefined){
+                    value = 0;
+                }
+                return value;
             }
-            return value;
+
+            let packageEdited = {
+                id : id,
+                location_id : req.body.location,
+                sport_id : req.body.sport,
+                name : req.body.activityName,
+                start_time : req.body.startTime,
+                end_time : req.body.endTime,
+                image : image,
+                description : req.body.description,
+                discount : booleanConverter(req.body.sale),
+                sale_ratio : booleanConverter(req.body.radio),
+                reservation_price : req.body.reservationPrice,
+                price : req.body.price,
+                lunch : booleanConverter(req.body.lunch),
+                snack : booleanConverter(req.body.snack),
+                transport : booleanConverter(req.body.transport),
+                experience_level : booleanConverter(req.body.experienceLevel),
+                description : req.body.description,
+            };
+
+            
+
+            Activities.update(packageEdited, {
+                where: { id: id}
+            }).then(res.redirect("/userAdmin/adminBase"))
+            .catch(error => res.send(error))
         }
 
-        let packageEdited = {
-            id : id,
-            location_id : req.body.location,
-            sport_id : req.body.sport,
-            name : req.body.activityName,
-            start_time : req.body.startTime,
-            end_time : req.body.endTime,
-            image : image,
-            description : req.body.description,
-            discount : booleanConverter(req.body.sale),
-            sale_ratio : booleanConverter(req.body.radio),
-            reservation_price : req.body.reservationPrice,
-            price : req.body.price,
-            lunch : booleanConverter(req.body.lunch),
-            snack : booleanConverter(req.body.snack),
-            transport : booleanConverter(req.body.transport),
-            experience_level : booleanConverter(req.body.experienceLevel),
-            description : req.body.description,
-        };
 
         
-
-        Activities.update(packageEdited, {
-             where: { id: id}
-        }).then(res.redirect("/userAdmin/adminBase"))
-        .catch(error => res.send(error))
 
     },
     //BORRAR PAQUETE

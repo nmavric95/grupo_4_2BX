@@ -21,40 +21,62 @@
            <div class="form">
                    <div class="activity">
                    <label for="activityName">Nombre de la actividad</label>
-                   <input type="text" name="activityName"  id="activityName" maxlength="30" value="<%= packageToEdit.name %>"> 
-               
+                   <input type="text" name="activityName"  id="activityName" maxlength="30" value="<%= packageToEdit.name %>">
+                   <% if (locals.errors && errors.activityName) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.activityName.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
                    <label for="sport">Deporte</label>               
                    <select class="listAF" name="sport" id="sport">
                      <option value="" disabled selected>Seleccionar deporte</option>
                      <% allSports.forEach(sport => { %>
-                      <% if (sport.id == packageToEdit.sport_id) { %>
-                        <option value="<%= sport.id %>" selected><%= sport.name %></option>
-                      <% } %>
-                       
-                      <option value="<%= sport.id %>"><%= sport.name %></option>
-                      
+                        <option value="<%= sport.id %>" <%= (sport.id == packageToEdit.sport_id || sport.id == packageToEdit.sport) ? "selected" : "" %>><%= sport.name %></option>
                      <% }); %>
                    </select>
+                   <% if (locals.errors && errors.sport) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.sport.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
+
                    </div>
  
                    <div class="activityDuration">
                    <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" value="<%= packageToEdit.start_time %>">Horario inicio</label>
+                   <% if (locals.errors && errors.startTime) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.startTime.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
                    
                    <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" value="<%= packageToEdit.end_time %>">Horario finalización</label>
+                   <% if (locals.errors && errors.endTime) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.endTime.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
                    </div>
  
                    <label for="Location">Lugar</label>
                    <select class="listAF" name="location" id="geoRegion">
-                     <% allProvinceLocations.forEach(province => { %>
-
-                      <% if (province.id == packageToEdit.location_id) { %>
-                        <option value="<%= province.id %>" selected> <%= province.province %>  </option>
-                      <% } %> 
-                      
-                      <option value="<%= province.id %>"> <%= province.province %>  </option>
+                    <option value="" disabled selected>Seleccionar provincia</option>
+                     <% allProvinceLocations.forEach(province => { %>                   
+                        <option value="<%= province.id %>" <%= (province.id == packageToEdit.location_id || province.id == packageToEdit.location) ? "selected" : null %> > <%= province.province %>  </option>
                       
                      <% }); %>
                    </select>
+                   <% if (locals.errors && errors.location) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.location.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
+                   
                    <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required>  -->
  
                                    
@@ -75,10 +97,20 @@
  
                    <label for="price">Precio</label>
                    <input type="number" name="price"  id="price" value="<%= packageToEdit.price %>"> 
- 
+                   <% if (locals.errors && errors.price) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.price.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                  <% } %>
+
                    <label for="reservationPrice">Precio reserva</label>
                    <input type="number" name="reservationPrice"  id="reservationPrice" value="<%= packageToEdit.reservation_price %>"> 
- 
+                   <% if (locals.errors && errors.reservationPrice) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.reservationPrice.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                  <% } %> 
+
                    <p>Esta en oferta?</p>
                    <div class="radioButton" id="sale">
                    <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value="<%= packageToEdit.sale_ratio %>"  
@@ -102,9 +134,13 @@
  
                <label for="description">Descripción de la actividad</label>
                <input type="text" name="description"  id="description" maxlength="400" value="<%= packageToEdit.description  %>"> 
-             
+                <% if (locals.errors && errors.description) { %>
+                  <p class="warning message">
+                      <i class="fa-solid fa-angles-up"></i><%= errors.description.msg %><i class="fa-solid fa-angles-up"></i> 
+                  </p>
+                <% } %>
                <label for="image">Agregar imagenes</label>
-               <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple required>    
+               <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>    
  
            </div>
  

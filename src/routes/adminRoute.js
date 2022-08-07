@@ -47,7 +47,7 @@ router.post("/adminForm", upload.any(), packageValidation ,adminControllers.admi
 
 //RUTA EDITAR PAQUETE
 router.get("/adminForm/:idPackages", adminControllers.adminFormEdit);
-router.put("/adminForm/:idPackages", upload.any() ,adminControllers.adminFormEditSend);
+router.put("/adminForm/:idPackages", upload.any(), packageValidation,adminControllers.adminFormEditSend);
 
 router.get("/adminBase", adminControllers.adminBase);
 
