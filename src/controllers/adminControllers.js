@@ -1,7 +1,8 @@
 //CONTROLLER PARA ADMIN
-const path = require("path")
-const fs = require("fs")
-const pathDB = path.resolve("./data/packageDB.json")
+// const path = require("path")
+// const fs = require("fs")
+// const pathDB = path.resolve("./data/packageDB.json")
+const { validationResult } = require('express-validator')
 
 //BASE DE DATOS RELACIONAL
 const db = require("../database/models");
@@ -22,10 +23,6 @@ const adminControllers = {
     },
     //VISTA CREAR NUEVO PAQUETE
     adminForm : (req, res) => {
-        // let promGeoRegionLocations = Locations.findAll({
-        //     attributes : ["geo_region"],
-        //     group: "geo_region"
-        // });
         let promProvinceLocations = Locations.findAll();
         let promSports = Sports.findAll();
 
@@ -39,46 +36,64 @@ const adminControllers = {
     },
     //ALMACENAR NUEVO PAQUETE
     adminFormStore : (req, res) => {
-        let defaultImage = "Logo1FondoNegro.jpg";
-        let image ;
-        if (req.files[0]){
-            image = req.files[0].filename;
+        let errors = validationResult(req);
+        console.log(errors)
+        if(!errors.isEmpty()){
+            let promProvinceLocations = Locations.findAll();
+            let promSports = Sports.findAll();
+
+            Promise
+                .all([promProvinceLocations, promSports])
+                .then(([allProvinceLocations, allSports]) => {
+                    return res.render("./user/adminForm", {allProvinceLocations, allSports, errors: errors.mapped(), oldData: {...req.body}} )
+                })
+                .catch(error => res.send(error));
+            // return res.render("./user/adminForm", {errors: errors.mapped(), oldData: {...req.body}})
         }else{
-            image = defaultImage;
-        };
+            let defaultImage = "Logo1FondoNegro.jpg";
+            let image ;
+            if (req.files[0]){
+                image = req.files[0].filename;
+            }else{
+                image = defaultImage;
+            };
 
-        let booleanConverter = function(value){
-            if (value == undefined){
-                value = 0;
+            let booleanConverter = function(value){
+                if (value == undefined){
+                    value = 0;
+                }
+                return value;
             }
-            return value;
-        }
-    
-        //CODIGO PARA DB
-        let newActivity = {
+        
+            //CODIGO PARA DB
+            let newActivity = {
 
-            location_id : req.body.location,
-            sport_id : req.body.sport,
-            name : req.body.activityName,
-            start_time : req.body.startTime,
-            end_time : req.body.endTime,
-            image : image,
-            description : req.body.description,
-            discount : booleanConverter(req.body.sale),
-            sale_ratio : booleanConverter(req.body.radio),
-            reservation_price : req.body.reservationPrice,
-            price : req.body.price,
-            lunch : booleanConverter(req.body.lunch),
-            snack : booleanConverter(req.body.snack),
-            transport : booleanConverter(req.body.transport),
-            experience_level : booleanConverter(req.body.experienceLevel),
-            description : req.body.description,
-        };
+                location_id : req.body.location,
+                sport_id : req.body.sport,
+                name : req.body.activityName,
+                start_time : req.body.startTime,
+                end_time : req.body.endTime,
+                image : image,
+                description : req.body.description,
+                discount : booleanConverter(req.body.sale),
+                sale_ratio : booleanConverter(req.body.radio),
+                reservation_price : req.body.reservationPrice,
+                price : req.body.price,
+                lunch : booleanConverter(req.body.lunch),
+                snack : booleanConverter(req.body.snack),
+                transport : booleanConverter(req.body.transport),
+                experience_level : booleanConverter(req.body.experienceLevel),
+                description : req.body.description,
+            };
+
+            
+            Activities.create(newActivity)
+                .then(res.redirect("/userAdmin/adminBase"))
+                .catch(error => res.send(error))
+            }
+
 
         
-        Activities.create(newActivity)
-            .then(res.redirect("/userAdmin/adminBase"))
-            .catch(error => res.send(error))
     
     },
     //VISTA EDITAR PAQUETE

@@ -10,7 +10,7 @@ const userAdminMiddleware = require("../middlewares/userAdminMiddelware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../public/img')
+      cb(null, '../public/img/users')
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + path.extname(file.originalname);
@@ -29,10 +29,10 @@ const updateValidation = [
   body('name').notEmpty().withMessage('Completa tu nombre'),
   body('lastName').notEmpty().withMessage('Completa tu apellido'),
   body('birthDate').notEmpty().withMessage('Completa tu fecha de nacimiento'),
-  body('peso')
+  body('weight')
     .notEmpty().withMessage('Completa tu peso en kilogramos').bail()
     .isNumeric().withMessage('Debes ingresar un valor numérico'),
-  body('altura')
+  body('height')
     .notEmpty().withMessage('Completa tu altura en metros').bail()
     .isNumeric().withMessage('Debes ingresar un valor numérico'),
   body('email')

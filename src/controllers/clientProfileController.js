@@ -1,7 +1,5 @@
 const path = require("path")
-const fs = require("fs");
 const { validationResult } = require('express-validator');
-const { body } = require("express-validator");
 const pathDB = path.resolve("./data/userDB.json")
 
 
@@ -9,9 +7,6 @@ const pathDB = path.resolve("./data/userDB.json")
 const db = require("../database/models");
 const Users = db.User;
 const Actions = db.Action;
-
-
-const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 
 // PERFIL CLIENTE 
@@ -52,37 +47,60 @@ const clientProfileController = {
         //         image = req.files[0].filename;
         //     }else{
         //         image = userToEdit.image;
-        //     };}},
+        //     };}
 
             // CODIGO NUEVO DB
     update:  (req,res) => {
             let id = req.params.id;
-            let userToEdit = Users.findByPk(id);
-                let image;
-            if(req.files[0] != undefined){
-                image = req.files[0].filename;
+            let resultValidation = validationResult(req);
+            let userToEdit = Users.findByPk(id);            
+
+            if(!resultValidation.isEmpty()) {
+                let userToDetail = {
+                    id : id,
+                    name: req.body.name,
+                    last_name: req.body.lastName,
+                    birth_date: req.body.birthDate,
+                    email: req.body.email,
+                    image : req.body.image ? req.body.image : userToEdit.image,
+                    weight: req.body.weight,
+                    height: req.body.height,
+                    tellus: req.body.tellus,
+                };
+                res.render("./user/clientProfile", {
+                    userToDetail : userToDetail,
+                    errors : resultValidation.mapped(),
+                })  
             }else{
-                image = userToEdit.image;}
+                
+                let image;
+                if(req.files[0] != undefined){
+                    image = req.files[0].filename;
+                }else{
+                    image = userToEdit.image;
+                }
                 Users
-                .update(
-                    {
-                        name: req.body.name,
-                        last_name: req.body.lastName,
-                        birth_date: req.body.birthDate,
-                        email: req.body.email,
-                        image : image,
-                        weight: req.body.weight,
-                        height: req.body.height,
-                        tellus: req.body.tellus,
-                        admin: req.body.admin,
-                    },
-                    {
-                        where: {id: id}
-                    }
-                    )
-                .then(()=> {
-                    return res.redirect(("/userClient/" + id))})            
-                .catch(error => res.send(error))
+                    .update(
+                        {
+                            name: req.body.name,
+                            last_name: req.body.lastName,
+                            birth_date: req.body.birthDate,
+                            email: req.body.email,
+                            image : image,
+                            weight: req.body.weight,
+                            height: req.body.height,
+                            tellus: req.body.tellus,
+                       },
+                        {
+                            where: {id: id}
+                        }
+                        )
+                    .then(()=> {
+                        return res.redirect(("/userClient/" + id))})            
+                    .catch(error => res.send(error))
+            }
+
+            
             },
 
         //     let userEdited = {

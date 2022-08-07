@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const { body } = require('express-validator');
 
 //MULTER
 
@@ -18,6 +19,23 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage })
 
+// EXP-VALIDATOR CREACION/EDICION PAQUETES
+const packageValidation = [
+  body('activityName').notEmpty().withMessage('Completa el nombre de la actividad'),
+  body('sport').notEmpty().withMessage('Debes seleccionar un deporte'),
+  body('startTime').notEmpty().withMessage('Debes ingresar un horario de inicio'),
+  body('endTime').notEmpty().withMessage('Debes ingresar un horario de finalizado'),
+  body('location').notEmpty().withMessage('Debes ingresar una localizacion'),
+  body('price')
+    .notEmpty().withMessage('Debes ingresar un valor').bail()
+    .isNumeric().withMessage('Debes ingresar un valor numérico'),
+  body('reservationPrice')
+    .notEmpty().withMessage('Debes ingresar un valor').bail()
+    .isNumeric().withMessage('Debes ingresar un valor numérico'),
+  body('description')
+  .notEmpty().withMessage('Debes ingresar una descripcion'),
+]
+
 
 //CONTROLLERS
 const adminControllers = require("../controllers/adminControllers");
@@ -25,7 +43,7 @@ const adminControllers = require("../controllers/adminControllers");
 
 //RUTA CREAR PAQUETE
 router.get("/adminForm", adminControllers.adminForm);
-router.post("/adminForm", upload.any() ,adminControllers.adminFormStore);
+router.post("/adminForm", upload.any(), packageValidation ,adminControllers.adminFormStore);
 
 //RUTA EDITAR PAQUETE
 router.get("/adminForm/:idPackages", adminControllers.adminFormEdit);

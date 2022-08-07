@@ -21,22 +21,40 @@
           <div class="form">
                   <div class="activity">
                   <label for="activityName">Nombre de la actividad</label>
-                  <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30"required> 
+                  <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30" value="<%= locals.oldData ? oldData.activityName : null %>"> 
+                  <% if (locals.errors && errors.activityName) { %>
+                    <p class="warning message">
+                        <i class="fa-solid fa-angles-up"></i><%= errors.activityName.msg %><i class="fa-solid fa-angles-up"></i> 
+                    </p>
+                 
+                    <% } %>
               
                   <label for="sport">Deporte</label>               
                   <select class="listAF" name="sport" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
-                    <% allSports.forEach(sport => { %>
-                      <option value="<%= sport.id %>"><%= sport.name %></option>
+                      <% allSports.forEach(sport => { %>
+                        <% if (locals.oldData && oldData.sport) { %>
+                          <option value="<%= sport.id %>" selected><%= sport.name %></option>
+                        <% } %>
+
+                        <option value="<%= sport.id %>" ><%= sport.name %></option>
+                      
+                      <% }); %>
+
+                      <% if (locals.errors && errors.sport) { %>
+                        <p class="warning message">
+                            <i class="fa-solid fa-angles-up"></i><%= errors.sport.msg %><i class="fa-solid fa-angles-up"></i> 
+                        </p>
                      
-                    <% }); %>
+                        <% } %>
+
                   </select>
                   </div>
 
                   <div class="activityDuration">
-                  <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" required>Horario inicio</label>
+                  <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" >Horario inicio</label>
                   
-                  <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" required>Horario finalización</label>
+                  <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" >Horario finalización</label>
                   </div>
 
                   <label for="Location">Lugar</label>
@@ -47,7 +65,7 @@
                      
                     <% }); %>
                   </select>
-                  <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" required>  -->
+                  <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" >  -->
 
                                   
                   <p>Elementos incluidos</p>
@@ -63,10 +81,10 @@
                   </div>      
 
                   <label for="price">Precio</label>
-                  <input type="number" placeholder="9,999" name="price"  id="price" required> 
+                  <input type="number" placeholder="9,999" name="price"  id="price" > 
 
                   <label for="reservationPrice">Precio reserva</label>
-                  <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" required> 
+                  <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" > 
 
                   <p>Esta en oferta?</p>
                   <div class="radioButton" id="sale">
@@ -89,10 +107,10 @@
               <h3>Descripción del paquete</h3>        
 
               <label for="description">Descripción de la actividad</label>
-              <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" required> 
+              <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" > 
             
               <label for="image">Agregar imagenes</label>
-              <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple required>    
+              <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple >    
 
           </div>
 
