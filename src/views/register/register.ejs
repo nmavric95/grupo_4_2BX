@@ -74,9 +74,9 @@
 
             <label for="passwordRepeat">Repetir contraseña</label>
             <input type="password" name="passwordRepeat" id="passwordRepeat">
-            <% if (locals.errors && errors.password) { %>
+            <% if (locals.errors && errors.passwordRepeat) { %>
                 <p class="warning message">
-                    <i class="fa-solid fa-angles-up"></i><%= errors.password.msg %><i class="fa-solid fa-angles-up"></i> 
+                    <i class="fa-solid fa-angles-up"></i><%= errors.passwordRepeat.msg %><i class="fa-solid fa-angles-up"></i> 
                 </p>
              
             <% } %>
