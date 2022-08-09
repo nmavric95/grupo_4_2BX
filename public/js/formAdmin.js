@@ -8,7 +8,7 @@ window.onload = () => {
     let btnSubmit = document.querySelector(".btnSubmit")
     btnSubmit.disabled = true
 
-    form.activityName.focus()
+    // form.activityName.focus()
 
 
     let validationName = document.querySelector("#activityName")
