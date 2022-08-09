@@ -4,6 +4,7 @@
 <head>
   <%- include("../partialsGeneral/head") %>
   <link rel="stylesheet" href="/css/stylesAdminForm.css">
+  <script src="/js/formAdmin.js"></script>
   <title>2BX / Editando Paquete <%= packageToEdit.name %> </title>
 </head>
 <body>
@@ -145,7 +146,7 @@
            </div>
  
            <div class="buttons">
-             <button type="submit" form="newProduct" value="Submit">Actualizar actividad</button>
+             <button class="btnSubmit" type="submit" form="newProduct" value="Submit">Actualizar actividad</button>
            </div> 
  
          </form>
