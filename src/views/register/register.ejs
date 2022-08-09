@@ -4,6 +4,7 @@
 <head>
     <%- include("../partialsGeneral/head") %>
     <link rel="stylesheet" href="/css/stylesRegister.css">
+    <script src = "/js/formRegister.js"></script>
     <title>2BX / Register</title>
 </head>
 <body>
@@ -26,6 +27,7 @@
                 </p>
              
             <% } %>
+               
 
             <label for="lastName">Apellido</label>
             <input type="text" name="lastName" val id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
@@ -91,9 +93,8 @@
         </div>
         </form>
 
-    <script src = "js/forms.js"></script>
 
-        <a href="/login"><button type="submit" form="registerForm" value="Submit">Registrar</button></a>
+        <button class="btnSubmit" type="submit" form="registerForm" value="Submit">Registrar</button>
     </section>
 
     <section class="image">

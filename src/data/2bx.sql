@@ -187,7 +187,7 @@ CREATE TABLE `users` (
   `tellus` varchar(500) DEFAULT NULL,
   `admin` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,7 +196,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',1),(3,'Ana','Cerruti','1999-11-09','cerrutianamaria@gmail.com','$2a$10$4YWOirzAf3VFizwrzacRaeWjPLrWzalMvp1acfc8SaLaKlI7Yorhm','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',1),(3,'Ana','Cerruti','1999-11-09','cerrutianamaria@gmail.com','$2a$10$4YWOirzAf3VFizwrzacRaeWjPLrWzalMvp1acfc8SaLaKlI7Yorhm','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(4,'Filomena','Pepita','2006-02-12','filomena@gmail.com','$2a$10$a0vBTzB.1OouidO/FI3/4eBekCpbiX72WJgf/g0w3l2b3XAHj9gFe','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(5,'Juana','Gonzalez','1995-07-12','juanita@gmail.com','$2a$10$YkRbCtk4c3XxJaZSx8WYuuEYFBCwS.wL8uJoJrJW9lXWF.ZgCWvPa','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(6,'Nadita','Maverick','1995-07-23','nadita@gmail.com','$2a$10$2uQjCBvS/JyjMnN1zzNM8eu2KjqKcHT.ICVd4eSQYxOsZ8MZwx9fy','Logo1FondoNegro.jpg',NULL,NULL,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -209,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-26 21:30:20
+-- Dump completed on 2022-08-08 22:31:06
