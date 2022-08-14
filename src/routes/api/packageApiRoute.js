@@ -6,10 +6,10 @@ const path = require("path")
 const packageApiController = require("../../controllers/api/packageApiController")
 
 //Rutas
-router.get("/package", packageApiController.list);
+router.get("/", packageApiController.list);
 // router.post("/package", packageApiController.create)
-router.get("/package/:idPackages", packageApiController.detail)
+router.get("/:idPackages", packageApiController.detail)
 // router.post("/package/:idPackages", packageApiController.edit)
-router.delete("/packages/delete/idPackages", packageApiController.delete)
+router.delete("/delete/idPackages", packageApiController.delete)
 
 module.exports = router;

@@ -56,7 +56,7 @@ app.use(methodOverride("_method"))
 
 //ROUTES
 app.use("/", mainRouter);
-app.use("/api", packagesApiRouter);
+app.use("/api/package", packagesApiRouter);
 app.use("/packages", packageRouter);
 app.use("/productCart", productCartRouter);
 app.use("/userAdmin", adminRouter);
