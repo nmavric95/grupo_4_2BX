@@ -20,6 +20,9 @@ const productCartRouter = require("./routes/productCartRoutes");
 const adminRouter = require("./routes/adminRoute")
 const cProfileRouter = require("./routes/cProfileRoute");
 
+//VARIABLES DE API ROUTES
+const packagesApiRouter = require("./routes/api/packageApiRoute.js");
+
 
 // MIDDLEWARES
 app.use(cookies())
@@ -53,6 +56,7 @@ app.use(methodOverride("_method"))
 
 //ROUTES
 app.use("/", mainRouter);
+app.use("/api", packagesApiRouter);
 app.use("/packages", packageRouter);
 app.use("/productCart", productCartRouter);
 app.use("/userAdmin", adminRouter);
