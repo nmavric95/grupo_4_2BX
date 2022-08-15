@@ -12,7 +12,7 @@
 }
 
 
-h2{
+.sectionTitle{
     font-size: 32px;
     font-family: "BPimperial Regular";
     display: block;
@@ -30,7 +30,7 @@ h2{
     padding: 5%;
 }
 
-p{
+.textPW{
     font-size: 18px;
     font-family: "Lato", sans-serif;
     display: block;
@@ -39,7 +39,7 @@ p{
     color: gray;
 }
 
-a:link{
+.linkLogin:link{
     color:RGB(203,108,230);
     text-shadow: 2px 2px 2px RGB(157,59,225);
     cursor: pointer;
@@ -47,7 +47,7 @@ a:link{
     transition-duration: 0.2s;
 }
 
-a:hover {
+.linkLogin:hover {
     font-weight: bold;
     color: RGBA(157,59,225,0.5);
     text-shadow: 2px 2px 2px RGB(121,255,160)
@@ -55,7 +55,7 @@ a:hover {
   }
 
 /* inputs */
-label{
+.inputLabel{
     font-size: 18px;
     display: block;
     text-align: left;
@@ -64,7 +64,7 @@ label{
     padding-top: 2%;
 }
 
-input[type=email], [type=password]{
+.inputLogin{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -77,7 +77,7 @@ input[type=email], [type=password]{
     
   }
 
-  input[type=email]:hover ,input[type=password]:hover ,input[type=email]:focus,input[type=password]:focus{
+  .inputLogin:hover, .inputLogin:focus{
     width: 90%;
     padding: 12px 20px;
     margin: 8px ;
@@ -93,7 +93,7 @@ input[type=email], [type=password]{
 
 
 /* button */
-button{
+.btnSubmit{
     width: 25%;
     font-family: "Lato", sans-serif;
     background-color: RGB(121,255,160);
@@ -116,7 +116,7 @@ button{
   }
 
 
-button:hover{
+.btnSubmit:hover{
     background-color: RGB(157,59,225);
     color: RGB(121,255,160);
 } 

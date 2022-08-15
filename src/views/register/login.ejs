@@ -14,14 +14,14 @@
     <main>
     
         <section class="loginForm">
-           <h2>Login / <a href="/register"> Registro </a></h2>
+           <h2 class="sectionTitle" >Login / <a class="linkLogin" href="/register"> Registro </a></h2>
            
            <form action="/login" method="POST" id="loginForm" enctype="multipart/form-data">
             
            <div class="form">
               
-               <label for="email">Email</label>
-               <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
+               <label class="inputLabel" for="email">Email</label>
+               <input class="inputLogin" type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                <% if (locals.errors && errors.email) { %>
                 <p class="warning message">
                     <i class="fa-solid fa-angles-up"></i><%= errors.email.msg %><i class="fa-solid fa-angles-up"></i> 
@@ -30,8 +30,8 @@
                 <% } %> 
               
            
-               <label for="password">Contraseña</label>
-               <input type="password" name="password" id="password">
+               <label class="inputLabel" for="password">Contraseña</label>
+               <input class="inputLogin" type="password" name="password" id="password">
                <% if (locals.errors && errors.password) { %>
                 <p class="warning message">
                     <i class="fa-solid fa-angles-up"></i><%= errors.password.msg %><i class="fa-solid fa-angles-up"></i> 
@@ -43,8 +43,8 @@
                
            </div>  
            
-           <label for="checkbox"> <input type="checkbox" name="rememberEmail" id="checkbox"> Recordar mi Email</label>
-           <label for="checkbox"> <input type="checkbox" name="rememberPassword" id="checkbox"> Recordar mi contraseña </label>
+           <label class="inputLabel" for="checkbox"> <input type="checkbox" name="rememberEmail" id="checkbox"> Recordar mi Email</label>
+           <label class="inputLabel" for="checkbox"> <input type="checkbox" name="rememberPassword" id="checkbox"> Recordar mi contraseña </label>
               
            </form>
 
@@ -52,7 +52,7 @@
    
            <button class="btnSubmit" type="submit" form="loginForm" value="Submit">Login</button>
 
-           <p class="textPW"><a href="/*****"> Olvide mi contraseña.</a></p>
+           <p class="textPW"><a class="linkLogin" href="/*****"> Olvide mi contraseña.</a></p>
        </section>
    
        <section class="image">
