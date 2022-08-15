@@ -136,8 +136,11 @@
                       <i class="fa-solid fa-angles-up"></i><%= errors.description.msg %><i class="fa-solid fa-angles-up"></i> 
                   </p>
                 <% } %>
-              <label class="adminFormLabel" for="image">Agregar imagenes</label>
-              <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple >    
+              
+              <div class="upload" >
+                <label class="adminFormLabel" for="image">Agregar imagenes</label>
+                <input class="inputUpload" type="file" name="image" id="image" accept="image/png, image/jpeg" multiple >    
+              </div>
 
           </div>
 

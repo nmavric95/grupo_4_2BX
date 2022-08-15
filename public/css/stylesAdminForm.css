@@ -181,11 +181,17 @@ section.view{
     outline: none;
   }  
 
-   
-  input[type=file]{
-    margin-top: 10px;  
+  .upload{
+    margin: 1px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .inputUpload{
+    margin: 3px;  
     display: block;
-    margin-left: 7%;
+    width: 100%;
+    
 
   }
 
