@@ -9,7 +9,7 @@ const usersApiController = require("../../controllers/api/usersApiController")
 router.get("/", usersApiController.list);
 // router.post("/package", usersApiController.create)
 router.get("/:idPackages", usersApiController.detail)
-// router.post("/package/:idPackages", usersApiController.edit)
+// router.put("/package/:idPackages", usersApiController.edit)
 router.delete("/delete/idPackages", usersApiController.delete)
 
 module.exports = router;

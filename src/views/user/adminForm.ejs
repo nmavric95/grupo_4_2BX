@@ -21,8 +21,8 @@
 
           <div class="form">
                   <div class="activity">
-                  <label for="activityName">Nombre de la actividad</label>
-                  <input type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30" value="<%= locals.oldData ? oldData.activityName : null %>"> 
+                  <label class="adminFormLabel" for="activityName">Nombre de la actividad</label>
+                  <input class="inputAdminForm" type="text" placeholder="Trekking Volcan Lanin" name="activityName"  id="activityName" maxlength="30" value="<%= locals.oldData ? oldData.activityName : null %>"> 
                   <% if (locals.errors && errors.activityName) { %>
                     <p class="warning message">
                         <i class="fa-solid fa-angles-up"></i><%= errors.activityName.msg %><i class="fa-solid fa-angles-up"></i> 
@@ -30,7 +30,7 @@
                  
                     <% } %>
               
-                  <label for="sport">Deporte</label>               
+                  <label class="adminFormLabel" for="sport">Deporte</label>               
                   <select class="listAF" name="sport" id="sport">
                     <option value="" disabled selected>Seleccionar deporte</option>
                       <% allSports.forEach(sport => { %>
@@ -47,7 +47,7 @@
                   </div>
 
                   <div class="activityDuration">
-                  <label for="startTime"><input type="time" id="startTime" name="startTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.startTime : null %>">Horario inicio</label>
+                  <label class="adminFormLabel" for="startTime"><input class="timeInput" type="time" id="startTime" name="startTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.startTime : null %>">Horario inicio</label>
                     <% if (locals.errors && errors.startTime) { %>
                       <p class="warning message">
                           <i class="fa-solid fa-angles-up"></i><%= errors.startTime.msg %><i class="fa-solid fa-angles-up"></i> 
@@ -55,7 +55,7 @@
                   
                       <% } %>
 
-                  <label for="endTime"><input type="time" id="endTime" name="endTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.endTime : null %>">Horario finalización</label>
+                  <label class="adminFormLabel" for="endTime"><input class="timeInput" type="time" id="endTime" name="endTime" min="00:00" max="23:59" value="<%= locals.oldData ? oldData.endTime : null %>">Horario finalización</label>
                     <% if (locals.errors && errors.endTime) { %>
                       <p class="warning message">
                           <i class="fa-solid fa-angles-up"></i><%= errors.endTime.msg %><i class="fa-solid fa-angles-up"></i> 
@@ -64,7 +64,7 @@
 
                   </div>
 
-                  <label for="Location">Lugar</label>
+                  <label class="adminFormLabel" for="Location">Lugar</label>
                   <select class="listAF" name="location" id="geoRegion">
                     <option value="" disabled selected>Seleccionar provincia</option>
                     <% allProvinceLocations.forEach(province => { %>
@@ -81,41 +81,41 @@
                   <!-- <input type="text" placeholder="Neuquén" name="Location"  id="Location" maxlength="30" >  -->
 
                                   
-                  <p>Elementos incluidos</p>
+                  <p class="inputTitle" >Elementos incluidos</p>
                   <div class="radio">
-                  <label for="lunch"><input type="radio" class="radio" name="lunch" id="lunch" value=1>Almuerzo</label>
-                  <label for="snack"><input type="radio" class="radio" name="snack" id="snack" value=1>Snacks</label>
-                  <label for="transport"><input type="radio" class="radio" name="transport" id="transport" value=1>Transporte desde el hotel</label>
+                  <label class="adminFormLabel" for="lunch"><input type="radio" class="radio" name="lunch" id="lunch" value=1>Almuerzo</label>
+                  <label class="adminFormLabel" for="snack"><input type="radio" class="radio" name="snack" id="snack" value=1>Snacks</label>
+                  <label class="adminFormLabel" for="transport"><input type="radio" class="radio" name="transport" id="transport" value=1>Transporte desde el hotel</label>
                   </div>
                   
-                  <p>Requisitos</p>
+                  <p class="inputTitle" >Requisitos</p>
                   <div class="radio">
-                  <label for="experience"><input type="radio" class="radio" name="experience" id="experience" value=1>Experiencia previa</label>
+                  <label class="adminFormLabel" for="experience"><input type="radio" class="radio" name="experience" id="experience" value=1>Experiencia previa</label>
                   </div>      
 
-                  <label for="price">Precio</label>
-                  <input type="number" placeholder="9,999" name="price"  id="price" value="<%= locals.oldData ? oldData.price : null %>">
+                  <label class="adminFormLabel" for="price">Precio</label>
+                  <input class="inputAdminForm" type="number" placeholder="9,999" name="price"  id="price" value="<%= locals.oldData ? oldData.price : null %>">
                     <% if (locals.errors && errors.price) { %>
                       <p class="warning message">
                           <i class="fa-solid fa-angles-up"></i><%= errors.price.msg %><i class="fa-solid fa-angles-up"></i> 
                       </p>
                     <% } %> 
 
-                  <label for="reservationPrice">Precio reserva</label>
-                  <input type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" value="<%= locals.oldData ? oldData.reservationPrice : null %>">
+                  <label class="adminFormLabel" for="reservationPrice">Precio reserva</label>
+                  <input class="inputAdminForm" type="number" placeholder="9,999" name="reservationPrice"  id="reservationPrice" value="<%= locals.oldData ? oldData.reservationPrice : null %>">
                     <% if (locals.errors && errors.reservationPrice) { %>
                       <p class="warning message">
                           <i class="fa-solid fa-angles-up"></i><%= errors.reservationPrice.msg %><i class="fa-solid fa-angles-up"></i> 
                       </p>
                     <% } %>
 
-                  <p>Esta en oferta?</p>
+                  <p class="inputTitle" >Esta en oferta?</p>
                   <div class="radioButton" id="sale">
-                  <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=1>Si</label>
+                  <label class="adminFormLabel" for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=1>Si</label>
                   <!-- <label for="saleRadio"><input type="radio" class="radio" name="radio" id="saleRadio" value=0 selected>No</label> -->
                   </div>
 
-                  <label for="sale">% de descuento</label>
+                  <label class="adminFormLabel" for="sale">% de descuento</label>
                   <select class="listAF" name="sale" id="sale">
                     <option value="" disabled selected>Seleccionar descuento</option>
                     <option value=0,1>10%</option>
@@ -127,22 +127,22 @@
                   
 
 
-              <h3>Descripción del paquete</h3>        
+              <h3 class="h3">Descripción del paquete</h3>        
 
-              <label for="description">Descripción de la actividad</label>
-              <input type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" value="<%= locals.oldData ? oldData.description : null %>"> 
+              <label class="adminFormLabel" for="description">Descripción de la actividad</label>
+              <input class="inputAdminForm" type="text" placeholder="Descripción de la actividad" name="description"  id="description" maxlength="400" value="<%= locals.oldData ? oldData.description : null %>"> 
                 <% if (locals.errors && errors.description) { %>
                   <p class="warning message">
                       <i class="fa-solid fa-angles-up"></i><%= errors.description.msg %><i class="fa-solid fa-angles-up"></i> 
                   </p>
                 <% } %>
-              <label for="image">Agregar imagenes</label>
+              <label class="adminFormLabel" for="image">Agregar imagenes</label>
               <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple >    
 
           </div>
 
           <div class="buttons">
-            <button type="reset" value="reset" class="reset">Borrar todo</button>
+            <button class="btnReset" type="reset" value="reset" class="reset">Borrar todo</button>
             <button class="btnSubmit" type="submit" form="newProduct" value="Submit">Crear paquete</button>
           </div> 
 
@@ -158,7 +158,6 @@
     
     </main>
 
-    <footer>
        <!-- FOOTER -->
     <%- include("../partialsGeneral/footer")  %>
 

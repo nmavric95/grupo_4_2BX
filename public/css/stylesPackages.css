@@ -12,7 +12,7 @@
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     padding: 5px;
     text-align: center;
 
@@ -44,6 +44,7 @@
     text-align: center;
     padding: 10px;
     transition: box-shadow 600ms;
+    transition-duration: 0.4s;
 }
 
 .productItem:hover{
@@ -104,6 +105,25 @@
 .subContainer{
     display: none;
 }
+
+.btnActionsCrud{
+    display: flex;
+    width: 50px;
+    font-family: "Lato", sans-serif;
+    background-color: rgb(121,255,160);
+    color: rgb(157,59,225);
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    }
 
 
 
@@ -183,6 +203,12 @@
         border-radius: 15px;
         justify-content: center;
         align-items: center;
+        transition-duration: 0.4s;
     
     }
+
+    .btnActionsCrud:hover{
+        background-color: rgb(157,59,225);
+        color: rgb(121,255,160);
+    } 
 }

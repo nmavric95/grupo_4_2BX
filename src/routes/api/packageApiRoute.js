@@ -9,7 +9,7 @@ const packageApiController = require("../../controllers/api/packageApiController
 router.get("/", packageApiController.list);
 // router.post("/package", packageApiController.create)
 router.get("/:idPackages", packageApiController.detail)
-// router.post("/package/:idPackages", packageApiController.edit)
+// router.put("/package/:idPackages", packageApiController.edit)
 router.delete("/delete/idPackages", packageApiController.delete)
 
 module.exports = router;
