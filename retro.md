@@ -101,3 +101,36 @@ STRINT 5
 -Do more: La comunicación del equipo es buena y por tanto creemos que podemos aprovechar este punto, para trabajar más en conjunto en las consignas en vez de repartir simplemente la carga. De esta forma, creemos que al dos o mas personas mirar el mismo problema, nos permitirá resolverlo más rápido y optimizar nuestro tiempo.
 
 -Start Doing: De nuestra reunión surgió la necesidad de comenzar a hacer más consultas entre cada sprint a los profesores y no esperar a las clases prácticas; ya que es más complicado resolver algunas cuestiones si no las atacamos con más tiempo.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Retrospectiva
+STRINT 6
+
+-Stop Doing: Respecto a la comunicación entre el equipo, surgió en nuestra retrospectiva, la necesidad de mantener un mayor detalle en nuestro tablero de trabajo sobre las consignas puntuales de cada sprint. La intención, es evitar omitir parte de la consigna al intentar recordarla o lo que cada uno comprendió sobre la misma, sino mantener la original como guía clara para cada tarea.
+
+-Do Less: Vamos a intentar disminuir la cantidad de commits "de prueba", ya que generan confusiones y actividad innecesaria y poco clara en el repo.
+
+-KeepDoing: Creemos que debemos continuar nuestras reuniones para codear juntos, implementamos hace algunos sprints reuniones para resolver cuestiones que creemos más complicadas entre todos y de esta forma es mucho más fácil encontrar una resolución.
+
+-Do more: Debemos aprovechar más las clases prácticas para consultar dudas sobre temas pendientes a los profesores, ya que sino se nos acumulan y quedan a la espera de una solución, cada vez más complicada de encontrar (siendo que dejamos atrás el tema).
+
+-Start Doing: Creemos que es necesario empezar a diagramar "en papel" algunos cambios estructurales, antes de realizarlos, para lograr un acuerdo sobre la estructura a seguir y para evitar encontrarnos con un inconveniente con la misma que podríamos haber previsto.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Retrospectiva
+STRINT 7
+
+-Stop Doing: Para el último sprint, creemos que es muy importante abandonar el hábito de dejar temas para "más tarde". En el momento en que nos encontramos con un problema, intentaremos no dejar de trabajar en el, hasta obtener una solución y así poder avanzar tranquilos en nuestras tareas pendientes (sabiendo que no dejamos cabos sueltos atrás).
+
+-Do Less: En este último tramo, intentaremos unificar criterios y emprolijar nuestro código, haciendo menos trabajo por serparado y codeando más juntos para llegar a la meta final de la forma más organizada posible.
+
+-KeepDoing: Nuestras lluvias de ideas y reuniones para organizarnos, si bien deberán ser de forma más frecuente, ya veníamos implementandolas de forma bastante eficiente. Por lo que es un punto positivo a mantener del equipo.
+
+-Do more: En el último tramo del proyecto, creemos que es importante que recurramos a ejemplos de código externo; no solo para expeditar lo que nos falta, sino también para revisar lo que ya hicimos y ver si encontramos puntos de mejora.
+
+-Start Doing: A esta altura del proyecto... no sabemos si hay mucho más que podamos comenzar a hacer. Seguramente, empezaremos a dormir menos, codear más y trabajar en nuestras habilidades de organización. Decidimos implementar para este último tramo, un esquema de checklists para ir cerrando cada uno de los puntos pendientes que encontramos!
