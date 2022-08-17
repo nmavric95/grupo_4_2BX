@@ -1,6 +1,14 @@
 <div class="containerBottom">
     <section class="packages s1">
         <label for="*" class="control"><</label>
+        <% dataBasePackages.forEach((package, i) => { %>
+            <article class="product p<%=i+1%>">
+                <div class="picturePackage"><img class="pictureIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+                <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
+            </article>
+          
+        <% }) %>
+<!-- 
         <article class="product p1">
             <div class="picturePackage"><img class="pictureIn" src="img/paquete1.jpg" alt="paquete"></div>
             <p>PAQUETE 1</p>
@@ -16,8 +24,8 @@
         <article class="product p4">
             <div class="picturePackage"><img class="pictureIn" src="img/paquete4.jpeg" alt="paquete"></div>
             <p>PAQUETE 4</p>
-        </article>
-        <label for="*" class="control">></label>
+        </article> -->
+        <label for="*" class="control f">></label>
     </section>
     <section class="clientMessages">
         <article class="card">

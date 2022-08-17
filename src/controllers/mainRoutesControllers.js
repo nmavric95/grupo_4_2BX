@@ -11,6 +11,7 @@ const bcrypt = require('bcryptjs');
 const db = require("../database/models");
 const Users = db.User;
 const Actions = db.Action;
+const Activities = db.Activity
 
 
 //const pathDB = path.join(__dirname, '../data/userDB.json');
@@ -52,7 +53,8 @@ const crew = [
 
 const mainRoutesControllers = {
     index : (req, res) =>{
-       res.render("./index/index", {succesUser : req.session.userL})
+        Activities.findAll()
+        .then(dataBasePackages => res.render("./index/index", {dataBasePackages, succesUser : req.session.userL }))
     },
 
     login : (req, res) => {
