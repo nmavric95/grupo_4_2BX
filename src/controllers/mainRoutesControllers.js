@@ -1,8 +1,6 @@
 //CONTROLLERS PARA LAS MAIN ROUTES
 
 const path = require("path")
-const fs = require("fs")
-const pathDB = path.resolve("./data/userDB.json")
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 
@@ -13,11 +11,6 @@ const Users = db.User;
 const Actions = db.Action;
 const Activities = db.Activity
 
-
-//const pathDB = path.join(__dirname, '../data/userDB.json');
-const userDB = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
-
-const User = require('../models/Users');
 
 const crew = [
     {

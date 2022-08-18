@@ -1,4 +1,3 @@
-const User = require("../models/Users")
 const db = require("../database/models")
 
 const Users= db.User

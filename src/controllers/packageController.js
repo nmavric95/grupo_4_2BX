@@ -1,12 +1,8 @@
 const path = require("path");
-const pathDB = path.resolve("./data/packageDB.json");
-const fs = require("fs");
 
 //BASE DE DATOS RELACIONAL
 const db = require("../database/models");
 const Activities = db.Activity;
-
-const dataBasePackages = JSON.parse(fs.readFileSync(pathDB, "utf-8"))
 
 //CONTROLLER PARA PRODUCT DETAIL
 const packageController = {
