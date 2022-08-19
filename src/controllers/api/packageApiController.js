@@ -54,6 +54,25 @@ const packageApiController = {
         .then(() => res.status(200).json())
         .catch(error => res.send(error))
     },
+
+    search: (req, res) =>{
+        let criteria = req.params.criteria
+        let value = req.params.value
+
+        Activities.findAll({
+            where:{
+                [criteria]: {value},
+            }
+        })
+        .then( (products) => res.status(200).json({
+            meta : {
+                link : "/api/package/searchPackages/" + criteria + "/" + value,
+                coincidencias : products.length,
+            },
+            data : products
+        }))
+        .catch(error => res.send(error))
+    }
 }
 
 module.exports = packageApiController;

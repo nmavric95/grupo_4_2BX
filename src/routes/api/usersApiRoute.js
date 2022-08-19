@@ -8,8 +8,10 @@ const usersApiController = require("../../controllers/api/usersApiController")
 //Rutas
 router.get("/", usersApiController.list);
 // router.post("/package", usersApiController.create)
-router.get("/:idPackages", usersApiController.detail)
+router.get("/:idUser", usersApiController.detail)
+
+router.get("/searchUsers/:userName", usersApiController.search)
 // router.put("/package/:idPackages", usersApiController.edit)
-router.delete("/delete/idPackages", usersApiController.delete)
+router.delete("/delete/idUser", usersApiController.delete)
 
 module.exports = router;

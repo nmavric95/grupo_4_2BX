@@ -23,7 +23,8 @@ const cProfileRouter = require("./routes/cProfileRoute");
 //VARIABLES DE API ROUTES
 const packagesApiRouter = require("./routes/api/packageApiRoute.js");
 const usersApiRouter = require("./routes/api/usersApiRoute.js");
-
+const locationsApiRouter = require("./routes/api/locationsApiRouter.js")
+const sportsApiRouter = require("./routes/api/sportsApiRouter.js")
 
 // MIDDLEWARES
 app.use(cookies())
@@ -59,6 +60,8 @@ app.use(methodOverride("_method"))
 app.use("/", mainRouter);
 app.use("/api/package", packagesApiRouter);
 app.use("/api/users", usersApiRouter);
+app.use("/api/locations", locationsApiRouter)
+app.use("/api/sports", sportsApiRouter)
 app.use("/packages", packageRouter);
 app.use("/productCart", productCartRouter);
 app.use("/userAdmin", adminRouter);
