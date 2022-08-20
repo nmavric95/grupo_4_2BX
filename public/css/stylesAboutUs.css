@@ -39,6 +39,7 @@
 
 body{
     font-family: "Lato", sans-serif;
+    background-color: #ebebeb;
 }
 
 /* MAIN */
@@ -75,10 +76,15 @@ text-align: center;
     margin: 10px;
     padding: 10px;
     width: 80%;
+    text-align: justify;
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.7);
+}
+
+hr.separador{
+    color: #9d3be1;
 }
 
 .memberImage{
@@ -86,6 +92,11 @@ text-align: center;
     height: 150px;
     margin: 10px;
     border-radius: 50%;
+    transition-duration: 0.2s;
+}
+
+.memberImage:hover{
+    border-radius: 0%;
 }
 
 .containerAbout{
@@ -95,18 +106,22 @@ text-align: center;
 
 .name{
     font-weight: bold;
-    color: #9d3be1;
+    color: #79ffa0;
+    text-shadow: 2px 2px #9d3be1;
     margin-bottom: 5px;
 
 }
 
 .personalDescription{
-    color: #9d3be1;
+    color: #79ffa0;
+    /* color: #9d3be1; */
     margin-bottom: 5px;
 }
 
 .personalContact{
     margin-top: 10px;
+    color: #79ffa0;
+    text-shadow: 2px 2px #9d3be1;
 }
 
 .personalContact li{
