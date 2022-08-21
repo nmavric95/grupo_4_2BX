@@ -3,9 +3,6 @@
 <head>
     <%- include("../partialsGeneral/head") %>
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
-    <link rel="stylesheet" href="/css/stylesheetIndex.css">
-    <link rel="stylesheet" href="/css/stylesPackages.css">
-    <link rel="stylesheet" href="/css/stylesPackagesSearchBar.css">
 
     <title>2BX - Carro de Compras</title>
 </head>
@@ -13,65 +10,35 @@
     <%- include("../partialsGeneral/header")  %> 
 <main>
 
-<section>
+    <section>
         <div class="cart1">
             <h1 class="bot1 animated infinite zoomIn">Carro de Compras</h1>
             <p></p>
             <p></p>
-            <h2 class="bot2">Precio</h2>
-            <h2 class="bot2">Cantidad</h2>
-            <h2 class="bot2">Subtotal</h2>
-            <h2 class="bot2">Seleccionar</h2>
         </div>
     </section>
-<section>
+    <section>
         <div class="cart2">
-        <article class="cards">
-
-            <article class="productItem p1">
-                <div class="picturePackages"><img class="picturesIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
-                <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
-            </article>
-
-            <a href="/packages" type="button" ><h3>REMOVE</h3></a>
-
-            <h3>$ 10000</h3>
-            <input class="si" type="number" value="numero">  
-            <h3>$</h3>
-            <form action="seleccionar.html" method="POST">
-                <label text="Seleccionar"></label>
-                <input type="button" class="si" value="Sí">
-            </form>
-        </article>
-        </div>
-        <div class="cart2">
-        <article class="cards">
             <h3 class="animated infinite flash">Power RAFTING</h3>
             <img class="foto" src="/img/paquete2.jpg" alt="Rafting">
-            <h3>$ 20000</h3>
-            <input class="si" type="number" value="numero">    
+        
+
+            <a href="/packages" type="button" ><h3>REMOVE</h3></a>
+           
+            <h2 class="bot2">Precio</h2>
+            <h3>$ 10000</h3>
+            <h2 class="bot2">Cantidad</h2>
+            <input class="si" type="number" value="numero">  
+            <h2 class="bot2">Subtotal</h2>
             <h3>$</h3>
+            <h2 class="bot2">Seleccionar</h2>
             <form action="seleccionar.html" method="POST">
                 <label text="Seleccionar"></label>
                 <input type="button" class="si" value="Sí">
             </form>
-        </article>
-        </div>
-        <div class="cart2">
-        <article class="cards">
-            <h3 class="animated infinite flash">SURF Adrenalin</h3>
-            <img class="foto" src="/img/paquete3.jpg"  alt="Surf">
-            <h3>$ 30000</h3>
-            <input class="si" type="number" value="numero">     
-            <h3>$</h3>
-            <form action="seleccionar.html" method="POST">
-                <label text="Seleccionar"></label>
-                <input type="button" class="si" value="Sí">
-            </form>
-        </article>
-        </div>
-</section>
-<section>
+        </div> 
+    </section>      
+    <section>
         <div class="cart3">
             <h1>TOTAL:</h1>
             <a href="/packages" type="button" class="com animated infinite pulse">Seguir comprando</a>

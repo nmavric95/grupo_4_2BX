@@ -73,7 +73,7 @@ h2{
     cursor: pointer;
     letter-spacing: 2px;
 }
-.cards {
+.cart2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -184,8 +184,11 @@ h1{
         padding-bottom: 10px;
     }
 
-    .cards {
+    .cart2{
+
+        display: flex;
         flex-direction: column;
+    
     }
 
     h3{
@@ -193,7 +196,7 @@ h1{
     }
 
     .foto{
-    padding-left: 25px; }
+        padding-left: 25px; }
 
     .si{
         width: 200px;
@@ -201,11 +204,6 @@ h1{
         margin-bottom: 15px;
     }
 
-    .cart3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
     
     .com {
         margin: 15px;
@@ -213,8 +211,23 @@ h1{
 
     }
 
-    .cart3 h1{
-        padding-right: 200px;
+   
+    .bot2{
+        text-align: center;
+        background-color: gainsboro;  
+        padding-bottom: 55px;  
+
+    }
+
+    .cart3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    section{
+        display: flex;
+        justify-content: space-around;
     }
   
 
@@ -222,8 +235,11 @@ h1{
 
 @media screen and (min-width: 481px){
 
-    .cart3 h1{
-        padding-right: 300px;
+    .bot2{
+        text-align: center;
+        background-color: gainsboro; 
+        padding-bottom: 55px;  
+ 
     }
 
     .com{
@@ -231,6 +247,16 @@ h1{
     }
 
 
+    .cart3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    section{
+        display: flex;
+        justify-content: space-around;
+    }
 
 }
 
@@ -257,19 +283,15 @@ h1{
     .bot2{
      display: flex;
      justify-content: space-between;
-     padding: 75px;    
+     padding-bottom: 55px;  
+     background-color: gainsboro;  
     }
 
     .cart3 {
         display: flex;
         flex-direction: row;
         box-sizing: border-box;
-        
-    }
 
-    .cards {
-        display: flex;
-        flex-direction: row;
     }
 
     .si{
@@ -283,12 +305,18 @@ h1{
 
     h2{
         padding: 20px;
+       
     }
 
     .com {
         width: 250px;
         height: 40px;
         text-align: center;
+    }
+
+    section{
+        display: flex;
+        justify-content: space-around;
     }
    
   
