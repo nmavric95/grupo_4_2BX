@@ -1,12 +1,22 @@
 <section class="packagesContainer">
-    <% dataBasePackages.forEach(package => { %>
 
-    <article class="productItem p1">
-        <div class="picturePackages"><img class="picturesIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
-        <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
-        <a href="/adminForm/:id"></a>
-        </form>
-    </article>
-  
-    <% }) %>
+    <% if (dataBasePackages.length == 0) { %>
+        <p class="warning message" ><%= "No se encuentran paquetes con los filtros requeridos, por favor prueba con otros" %></p>     
+    <% }else{ %>
+        <% dataBasePackages.forEach(package => { %>
+
+            <article class="productItem p1" >
+                <a class="nameTitleContainer" href="/packages/detail/<%= package.id %> "><h3 class="nameTitle" ><%= package.name  %></h3></a>
+                <div class="picturePackages"><img class="picturesIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+                <div class="detail">
+                    <p >Reserva: $<%= package.reservation_price  %></p>
+                    <p >Precio: $<%= package.price  %> + reserva</p>
+                    <p >Provincia: <%= package.Location.province  %></p>
+                    <p >Deporte: <%= package.Sport.name  %></p>
+                </div>    
+            </article>
+          
+        <% }) %>
+    <% } %>
+    
 </section>

@@ -20,14 +20,16 @@
     text-align: center;
 }
 
-.packagesSearchBar div.filter{
+.filter{
     color: #9D3BE1;
     font-size: 0.9rem;
     transition: all 600ms;
     padding: 0.5rem;
+    align-items: center;
+    display: flex;
 }
 
-.packagesSearchBar div.filter:hover{
+.filter:hover{
     color: #79ffa0;
     text-shadow: 2px 2px 2px #9D3BE1;
 }
@@ -47,6 +49,76 @@
     border: 2px solid #79ffa0;
 }
 
+.btnSubmit{
+    width: fit-content;
+    font-family: "Lato", sans-serif;
+    background-color: RGB(121,255,160);
+    border: none;
+    color: RGB(157,59,225);
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition-duration: 0.4s;
+  }
+
+ 
+.btnSubmit:hover{
+    background-color: RGB(157,59,225);
+    color: RGB(121,255,160);
+} 
+
+
+.btnReset{
+    width: fit-content;
+    font-family: "Lato", sans-serif;
+    background-color: RGBA(121,255,160,0.4);
+    border: none;
+    color: RGB(157,59,225);
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition-duration: 0.4s;
+  }
+
+ 
+  .btnReset:hover{
+    background-color: RGBA(157,59,225,0.3);
+    color: RGB(121,255,160);
+}
+
+a.linkReset {
+    outline: none;
+    text-decoration: none;
+}
+
+.formClassForMediaQuery{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
 
 /* MEDIA QUERY */
 
@@ -55,9 +127,10 @@
     .packagesSearchBar{
         flex-flow: row wrap;
         align-items: baseline;
+        
     }
 
-    .packagesSearchBar div.filter{
+    .filter{
         font-size: 1rem;
     }
 
@@ -68,6 +141,14 @@
     .searchBarTitle{
         font-size: 1.1rem;
     }
+
+    .formClassForMediaQuery{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+
 
 }
 
