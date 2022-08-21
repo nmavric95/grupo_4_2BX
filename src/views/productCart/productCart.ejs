@@ -3,6 +3,9 @@
 <head>
     <%- include("../partialsGeneral/head") %>
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
+    <link rel="stylesheet" href="/css/stylesheetIndex.css">
+    <link rel="stylesheet" href="/css/stylesPackages.css">
+    <link rel="stylesheet" href="/css/stylesPackagesSearchBar.css">
 
     <title>2BX - Carro de Compras</title>
 </head>
@@ -24,8 +27,14 @@
 <section>
         <div class="cart2">
         <article class="cards">
-            <h3 class="animated infinite flash">Wild KAITSURF</h3>
-            <img class="foto" src="/img/paquete1.jpg"  alt="Kaitsurf">
+
+            <article class="productItem p1">
+                <div class="picturePackages"><img class="picturesIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+                <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
+            </article>
+
+            <a href="/packages" type="button" ><h3>REMOVE</h3></a>
+
             <h3>$ 10000</h3>
             <input class="si" type="number" value="numero">  
             <h3>$</h3>
