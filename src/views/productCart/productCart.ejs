@@ -18,29 +18,56 @@
         </div>
     </section>
     <section>
-        <div class="cart2">
-            <h3 class="animated infinite flash">Power RAFTING</h3>
-            <img class="foto" src="/img/paquete2.jpg" alt="Rafting">
-        
 
-            <a href="/packages" type="button" ><h3>REMOVE</h3></a>
-           
-            <h2 class="bot2">Precio</h2>
-            <h3>$ 10000</h3>
-            <h2 class="bot2">Cantidad</h2>
-            <input class="si" type="number" value="numero">  
-            <h2 class="bot2">Subtotal</h2>
-            <h3>$</h3>
-            <h2 class="bot2">Seleccionar</h2>
-            <form action="seleccionar.html" method="POST">
-                <label text="Seleccionar"></label>
-                <input type="button" class="si" value="Sí">
-            </form>
-        </div> 
+        <% if (toBuy.length == 0) { %>
+            <p class="warning message" ><%= "Carrito vacio" %></p>     
+        <% }else{ %>
+            <% toBuy.forEach(package => { %>
+
+                <div class="cart2">
+                    <h3 class="animated infinite flash"><%= package.name  %></h3>
+                    <img class="foto" src="/img/activities/<%= package.image  %>" alt="Image">
+                
+        
+                    <a href="/packages" type="button" ><h3>REMOVE</h3></a>
+                   
+                    <h2 class="bot2">Precio</h2>
+                    <h3><%= package.price  %></h3>
+                    <h2 class="bot2">Cantidad</h2>
+                    <input class="si" type="number" value="numero">  
+                    <h2 class="bot2">Subtotal</h2>
+                    <h3>$</h3>
+                    <h2 class="bot2">Seleccionar</h2>
+                    <form action="seleccionar.html" method="POST">
+                        <label text="Seleccionar"></label>
+                        <input type="button" class="si" value="Sí">
+                    </form>
+                </div> 
+    
+                <!-- <article class="productItem p1" >
+                    <a class="nameTitleContainer" href="/packages/detail/<%= package.id %> "><h3 class="nameTitle" ><%= package.name  %></h3></a>
+                    <div class="picturePackages"><img class="picturesIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+                    <div class="detail">
+                        <p >Reserva: $<%= package.reservation_price  %></p>
+                        <p >Precio: $<%= package.price  %> + reserva</p>
+                        <p >Provincia: <%= package.Location.province  %></p>
+                        <p >Deporte: <%= package.Sport.name  %></p>
+                    </div>    
+                </article> -->
+              
+            <% }) %>
+        <% } %>
+
+
+
+        
     </section>      
     <section>
         <div class="cart3">
-            <h1>TOTAL:</h1>
+            <div class="totalContainer" >
+                <h2 class="totalPrice">TOTAL:</h2>
+                <h3 class="totalPriceNumber" >123456</h3>
+            </div>
             <a href="/packages" type="button" class="com animated infinite pulse">Seguir comprando</a>
             <a type="button" class="com animated infinite pulse">Comprar</a>
         </div>
