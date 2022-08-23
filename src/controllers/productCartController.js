@@ -1,6 +1,8 @@
 //CONTROLLER PARA PRODUCT CART
 const path = require("path");
 const db = require("../database/models");
+const { Sequelize } = require("../database/models")
+const Op = Sequelize.Op
 const userRoutesMiddleware = require("../middlewares/userRoutesMiddleware");
 
 const Activities = db.Activity;
@@ -15,54 +17,22 @@ const productCartController = {
 
         if(stringIdsPackages) {
             let idsPackages = stringIdsPackages.split(",");
+            console.log(idsPackages)
             let toBuy = [];
 
-            // Activities.findAll({include : [{association : "Location"}, {association : "Sport"}]})
-            //     .then(allPackages => {
-            //         toBuy = allPackages.map(package => {
-
-            //         })
-            //     })
-            //     .catch(error => res.send(error));
-
-
-
-            // idsPackages.forEach(id => {
-            //     Activities.findByPk(id, {
-            //         include : [{association : "Location"}, {association : "Sport"}]
-            //     })
-            //     .then(packageToBuy => {
-            //         toBuy.push(packageToBuy)
-            //         res.render("./productCart/productCart", {toBuy})
-            //     })
-            //     .catch(error => res.send(error));
-            // })
-
-            // idsPackages.map(id => {
-            //     Activities.findByPk(id, {
-            //         include : [{association : "Location"}, {association : "Sport"}]
-            //     })
-            //     .then(packageToBuy => {
-            //         toBuy.push(packageToBuy)
-            //         res.render("./productCart/productCart", {toBuy})
-            //     })
-            //     .catch(error => res.send(error));
-            // })
-
-            // toBuy = idsPackages.map(id => {
-            //         Activities.findByPk(id, {
-            //             include : [{association : "Location"}, {association : "Sport"}]
-            //         })
-            //         .then(packageToBuy => {
-            //             let package = packageToBuy
-            //             return package
-            //         })
-            //         .catch(error => res.send(error)); 
-            //     })
-
-            // console.log(toBuy)
-
-            // res.render("./productCart/productCart", {toBuy})
+            
+            Activities.findAll({
+                    where: {id: {[Op.in]: idsPackages}},
+                    
+                })
+                .then(values => {
+                    values.map(value => {
+                        toBuy.push(value.dataValues)
+                    })
+                    
+                    res.render("./productCart/productCart", {toBuy})
+                })
+                .catch(error => res.send(error))
             
         }else{
             let toBuy = [];
@@ -83,15 +53,10 @@ const productCartController = {
             res.redirect("/productCart");
 
         }else{
-            let idsPackages = [];
 
             let stringIdsPackages = "";
 
-            idsPackages.push(id);
-
-            for(let i = 0; i < idsPackages.length; i++) {
-                stringIdsPackages += idsPackages[i] + ","
-            }
+            stringIdsPackages += id + ","
             
             stringIdsPackages = stringIdsPackages.substring(0, stringIdsPackages.length-1);
 
