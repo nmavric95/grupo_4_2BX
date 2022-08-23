@@ -13,11 +13,8 @@ const productCartController = {
 
         let stringIdsPackages = req.cookies.idsPackageCookie
 
-        console.log(stringIdsPackages)
-
         if(stringIdsPackages) {
             let idsPackages = stringIdsPackages.split(",");
-            console.log(idsPackages)
             let toBuy = [];
 
             
@@ -65,13 +62,29 @@ const productCartController = {
             res.redirect("/productCart");
         }
 
+    },
+    
+    remove : (req, res) => {
 
+        let stringIdsPackages = req.cookies.idsPackageCookie
+        let idToRemove = req.params.id        
+        let idsPackages = stringIdsPackages.split(",");
+        newStringIdsPackages = ""
+            
+        let idsFiltered = idsPackages.filter((id) => {
+            return id != idToRemove
+        })
 
-        
+        idsFiltered.map((id) => {
+            newStringIdsPackages += id + ","
+        })
 
+        newStringIdsPackages = newStringIdsPackages.substring(0, newStringIdsPackages.length-1);
+        console.log(newStringIdsPackages)
+            res.cookie("idsPackageCookie", newStringIdsPackages, {maxAge: (1000*60)*5})
 
-         
-        // res.render("./productCart/productCart")
+            res.redirect("/productCart")
+
     },
 };
 

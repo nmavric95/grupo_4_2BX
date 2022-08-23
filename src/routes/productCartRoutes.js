@@ -8,4 +8,6 @@ router.get("/", productCartController.productCart);
 
 router.get("/:idPackages", productCartController.productCartAdd);
 
+router.get("/remove/:id", productCartController.remove)
+
 module.exports = router;
