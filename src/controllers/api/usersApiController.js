@@ -60,7 +60,7 @@ const usersApiController = {
 
         Users.findAll({
             where:{
-                name:{[Op.like]: searchName}
+                name:{[Op.like]: "%" + searchName + "%"}
             }
         })
         .then( (users) => res.status(200).json({

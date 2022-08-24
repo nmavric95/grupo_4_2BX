@@ -6,6 +6,8 @@ const session = require("express-session")
 const cookies = require("cookie-parser")
 const globalMiddleware = require('./middlewares/globalMiddleware');
 const userLMiddleware = require('./middlewares/userLMiddleware');
+//Autentificacion para entrar en ruta admin
+const userAdminAuth = require('./middlewares/userAdminAuth');
 
 //PUBLIC PATH
 const publicPath = path.resolve("../public")
@@ -64,7 +66,7 @@ app.use("/api/locations", locationsApiRouter)
 app.use("/api/sports", sportsApiRouter)
 app.use("/packages", packageRouter);
 app.use("/productCart", productCartRouter);
-app.use("/userAdmin", adminRouter);
+app.use("/userAdmin", userAdminAuth, adminRouter);
 app.use("/userClient", cProfileRouter);
 
 
