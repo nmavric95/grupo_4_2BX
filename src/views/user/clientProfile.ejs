@@ -36,15 +36,17 @@
                             
                             <% } %>
                         </div>
-                        
-                        <label><h4>Foto</h4></label>
-                        <input class="photo" type="file" name="image" accept="image/jpeg, image/jpg" value="<%= userToDetail.image ? userToDetail.image : "" %>">
+
+                        <div id="photo">
                         <div><img src="/img/users/<%= userToDetail.image %>" alt="Imagen de perfil usuario"></div>
+                        <label><h4>Tu Foto</h4></label>
+                        <input class="photo" type="file" name="image" accept="image/jpeg, image/jpg" value="<%= userToDetail.image ? userToDetail.image : "" %>">
+                        </div>
                     </div>
 
 
+            <article class="aboutme">
                     <h4>Sobre mi</h4>
-                    <div class="aboutme">
 
                         <div>
                             <label for="" id="personalinfo">Nacimiento:</label>
@@ -85,7 +87,7 @@
                         <input class="photo" value="adjunta tu apto" type="file" accept="DOCTYPE">
 
 
-                    </div>
+            </article>
 
                     <div id="tellus">
                         <br>
@@ -147,7 +149,7 @@
                 <a href="/productCart" type="button" class="com animated infinite pulse">Agregar/Eliminar</a>
             </div>
 
-            <h4>Ultimas visitas y compras</h4>
+            <h4>Ultimas visitas</h4>
 
             <div class="last">
                 

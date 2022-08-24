@@ -86,6 +86,26 @@ const productCartController = {
             res.redirect("/productCart")
 
     },
+
+    // pay : (req, res) => {
+
+    //     let stringIdsPackages = req.cookies.idsPackageCookie
+    //     let idToPay = req.params.id      
+
+    //     console.log(idToPay)
+
+    //     let products = [];
+    //     let quantity = 0;
+
+    //     if (stringIdsPackages){
+    //     quantity = quantity + idToPay
+    //     products.push(quantity)
+    // }
+
+    //     res.redirect("/productCart")
+
+
+    // }
 };
 
 module.exports = productCartController;

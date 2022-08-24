@@ -165,6 +165,47 @@ p.warning.message i {
 
 @media screen and (min-width: 426px){
 
+ .formContainerDisplayEdit{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(24, 220, 164, 0.35);
+    border: solid 5px rgba(24, 220, 164, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #79ffa0;
+    }
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 80%;
+    padding-left: 60px;
+    padding-top: 20px;
+
+}
+
+
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 55px;
+
+}
+
+.aboutme label {
+
+    padding-right: 50px;
+
+}
 
 h4{
     display: block;
@@ -176,12 +217,6 @@ h4{
     font-size: 25px;
 }
 
-.aboutme{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .number{
     width: 250px;
@@ -233,17 +268,31 @@ h4{
 
 
 .photo{
-    width: 350px;
+    width: 250px;
     padding: 20px;
 }
 
 }
 
+
+
+
 @media screen and (min-width: 481px){
 
     .photo{
-        width: 500px;
+        width: 350px;
         padding-bottom: 50px;
+    }
+
+    #tellus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .tellus {
+        width: 85%;
     }
 
     .misp{
@@ -260,14 +309,50 @@ h4{
 
 }
 
+
+
+
+
 @media screen and (min-width: 769px){
+
+    .formContainerDisplayEdit{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(24, 220, 164, 0.35);
+        border: solid 6px rgba(24, 220, 164, 0.5);
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: #79ffa0;
+        }
 
     .name{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        padding: 90px;
 
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #photo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #name {
+        width: 100%;
+    }
+
+    .aboutme {
+        padding: 90px;
     }
 
     .misp{
@@ -280,7 +365,7 @@ h4{
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 150px;
+        padding-left: 380px;
     }
 
     .misp2{
@@ -297,7 +382,7 @@ h4{
     }
 
     .tellus{
-        width: 1700px;
+        width: 1350px;
     }
 
     .aboutme{

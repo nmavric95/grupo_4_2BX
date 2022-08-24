@@ -12,9 +12,7 @@
 
     <section>
         <div class="cart1">
-            <h1 class="bot1 animated infinite zoomIn">Carro de Compras</h1>
-            <p></p>
-            <p></p>
+            <h1 class="bot1">Carro de Compras</h1>
         </div>
     </section>
     <section>
@@ -31,12 +29,12 @@
         
                     <a href="/productCart/remove/<%= package.id  %>" type="button" ><h3>REMOVE</h3></a>
                    
-                    <h2 class="bot2">Precio</h2>
-                    <h3><%= package.price  %></h3>
                     <h2 class="bot2">Cantidad</h2>
-                    <input class="si" type="number" value="numero">  
+                    <input class="si" type="number" value="numero"> 
+                    <h2 class="bot2">Precio</h2>
+                    <h3><%= package.price  %></h3> 
                     <h2 class="bot2">Subtotal</h2>
-                    <h3>$</h3>
+                    <h3>$ <%= package.price %></h3>
                     <h2 class="bot2">Seleccionar</h2>
                     <form action="seleccionar.html" method="POST">
                         <label text="Seleccionar"></label>
@@ -48,15 +46,12 @@
             <% }) %>
         <% } %>
 
-
-
-        
     </section>      
     <section>
         <div class="cart3">
             <div class="totalContainer" >
                 <h2 class="totalPrice">TOTAL:</h2>
-                <h3 class="totalPriceNumber" >123456</h3>
+                <h3 class="totalPriceNumber" >123</h3>
             </div>
             <a href="/packages" type="button" class="com animated infinite pulse">Seguir comprando</a>
             <a type="button" class="com animated infinite pulse">Comprar</a>

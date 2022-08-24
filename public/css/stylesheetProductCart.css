@@ -193,9 +193,10 @@ h3.totalPriceNumber{
 
     .cart1 h1{
         display: flex;
-        justify-content: space-around;
-        margin-left: 600px;
-        margin-right: 320px;
+        text-align: center;
+        padding-left: 100px;
+        /* margin-left: 600px;
+        margin-right: 320px; */
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -274,19 +275,22 @@ h3.totalPriceNumber{
         justify-content: space-around;
     }
 
+    .cart1 {
+        display: flex;
+        text-align: center;
+        padding-left: 100px;
+    }
+
 }
 
 @media screen and (min-width: 769px){
 
 
     .cart1 {
-        margin: 0px;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        text-align: center;
+        padding-left: 350px;
         background-color: gray;
-        padding-left: 10px;
-        padding-top: 0px;
         box-sizing: border-box;        
     }
     
