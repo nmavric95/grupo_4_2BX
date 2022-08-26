@@ -1,6 +1,8 @@
 //BASE DE DATOS RELACIONAL
 const db = require("../../database/models");
+const { Sequelize } = require("../../database/models");
 const Activities = db.Activity;
+const Sports = db.Sport;
 
 //Controlados Api
 const packageApiController = {
@@ -71,6 +73,49 @@ const packageApiController = {
             },
             data : products
         }))
+        .catch(error => res.send(error))
+    },
+
+    categories : (req, res) => {
+        // let packages = await Activities.findAll( {
+        //     attributes: ['id', 'name', 'description','genre_id'],
+        //     raw: true });
+
+        // let productsByGenre = {}
+        // let genres = await db.Genres.findAll();
+        // genres.forEach(genre => {
+        //     let count = 0;
+        //     products.forEach(element => {
+        //         if(element.genre_id == genre.id ){
+        //             count ++
+        //         }   
+        //     });
+        //     productsByGenre[genre.name] = count
+        //     });
+
+
+        Activities.findAll({
+            include : [
+                {association : "Location"},
+                {association : "Sport"}
+            ],
+            attributes: [
+                "sport_id",
+                [Sequelize.fn("COUNT", Sequelize.col("sport_id")), "Cantidad"],
+              ],
+              group: "sport_id",
+        })
+        .then(dataBasePackages => {
+            let rta = dataBasePackages.map(package => package)
+
+            res.status(200).json({
+                meta : {
+                    total : dataBasePackages.length,
+                    link : "/api/package",
+                },
+                data : rta,
+            })
+        })
         .catch(error => res.send(error))
     }
 }

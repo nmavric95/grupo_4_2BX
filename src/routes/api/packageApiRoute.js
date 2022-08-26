@@ -10,6 +10,8 @@ router.get("/", packageApiController.list);
 // router.post("/package", packageApiController.create)
 router.get("/:idPackages", packageApiController.detail)
 
+router.get("/categories", packageApiController.categories)
+
 router.get("/searchPackages/:criteria/:value", packageApiController.search)
 // router.put("/package/:idPackages", packageApiController.edit)
 router.delete("/delete/idPackages", packageApiController.delete)
