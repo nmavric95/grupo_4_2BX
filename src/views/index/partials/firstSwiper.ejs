@@ -1,0 +1,48 @@
+<div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <% dataBasePackages.forEach((package, i) => { %>
+          <article class="swiper-slide">
+            <div class="product">
+              <div class="picturePackage"><img class="pictureIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+              <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
+            </div>
+          </article>
+        
+        <% }) %>
+
+      </div>
+      <div class="swiper-pagination"></div>
+  </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          321: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          426: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          769: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>

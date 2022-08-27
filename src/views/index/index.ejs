@@ -4,7 +4,15 @@
     <%- include("../partialsGeneral/head")  %> 
     <link rel="stylesheet" href="/css/stylesheetIndex.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <title>2BX - Home</title>
     </head>
     <body>
@@ -62,11 +70,24 @@
             </div>
         </div>
         <section class="bottomHome">
-        <%- include("./partials/firstSection")  %> 
-        <%- include("./partials/secondSection")  %> 
-        <%- include("./partials/thirdSection")  %> 
+            <div class="containerBottom">
+            <%- include("./partials/firstSwiper")  %>   
+        
+            <section class="clientMessages">
+                <article class="card">
+                    <label for="*" class="controlMessages">></label>
+                    <img class="userImage" src="img/FOTORANDOM2.jpg" alt="imagen de usuario">
+                    <div class="message">
+                        <strong>Pepito Cawabonga</strong>
+                        <p>"Una experiencia increibleee! Pase mi finde a pura adrenalina. Muy divertido!!!"</p>
+                    </div>
+                </article>
+            </section> 
+            </div>
         </section>
+
     </main>
+    
     <%- include("../partialsGeneral/footer")  %> 
     
 </body>

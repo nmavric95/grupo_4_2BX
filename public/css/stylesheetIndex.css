@@ -302,7 +302,12 @@ nav li a:hover{
 }
 .swiper.mySwiper{
     width: 100%;
+    height: 320px;
 }
+.swiper-pagination{
+    bottom: 10px;
+}
+
 .packages{
     width: 100%;
     height: 45vh;
@@ -334,9 +339,9 @@ nav li a:hover{
     background: rgba(0,0,0,0.8)
 }
 
-.swiper-slide.product{
+.product{
     background-color: rgba(0, 0, 0, 0.7);
-    width: 50%;
+    width: 90%;
     height: 80%;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
     /* border-radius: 10%; */
@@ -346,25 +351,25 @@ nav li a:hover{
     transition: box-shadow 600ms;
 }
 
-.swiper-slide.product:hover{
+.product:hover{
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 4px 4px 4px rgba(121, 255, 160, 0.5);
 }
 
 .picturePackage{
-    width: 90%;
-    height: 60%;
+    width: 95%;
+    height: 65%;
     /* border-radius: 10%; */
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    
 
 }
 
 .pictureIn{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .product p{
@@ -381,18 +386,6 @@ nav li a:hover{
     text-shadow: #79ffa0;
 }
 
-.product.p2{
-    display: none;
-}
-
-.product.p3{
-    display: none;
-}
-
-.product.p4{
-    display: none;
-}
-
 .packages.s2{
     display: none;
 }
@@ -400,7 +393,11 @@ nav li a:hover{
 .packages.s3{
     display: none;
 }
-
+/*SWIPER STYLE*/
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
 
 
 /*SECCIÓN MENSAJES DE CLIENTES*/
@@ -489,20 +486,7 @@ nav li a:hover{
         height: auto;
         margin: -100px 0px 100px 0px;
     }
-    .swiper.mySwiper{
-        height: 50vh;
-    }
 
-    
-
-    .swiper-slide.product{
-        width: 35%;
-        height: 90%;
-    }
-
-    .product.p2{
-        display:block;
-    }
 
     .card{
         border-radius: 0%;
@@ -565,10 +549,7 @@ nav li a:hover{
         flex-wrap: nowrap;
         justify-content: center;
     }
-    .swiper{
-        width: 70%;
-        height: 45vh;
-    }
+    
     .packages{
         width: 95%;
     }
@@ -581,21 +562,8 @@ nav li a:hover{
         display: flex;
     }
 
-    .product{
-        width: 20%;
-    }
-
-    .product.p3{
-        display:block;
-    }
-    
-    .product.p4{
-        display: block;
-    }
-
     .clientMessages{
-        width: 30vw;
-        height: 45vh;
+        width: 40%;
     
     }
 
@@ -613,4 +581,5 @@ nav li a:hover{
         right: 90%;
         bottom: 7%;
     }
+
 }

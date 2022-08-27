@@ -9,36 +9,18 @@
             </article>
           
         <% }) %>
-<!-- 
-        <article class="product p1">
-            <div class="picturePackage"><img class="pictureIn" src="img/paquete1.jpg" alt="paquete"></div>
-            <p>PAQUETE 1</p>
-        </article>
-        <article class="product p2">
-            <div class="picturePackage"><img class="pictureIn" src="img/paquete2.jpg" alt="paquete"></div>
-            <p>PAQUETE 2</p>
-        </article>
-        <article class="product p3">
-            <div class="picturePackage"><img class="pictureIn" src="img/paquete3.jpg" alt="paquete"></div>
-            <p>PAQUETE 3</p>
-        </article>
-        <article class="product p4">
-            <div class="picturePackage"><img class="pictureIn" src="img/paquete4.jpeg" alt="paquete"></div>
-            <p>PAQUETE 4</p>
-        </article> -->
+
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
 
         <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <script> 
+    <script> 
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 30,
             slidesPerGroup: 4,
-            loop: true,
-            loopFillGroupWithBlank: true,
             pagination: {
               el: ".swiper-pagination",
               clickable: true,
@@ -47,7 +29,8 @@
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             },
-    });</script>
+    });
+    </script>
         <!-- <label for="*" class="control f">></label> -->
     </div>
     </section>
