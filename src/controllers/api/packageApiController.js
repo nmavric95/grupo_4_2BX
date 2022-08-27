@@ -3,6 +3,7 @@ const db = require("../../database/models");
 const { sequelize } = require("../../database/models");
 const Activities = db.Activity;
 const Sports = db.Sport;
+const Locations = db.Location;
 
 //Controlados Api
 const packageApiController = {
@@ -84,6 +85,24 @@ const packageApiController = {
                 meta : {
                     total : dataBasePackages.length,
                     link : "/api/package/categories",
+                },
+                data : dataBasePackages,
+            })
+        })
+        .catch(error => res.send(error))
+    },
+
+    locations : (req, res) => {
+        
+        Activities.findAll({
+            include : [{association : "Location", attributes:["province"]}],
+            attributes: [[sequelize.literal("Location.name"), "Provincia"], [sequelize.fn("COUNT", sequelize.col("Activity.id")), "Count"]],
+            group: "Location.province",
+            })
+        .then(dataBasePackages => {res.status(200).json({
+                meta : {
+                    total : dataBasePackages.length,
+                    link : "/api/package/locations",
                 },
                 data : dataBasePackages,
             })

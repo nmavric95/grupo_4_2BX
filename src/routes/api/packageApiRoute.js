@@ -12,6 +12,8 @@ router.get("/:idPackages", packageApiController.detail)
 
 router.get("/categoriesSports/show", packageApiController.categories)
 
+router.get("/locationsProvince/show", packageApiController.locations)
+
 router.get("/searchPackages/:criteria/:value", packageApiController.search)
 // router.put("/package/:idPackages", packageApiController.edit)
 router.delete("/delete/idPackages", packageApiController.delete)

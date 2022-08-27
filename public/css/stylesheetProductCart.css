@@ -194,7 +194,7 @@ h3.totalPriceNumber{
     .cart1 h1{
         display: flex;
         text-align: center;
-        padding-left: 100px;
+        padding-left: 110px;
         /* margin-left: 600px;
         margin-right: 320px; */
         padding-top: 10px;
@@ -278,7 +278,7 @@ h3.totalPriceNumber{
     .cart1 {
         display: flex;
         text-align: center;
-        padding-left: 100px;
+        padding-left: 30px;
     }
 
 }
@@ -337,6 +337,12 @@ h3.totalPriceNumber{
     section{
         display: flex;
         justify-content: space-around;
+    }
+
+    .empty{
+        display: flex;
+        align-items: center;
+        height: 270px;
     }
    
   

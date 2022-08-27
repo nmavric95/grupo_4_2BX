@@ -18,7 +18,9 @@
     <section>
 
         <% if (toBuy.length == 0) { %>
-            <p class="warning message" ><%= "Carrito vacio" %></p>     
+            <div class="empty">
+                <h1><%= "Carrito vacio" %></h1>
+            </div>     
         <% }else{ %>
             <% toBuy.forEach(package => { %>
 
