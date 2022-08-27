@@ -1,6 +1,6 @@
 //BASE DE DATOS RELACIONAL
 const db = require("../../database/models");
-const { Sequelize } = require("../../database/models");
+const { sequelize } = require("../../database/models");
 const Activities = db.Activity;
 const Sports = db.Sport;
 
@@ -25,8 +25,6 @@ const packageApiController = {
         .catch(error => res.send(error))
     },
 
-    // create : 
-
     detail : (req, res) => {
         let id = req.params.idPackages;
         Activities.findByPk(id, {
@@ -46,7 +44,6 @@ const packageApiController = {
             .catch(error => res.send(error))
     },
     
-    // edit :
 
     delete: (req, res) => {
         let id = req.params.idPackages
@@ -77,47 +74,23 @@ const packageApiController = {
     },
 
     categories : (req, res) => {
-        // let packages = await Activities.findAll( {
-        //     attributes: ['id', 'name', 'description','genre_id'],
-        //     raw: true });
-
-        // let productsByGenre = {}
-        // let genres = await db.Genres.findAll();
-        // genres.forEach(genre => {
-        //     let count = 0;
-        //     products.forEach(element => {
-        //         if(element.genre_id == genre.id ){
-        //             count ++
-        //         }   
-        //     });
-        //     productsByGenre[genre.name] = count
-        //     });
-
-
+        
         Activities.findAll({
-            include : [
-                {association : "Location"},
-                {association : "Sport"}
-            ],
-            attributes: [
-                "sport_id",
-                [Sequelize.fn("COUNT", Sequelize.col("sport_id")), "Cantidad"],
-              ],
-              group: "sport_id",
-        })
-        .then(dataBasePackages => {
-            let rta = dataBasePackages.map(package => package)
-
-            res.status(200).json({
+            include : [{association : "Sport", attributes:["name"]}],
+            attributes: [[sequelize.literal("Sport.name"), "Deporte"], [sequelize.fn("COUNT", sequelize.col("Activity.id")), "Count"]],
+            group: "Sport.name",
+            })
+        .then(dataBasePackages => {res.status(200).json({
                 meta : {
                     total : dataBasePackages.length,
-                    link : "/api/package",
+                    link : "/api/package/categories",
                 },
-                data : rta,
+                data : dataBasePackages,
             })
         })
         .catch(error => res.send(error))
-    }
+    },
+    
 }
 
 module.exports = packageApiController;

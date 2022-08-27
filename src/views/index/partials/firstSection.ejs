@@ -1,8 +1,9 @@
 <div class="containerBottom">
-    <section class="packages s1">
-        <label for="*" class="control"><</label>
+    <div class="swiper mySwiper">
+    <section class="swiper-wrapper packages s1">
+        <!-- <label for="*" class="control"><</label> -->
         <% dataBasePackages.forEach((package, i) => { %>
-            <article class="product p<%=i+1%>">
+            <article class="swiper-slide product p<%=i+1%>">
                 <div class="picturePackage"><img class="pictureIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
                 <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
             </article>
@@ -25,7 +26,30 @@
             <div class="picturePackage"><img class="pictureIn" src="img/paquete4.jpeg" alt="paquete"></div>
             <p>PAQUETE 4</p>
         </article> -->
-        <label for="*" class="control f">></label>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+        <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script> 
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 4,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+    });</script>
+        <!-- <label for="*" class="control f">></label> -->
+    </div>
     </section>
     <section class="clientMessages">
         <article class="card">
