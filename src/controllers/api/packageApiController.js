@@ -96,7 +96,7 @@ const packageApiController = {
         
         Activities.findAll({
             include : [{association : "Location", attributes:["province"]}],
-            attributes: [[sequelize.literal("Location.name"), "Provincia"], [sequelize.fn("COUNT", sequelize.col("Activity.id")), "Count"]],
+            attributes: [[sequelize.literal("Location.province"), "Provincia"], [sequelize.fn("COUNT", sequelize.col("Activity.id")), "Count"]],
             group: "Location.province",
             })
         .then(dataBasePackages => {res.status(200).json({
