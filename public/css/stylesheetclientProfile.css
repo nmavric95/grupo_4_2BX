@@ -29,7 +29,7 @@
 
 .formContainerDisplayEdit{
     width: 90%;
-    height: 700px;
+    height: 1000px;
     background-color: rgba(24, 220, 164, 0.35);
     border: solid 5px rgba(24, 220, 164, 0.5);
     border-top-left-radius: 20px;
@@ -67,15 +67,54 @@
 .firstData{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    
 }
 
 .secondData{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+}
+
+label{
+    font-size: 20px;
+}
+#personalinfo{
+    padding: 20px;
+}
+
+.aboutme{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.number{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 250px;
+    height: 35px;
+    color: #9d3be1;
+}
+
+.number:hover{
+    color:  #9d3be1;
+    background-color: #79ffa0;
+    transition-property: background-color, color;
+    transition-duration: 0.5ms;
+
+}
+
+.photo{
+    padding-top: 15px;
+    cursor: pointer;
 }
 
 #photo{
@@ -85,13 +124,80 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 20px;
+    padding-left: 200px;
 }
  img{
-    width: 70%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
  }
+
+ .tellus{
+    background-color: rgba(0, 0, 0, 0.35);
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 1450px;
+    height: 200px;
+    color: #79ffa0;
+ }
+
+ #tellus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .conf{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.misp{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+ .misp2{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+ }
+
+ .com {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    color: #79ffa0;
+    background-color: #9d3be1;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; 
+    width: 200px;
+    height: 40px;  
+}
+
+.com:hover{
+    color:  #9d3be1;
+    background-color: #79ffa0;
+    transition-property: background-color, color;
+    transition-duration: 0.5ms;
+
+}
+
+
+
+
 
 
 /* MENSAJE DE ERROR VALIDACIONES */
@@ -117,9 +223,16 @@ p.warning.message i {
 
 /** MQ **/
 
-@media screen and (min-width: 426px){
+@media(min-width: 426px){
+
+/* main{display: flex;}
 
 
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 
 }
 
