@@ -3,6 +3,7 @@
 <head>
     <%- include("../partialsGeneral/head") %>
     <link rel="stylesheet" href="/css/stylesheetProductCart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <title>2BX - Carro de Compras</title>
 </head>
@@ -19,7 +20,7 @@
 
         <% if (toBuy.length == 0) { %>
             <div class="empty">
-                <h1><%= "Carrito vacio" %></h1>
+                <i class="fa-solid fa-cart-arrow-down"></i>
             </div>     
         <% }else{ %>
             <% toBuy.forEach(package => { %>

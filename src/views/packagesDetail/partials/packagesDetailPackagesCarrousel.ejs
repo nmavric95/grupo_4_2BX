@@ -1,24 +1,50 @@
 <section class="packagesContainer packagesDetail">
-    <label for="*" class="controls"><</label>
-    <article class="productItem p1">
-        <div class="picturePackages"><img class="picturesIn" src="/img/paquete1.jpg" alt="paquete"></div>
-        <a href="/packages/detail"><p>PAQUETE 1</p></a>
-    </article>
-    <article class="productItem p2">
-        <div class="picturePackages"><img class="picturesIn" src="/img/paquete2.jpg" alt="paquete"></div>
-        <a href="/packages/detail/"><p>PAQUETE 2</p></a>
-    </article>
-    <article class="productItem p3">
-        <div class="picturePackages"><img class="picturesIn" src="/img/paquete3.jpg" alt="paquete"></div>
-        <a href="/packages/detail"><p>PAQUETE 3</p></a>
-    </article>
-    <article class="productItem p4">
-        <div class="picturePackages"><img class="picturesIn" src="/img/paquete4.jpeg" alt="paquete"></div>
-        <a href="/packages/detail"><p>PAQUETE 4</p></a>
-    </article>
-    <article class="productItem p5">
-        <div class="picturePackages"><img class="picturesIn" src="/img/paquete4.jpeg" alt="paquete"></div>
-        <a href="/packages/detail"><p>PAQUETE 5</p></a>
-    </article>
-    <label for="*" class="controls">></label>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <% allActivities.forEach((package, i) => { %>
+            <article class="swiper-slide">
+              <div class="product">
+                <div class="picturePackage"><img class="pictureIn" src="/img/activities/<%= package.image  %>"  alt="paquete"></div>
+                <a href="/packages/detail/<%= package.id %> "><p><%= package.name  %></p></a>
+              </div>
+            </article>
+          
+          <% }) %>
+  
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+  
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            321: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            426: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            769: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          },
+        });
+      </script>
 </section>

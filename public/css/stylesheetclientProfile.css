@@ -27,117 +27,71 @@
   background-size: 1900px;
 }
 
-/* .name{
-    padding-bottom: 95px;
-} */
+.formContainerDisplayEdit{
+    width: 90%;
+    height: 700px;
+    background-color: rgba(24, 220, 164, 0.35);
+    border: solid 5px rgba(24, 220, 164, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #79ffa0;
+
+}
+#formularioProfile{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nameAndPhoto{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
 
 
 .aboutme{
+    width: 65%;
     display: flex;
-    position: relative;
     flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 100px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.number{
-    width: 55px;
-    height: 38px;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    color: #9d3be1;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-}
-
-.number:hover{
-
-    background-color: #79ffa0;
-    color: RGB(157,59,225);
-    font-weight: bold;
-    border: none;
-    transition-property: background-color, color;
-    transition-duration: 0.5ms;
-}
-
-#personalinfo{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 25px;
-    font-weight: bold;
-
-}
-
-#checkok{
-    width: 25px;
-    height: 25px;
-}
-
-.tellus{
+.firstData{
     display: flex;
-    align-items: flex-start;
-    width: 1000px;
-    height: 200px;
-    border-radius: 40px;
-    border: none;
-    color: #79ffa0;
-    background-color: transparent;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-h4{
-    display: flex;
-    align-items: flex-start;
-    width: 700px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    letter-spacing: 4px;
-}
-
-h5{
-    font-size: 30px;
-}
-
-
-.com{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    height: 35px;
-    width: 200px;
-    font-size: 20px;
-    color: blueviolet;
-    background-color: #79ffa0;
+    align-items: flex-start;
 }
 
-h3{
-    color: black;
-}
-
-.misp{
+.secondData{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.misp2{
-    display: flex;
-    flex-direction: row;
-}
-
-.last{
-    display: flex;
-    flex-direction: row;
-}
-
-.photo{
+#photo{
+    width: 35%;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
 }
-
+ img{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+ }
 
 
 /* MENSAJE DE ERROR VALIDACIONES */
@@ -165,156 +119,10 @@ p.warning.message i {
 
 @media screen and (min-width: 426px){
 
- .formContainerDisplayEdit{
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgba(24, 220, 164, 0.35);
-    border: solid 5px rgba(24, 220, 164, 0.5);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    color: #79ffa0;
-    }
-
-.name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-img{
-    width: 80%;
-    padding-left: 60px;
-    padding-top: 20px;
 
 }
 
-
-.aboutme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 55px;
-
-}
-
-.aboutme label {
-
-    padding-right: 50px;
-
-}
-
-h4{
-    display: block;
-    font-family: "BPimperial Regular";
-    color: #79ffa0;
-    text-shadow: 8px 8px 8px black;
-    width: 200px;
-    letter-spacing: 2px;
-    font-size: 25px;
-}
-
-
-.number{
-    width: 250px;
-}
-
-#checkok{
-    display: flex;
-    flex-direction: column;
-
-}
-
-#tellus{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-}
-
-.tellus{
-    width: 300px;
-    background-color: rgba(0,0,0,0.2);
-    border: none;
-}
-
-.misp{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.misp2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.last{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.conf{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.photo{
-    width: 250px;
-    padding: 20px;
-}
-
-}
-
-
-
-
-@media screen and (min-width: 481px){
-
-    .photo{
-        width: 350px;
-        padding-bottom: 50px;
-    }
-
-    #photo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #tellus {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .tellus {
-        width: 85%;
-    }
-
-    .misp{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .last{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
 
 
 
@@ -324,114 +132,10 @@ h4{
 
     .formContainerDisplayEdit{
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: rgba(24, 220, 164, 0.35);
-        border: solid 6px rgba(24, 220, 164, 0.5);
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        color: #79ffa0;
         margin: 90px;
         }
 
-    .name{
-        display: flex;
-        flex-direction: column;
-        align-items:flex-start;
-        justify-content: space-between;
-        padding: 35px;
-
-    }
-
-    .nameAndPhoto{
-        display: flex;
-        flex-direction: row;
-        padding: 75px;
-    }
-
-    img {
-        width: 500px;
-    }
-
-    #photo{
-        display: flex;
-        flex-direction: column;
-        padding-left: 500px;
-       
-    }
-
-    #name {
-        width: 100%;
-    }
-
-    .aboutme {
-        padding: 60px;
-    }
-
-    #personalinfo{
-        padding-right: 15px;
-    }
-
-    .misp{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .last{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 380px;
-    }
-
-    .misp2{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #tellus{
-        display: flex;
-        align-items: center;
-        padding-bottom: 50px;
-    }
-
-    .tellus{
-        width: 1550px;
-    }
-
-    .aboutme{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .number{
-       
-        width: 190px;
-       
-    }
-
-    .conf{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 90px;
-    }
-
-    h4{
-        display: flex;
-        align-items: flex-start;
-        font-size: 30px;
-        letter-spacing: 4px;
-       
-    }
+   
 
 
 }

@@ -183,7 +183,10 @@ h3.totalPriceNumber{
     text-align: right;
 }
 
-
+.fa-solid.fa-cart-arrow-down{
+    font-size: 120%;
+    color: #ebebeb;
+}
 
 
 /** MQ **/

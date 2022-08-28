@@ -1,4 +1,5 @@
 //BASE DE DATOS RELACIONAL
+
 const db = require("../database/models");
 const Activities = db.Activity;
 const Locations = db.Location;
@@ -27,16 +28,21 @@ const packageController = {
 
     packagesDetail : (req, res) => {
         let id = req.params.idPackages;
-        Activities.findByPk(id, {
-            include : [
-                {association : "Location"},
-                {association : "Sport"}
-            ]
-        })
-            .then(packageToDetail => {
-                res.render("./packagesDetail/packagesDetail", {packageToDetail})
+
+        let packageToRender = Activities.findByPk(id, {
+                include: [{association: "Location"}, {association: "Sport"}]
             })
-            .catch(error => res.send(error));
+
+        let allActivities = Activities.findAll({
+                include: [{association: "Location"}, {association: "Sport"}]
+            })
+
+        Promise.all([packageToRender, allActivities])
+        .then(([packageToDetail, allActivities]) => {
+              res.render("./packagesDetail/packagesDetail", {packageToDetail, allActivities})
+        })
+        .catch(error => res.send(error))
+
     },
 
     filter : (req, res) => {
