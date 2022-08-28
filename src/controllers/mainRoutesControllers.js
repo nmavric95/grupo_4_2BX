@@ -46,8 +46,13 @@ const crew = [
 
 const mainRoutesControllers = {
     index : (req, res) =>{
-        Activities.findAll()
-        .then(dataBasePackages => res.render("./index/index", {dataBasePackages, succesUser : req.session.userL }))
+        let dataBasePackages = Activities.findAll()
+        let offerPackages = Activities.findAll({
+            where: {sale_ratio: 1}
+        })
+        Promise.all([dataBasePackages, offerPackages])
+        .then(([dataBasePackages, offerPackages]) => res.render("./index/index", {dataBasePackages, offerPackages, succesUser : req.session.userL }))
+        .catch(error => res.send(error))
     },
 
     login : (req, res) => {
