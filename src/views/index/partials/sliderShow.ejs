@@ -1,0 +1,34 @@
+ <!-- Swiper -->
+ <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide Show"><img src="img/skydive_1280.jpg" alt="skydive"></div>
+      <div class="swiper-slide Show"><img src="img/parapente_1280.jpg" alt="paragliding"></div>
+      <div class="swiper-slide Show"><img src="img/kaitsurf_1280.jpg" alt="kaitsurf"></div>
+      <div class="swiper-slide Show"><img src="img/rock-climbing_1280.jpg" alt="climbing"></div>
+      <div class="swiper-slide Show"><img src="img/rafting_1280.jpg" alt="rafting"></div>
+
+    </div>
+    <div class="swiper-button-next2"></div>
+    <div class="swiper-button-prev2"></div>
+    <div class="swiper-pagination2"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+      },
+    });
+  </script>
