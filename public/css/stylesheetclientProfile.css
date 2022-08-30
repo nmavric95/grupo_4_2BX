@@ -67,15 +67,19 @@
 .firstData{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 10px;
+    align-items: center;
+    padding-bottom: 50px;
     
 }
 
 .secondData{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
+    padding-left: 100px;
     /* justify-content: center; */
     /* align-items: flex-start; */
 }
@@ -124,10 +128,10 @@ label{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 200px;
+    padding-left: 300px;
 }
  img{
-    width: 100%;
+    width: 350px;
     margin-right: auto;
     margin-left: auto;
  }
@@ -140,7 +144,7 @@ label{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 1450px;
-    height: 200px;
+    height: 180px;
     color: #79ffa0;
  }
 
@@ -165,7 +169,7 @@ label{
  .misp2{
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
  }
 
  .com {
@@ -221,9 +225,13 @@ p.warning.message i {
 }
 
 
+
+
+
+
 /** MQ **/
 
-@media(min-width: 426px){
+@media screen and (min-width: 426px){
 
 /* main{display: flex;}
 

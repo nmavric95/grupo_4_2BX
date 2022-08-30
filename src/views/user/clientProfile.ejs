@@ -37,21 +37,18 @@
                             
                                <% } %>
 
-                            
-        
-                          
-                                    <label for="" id="personalinfo">Nacimiento:</label>
-                                    <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birth_date %>">
-                                    <% if (locals.errors && errors.birthDate) { %>
-                                        <p class="warning message">
-                                            <i class="fa-solid fa-angles-up"></i><%= errors.birthDate.msg %><i class="fa-solid fa-angles-up"></i> 
-                                        </p>
+                                <label for="" id="personalinfo">Nacimiento:</label>
+                                <input class="number" type="date" name="birthDate" id="birthDate" value="<%= userToDetail.birth_date %>">
+                                <% if (locals.errors && errors.birthDate) { %>
+                                    <p class="warning message">
+                                        <i class="fa-solid fa-angles-up"></i><%= errors.birthDate.msg %><i class="fa-solid fa-angles-up"></i> 
+                                    </p>
                                     
-                                    <% } %>
+                                <% } %>
                             
                          </div>
                             <div class="secondData">
-                                <div>
+                                <!-- <div> -->
                                     <label for="" id="personalinfo">Peso(Kg):</label>
                                     <input class="number" type="number" name="weight" value = <%= userToDetail.weight ? userToDetail.weight : "" %>>
                                     <% if (locals.errors && errors.weight) { %>
@@ -60,9 +57,9 @@
                                         </p>
                                     
                                     <% } %>
-                                </div>
+                                <!-- </div>
                                 <br>
-                                <div>
+                                <div> -->
                                     <label for="" id="personalinfo">Altura(mts):</label>
                                     <input class="number" type="number" name="height" value = <%= userToDetail.height ? userToDetail.height : "" %>>
                                     <% if (locals.errors && errors.height) { %>
@@ -71,14 +68,14 @@
                                         </p>
                                     
                                     <% } %>
-                                </div>
-                                <br>
+                                <!-- </div>
+                                <br> -->
                                 <label for="" id="personalinfo">Apto Medico:</label>
                                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">SI</label>
                                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">NO</label>
                                 <input class="photo" value="adjunta tu apto" type="file" accept="DOCTYPE">
+                            <!-- </div> -->
                             </div>
-                    </div>
 
                     <div id="photo">
                         <img src="/img/users/<%= userToDetail.image %>" alt="Imagen de perfil usuario">

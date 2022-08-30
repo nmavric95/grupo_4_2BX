@@ -25,25 +25,22 @@
         <% }else{ %>
             <% toBuy.forEach(package => { %>
 
-                <div class="cart2">
+            <article class="cart2">
+                <div class="cart2-1">
                     <h3 class="animated infinite flash"><%= package.name  %></h3>
                     <img class="foto" src="/img/activities/<%= package.image  %>" alt="Image">
-                
-        
                     <a href="/productCart/remove/<%= package.id  %>" type="button" ><h3>REMOVE</h3></a>
                    
-                    <h2 class="bot2">Cantidad</h2>
-                    <input class="si" type="number" value="numero"> 
-                    <h2 class="bot2">Precio</h2>
-                    <h3><%= package.price  %></h3> 
-                    <h2 class="bot2">Subtotal</h2>
-                    <h3>$ <%= package.price %></h3>
-                    <h2 class="bot2">Seleccionar</h2>
-                    <form action="seleccionar.html" method="POST">
-                        <label text="Seleccionar"></label>
-                        <input type="button" class="si" value="Sí">
-                    </form>
-                </div> 
+                </div>
+
+                <div class="cart2-2">
+                    <h2 class="bot2">Cantidad: <input class="yes" type="number" value="numero"></h2>
+                    <h2 class="bot2">Precio: $ <%= package.price %></h2>
+                    <!-- <h3>$ <%= package.price  %></h3>  -->
+                    <h2 class="bot2">Subtotal: $ <%= package.price %></h2>
+                    <h2 class="bot2">Seleccionar: <input type="button" class="yes" value="Sí"></h2>
+                </div>
+            </article> 
     
               
             <% }) %>
