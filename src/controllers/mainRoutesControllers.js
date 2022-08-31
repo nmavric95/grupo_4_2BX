@@ -102,9 +102,17 @@ const mainRoutesControllers = {
     },
 
     createN: (req,res) => {
-
+    let emailRegister = req.body.email
+    let existingEmail = {}
     let resultValidation = validationResult(req);
+        Users.findAll({
+            where: {email: emailRegister}
+        })
+        .then(data => {
+            existingEmail = data
 
+        if(existingEmail === {}){
+       
         if(!resultValidation.isEmpty()) {
             res.render("./register/register", {
                 errors : resultValidation.mapped(),
@@ -125,6 +133,13 @@ const mainRoutesControllers = {
            Users.create(newUserToCreate);
            res.redirect("/login") 
         }
+        } else{
+            res.render("./register/register", {errors: {
+                email: {
+                    msg: "Ya existe un usuario con este email"}}, oldData: req.body})}
+        })
+        .catch(error => res.send(error))
+        
     },
            
     aboutUs : (req, res) => {

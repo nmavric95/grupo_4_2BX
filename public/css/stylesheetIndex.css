@@ -93,9 +93,17 @@
 
 /*WEATHER WIDGET*/
 .containerBottom2{
-    margin-top: 10px;
+    margin-top: 20px;
     /* margin-bottom: 10px; */
     color: #ebebeb;
+}
+#openweathermap-widget-21{
+    display: none;
+}
+#openweathermap-widget-22{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*SECCIÓN PAQUETES*/
@@ -211,7 +219,7 @@
     background-color: #ebebeb;
     opacity: 110%;
     width: 100%;
-    height: 45vh;
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -308,6 +316,15 @@
         bottom: 10%;
     }
 
+    #openweathermap-widget-21{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #openweathermap-widget-22{
+        display: none;
+    }
+
 }
 
 @media (min-width: 769px){
@@ -353,11 +370,13 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        align-items: center;
     }
     .containerBottom2{
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        align-items: center;
     }
     
     .packages{
@@ -374,6 +393,7 @@
 
     .clientMessages{
         width: 40%;
+        height: 300px;
     
     }
 
@@ -390,6 +410,14 @@
     .controlMessages{
         right: 90%;
         bottom: 7%;
+    }
+    #openweathermap-widget-21{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #openweathermap-widget-22{
+        display: none;
     }
 
 }
