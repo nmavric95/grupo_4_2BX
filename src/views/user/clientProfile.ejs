@@ -15,10 +15,14 @@
                 <form id="formularioProfile" method="POST" action="/userClient/<%= userToDetail.id %>?_method=PUT" enctype="multipart/form-data">
                     
                 <div class="nameAndPhoto">
+                    <div id="photo">
+                        <img src="/img/users/<%= userToDetail.image %>" alt="Imagen de perfil usuario">
+                        <!-- <label><h4>Tu Foto</h4></label> -->
+                        <input class="photo" type="file" name="image" accept="image/jpeg, image/jpg" value="<%= userToDetail.image ? userToDetail.image : "" %>">
+                    </div>
 
                     <div class="aboutme">
                         <div class="firstData">
-                            
                               <label for="" id="personalinfo"><h4>Nombre:</h4></label>
                               <input class="number" type="text" name="name" id="name" value="<%= userToDetail.name %>">
                               <% if (locals.errors && errors.name) { %>
@@ -44,10 +48,9 @@
                                         <i class="fa-solid fa-angles-up"></i><%= errors.birthDate.msg %><i class="fa-solid fa-angles-up"></i> 
                                     </p>
                                     
-                                <% } %>
-                            
+                                <% } %>  
                          </div>
-                            <div class="secondData">
+                         <div class="secondData">
                                 <!-- <div> -->
                                     <label for="" id="personalinfo">Peso(Kg):</label>
                                     <input class="number" type="number" name="weight" value = <%= userToDetail.weight ? userToDetail.weight : "" %>>
@@ -73,17 +76,11 @@
                                 <label for="" id="personalinfo">Apto Medico:</label>
                                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">SI</label>
                                 <label for="checkbox"><input id="checkok" name="checkok" type="checkbox">NO</label>
-                                <input class="photo" value="adjunta tu apto" type="file" accept="DOCTYPE">
+                                <input class="checkOk" value="adjunta tu apto" type="file" accept="DOCTYPE">
                             <!-- </div> -->
-                            </div>
-
-                    <div id="photo">
-                        <img src="/img/users/<%= userToDetail.image %>" alt="Imagen de perfil usuario">
-                        <label><h4>Tu Foto</h4></label>
-                        <input class="photo" type="file" name="image" accept="image/jpeg, image/jpg" value="<%= userToDetail.image ? userToDetail.image : "" %>">
+                        </div>
                     </div>
-                </div>
-            </div>   
+                </div>   
 
 
                     <div id="tellus">
@@ -113,8 +110,6 @@
                             
                             <% } %>
                         </div>
-
-                        <!-- <a type="button" class="com animated infinite pulse">Editar</a> -->
                     </div>
 
                     <div class="misp2">

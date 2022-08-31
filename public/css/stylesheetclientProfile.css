@@ -28,8 +28,8 @@
 }
 
 .formContainerDisplayEdit{
-    width: 90%;
-    height: 1000px;
+    width: 100%;
+    height: 1350px;
     background-color: rgba(24, 220, 164, 0.35);
     border: solid 5px rgba(24, 220, 164, 0.5);
     border-top-left-radius: 20px;
@@ -39,63 +39,57 @@
     color: #79ffa0;
 
 }
-#formularioProfile{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .nameAndPhoto{
-    width: 90%;
-    height: 60%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: column;
 }
 
 
 .aboutme{
-    width: 65%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
 }
+
+#photo{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 15px;
+}
+
+img{
+    width: 80%;
+    padding-bottom: 9px;    
+ }
+
 
 .firstData{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
-    
 }
 
 .secondData{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    padding-left: 100px;
-    /* justify-content: center; */
-    /* align-items: flex-start; */
+    align-items: center;
+}
+
+.checkOk{
+    width: 200px;
 }
 
 label{
-    font-size: 20px;
-}
-#personalinfo{
-    padding: 20px;
+    font-size: 18px;
+    /* font-style: oblique; */
 }
 
-.aboutme{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 50px;
+#personalinfo{
+    padding: 15px;
 }
 
 .number{
@@ -103,7 +97,7 @@ label{
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 250px;
+    width: 80%;
     height: 35px;
     color: #9d3be1;
 }
@@ -116,24 +110,11 @@ label{
 
 }
 
-.photo{
-    padding-top: 15px;
-    cursor: pointer;
-}
-
-#photo{
-    width: 35%;
-    cursor: pointer;
+#tellus{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 300px;
-}
- img{
-    width: 350px;
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
+    padding-top: 20px;
  }
 
  .tellus{
@@ -143,24 +124,12 @@ label{
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 1450px;
-    height: 180px;
+    width: 80%;
+    height: 90px;
     color: #79ffa0;
  }
 
- #tellus{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
-
- .conf{
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-}
-
-.misp{
+ .misp{
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -180,15 +149,15 @@ label{
     color: #79ffa0;
     background-color: #9d3be1;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px; 
-    width: 200px;
-    height: 40px;  
+    width: 190px;
+    height: 35px;  
 }
 
 .com:hover{
@@ -233,30 +202,71 @@ p.warning.message i {
 
 @media screen and (min-width: 426px){
 
-/* main{display: flex;}
+    .formContainerDisplayEdit{
+        height: 1200px;
+    }
 
+    .nameAndPhoto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.aboutme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+    img{
+        width: 300px
+
+    }
+
+   .aboutme{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .firstData{
+        padding-right: 35px;
+    }
+
+    .secondData{
+        padding-left: 15px;
+    } 
+
+    .tellus{
+        width: 75%;
+        height: 120px;
+     }
+
+     .conf{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .number{
+        width: 250px;
+        height: 35px;
+    }
+    
 
 }
-
-
-
-
 
 
 @media screen and (min-width: 769px){
 
     .formContainerDisplayEdit{
+        height: 800px;
+    }
 
-        margin: 90px;
-        }
+    .nameAndPhoto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
 
-   
+    }
 
-
+    .conf{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
