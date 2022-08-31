@@ -16,43 +16,52 @@
             <h1 class="bot1">Carro de Compras</h1>
         </div>
     </section>
-    <section>
-
+    <section class="cartDivContainer">
         <% if (toBuy.length == 0) { %>
             <div class="empty">
                 <i class="fa-solid fa-cart-arrow-down"></i>
             </div>     
         <% }else{ %>
+        <div class="cartDivContainerAdded">
+       
             <% toBuy.forEach(package => { %>
 
             <article class="cart2">
                 <div class="cart2-1">
-                    <h3 class="animated infinite flash"><%= package.name  %></h3>
                     <img class="foto" src="/img/activities/<%= package.image  %>" alt="Image">
-                    <a href="/productCart/remove/<%= package.id  %>" type="button" ><h3>REMOVE</h3></a>
                    
                 </div>
 
                 <div class="cart2-2">
+                    <h3 class="itemName"><%= package.name  %></h3>
                     <h2 class="bot2">Cantidad: <input class="yes" type="number" value="numero"></h2>
                     <h2 class="bot2">Precio: $ <%= package.price %></h2>
-                    <!-- <h3>$ <%= package.price  %></h3>  -->
                     <h2 class="bot2">Subtotal: $ <%= package.price %></h2>
-                    <h2 class="bot2">Seleccionar: <input type="button" class="yes" value="Sí"></h2>
+                    <a href="/productCart/remove/<%= package.id  %>" type="button" ><h3 class="removeItem">REMOVE</h3></a>
                 </div>
-            </article> 
-    
+            </article>
+        
               
             <% }) %>
         <% } %>
-
+        </div>  
+        <% if (toBuy.length !== 0) { %>
+        <div class="cartFinishShopping">
+            <div class="totalContainer" >
+                <h2 class="totalPrice">TOTAL:</h2>
+                <% if (totalAmount !== 0) { %>
+                    <h3 class="totalPriceNumber" >$ <%= totalAmount  %> </h3>
+                <% } %>
+        
+            </div>
+            <div class="paragraphFinishShop">
+                <p>Si estás comprando, GRACIAS POR TU COMPRA! Y si tenes alguna consulta, dejala en nuestra sección de contacto!</p>
+            </div>
+        </div>
+        <% } %>
     </section>      
     <section>
         <div class="cart3">
-            <div class="totalContainer" >
-                <h2 class="totalPrice">TOTAL:</h2>
-                <h3 class="totalPriceNumber" >123</h3>
-            </div>
             <a href="/packages" type="button" class="com animated infinite pulse">Seguir comprando</a>
             <a type="button" class="com animated infinite pulse">Comprar</a>
         </div>

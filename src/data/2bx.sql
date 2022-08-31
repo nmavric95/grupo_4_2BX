@@ -187,7 +187,7 @@ CREATE TABLE `users` (
   `tellus` varchar(500) DEFAULT NULL,
   `admin` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,7 +196,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',1),(3,'Ana','Cerruti','1999-11-09','cerrutianamaria@gmail.com','$2a$10$4YWOirzAf3VFizwrzacRaeWjPLrWzalMvp1acfc8SaLaKlI7Yorhm','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(4,'Filomena','Pepita','2006-02-12','filomena@gmail.com','$2a$10$a0vBTzB.1OouidO/FI3/4eBekCpbiX72WJgf/g0w3l2b3XAHj9gFe','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(5,'Juana','Gonzalez','1995-07-12','juanita@gmail.com','$2a$10$YkRbCtk4c3XxJaZSx8WYuuEYFBCwS.wL8uJoJrJW9lXWF.ZgCWvPa','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(6,'Nadita','Maverick','1995-07-23','nadita@gmail.com','$2a$10$2uQjCBvS/JyjMnN1zzNM8eu2KjqKcHT.ICVd4eSQYxOsZ8MZwx9fy','Logo1FondoNegro.jpg',NULL,NULL,NULL,1),(7,'Claudia','Cerruti','1990-09-09','claudia.c@gmail.com','$2a$10$V1TB6xZL/Js8kbIQOXnFae0bf9Sh3F2L9THpTzsmYyqPT9/CKgneK','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'ggg','hhh','1990-10-10','g@h.com','$2a$10$R5IPuCPhottIFrdMTqUoWOhC9xGXl.yuQNhZAK9qkKXa6gxGtL0hW','Logo1FondoNegro.jpg',40,2,'Hola que tal!',NULL),(2,'Nadia','Mavric','1995-07-23','mavricnadia@gmail.com','$2a$10$w1IXvddqE5TGIqcDLTzhFeU5fhAh2sCSScmFeoM25r2YhXZ2y/RcC','image-1658793964746-908049978.jpg',58,0,'',1),(3,'Ana','Cerruti','1999-11-09','cerrutianamaria@gmail.com','$2a$10$4YWOirzAf3VFizwrzacRaeWjPLrWzalMvp1acfc8SaLaKlI7Yorhm','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(4,'Filomena','Pepita','2006-02-12','filomena@gmail.com','$2a$10$a0vBTzB.1OouidO/FI3/4eBekCpbiX72WJgf/g0w3l2b3XAHj9gFe','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(5,'Juana','Gonzalez','1995-07-12','juanita@gmail.com','$2a$10$YkRbCtk4c3XxJaZSx8WYuuEYFBCwS.wL8uJoJrJW9lXWF.ZgCWvPa','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(6,'Nadita','Maverick','1995-07-23','nadita@gmail.com','$2a$10$2uQjCBvS/JyjMnN1zzNM8eu2KjqKcHT.ICVd4eSQYxOsZ8MZwx9fy','Logo1FondoNegro.jpg',NULL,NULL,NULL,1),(7,'Claudia','Cerruti','1990-09-09','claudia.c@gmail.com','$2a$10$V1TB6xZL/Js8kbIQOXnFae0bf9Sh3F2L9THpTzsmYyqPT9/CKgneK','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(8,'Claudis','Genia','2022-08-11','claudia.c@gmail.com','$2a$10$dy7kgKoznBIp89OWqJ.qJeMKQgxOUnkjUlonEGSN6tCi5RQ2pPr/m','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(9,'claudia','sss','2022-08-13','claudia.c@gmail.com','$2a$10$o0XY2Mt.KJH10EIQaeY.Su5A1DeQ5j0MPMNji/FTvpfJcTmRpuEQK','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(10,'clau','vv','2022-08-13','claudia.c@gmail.com','$2a$10$D4MjECIQ8DhfllDvjwd8xORkDAUPIhj/2J9H2cmGzAS/ypso1mGR.','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL),(11,'Pepito','Juarez','2011-02-03','pepito.j@gmail.com','$2a$10$6AopirG84woj5iTR2aq5tuP.Hl/llSRiZVtavPAf7XDLwgSIYm406','Logo1FondoNegro.jpg',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -209,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-28 14:28:51
+-- Dump completed on 2022-08-31  0:33:40

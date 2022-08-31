@@ -15,21 +15,31 @@
 
 
 /*MAIN BODY*/
-
-
+.cartDivContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cartDivContainerAdded{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 .yes{
     cursor: pointer;
     border-radius: 35px;
     color: #79ffa0;
     background-color: #9d3be1;
-    width: 55px;
+    width: 20px;
  
     
 }
     
 .yes:hover{
-    width: 55px;
+    width: 20px;
     background-color: #79ffa0;
     color: #9d3be1;
     font-weight: bold;
@@ -47,57 +57,60 @@
     text-shadow: 2px 2px 2px #9d3be1;
     width: 800px;
     letter-spacing: 2px;
+    font-size: 1.8rem;
 }
+
+.cart2{
+    width: 100%;
+    height: 120px;
+    margin: 5px; 
+    display: flex;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.cart2-1{
+    width: 30%;
+    height: 80%;
+    margin: 5px; 
+    margin-left: 15px;
+}
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart2-2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+h3.removeItem{
+    color: #9d3be1;
+    font-weight: bold;
+    font-size: 0.75rem;
+
+}
+h3.itemName{
+    color: #9d3be1;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
 .bot2{
-    /* display: block;
-    font-family: "BPimperial Regular";
-    background-color: gray; */
-    color: #246b08;
+    color: #9d3be1;
+    font-size: 0.7rem;
     /* text-shadow: 2px 2px 2px #9d3be1;
     width: 90px;
     cursor: pointer;
     letter-spacing: 2px; */
 }
 
-.cart2{
-    width: 30%;
-    height: 500px;
-    margin: 10px;
-    padding: 20px; 
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.cart2-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart2-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-}
-
-h3{
-    font-family: "Lato";
-    display: block;
-    color: #9d3be1;
-    font-weight: bold;
-    font-size: 25px;
-
-}
-.foto {
-    width: 250px;
-    height: 250px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
 .cart1 {
     display: flex;
@@ -112,13 +125,6 @@ h3{
 
 
 
-.cart2 {
-    background-color: gainsboro;
-    border: solid 10px black;
-    border-color: #79ffa0;
-
-}
-
 .cart3 {
     display: flex;
     flex-flow: column wrap;
@@ -130,23 +136,6 @@ h3{
     
 }
 
-h2.totalPrice{
-    display: block;
-    font-family: "BPimperial Regular";
-    text-align: center;
-    background-color: gray;
-    color: #79ffa0;
-    text-shadow: 2px 2px 2px #9d3be1;
-    width: fit-content;
-    padding: 10px;
-    letter-spacing: 2px;
-    
-}
-
-h3.totalPriceNumber{
-    padding: 10px;
-    
-}
 
 .com {
     display: flex;
@@ -156,15 +145,16 @@ h3.totalPriceNumber{
     color: #79ffa0;
     background-color: #9d3be1;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
-    width: 200px;
-    height: 40px;
+    width: 120px;
+    height: 20px;
     border: none;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;  
+    margin: 5px;  
 }
 
 .com:hover{
@@ -174,19 +164,64 @@ h3.totalPriceNumber{
     transition-duration: 0.5ms;
 
 }
+.cartFinishShopping{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: gainsboro;
+    padding: 20px;
+}
+
+.paragraphFinishShop{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: #9d3be1;
+}
+
 
 .totalContainer{
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-end;
-    text-align: right;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
 }
+
+h2.totalPrice{
+    font-family: "BPimperial Regular";
+    text-align: center;
+    color: #79ffa0;
+    text-shadow: 2px 2px 2px #9d3be1;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-family: 1.1rem;
+    
+}
+
+h3.totalPriceNumber{
+    color: #9d3be1;
+    font-size: 1rem;
+    font-weight: bold;    
+}
+
 
 .fa-solid.fa-cart-arrow-down{
     font-size: 120%;
     color: #d1c1d1;
 }
 
+
+.empty{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 270px;
+    min-width: 300px;
+}
 
 /** MQ **/
 
@@ -203,19 +238,7 @@ h3.totalPriceNumber{
         padding-bottom: 10px;
     }
 
-    .cart2{
-
-        display: flex;
-        flex-direction: column;
     
-    }
-
-    h3{
-        padding-top: 20px;
-    }
-
-    .foto{
-        padding-left: 25px; }
 
     .si{
         width: 200px;
@@ -231,61 +254,64 @@ h3.totalPriceNumber{
     }
 
    
-    .bot2{
-        text-align: center;
-        background-color: gainsboro;  
-        padding-bottom: 55px;  
-
-    }
-
     .cart3 {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    section{
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        margin: 5px;
+        align-items: center;
     }
-  
+    .cart2{
+        height: 200px;
+        margin: 10px; 
+    }
+    
+    .cart2-1{
+        width: 40%;
+        height: 80%;
+    }
+    .foto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .cart2-2{
+        width: 60%;
+    }
+    
+    h3.removeItem{
+        font-size: 1rem;
+    
+    }
+    h3.itemName{
+        font-size: 1.1rem;
+    }
+    
+    .bot2{
+        font-size: 0.95rem;
+
+    }
+    .com {
+        font-size: 18px;
+        font-weight: bold;
+        width: 200px;
+        height: 30px;
+        border: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;  
+        margin: 5px;  
+    }
+    
+    .empty{
+        font-size: 80px;
+    }
 
 }
 
-@media screen and (min-width: 481px){
-
-    .bot2{
-        text-align: center;
-        background-color: gainsboro; 
-        padding-bottom: 55px;  
- 
-    }
-
-    .com{
-        text-align: center;
-    }
 
 
-    .cart3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    section{
-        display: flex;
-        justify-content: space-around;
-        margin: 0px;
-    }
-
-    .cart1 {
-        display: flex;
-        text-align: center;
-        padding-left: 30px;
-    }
-
-}
 
 @media screen and (min-width: 769px){
 
@@ -304,34 +330,14 @@ h3.totalPriceNumber{
         padding: 0px;
     }
     
-    /* .bot2{
-     display: flex;
-     justify-content: space-between;
-     padding-bottom: 55px;  
-     background-color: gainsboro;  
-    } */
-
+   
     .cart3 {
         display: flex;
         flex-direction: row;
-        box-sizing: border-box;
-
+        justify-content: space-around;
+        align-items: center;
     }
-/* 
-    .si{
-        width: 50px;
-        height: 30px;
-    }
-    
-    .foto{
-        display: flex;
-        justify-content: flex-start;    
-    } */
 
-    /* h2{
-        padding: 20px;
-       
-    } */
 
     .com {
         width: 250px;
@@ -344,11 +350,44 @@ h3.totalPriceNumber{
         justify-content: space-around;
     }
 
-    .empty{
+
+    .cartDivContainer{
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        height: 270px;
     }
-   
+
+    .cartFinishShopping{
+        width: 40%;
+        height: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .cartDivContainerAdded{
+        width: 60%;
+        margin-right: 10px;
+        
+    }
+    .cart2{
+        margin-right: 15px;
+        width: 90%;
+    }
+
+    h2.totalPrice{
+        font-family: 1.5rem;
+        
+    }
+    
+    h3.totalPriceNumber{
+        font-size: 1.3rem;
+        font-weight: bolder;    
+    }
+    .empty{
+        font-size: 100px;
+    }
   
     }

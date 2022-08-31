@@ -12,10 +12,12 @@ const productCartController = {
     productCart : (req, res) => {
 
         let stringIdsPackages = req.cookies.idsPackageCookie
+        let totalAmount = 0
 
         if(stringIdsPackages) {
             let idsPackages = stringIdsPackages.split(",");
             let toBuy = [];
+            
 
             
             Activities.findAll({
@@ -27,13 +29,16 @@ const productCartController = {
                         toBuy.push(value.dataValues)
                     })
                     
-                    res.render("./productCart/productCart", {toBuy})
+                    values.map( value => {
+                        totalAmount += value.price
+                    })
+                    res.render("./productCart/productCart", {toBuy, totalAmount})
                 })
                 .catch(error => res.send(error))
             
         }else{
             let toBuy = [];
-            res.render("./productCart/productCart", {toBuy})
+            res.render("./productCart/productCart", {toBuy, totalAmount})
         }
 
     },
