@@ -4,15 +4,16 @@
 
         <div class="userBox">
         <a href="/userClient/<%= locals.userLoggedOk.id %> "><p class="userLogged">Hola <%= locals.userLoggedOk.name  %> </p></a>
-        <img src="/img/users/<%= locals.userLoggedOk.image %>" class="profilePic" alt="profilePic">
-        </div>
+        <div class="profilePic"><a href="/userClient/<%= locals.userLoggedOk.id %>"><img src="/img/users/<%= locals.userLoggedOk.image %>" class="profilePicFiller" alt="profilePic"></a></div>
         <form action="/userClient/logout" method="post"><button class="logoutButton">LogOut</button></form>
-    
+        </div>
+
+
     <% } else { %>
          <a href="/login"><p class="loginButton">Login</p></a>
     <% } %>
 </header>
-<nav class="bottomBar">
+<nav id="bottomBar"s>
     <ul class="navBar">
         <li><a href="/packages">Paquetes</a></li>
         <li><a href="/aboutUs">About Us</a></li>
@@ -20,7 +21,34 @@
         <li><a href="/register">Registro</a></li>
         <li><a href="/productCart">Carrito</a></li>
     </ul>
-    <div class="burgerMenu"><i class="fa-solid fa-square-minus"></i></div>
+    
+
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                  <div id="bar1" class="bar"></div>
+                  <div id="bar2" class="bar"></div>
+                  <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="navBurger" id="navBurger">
+                  <ul class="ulBurger">
+                    <li class="liBurger"><a class="aBurger" href="/packages">Paquetes</a></li>
+                    <li class="liBurger"><a class="aBurger" href="/aboutUs">About Us</a></li>
+                    <li class="liBurger"><a class="aBurger" href="/register">Registro</a></li>
+                    <li class="liBurger"><a class="aBurger" href="/productCart">Carrito</a></li>
+                  </ul>
+                </nav> 
+              </div>
+              
+              <div class="menu-bg" id="menu-bg"></div>
+
+    <script>
+        function menuOnClick() {
+            document.getElementById("menu-bar").classList.toggle("change");
+            document.getElementById("navBurger").classList.toggle("change");
+            document.getElementById("menu-bg").classList.toggle("change-bg")
+            document.getElementById("bottomBar").classList.toggle("change-bottomBar")
+        }
+    </script>
 </nav>
 
   
