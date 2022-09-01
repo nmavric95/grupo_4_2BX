@@ -157,7 +157,7 @@ body{
 .profilePic{
     width: 50%;
     max-height: 50px;
-    border-radius: 50%;
+    border: 50%;
     margin-right: 5px;
 }
 
@@ -165,6 +165,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 #bottomBar{
