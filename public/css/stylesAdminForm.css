@@ -150,7 +150,7 @@ section.view{
 }
 
   .btnSubmit{
-    width: 30%;
+    width: 34%;
     font-family: "Lato", sans-serif;
     background-color: RGB(121,255,160);
     border: none;
@@ -163,7 +163,7 @@ section.view{
     align-items: center;
     justify-content: center;
     margin: auto;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 15px;
     margin-bottom: 20px;
